@@ -1,20 +1,11 @@
-import * as Notifications from "expo-notifications";
-import { useAppDataStore } from "@/lib/stores/session-store";
 import { useSettingsStore } from "@/lib/stores/settings-store";
 import { useSubscriptionStore } from "@/lib/stores/subscription-store";
 import { getDiagnostics, PRODUCT_IDS, type RevenueCatDiagnostics } from "@/lib/services/revenue-cat";
-import { shareBackup, createBackup, runDailyBackupIfNeeded } from "@/lib/services/backup";
-import { useSubscription } from "@/lib/contexts/subscription-context";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useState } from "react";
 import { ActivityIndicator, Alert, Pressable, ScrollView, Share, StyleSheet, Text, View } from "react-native";
 
 export default function DebugScreen() {
-	const { refreshCredits } = useSubscription();
-	const onboardingCompleted = useSettingsStore((s) => s.onboardingCompleted);
-	const items = useAppDataStore((s) => s.items);
-	const completedCount = items.filter((i) => i.status === "completed").length;
-
 	const isPurchasedPremium = useSubscriptionStore((s) => s.isPurchasedPremium);
 	const hasSeenOnboardingPaywall = useSubscriptionStore((s) => s.hasSeenOnboardingPaywall);
 	const trialStartedAt = useSubscriptionStore((s) => s.trialStartedAt);
@@ -22,109 +13,10 @@ export default function DebugScreen() {
 	const trialDaysRemaining = useSubscriptionStore((s) => s.trialDaysRemaining);
 	const hasPremiumAccess = useSubscriptionStore((s) => s.hasPremiumAccess);
 
-	const resetOnboarding = () => {
-		useSettingsStore.setState({ onboardingCompleted: false });
-		Alert.alert("Done", "Onboarding reset. Restart the app to see it again.");
-	};
-
-	const clearAllData = () => {
-		Alert.alert("Clear All Data", "This will remove all items. Are you sure?", [
-			{ text: "Cancel", style: "cancel" },
-			{
-				text: "Clear",
-				style: "destructive",
-				onPress: () => {
-					useAppDataStore.setState({ items: [] });
-					Alert.alert("Done", "All data cleared.");
-				},
-			},
-		]);
-	};
-
 	return (
 		<ScrollView style={styles.container} contentContainerStyle={styles.content}>
 			<Text style={styles.title}>Debug Tools</Text>
 			<Text style={styles.subtitle}>For development & testing only</Text>
-
-			<View style={styles.section}>
-				<Text style={styles.sectionTitle}>Current State</Text>
-				<View style={styles.stateRow}>
-					<Text style={styles.stateLabel}>Onboarding completed</Text>
-					<Text style={[styles.stateValue, { color: onboardingCompleted ? "#2d6a2e" : "#b44" }]}>
-						{onboardingCompleted ? "Yes" : "No"}
-					</Text>
-				</View>
-				<View style={styles.stateRow}>
-					<Text style={styles.stateLabel}>Completed items</Text>
-					<Text style={styles.stateValue}>{completedCount}</Text>
-				</View>
-				<View style={styles.stateRow}>
-					<Text style={styles.stateLabel}>Total items</Text>
-					<Text style={styles.stateValue}>{items.length}</Text>
-				</View>
-			</View>
-
-			<View style={styles.section}>
-				<Text style={styles.sectionTitle}>Onboarding</Text>
-				<Pressable style={styles.button} onPress={resetOnboarding}>
-					<Text style={styles.buttonText}>Reset Onboarding</Text>
-				</Pressable>
-			</View>
-
-			<View style={styles.section}>
-				<Text style={styles.sectionTitle}>Notifications</Text>
-				<Pressable
-					style={styles.button}
-					onPress={async () => {
-						const perms = await Notifications.getPermissionsAsync();
-						const scheduled = await Notifications.getAllScheduledNotificationsAsync();
-						const lines = [
-							`Permission: ${perms.status}`,
-							`Scheduled count: ${scheduled.length}`,
-							...scheduled.map((n) => `  ${n.identifier}: ${n.content.title}`),
-						];
-						Alert.alert("Notification Debug", lines.join("\n"));
-					}}
-				>
-					<Text style={styles.buttonText}>Notification Debug Info</Text>
-				</Pressable>
-				<Pressable
-					style={styles.button}
-					onPress={async () => {
-						const { status } = await Notifications.getPermissionsAsync();
-						if (status !== "granted") {
-							const { status: newStatus } = await Notifications.requestPermissionsAsync();
-							if (newStatus !== "granted") {
-								Alert.alert("No Permission", `Status: "${newStatus}". Enable in Settings.`);
-								return;
-							}
-						}
-						await Notifications.scheduleNotificationAsync({
-							content: {
-								title: "Test notification",
-								body: "If you see this, notifications are working!",
-								sound: "default",
-							},
-							trigger: {
-								type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL,
-								seconds: 5,
-							},
-						});
-						Alert.alert("Scheduled", "Notification in 5s.");
-					}}
-				>
-					<Text style={styles.buttonText}>Test Notification (5s)</Text>
-				</Pressable>
-				<Pressable
-					style={[styles.button, styles.destructiveButton]}
-					onPress={async () => {
-						await Notifications.cancelAllScheduledNotificationsAsync();
-						Alert.alert("Done", "All scheduled notifications cancelled.");
-					}}
-				>
-					<Text style={[styles.buttonText, styles.destructiveText]}>Cancel All Scheduled</Text>
-				</Pressable>
-			</View>
 
 			<View style={styles.section}>
 				<Text style={styles.sectionTitle}>Subscription</Text>
@@ -158,9 +50,8 @@ export default function DebugScreen() {
 				</View>
 				<Pressable
 					style={styles.button}
-					onPress={async () => {
+					onPress={() => {
 						useSubscriptionStore.setState({ isPurchasedPremium: true });
-						await refreshCredits();
 						Alert.alert("Done", "Premium enabled (local).");
 					}}
 				>
@@ -168,9 +59,8 @@ export default function DebugScreen() {
 				</Pressable>
 				<Pressable
 					style={[styles.button, styles.destructiveButton]}
-					onPress={async () => {
+					onPress={() => {
 						useSubscriptionStore.setState({ isPurchasedPremium: false });
-						await refreshCredits();
 						Alert.alert("Done", "Premium removed (local).");
 					}}
 				>
@@ -199,73 +89,28 @@ export default function DebugScreen() {
 
 			<View style={styles.section}>
 				<Text style={styles.sectionTitle}>Data</Text>
-				<Pressable style={[styles.button, styles.destructiveButton]} onPress={clearAllData}>
+				<Pressable
+					style={[styles.button, styles.destructiveButton]}
+					onPress={() => {
+						Alert.alert("Clear All Data", "This will reset all local storage. Are you sure?", [
+							{ text: "Cancel", style: "cancel" },
+							{
+								text: "Clear",
+								style: "destructive",
+								onPress: async () => {
+									await AsyncStorage.clear();
+									Alert.alert("Done", "All local data cleared. Restart the app.");
+								},
+							},
+						]);
+					}}
+				>
 					<Text style={[styles.buttonText, styles.destructiveText]}>Clear All Data</Text>
 				</Pressable>
 			</View>
 
-			<DataRecoveryDebugSection />
 			<RevenueCatSection />
 		</ScrollView>
-	);
-}
-
-function DataRecoveryDebugSection() {
-	const [backupExporting, setBackupExporting] = useState(false);
-
-	const handleExportBackup = async () => {
-		setBackupExporting(true);
-		try {
-			await shareBackup();
-		} catch (e: unknown) {
-			Alert.alert("Export Error", e instanceof Error ? e.message : String(e));
-		} finally {
-			setBackupExporting(false);
-		}
-	};
-
-	const handlePreviewBackup = async () => {
-		try {
-			const envelope = await createBackup();
-			const storeKeys = Object.keys(envelope.stores);
-			const totalSize = JSON.stringify(envelope).length;
-			const lines = [
-				`Version: ${envelope.version}`,
-				`Created: ${envelope.createdAt}`,
-				`Stores: ${storeKeys.length} (${storeKeys.join(", ")})`,
-				`Total size: ${(totalSize / 1024).toFixed(1)} KB`,
-			];
-			Alert.alert("Backup Preview", lines.join("\n"));
-		} catch (e: unknown) {
-			Alert.alert("Error", e instanceof Error ? e.message : String(e));
-		}
-	};
-
-	const handleForceDailyBackup = async () => {
-		try {
-			await AsyncStorage.removeItem("app-last-backup");
-			await runDailyBackupIfNeeded();
-			Alert.alert("Done", "Daily backup ran successfully.");
-		} catch (e: unknown) {
-			Alert.alert("Error", e instanceof Error ? e.message : String(e));
-		}
-	};
-
-	return (
-		<View style={styles.section}>
-			<Text style={styles.sectionTitle}>Data & Recovery</Text>
-			<Pressable style={styles.button} onPress={handlePreviewBackup}>
-				<Text style={styles.buttonText}>Preview Backup Data</Text>
-			</Pressable>
-			<Pressable style={styles.button} onPress={handleExportBackup}>
-				<Text style={styles.buttonText}>
-					{backupExporting ? "Exporting..." : "Export Backup (Share Sheet)"}
-				</Text>
-			</Pressable>
-			<Pressable style={styles.button} onPress={handleForceDailyBackup}>
-				<Text style={styles.buttonText}>Force Daily Backup Now</Text>
-			</Pressable>
-		</View>
 	);
 }
 

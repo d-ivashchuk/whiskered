@@ -6,7 +6,6 @@ import {
   purchasePackage,
   restorePurchases,
 } from "@/lib/services/revenue-cat";
-import { useSubscription } from "@/lib/contexts/subscription-context";
 import { useSubscriptionStore } from "@/lib/stores/subscription-store";
 import { router } from "expo-router";
 import { Crown, Infinity as InfinityIcon, Sparkles, Star, X, Zap } from "lucide-react-native";
@@ -80,7 +79,7 @@ export default function PaywallScreen() {
   const markOnboardingPaywallSeen = useSubscriptionStore(
     (s) => s.markOnboardingPaywallSeen,
   );
-  const { isPro } = useSubscription();
+  const isPro = useSubscriptionStore((s) => s.hasPremiumAccess)();
 
   const [selectedPlan, setSelectedPlan] = useState<SubscriptionPlanId>("annual");
   const [loading, setLoading] = useState(false);

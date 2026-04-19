@@ -35,9 +35,6 @@ export default function TabLayout() {
             ),
           }}
         />
-
-        {/* Hidden screens still in the tabs group */}
-        <Tabs.Screen name="activity" options={{ href: null }} />
       </Tabs>
     </ThemeProvider>
   );

@@ -52,4 +52,7 @@ app-example
 # original sound source files (large)
 assets/sounds/sources/
 
+# Crawled data (regenerable)
+data/
+
 .env.local

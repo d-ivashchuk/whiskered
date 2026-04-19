@@ -1,6 +1,5 @@
 import { Text } from "@/components/ui/text";
 import { Switch } from "@/components/ui/switch";
-import { useAuth } from "@/lib/contexts/auth-context";
 import { useIsPremium } from "@/lib/hooks/use-premium";
 import {
 	restorePurchases,
@@ -9,23 +8,21 @@ import { useSettingsStore } from "@/lib/stores/settings-store";
 import { useSubscriptionStore } from "@/lib/stores/subscription-store";
 import { useThemeColors } from "@/lib/theme";
 
-import { Bell, ChevronRight, Crown, Download, FileText, LogOut, MessageSquare, Shield, Star, Wrench } from "lucide-react-native";
+import { ChevronRight, Crown, FileText, Shield, Star, Wrench } from "lucide-react-native";
 import SegmentedControl from "@react-native-segmented-control/segmented-control";
 import * as Application from "expo-application";
 import * as Updates from "expo-updates";
-import { useCallback, useState } from "react";
+import { useCallback } from "react";
 import { Alert, Linking, Platform, Pressable, ScrollView, View } from "react-native";
 import { requestStoreReview } from "@/lib/services/rate-app";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { capture, getPostHogClient } from "@/lib/services/posthog";
-import { shareBackup } from "@/lib/services/backup";
 
 export default function SettingsScreen() {
 	const insets = useSafeAreaInsets();
 	const router = useRouter();
 	const colors = useThemeColors();
-	const { signOut, user } = useAuth();
 
 	const hapticEnabled = useSettingsStore((s) => s.hapticEnabled);
 	const setHapticEnabled = useSettingsStore((s) => s.setHapticEnabled);
@@ -33,9 +30,6 @@ export default function SettingsScreen() {
 	const setSoundEnabled = useSettingsStore((s) => s.setSoundEnabled);
 	const analyticsEnabled = useSettingsStore((s) => s.analyticsEnabled);
 	const setAnalyticsEnabled = useSettingsStore((s) => s.setAnalyticsEnabled);
-
-	const notificationsEnabled = useSettingsStore((s) => s.notificationsEnabled);
-	const dailyReminderEnabled = useSettingsStore((s) => s.dailyReminderEnabled);
 
 	const { isTrialActive, trialDaysRemaining } = useIsPremium();
 	const isPurchased = useSubscriptionStore((s) => s.isPurchasedPremium);
@@ -75,27 +69,10 @@ export default function SettingsScreen() {
 	const debugFlag = posthog?.getFeatureFlag("enable-debug-tab");
 	const showDebug = __DEV__ || debugFlag === true || debugFlag === "true";
 
-	const [exporting, setExporting] = useState(false);
-	const handleExport = useCallback(async () => {
-		setExporting(true);
-		try {
-			await shareBackup();
-		} catch {
-			Alert.alert("Export Failed", "Something went wrong. Please try again.");
-		} finally {
-			setExporting(false);
-		}
-	}, []);
-
 	const appearanceMode = useSettingsStore((s) => s.appearanceMode);
 	const setAppearanceMode = useSettingsStore((s) => s.setAppearanceMode);
 
 	type AppearanceOption = "system" | "light" | "dark";
-
-	// Summary for notifications row
-	const notifSummary = notificationsEnabled
-		? `On${dailyReminderEnabled ? " · Daily reminder" : ""}`
-		: "Off";
 
 	return (
 		<View className="flex-1 bg-background" style={{ paddingTop: insets.top }}>
@@ -205,26 +182,6 @@ export default function SettingsScreen() {
 					</View>
 				</View>
 
-				{/* Notifications row */}
-				<View className="px-6 mb-8">
-					<View className="bg-card rounded-2xl overflow-hidden">
-						<Pressable
-							onPress={() => router.push("/settings-notifications")}
-							className="px-4 py-4 flex-row items-center"
-							testID="settings-notifications-row"
-						>
-							<Bell size={18} color={colors.mutedForeground} strokeWidth={2} />
-							<View className="flex-1 ml-3">
-								<Text className="text-base font-medium text-foreground">Notifications</Text>
-								<Text className="text-sm text-muted-foreground mt-0.5">
-									{notifSummary}
-								</Text>
-							</View>
-							<ChevronRight size={18} color={colors.mutedForeground} strokeWidth={2} />
-						</Pressable>
-					</View>
-				</View>
-
 				{/* Appearance section */}
 				<View className="px-6 mb-8">
 					<Text className="text-base font-semibold uppercase tracking-[0.08em] text-muted-foreground mb-2">
@@ -252,37 +209,20 @@ export default function SettingsScreen() {
 						Feedback
 					</Text>
 					<View className="bg-card rounded-2xl overflow-hidden">
-						<Pressable
-							onPress={() => router.push("/feedback")}
-							className="px-4 py-4 flex-row items-center"
-						>
-							<MessageSquare size={18} color={colors.mutedForeground} strokeWidth={2} />
-							<View className="flex-1 ml-3">
-								<Text className="text-base font-medium text-foreground">Give Feedback</Text>
-								<Text className="text-sm text-muted-foreground mt-0.5">
-									Help us improve the app
-								</Text>
-							</View>
-							<ChevronRight size={18} color={colors.mutedForeground} strokeWidth={2} />
-						</Pressable>
-
 						{Platform.OS !== "web" ? (
-							<>
-								<View className="h-px bg-border mx-4" />
-								<Pressable
-									onPress={requestStoreReview}
-									className="px-4 py-4 flex-row items-center"
-								>
-									<Star size={18} color={colors.mutedForeground} strokeWidth={2} />
-									<View className="flex-1 ml-3">
-										<Text className="text-base font-medium text-foreground">Rate the App</Text>
-										<Text className="text-sm text-muted-foreground mt-0.5">
-											Enjoying the app? Leave a review
-										</Text>
-									</View>
-									<ChevronRight size={18} color={colors.mutedForeground} strokeWidth={2} />
-								</Pressable>
-							</>
+							<Pressable
+								onPress={requestStoreReview}
+								className="px-4 py-4 flex-row items-center"
+							>
+								<Star size={18} color={colors.mutedForeground} strokeWidth={2} />
+								<View className="flex-1 ml-3">
+									<Text className="text-base font-medium text-foreground">Rate the App</Text>
+									<Text className="text-sm text-muted-foreground mt-0.5">
+										Enjoying the app? Leave a review
+									</Text>
+								</View>
+								<ChevronRight size={18} color={colors.mutedForeground} strokeWidth={2} />
+							</Pressable>
 						) : null}
 					</View>
 				</View>
@@ -305,25 +245,6 @@ export default function SettingsScreen() {
 								onCheckedChange={(v) => { setAnalyticsEnabled(v); capture("setting_changed", { setting: "analytics", enabled: v }); }}
 							/>
 						</View>
-
-						<View className="h-px bg-border mx-4" />
-
-						<Pressable
-							onPress={handleExport}
-							disabled={exporting}
-							className="px-4 py-4 flex-row items-center"
-						>
-							<Download size={18} color={colors.mutedForeground} strokeWidth={2} />
-							<View className="flex-1 ml-3">
-								<Text className="text-base font-medium text-foreground">
-									{exporting ? "Exporting…" : "Export Data"}
-								</Text>
-								<Text className="text-sm text-muted-foreground mt-0.5">
-									Share a backup of your app data
-								</Text>
-							</View>
-							<ChevronRight size={18} color={colors.mutedForeground} strokeWidth={2} />
-						</Pressable>
 
 						<View className="h-px bg-border mx-4" />
 
@@ -365,43 +286,6 @@ export default function SettingsScreen() {
 								</Pressable>
 							</>
 						) : null}
-					</View>
-				</View>
-
-				{/* Account section */}
-				<View className="px-6 mb-4">
-					<Text className="text-base font-semibold uppercase tracking-[0.08em] text-muted-foreground mb-2">
-						Account
-					</Text>
-					<View className="bg-card rounded-2xl overflow-hidden">
-						{user && (
-							<View className="px-4 py-3">
-								<Text className="text-sm text-muted-foreground">{user.email}</Text>
-							</View>
-						)}
-						<View className="h-px bg-border mx-4" />
-						<Pressable
-							onPress={() => {
-								Alert.alert(
-									"Sign out",
-									"Are you sure you want to sign out?",
-									[
-										{ text: "Cancel", style: "cancel" },
-										{
-											text: "Sign out",
-											style: "destructive",
-											onPress: () => { capture("sign_out"); signOut(); },
-										},
-									],
-								);
-							}}
-							className="px-4 py-4 flex-row items-center"
-						>
-							<LogOut size={18} color="#6a2020" strokeWidth={2} />
-							<Text className="flex-1 ml-3 text-base font-medium" style={{ color: "#6a2020" }}>
-								Sign out
-							</Text>
-						</Pressable>
 					</View>
 				</View>
 

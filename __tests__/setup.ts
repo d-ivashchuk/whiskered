@@ -35,18 +35,6 @@ vi.mock("expo-sharing", () => ({
 	shareAsync: vi.fn(),
 }));
 
-vi.mock("expo-notifications", () => ({
-	getPermissionsAsync: vi.fn(() =>
-		Promise.resolve({ status: "undetermined" }),
-	),
-	requestPermissionsAsync: vi.fn(() =>
-		Promise.resolve({ status: "granted" }),
-	),
-	scheduleNotificationAsync: vi.fn(() => Promise.resolve("mock-id")),
-	cancelAllScheduledNotificationsAsync: vi.fn(() => Promise.resolve()),
-	setNotificationHandler: vi.fn(),
-}));
-
 // Mock @sentry/react-native (imports real react-native transitively)
 vi.mock("@sentry/react-native", () => ({
 	captureException: vi.fn(),

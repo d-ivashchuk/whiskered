@@ -5,24 +5,17 @@ declare const ErrorUtils: {
   getGlobalHandler(): (error: unknown, isFatal?: boolean) => void;
   setGlobalHandler(handler: (error: unknown, isFatal?: boolean) => void): void;
 };
-// Register notification handler early (before any notifications fire)
-import "@/lib/services/notifications";
 
 import { LogBox } from "react-native";
 LogBox.ignoreLogs(["[RevenueCat]", "Open debugger"]);
 
-import { AuthProvider, useAuth } from "@/lib/contexts/auth-context";
-import { SubscriptionProvider } from "@/lib/contexts/subscription-context";
-import { useOnboardingCheck } from "@/lib/hooks/use-onboarding-check";
-import { useNotificationSync } from "@/lib/hooks/use-notifications";
 import { getOrCreateDeviceId } from "@/lib/services/device-id";
-import { runDailyBackupIfNeeded } from "@/lib/services/backup";
-import { getPostHogClient, capture, setPersonProperties } from "@/lib/services/posthog";
+import { getPostHogClient, capture } from "@/lib/services/posthog";
 import { useSettingsStore } from "@/lib/stores/settings-store";
 import { useIsDark } from "@/lib/theme";
 import { useColorScheme } from "nativewind";
 import Constants from "expo-constants";
-import { Stack, usePathname, useRouter, useSegments } from "expo-router";
+import { Stack, usePathname } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import React, { Component, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AppState, Text, View } from "react-native";
@@ -129,11 +122,6 @@ const isStorybook =
 
 const StorybookUI = isStorybook ? require("../.rnstorybook").default : null;
 
-function NotificationProvider({ children }: { children: React.ReactNode }) {
-  useNotificationSync();
-  return <>{children}</>;
-}
-
 function AnalyticsOptOut() {
   const posthog = usePostHog();
   const analyticsEnabled = useSettingsStore((s) => s.analyticsEnabled);
@@ -152,7 +140,6 @@ function PostHogLifecycle() {
 
   useEffect(() => {
     if (!posthog) return;
-    // Track initial app open
     capture("app_opened");
     const sub = AppState.addEventListener("change", (state) => {
       if (state === "background" || state === "inactive") posthog.flush();
@@ -194,35 +181,6 @@ function DeviceIdentifier() {
   return null;
 }
 
-function DailyBackup() {
-  useEffect(() => {
-    runDailyBackupIfNeeded();
-  }, []);
-  return null;
-}
-
-/**
- * Sync subscription status with RevenueCat on app startup.
- * Catches cases where local state was cleared or purchase wasn't recorded.
- */
-function RevenueCatSync() {
-  const { user } = useAuth();
-  useEffect(() => {
-    if (!user) return;
-    (async () => {
-      try {
-        const { configureRevenueCat } = await import("@/lib/services/revenue-cat");
-        await configureRevenueCat();
-        const { useSubscriptionStore } = await import("@/lib/stores/subscription-store");
-        await useSubscriptionStore.getState().syncWithRevenueCat();
-      } catch (e) {
-        console.log("[RevenueCatSync] sync failed (non-fatal):", e);
-      }
-    })();
-  }, [user]);
-  return null;
-}
-
 function AppearanceSync() {
   const { setColorScheme } = useColorScheme();
   const appearanceMode = useSettingsStore((s) => s.appearanceMode);
@@ -239,41 +197,6 @@ function ThemedStatusBar() {
   return <StatusBar style={isDark ? "light" : "dark"} />;
 }
 
-/** Redirects user based on auth & onboarding state */
-function AuthGate() {
-  const { user, loading } = useAuth();
-  const segments = useSegments();
-  const router = useRouter();
-  const onboardingStatus = useOnboardingCheck(user?.id);
-
-  useEffect(() => {
-    if (loading) return;
-
-    const inAuthScreen = segments[0] === "auth";
-    const inOnboarding = segments[0] === "onboarding";
-
-    if (!user) {
-      // Not logged in — allow auth, onboarding, and debug screens
-      const inDebug = segments[0]?.startsWith("debug");
-      if (!inAuthScreen && !inOnboarding && !inDebug) {
-        router.replace("/auth");
-      }
-      return;
-    }
-
-    // User is logged in
-    if (onboardingStatus === "loading") return;
-
-    if (onboardingStatus === "needs_onboarding" && !inOnboarding) {
-      router.replace("/onboarding");
-    } else if (onboardingStatus === "complete" && inAuthScreen) {
-      router.replace("/(tabs)");
-    }
-  }, [user, loading, onboardingStatus, segments, router]);
-
-  return null;
-}
-
 export default Sentry.wrap(function RootLayout() {
   const posthogClient = useMemo(() => getPostHogClient(), []);
   const [splashDone, setSplashDone] = useState(false);
@@ -287,68 +210,31 @@ export default Sentry.wrap(function RootLayout() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
         <BottomSheetModalProvider>
-          <AuthProvider>
-            <SubscriptionProvider>
-              <NotificationProvider>
-                {posthogClient && <AnalyticsOptOut />}
-                {posthogClient && <PostHogLifecycle />}
-                {posthogClient && <ScreenTracker />}
-                {posthogClient && <DeviceIdentifier />}
-                <DailyBackup />
-                <RevenueCatSync />
-                <AppearanceSync />
-                <AuthGate />
-                <Stack screenOptions={{ headerShown: false }}>
-                  <Stack.Screen name="(tabs)" />
-                  <Stack.Screen
-                    name="auth"
-                    options={{
-                      gestureEnabled: false,
-                      animation: "fade",
-                    }}
-                  />
-                  <Stack.Screen
-                    name="onboarding"
-                    options={{
-                      gestureEnabled: false,
-                      animation: "fade",
-                    }}
-                  />
-                  <Stack.Screen
-                    name="paywall"
-                    options={{
-                      gestureEnabled: true,
-                      headerShown: false,
-                      animation: "slide_from_bottom",
-                    }}
-                  />
-                  <Stack.Screen
-                    name="settings"
-                    options={{
-                      headerShown: false,
-                      gestureEnabled: true,
-                      animation: "slide_from_right",
-                    }}
-                  />
-                  <Stack.Screen
-                    name="settings-notifications"
-                    options={{
-                      headerShown: false,
-                      animation: "slide_from_right",
-                    }}
-                  />
-                  <Stack.Screen
-                    name="feedback"
-                    options={{
-                      headerShown: false,
-                      animation: "slide_from_right",
-                    }}
-                  />
-                </Stack>
-                <ThemedStatusBar />
-              </NotificationProvider>
-            </SubscriptionProvider>
-          </AuthProvider>
+          {posthogClient && <AnalyticsOptOut />}
+          {posthogClient && <PostHogLifecycle />}
+          {posthogClient && <ScreenTracker />}
+          {posthogClient && <DeviceIdentifier />}
+          <AppearanceSync />
+          <Stack screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="(tabs)" />
+            <Stack.Screen
+              name="paywall"
+              options={{
+                gestureEnabled: true,
+                headerShown: false,
+                animation: "slide_from_bottom",
+              }}
+            />
+            <Stack.Screen
+              name="settings"
+              options={{
+                headerShown: false,
+                gestureEnabled: true,
+                animation: "slide_from_right",
+              }}
+            />
+          </Stack>
+          <ThemedStatusBar />
         </BottomSheetModalProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>

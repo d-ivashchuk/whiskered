@@ -5,7 +5,6 @@ import { createJSONStorage, persist } from "zustand/middleware";
 interface SettingsState {
 	hapticEnabled: boolean;
 	soundEnabled: boolean;
-	onboardingCompleted: boolean;
 	appearanceMode: "system" | "light" | "dark";
 
 	// Review
@@ -15,20 +14,8 @@ interface SettingsState {
 	// Analytics
 	analyticsEnabled: boolean;
 
-	// Notification settings
-	notificationsEnabled: boolean;
-	dailyReminderEnabled: boolean;
-	dailyReminderHour: number;
-	dailyReminderMinute: number;
-
 	setHapticEnabled: (enabled: boolean) => void;
 	setSoundEnabled: (enabled: boolean) => void;
-	setOnboardingCompleted: () => void;
-
-	setNotificationsEnabled: (enabled: boolean) => void;
-	setDailyReminderEnabled: (enabled: boolean) => void;
-	setDailyReminderTime: (hour: number, minute: number) => void;
-
 	setAppearanceMode: (mode: "system" | "light" | "dark") => void;
 	setAnalyticsEnabled: (enabled: boolean) => void;
 }
@@ -38,7 +25,6 @@ export const useSettingsStore = create<SettingsState>()(
 		(set) => ({
 			hapticEnabled: true,
 			soundEnabled: true,
-			onboardingCompleted: false,
 			appearanceMode: "system" as const,
 
 			hasRequestedReview: false,
@@ -46,31 +32,25 @@ export const useSettingsStore = create<SettingsState>()(
 
 			analyticsEnabled: true,
 
-			notificationsEnabled: false,
-			dailyReminderEnabled: true,
-			dailyReminderHour: 9,
-			dailyReminderMinute: 0,
-
 			setHapticEnabled: (enabled: boolean) => set({ hapticEnabled: enabled }),
 			setSoundEnabled: (enabled: boolean) => set({ soundEnabled: enabled }),
-			setOnboardingCompleted: () => set({ onboardingCompleted: true }),
-
-			setNotificationsEnabled: (enabled: boolean) => set({ notificationsEnabled: enabled }),
-			setDailyReminderEnabled: (enabled: boolean) => set({ dailyReminderEnabled: enabled }),
-			setDailyReminderTime: (hour: number, minute: number) =>
-				set({ dailyReminderHour: hour, dailyReminderMinute: minute }),
-
 			setAppearanceMode: (mode: "system" | "light" | "dark") => set({ appearanceMode: mode }),
 			setAnalyticsEnabled: (enabled: boolean) => set({ analyticsEnabled: enabled }),
 		}),
 		{
 			name: "app-settings",
-			version: 1,
+			version: 2,
 			storage: createJSONStorage(() => safeStorage),
 			migrate: (persisted) => {
 				const state = persisted as Record<string, unknown>;
 				if (typeof state.analyticsEnabled !== "boolean") state.analyticsEnabled = true;
 				if (typeof state.appearanceMode !== "string") state.appearanceMode = "system";
+				// Remove old notification fields from persisted state
+				delete state.notificationsEnabled;
+				delete state.dailyReminderEnabled;
+				delete state.dailyReminderHour;
+				delete state.dailyReminderMinute;
+				delete state.onboardingCompleted;
 				return state;
 			},
 		},
