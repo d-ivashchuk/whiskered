@@ -6,14 +6,16 @@ import {
   classes,
   sets,
   abilities,
+  statusEffects,
   getItem,
   type GameItem,
   type GameClass,
   type GameSet,
   type GameAbility,
+  type StatusEffect,
 } from "@/lib/game-data";
 import { getTierColor } from "@/lib/game-colors";
-import { getItemSprite, getClassSprite, getAbilitySprite } from "@/lib/sprites";
+import { getItemSprite, getClassSprite, getAbilitySprite, getStatusEffectSprite } from "@/lib/sprites";
 import { useRouter } from "expo-router";
 import { useCallback, useMemo, useRef, useState } from "react";
 import {
@@ -29,7 +31,7 @@ import type { TextInput } from "react-native";
 
 const MAX_PER_SECTION = 8;
 
-type EntityType = "item" | "class" | "ability" | "set";
+type EntityType = "item" | "class" | "ability" | "set" | "effect";
 
 interface SearchResult {
   type: EntityType;
@@ -123,6 +125,25 @@ function buildResults(query: string): SearchSection[] {
           return getItemSprite(itemName, item?.internalName);
         }),
         route: `/sets/${encodeURIComponent(s.name)}`,
+      })),
+    });
+  }
+
+  const matchedEffects = statusEffects.filter((e) =>
+    e.name.toLowerCase().includes(q)
+  );
+
+  if (matchedEffects.length > 0) {
+    sections.push({
+      title: "Effects",
+      total: matchedEffects.length,
+      data: matchedEffects.slice(0, MAX_PER_SECTION).map((e) => ({
+        type: "effect" as EntityType,
+        name: e.name,
+        subtitle: `${e.itemCount} items · ${e.setCount} sets`,
+        tier: "",
+        sprite: getStatusEffectSprite(e.name),
+        route: `/effects/${encodeURIComponent(e.name)}`,
       })),
     });
   }
@@ -269,7 +290,7 @@ export default function SearchScreen() {
               ref={inputRef}
               value={search}
               onChangeText={setSearch}
-              placeholder="Search items, classes, abilities, and sets..."
+              placeholder="Search items, classes, abilities, sets, and effects..."
               className="flex-1 pl-9"
               autoFocus
               autoCapitalize="none"
@@ -292,7 +313,7 @@ export default function SearchScreen() {
         <View className="flex-1 items-center justify-center px-8">
           <Search size={48} color={theme.border} />
           <Text className="text-muted-foreground text-center mt-4 text-sm">
-            Search items, classes, abilities, and sets
+            Search items, classes, abilities, sets, and effects
           </Text>
         </View>
       ) : sections.length === 0 ? (

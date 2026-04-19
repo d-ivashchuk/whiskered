@@ -593,7 +593,7 @@ async function fetchSpriteUrlsBatch(
           if (m) {
             const extracted = m[1].replace(/_/g, " ");
             const original = batch.find(
-              (n) => n.toLowerCase() === extracted.toLowerCase(),
+              (n) => n.toLowerCase().replace(/_/g, " ") === extracted.toLowerCase().replace(/_/g, " "),
             );
             if (original) result.set(original, page.imageinfo[0].url);
           }
@@ -813,7 +813,84 @@ async function crawlAbilities() {
   return result;
 }
 
-const TARGETS = ["items", "classes", "abilities"] as const;
+async function crawlStatusEffects() {
+  const STATUS_EFFECTS_DIR = path.join(DATA_DIR, "status-effects");
+  const STATUS_SPRITES_DIR = path.join(DATA_DIR, "sprites", "status-effects");
+  fs.mkdirSync(STATUS_EFFECTS_DIR, { recursive: true });
+  fs.mkdirSync(STATUS_SPRITES_DIR, { recursive: true });
+
+  // Fetch the Status Effects page wikitext to extract names + descriptions
+  console.log("[Status Effects] Fetching wiki page...");
+  const params = new URLSearchParams({
+    action: "query",
+    titles: "Status Effects",
+    prop: "revisions",
+    rvprop: "content",
+    rvslots: "main",
+    format: "json",
+  });
+  const data = (await fetchJSON(`${API_BASE}?${params}`)) as {
+    query: { pages: Record<string, { revisions?: Array<{ slots: { main: { "*": string } } }> }> };
+  };
+  const page = Object.values(data.query.pages)[0];
+  const wikitext = page?.revisions?.[0]?.slots.main["*"] ?? "";
+
+  // Parse status effects from wikitext — wiki table has 3 columns:
+  // | id="Name"| {{st|Name}} || <center> [[File:...]] \n|| Behavior description
+  // We split on |- row separators and extract name + behavior from each row.
+  const effects: Array<{ name: string; description: string }> = [];
+  const rows = wikitext.split(/\n\|-\s*\n/);
+  for (const row of rows) {
+    // Match the name from {{st|Name}} in the first column
+    const nameMatch = row.match(/\{\{st\|([^}|]+?)(?:\|[^}]*)?\}\}/);
+    if (!nameMatch) continue;
+    const name = nameMatch[1].trim();
+
+    // The behavior/description is after the last || in the row (3rd column)
+    // Split by || and take the last piece
+    const columns = row.split(/\|\|/);
+    if (columns.length < 3) continue;
+    // The behavior column may span multiple lines, take everything after the last ||
+    const rawDesc = columns.slice(2).join(" ").trim();
+    // Take just the first line/sentence for a concise description
+    const firstLine = rawDesc.split("\n")[0].trim();
+    const desc = stripWikiTemplates(firstLine).trim();
+    if (name && desc) {
+      effects.push({ name, description: desc });
+    }
+  }
+
+  console.log(`[Status Effects] Parsed ${effects.length} effects from wiki page.`);
+  fs.writeFileSync(
+    path.join(DATA_DIR, "status-effects.json"),
+    JSON.stringify(effects, null, 2),
+  );
+
+  // Also gather effect names from combined items data to catch effects not on the wiki page
+  const itemEffectNames = new Set<string>();
+  const combinedItemsPath = path.join(DATA_DIR, "combined", "items.json");
+  if (fs.existsSync(combinedItemsPath)) {
+    const combinedItems = JSON.parse(fs.readFileSync(combinedItemsPath, "utf-8")) as Array<{ statusEffects: string[] }>;
+    for (const item of combinedItems) {
+      for (const e of item.statusEffects) {
+        if (e && /^[A-Za-z]/.test(e)) itemEffectNames.add(e);
+      }
+    }
+    console.log(`[Status Effects] Found ${itemEffectNames.size} unique effects in combined items data.`);
+  }
+  // Merge: all effect names from wiki page + items
+  const allEffectNames = new Set([...effects.map((e) => e.name), ...itemEffectNames]);
+
+  // Download sprites — wiki uses STATUS_<Name>_Icon.svg naming
+  const spriteNames = [...allEffectNames].map((name) => `${name}_Icon`);
+  const result = await fetchAndDownloadSprites(
+    spriteNames, "STATUS", ["svg", "png"], STATUS_SPRITES_DIR, "Status Effect Sprites",
+  );
+  console.log(`  Status Effects: ${effects.length} described, ${result.saved} sprites, ${result.missing.length} missing\n`);
+  return result;
+}
+
+const TARGETS = ["items", "classes", "abilities", "effects"] as const;
 type Target = (typeof TARGETS)[number];
 
 async function main() {
@@ -836,6 +913,7 @@ async function main() {
   if (targets.includes("items")) await crawlItems();
   if (targets.includes("classes")) await crawlClasses();
   if (targets.includes("abilities")) await crawlAbilities();
+  if (targets.includes("effects")) await crawlStatusEffects();
 
   console.log("────────────────────────────────");
   console.log("Done!");

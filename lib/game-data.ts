@@ -144,6 +144,71 @@ export function getAbility(name: string): GameAbility | undefined {
   return abilityMap.get(name);
 }
 
+// ─── Status effects ─────────────────────────────────────────────────────────
+
+export interface StatusEffect {
+  name: string;
+  description: string;
+  itemCount: number;
+  setCount: number;
+}
+
+interface RawStatusEffect {
+  name: string;
+  description: string;
+}
+
+/* eslint-disable @typescript-eslint/no-require-imports */
+let _rawStatusEffects: RawStatusEffect[] = [];
+try {
+  _rawStatusEffects = require("../data/combined/status-effects.json") as RawStatusEffect[];
+} catch { /* optional */ }
+/* eslint-enable @typescript-eslint/no-require-imports */
+
+const _statusEffectDescMap = new Map(_rawStatusEffects.map((e) => [e.name, e.description]));
+
+const _statusEffectMap = new Map<string, { items: Set<string>; sets: Set<string> }>();
+
+for (const item of _items) {
+  for (const effect of item.statusEffects) {
+    if (!_statusEffectMap.has(effect)) _statusEffectMap.set(effect, { items: new Set(), sets: new Set() });
+    _statusEffectMap.get(effect)!.items.add(item.name);
+  }
+}
+for (const set of _sets) {
+  for (const effect of set.statusEffects) {
+    if (!_statusEffectMap.has(effect)) _statusEffectMap.set(effect, { items: new Set(), sets: new Set() });
+    _statusEffectMap.get(effect)!.sets.add(set.name);
+  }
+}
+
+export const statusEffects: StatusEffect[] = Array.from(_statusEffectMap.entries())
+  .map(([name, { items, sets }]) => ({
+    name,
+    description: _statusEffectDescMap.get(name) ?? "",
+    itemCount: items.size,
+    setCount: sets.size,
+  }))
+  .sort((a, b) => a.name.localeCompare(b.name));
+
+const statusEffectByName = new Map(statusEffects.map((e) => [e.name, e]));
+
+export function getStatusEffect(name: string): StatusEffect | undefined {
+  return statusEffectByName.get(name);
+}
+
+export function getItemsByStatusEffect(name: string): GameItem[] {
+  const entry = _statusEffectMap.get(name);
+  if (!entry) return [];
+  return _items.filter((i) => entry.items.has(i.name));
+}
+
+export function getSetsByStatusEffect(name: string): GameSet[] {
+  const entry = _statusEffectMap.get(name);
+  if (!entry) return [];
+  return _sets.filter((s) => entry.sets.has(s.name));
+}
+
 // ─── Slot types (for filtering) ──────────────────────────────────────────────
 
 export function getAllSlots(): string[] {

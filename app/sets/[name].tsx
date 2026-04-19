@@ -2,7 +2,7 @@ import { Text } from "@/components/ui/text";
 import { useThemeColors } from "@/lib/theme";
 import { getSet, getItem } from "@/lib/game-data";
 import { getTierColor } from "@/lib/game-colors";
-import { getItemSprite, getClassSprite } from "@/lib/sprites";
+import { getItemSprite, getClassSprite, getStatusEffectSprite } from "@/lib/sprites";
 import { useLocalSearchParams, useRouter, Stack } from "expo-router";
 import { Image, Pressable, ScrollView, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -90,15 +90,22 @@ export default function SetDetailScreen() {
           {set.statusEffects.length > 0 && (
             <Section title="Status Effects">
               <View className="flex-row flex-wrap gap-2">
-                {set.statusEffects.map((effect) => (
-                  <View
-                    key={effect}
-                    style={{ backgroundColor: theme.secondary, borderColor: theme.border, borderWidth: 1 }}
-                    className="rounded-lg px-3 py-1.5"
-                  >
-                    <Text className="text-sm">{effect}</Text>
-                  </View>
-                ))}
+                {set.statusEffects.map((effect) => {
+                  const effectSprite = getStatusEffectSprite(effect);
+                  return (
+                    <Pressable
+                      key={effect}
+                      onPress={() => router.push(`/effects/${encodeURIComponent(effect)}`)}
+                      style={{ backgroundColor: theme.secondary, borderColor: theme.border, borderWidth: 1 }}
+                      className="rounded-lg px-3 py-1.5 flex-row items-center gap-1.5"
+                    >
+                      {effectSprite ? (
+                        <Image source={effectSprite} style={{ width: 16, height: 16 }} resizeMode="contain" />
+                      ) : null}
+                      <Text className="text-sm">{effect}</Text>
+                    </Pressable>
+                  );
+                })}
               </View>
             </Section>
           )}

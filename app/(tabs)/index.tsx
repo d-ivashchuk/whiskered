@@ -1,11 +1,11 @@
 import { Text } from "@/components/ui/text";
 import { useThemeColors } from "@/lib/theme";
-import { items, classes, sets, abilities, dataLoaded } from "@/lib/game-data";
+import { items, classes, sets, abilities, statusEffects, dataLoaded } from "@/lib/game-data";
 import { getTierColor } from "@/lib/game-colors";
 import { useRouter } from "expo-router";
 import { Pressable, ScrollView, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { Sword, Shield, Layers, Zap, ChevronRight } from "lucide-react-native";
+import { Sword, Shield, Layers, Zap, Sparkles, ChevronRight } from "lucide-react-native";
 
 const TIERS = ["S", "A", "B", "C", "D"] as const;
 
@@ -128,6 +128,13 @@ export default function HomeScreen() {
             subtitle="Item set bonuses and synergies"
             onPress={() => router.push("/sets")}
             tierCounts={setTiers}
+          />
+          <NavCard
+            icon={<Sparkles size={22} color="#14b8a6" strokeWidth={1.5} />}
+            title="Effects"
+            count={statusEffects.length}
+            subtitle="Status effects and cross-references"
+            onPress={() => router.push("/effects")}
           />
         </View>
       </ScrollView>

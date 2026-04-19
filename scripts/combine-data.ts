@@ -440,10 +440,10 @@ function main(): void {
     // Parse sets (comma-separated, multi-set items)
     const sets = parseCSV(set);
 
-    // Parse statusEffects — strip "=N" values, just keep effect names
-    const parsedStatusEffects = parseCSV(statusEffects).map((se) =>
-      se.replace(/=\d+$/, "").trim()
-    );
+    // Parse statusEffects — strip "=N", "=N/M", "=N%", "=N+" values, just keep effect names
+    const parsedStatusEffects = parseCSV(statusEffects)
+      .map((se) => se.replace(/=[\d/+%.]+$/, "").trim())
+      .filter((se) => se && /^[A-Za-z]/.test(se));
 
     // Parse itemPools
     const parsedItemPools = parseCSV(itemPools);
@@ -698,6 +698,14 @@ function main(): void {
   fs.writeFileSync(path.join(OUT_DIR, "classes.json"), JSON.stringify(cleanedClasses, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, "abilities.json"), JSON.stringify(cleanedAbilities, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, "sets.json"), JSON.stringify(combinedSets, null, 2));
+
+  // Copy status-effects.json to combined output if it exists
+  const statusEffectsPath = path.join(DATA_DIR, "status-effects.json");
+  if (fs.existsSync(statusEffectsPath)) {
+    fs.copyFileSync(statusEffectsPath, path.join(OUT_DIR, "status-effects.json"));
+    const effectCount = JSON.parse(fs.readFileSync(statusEffectsPath, "utf-8")).length;
+    console.log(`  Status effects: ${effectCount} copied to combined output`);
+  }
 
   // ─── Step 5: Stats summary ──────────────────────────────────────────────
 

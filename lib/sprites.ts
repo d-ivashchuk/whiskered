@@ -16,6 +16,8 @@ const abilityCtx = require.context("../data/sprites/abilities", false, /\.png$/)
 const statCtx = require.context("../data/sprites/stats", false, /\.png$/);
 // @ts-expect-error
 const elementCtx = require.context("../data/sprites/elements", false, /\.png$/);
+// @ts-expect-error
+const statusEffectCtx = require.context("../data/sprites/status-effects", false, /\.png$/);
 
 type RequireContext = {
   keys(): string[];
@@ -39,6 +41,7 @@ const classSprites = buildMap(classCtx as RequireContext);
 const abilitySprites = buildMap(abilityCtx as RequireContext);
 const statSprites = buildMap(statCtx as RequireContext);
 const elementSprites = buildMap(elementCtx as RequireContext);
+const statusEffectSprites = buildMap(statusEffectCtx as RequireContext);
 
 // ─── Name → sprite key conversion ───────────────────────────────────────────
 
@@ -97,4 +100,10 @@ export function getElementSprite(element: string): ImageSourcePropType | null {
   // Capitalize first letter
   const key = element.charAt(0).toUpperCase() + element.slice(1).toLowerCase();
   return elementSprites.get(key) ?? null;
+}
+
+export function getStatusEffectSprite(name: string): ImageSourcePropType | null {
+  // Sprites are named like "Poison_Icon.png"
+  const key = name.replace(/\s+/g, "_") + "_Icon";
+  return statusEffectSprites.get(key) ?? null;
 }
