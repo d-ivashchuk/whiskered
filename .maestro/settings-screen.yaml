@@ -1,0 +1,27 @@
+appId: com.yourcompany.myapp
+name: Settings - Verify screen content
+tags:
+  - settings
+---
+- runFlow: helpers/test-setup.yaml
+
+- tapOn: "Settings"
+- assertVisible: "Settings"
+
+- assertVisible: "Appearance"
+- assertVisible: "Subscription"
+- assertVisible: "Preferences"
+
+- assertVisible: "Sound"
+- assertVisible: "Haptics"
+
+- scroll
+- assertVisible:
+    id: "settings-notifications-row"
+- assertVisible: "Analytics"
+
+# Tap into the notifications sub-screen and verify its content
+- tapOn:
+    id: "settings-notifications-row"
+- assertVisible: "Enable notifications"
+- assertVisible: "Daily reminder"

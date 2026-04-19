@@ -1,0 +1,8 @@
+appId: com.yourcompany.myapp
+name: Test setup - Skip onboarding
+---
+- clearState
+- launchApp
+- extendedWaitUntil:
+    visible: "Home"
+    timeout: 30000

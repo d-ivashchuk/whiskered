@@ -1,0 +1,44 @@
+{
+  "cli": {
+    "version": ">= 18.0.1",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "EXPO_APPLE_TEAM_ID": "T268ZABW3C"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "env": {
+        "EXPO_APPLE_TEAM_ID": "T268ZABW3C",
+        "EXPO_PUBLIC_POSTHOG_API_KEY": "phc_AyuDa26CnGYZwkubF9QULhmbGBLkJjws9hrXLpntSqEx",
+        "EXPO_PUBLIC_REVENUECAT_API_KEY_APPLE": "appl_HJGzFbaVxlrqZCLLLblUvXzjYnI"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "channel": "production",
+      "env": {
+        "EXPO_APPLE_TEAM_ID": "T268ZABW3C",
+        "SENTRY_DISABLE_AUTO_UPLOAD": "true",
+        "EXPO_PUBLIC_POSTHOG_API_KEY": "phc_AyuDa26CnGYZwkubF9QULhmbGBLkJjws9hrXLpntSqEx",
+        "EXPO_PUBLIC_REVENUECAT_API_KEY_APPLE": "appl_HJGzFbaVxlrqZCLLLblUvXzjYnI"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleTeamId": "T268ZABW3C",
+        "ascAppId": "6761140803",
+        "ascApiKeyPath": "./AuthKey_XK2KQVKB32.p8",
+        "ascApiKeyId": "XK2KQVKB32",
+        "ascApiKeyIssuerId": "16ad3f16-7ef0-4e78-a9fe-d6bfee803394"
+      }
+    }
+  }
+}

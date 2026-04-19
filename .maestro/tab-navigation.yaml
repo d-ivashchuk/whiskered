@@ -1,0 +1,20 @@
+appId: com.yourcompany.myapp
+name: Tab Navigation - Switch between all tabs
+tags:
+  - navigation
+  - smoke
+---
+- runFlow: helpers/test-setup.yaml
+
+# Activity tab
+- tapOn: "Activity"
+- assertVisible: "Activity"
+
+# Settings tab
+- tapOn: "Settings"
+- assertVisible: "Settings"
+
+# Back to Home tab
+- tapOn:
+    id: "tab-home"
+- assertVisible: "Home"
