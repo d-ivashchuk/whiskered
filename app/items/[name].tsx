@@ -1,0 +1,195 @@
+import { Text } from "@/components/ui/text";
+import { useThemeColors } from "@/lib/theme";
+import { getItem, getSet } from "@/lib/game-data";
+import { getTierColor, getRarityTextColor } from "@/lib/game-colors";
+import { getItemSprite } from "@/lib/sprites";
+import { useLocalSearchParams, useRouter, Stack } from "expo-router";
+import { Image, Pressable, ScrollView, View } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { ChevronRight } from "lucide-react-native";
+
+function Section({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <View className="mt-5">
+      <Text className="text-xs font-medium tracking-widest uppercase text-muted-foreground mb-2">
+        {title}
+      </Text>
+      {children}
+    </View>
+  );
+}
+
+export default function ItemDetailScreen() {
+  const { name } = useLocalSearchParams<{ name: string }>();
+  const router = useRouter();
+  const insets = useSafeAreaInsets();
+  const theme = useThemeColors();
+
+  const item = getItem(decodeURIComponent(name ?? ""));
+
+  if (!item) {
+    return (
+      <>
+        <Stack.Screen options={{ title: "Not Found" }} />
+        <View className="flex-1 items-center justify-center">
+          <Text>Item not found</Text>
+        </View>
+      </>
+    );
+  }
+
+  const sprite = getItemSprite(item.name, item.internalName);
+  const tierColor = getTierColor(item.tier);
+  const rarityColor = getRarityTextColor(item.rarity);
+
+  return (
+    <>
+      <Stack.Screen options={{ title: item.name }} />
+      <ScrollView
+        style={{ flex: 1 }}
+        contentContainerStyle={{ paddingBottom: insets.bottom + 40 }}
+      >
+        {/* Hero: sprite + tier */}
+        <View className="items-center pt-6 pb-4 px-5">
+          {sprite ? (
+            <Image source={sprite} style={{ width: 80, height: 80, borderRadius: 12 }} resizeMode="contain" />
+          ) : (
+            <View
+              style={{ backgroundColor: theme.secondary }}
+              className="w-24 h-24 rounded-xl items-center justify-center"
+            >
+              <Text className="text-3xl text-muted-foreground">?</Text>
+            </View>
+          )}
+          <Text className="text-xl font-bold mt-3 text-center">{item.name}</Text>
+          <View className="flex-row items-center gap-3 mt-1">
+            {item.rarity ? (
+              <Text style={{ color: rarityColor }} className="text-sm font-medium">{item.rarity}</Text>
+            ) : null}
+            {item.slot ? (
+              <Text className="text-sm text-muted-foreground">{item.slot}</Text>
+            ) : null}
+            {item.tier ? (
+              <View style={{ backgroundColor: tierColor.bg }} className="rounded px-2 py-0.5">
+                <Text style={{ color: tierColor.text }} className="text-xs font-black">
+                  Tier {item.tier}
+                </Text>
+              </View>
+            ) : null}
+          </View>
+        </View>
+
+        <View className="px-5">
+          {/* Description */}
+          {item.description ? (
+            <View
+              style={{ backgroundColor: theme.secondary, borderColor: theme.border, borderWidth: 1 }}
+              className="rounded-xl p-4"
+            >
+              <Text className="text-sm leading-5">{item.description}</Text>
+            </View>
+          ) : null}
+
+          {/* Found in (categories) */}
+          {item.categories.length > 0 && (
+            <Section title="Found in">
+              <View className="flex-row flex-wrap gap-2">
+                {item.categories.map((cat) => (
+                  <View
+                    key={cat}
+                    style={{ backgroundColor: theme.secondary, borderColor: theme.border, borderWidth: 1 }}
+                    className="rounded-lg px-3 py-1.5"
+                  >
+                    <Text className="text-sm">{cat}</Text>
+                  </View>
+                ))}
+              </View>
+            </Section>
+          )}
+
+          {/* Sets */}
+          {item.sets.length > 0 && (
+            <Section title="Sets">
+              {item.sets.map((setName) => {
+                const setData = getSet(setName);
+                return (
+                  <Pressable
+                    key={setName}
+                    onPress={() => router.push(`/sets/${encodeURIComponent(setName)}`)}
+                    style={{ backgroundColor: theme.secondary, borderColor: theme.border, borderWidth: 1 }}
+                    className="rounded-xl p-3 mb-2 flex-row items-center"
+                  >
+                    <View className="flex-1">
+                      <Text className="font-semibold text-sm">{setName}</Text>
+                      {setData?.description ? (
+                        <Text className="text-muted-foreground text-xs mt-0.5" numberOfLines={2}>
+                          {setData.description}
+                        </Text>
+                      ) : null}
+                      <Text className="text-muted-foreground text-xs mt-0.5">
+                        {setData?.items.length ?? "?"} items in set
+                      </Text>
+                    </View>
+                    <ChevronRight size={16} color={theme.mutedForeground} />
+                  </Pressable>
+                );
+              })}
+            </Section>
+          )}
+
+          {/* Status Effects */}
+          {item.statusEffects.length > 0 && (
+            <Section title="Status Effects">
+              <View className="flex-row flex-wrap gap-2">
+                {item.statusEffects.map((effect) => (
+                  <View
+                    key={effect}
+                    style={{ backgroundColor: theme.secondary, borderColor: theme.border, borderWidth: 1 }}
+                    className="rounded-lg px-3 py-1.5"
+                  >
+                    <Text className="text-sm">{effect}</Text>
+                  </View>
+                ))}
+              </View>
+            </Section>
+          )}
+
+          {/* Related Items */}
+          {item.relatedItems.length > 0 && (
+            <Section title="Related Items">
+              {item.relatedItems.map((relName) => {
+                const rel = getItem(relName);
+                const relSprite = getItemSprite(relName, rel?.internalName);
+                return (
+                  <Pressable
+                    key={relName}
+                    onPress={() => router.push(`/items/${encodeURIComponent(relName)}`)}
+                    style={({ pressed }) => ({
+                      backgroundColor: pressed ? theme.secondary : "transparent",
+                    })}
+                    className="flex-row items-center py-2 border-b border-border"
+                  >
+                    <View className="w-8 h-8 mr-3 items-center justify-center">
+                      {relSprite ? (
+                        <Image source={relSprite} style={{ width: 28, height: 28 }} resizeMode="contain" />
+                      ) : null}
+                    </View>
+                    <Text className="flex-1 text-sm">{relName}</Text>
+                    {rel?.tier ? (
+                      <View style={{ backgroundColor: getTierColor(rel.tier).bg }} className="rounded px-1.5 py-0.5 mr-2">
+                        <Text style={{ color: getTierColor(rel.tier).text }} className="text-[10px] font-black">{rel.tier}</Text>
+                      </View>
+                    ) : null}
+                    {rel?.slot ? (
+                      <Text className="text-muted-foreground text-xs">{rel.slot}</Text>
+                    ) : null}
+                  </Pressable>
+                );
+              })}
+            </Section>
+          )}
+        </View>
+      </ScrollView>
+    </>
+  );
+}

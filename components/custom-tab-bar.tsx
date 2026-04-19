@@ -12,7 +12,7 @@ const mono = Platform.select({
 });
 
 /** Tabs to display in order */
-const TAB_ORDER = ["index", "settings"];
+const TAB_ORDER = ["index", "search", "settings"];
 
 /** Height of the tab bar content area (excluding safe area inset). */
 export const TAB_BAR_CONTENT_HEIGHT = 52;

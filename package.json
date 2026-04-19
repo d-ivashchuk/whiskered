@@ -16,7 +16,9 @@
     "test:e2e": "maestro test .maestro/",
     "test:e2e:single": "maestro test",
     "lint": "expo lint",
-    "crawl": "npx tsx scripts/crawl-wiki.ts"
+    "crawl": "npx tsx scripts/crawl-wiki.ts",
+    "generate-tiers": "npx tsx scripts/generate-tiers.ts",
+    "combine": "npx tsx scripts/combine-data.ts"
   },
   "dependencies": {
     "@expo/cli": "^54.0.23",
