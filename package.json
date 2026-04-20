@@ -1,5 +1,5 @@
 {
-  "name": "kickd",
+  "name": "whiskered",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "private": true,
@@ -7,6 +7,7 @@
     "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
+    "ios:device": "node scripts/run-ios-device.js",
     "web": "expo start --web",
     "storybook": "EXPO_PUBLIC_STORYBOOK_ENABLED=true expo start",
     "storybook:ios": "EXPO_PUBLIC_STORYBOOK_ENABLED=true expo start --ios",
@@ -18,7 +19,9 @@
     "lint": "expo lint",
     "crawl": "npx tsx scripts/crawl-wiki.ts",
     "generate-tiers": "npx tsx scripts/generate-tiers.ts",
-    "combine": "npx tsx scripts/combine-data.ts"
+    "combine": "npx tsx scripts/combine-data.ts",
+    "build-fingerprints": "npx tsx scripts/build-fingerprints.ts",
+    "compile-model": "xcrun coremlcompiler compile ml/output/mewgenics_items.mlpackage ml/output/"
   },
   "dependencies": {
     "@expo/cli": "^54.0.23",
@@ -33,12 +36,13 @@
     "@rn-primitives/slot": "^1.2.0",
     "@rn-primitives/switch": "^1.2.0",
     "@sentry/react-native": "^8.7.0",
-"class-variance-authority": "^0.7.1",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "expo": "~54.0.33",
     "expo-application": "~7.0.8",
     "expo-av": "~16.0.8",
     "expo-build-properties": "^1.0.10",
+    "expo-camera": "~17.0.10",
     "expo-constants": "~18.0.13",
     "expo-device": "^8.0.10",
     "expo-file-system": "^19.0.21",
@@ -48,7 +52,6 @@
     "expo-image-picker": "~17.0.10",
     "expo-linking": "~8.0.11",
     "expo-localization": "~17.0.8",
-
     "expo-router": "~6.0.23",
     "expo-secure-store": "^15.0.8",
     "expo-sharing": "^14.0.8",
@@ -72,7 +75,6 @@
     "react-native-svg": "^15.15.3",
     "react-native-view-shot": "4.0.3",
     "react-native-web": "~0.21.0",
-    "react-native-worklets": "0.5.1",
     "tailwind-merge": "^3.4.1",
     "uuid": "^13.0.0",
     "zustand": "^5.0.11"
@@ -86,10 +88,10 @@
     "@types/uuid": "^10.0.0",
     "eslint": "^9.0.0",
     "eslint-config-expo": "~10.0.0",
-    "tailwindcss": "^3.4.19",
-    "typescript": "~5.9.2",
     "sharp": "^0.33.5",
+    "tailwindcss": "^3.4.19",
     "tsx": "^4.19.0",
+    "typescript": "~5.9.2",
     "vitest": "^4.0.18"
   }
 }
