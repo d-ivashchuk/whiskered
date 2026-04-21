@@ -16,7 +16,7 @@ import {
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { CameraView, useCameraPermissions } from "expo-camera";
 import { manipulateAsync, SaveFormat } from "expo-image-manipulator";
-import { X, ImageIcon, Scan, Bug } from "lucide-react-native";
+import { X, ImageIcon, Scan, Bug, Grid3X3, Play } from "lucide-react-native";
 import * as ImagePicker from "expo-image-picker";
 
 type Prediction = {
@@ -67,6 +67,7 @@ export default function ScannerScreen() {
   const [isScanning, setIsScanning] = useState(false);
   const [isActive, setIsActive] = useState(true);
   const [cameraReady, setCameraReady] = useState(false);
+  const [isFrozen, setIsFrozen] = useState(false);
   // squareFrac: 0.0 = smallest, 1.0 = largest
   const [squareFrac, setSquareFrac] = useState(0.5);
   const [showDebug, setShowDebug] = useState(false);
@@ -323,14 +324,41 @@ export default function ScannerScreen() {
             confidence: p.score,
           }))
         );
+        // Freeze: keep camera off, results visible
+        setIsFrozen(true);
+      } else {
+        // User cancelled picker — resume scanning
+        setIsActive(true);
+        setIsScanning(true);
       }
     } catch {
-      // ignore
-    } finally {
+      // On error, resume scanning
       setIsActive(true);
       setIsScanning(true);
     }
   }, []);
+
+  const handleResume = useCallback(() => {
+    setIsFrozen(false);
+    setPredictions([]);
+    labelHistoryRef.current.clear();
+    setIsActive(true);
+    setIsScanning(true);
+  }, []);
+
+  const handleGridScanner = useCallback(async () => {
+    const result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ["images"],
+      quality: 1.0,
+    });
+
+    if (!result.canceled && result.assets[0]) {
+      router.push({
+        pathname: "/grid-scanner",
+        params: { imageUri: result.assets[0].uri },
+      });
+    }
+  }, [router]);
 
   const handleClose = useCallback(() => {
     setIsActive(false);
@@ -375,11 +403,24 @@ export default function ScannerScreen() {
 
         <ScannerViewfinder squareSize={squareSize} />
 
+        {/* Resume button when frozen after gallery pick */}
+        {isFrozen && (
+          <Pressable onPress={handleResume} style={styles.resumeOverlay}>
+            <View style={styles.resumeButton}>
+              <Play size={32} color="#fff" fill="#fff" />
+            </View>
+            <Text style={styles.resumeText}>Tap to resume scanning</Text>
+          </Pressable>
+        )}
+
         {/* Top bar */}
         <View style={[styles.topBar, { paddingTop: insets.top + 8 }]}>
           <View style={styles.topBarLeft}>
             <Pressable onPress={handleGallery} style={styles.topBarButton}>
               <ImageIcon size={22} color="#fff" />
+            </Pressable>
+            <Pressable onPress={handleGridScanner} style={styles.topBarButton}>
+              <Grid3X3 size={22} color="#fff" />
             </Pressable>
             <Pressable
               onPress={() => setShowDebug((v) => !v)}
@@ -637,5 +678,26 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 32,
+  },
+  resumeOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(0,0,0,0.7)",
+    alignItems: "center",
+    justifyContent: "center",
+    zIndex: 10,
+  },
+  resumeButton: {
+    width: 72,
+    height: 72,
+    borderRadius: 36,
+    backgroundColor: "rgba(34,197,94,0.8)",
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 12,
+  },
+  resumeText: {
+    color: "rgba(255,255,255,0.8)",
+    fontSize: 14,
+    fontWeight: "500",
   },
 });
