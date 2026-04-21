@@ -55,4 +55,10 @@ assets/sounds/sources/
 # Crawled data (regenerable)
 data/
 
+# ML pipeline (generated)
+ml/dataset/
+ml/output/
+ml/.venv/
+
 .env.local
+ml/__pycache__/

@@ -233,6 +233,15 @@ export default Sentry.wrap(function RootLayout() {
                 animation: "slide_from_right",
               }}
             />
+            <Stack.Screen
+              name="scanner"
+              options={{
+                headerShown: false,
+                gestureEnabled: true,
+                animation: "slide_from_bottom",
+                presentation: "fullScreenModal",
+              }}
+            />
           </Stack>
           <ThemedStatusBar />
         </BottomSheetModalProvider>

@@ -10,14 +10,14 @@ const REVENUECAT_API_KEY_APPLE =
   process.env.EXPO_PUBLIC_REVENUECAT_API_KEY_APPLE ?? "";
 
 // Entitlement ID configured in RevenueCat dashboard
-export const PREMIUM_ENTITLEMENT = "Kickd Pro";
+export const PREMIUM_ENTITLEMENT = "Whiskered Pro";
 
 // ── Subscription product IDs (App Store Connect + RevenueCat) ────
-// TODO: replace with real product IDs for the kickd project
+// TODO: replace with real product IDs for the whiskered project
 export const PRODUCT_IDS = {
-  weekly: "kickd_plus_weekly",
-  monthly: "kickd_plus_monthly",
-  annual: "kickd_plus_annual",
+  weekly: "whiskered_plus_weekly",
+  monthly: "whiskered_plus_monthly",
+  annual: "whiskered_plus_annual",
 } as const;
 
 let isConfigured = false;

@@ -1,5 +1,6 @@
 import { Text } from "@/components/ui/text";
 import { Input } from "@/components/ui/input";
+import { ClassifierResultCard } from "@/components/classifier-result-card";
 import { useThemeColors } from "@/lib/theme";
 import {
   items,
@@ -19,6 +20,7 @@ import { getItemSprite, getClassSprite, getAbilitySprite, getStatusEffectSprite 
 import { useRouter } from "expo-router";
 import { useCallback, useMemo, useRef, useState } from "react";
 import {
+  ActivityIndicator,
   SectionList,
   Image,
   Pressable,
@@ -26,8 +28,9 @@ import {
   type ImageSourcePropType,
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { Search, X } from "lucide-react-native";
+import { Search, X, Camera } from "lucide-react-native";
 import type { TextInput } from "react-native";
+import type { ClassificationResult } from "@/modules/item-classifier";
 
 const MAX_PER_SECTION = 8;
 
@@ -49,6 +52,12 @@ interface SearchSection {
   data: SearchResult[];
   total: number;
 }
+
+type ScanState =
+  | { status: "idle" }
+  | { status: "loading"; imageUri: string }
+  | { status: "result"; imageUri: string; result: ClassificationResult }
+  | { status: "error"; message: string };
 
 function buildResults(query: string): SearchSection[] {
   if (!query.trim()) return [];
@@ -238,12 +247,35 @@ export default function SearchScreen() {
   const theme = useThemeColors();
   const inputRef = useRef<TextInput>(null);
   const [search, setSearch] = useState("");
+  const [scanState, setScanState] = useState<ScanState>({ status: "idle" });
 
   const sections = useMemo(() => buildResults(search), [search]);
   const totalResults = useMemo(
     () => sections.reduce((sum, s) => sum + s.total, 0),
     [sections]
   );
+
+  const runClassification = useCallback(async (uri: string) => {
+    setScanState({ status: "loading", imageUri: uri });
+    try {
+      // Dynamic import so it doesn't crash on web/Android where the module isn't available
+      const { classifyImage } = await import("@/modules/item-classifier");
+      const result = await classifyImage(uri);
+      setScanState({ status: "result", imageUri: uri, result });
+    } catch (err: unknown) {
+      const message =
+        err instanceof Error ? err.message : "Classification failed";
+      setScanState({ status: "error", message });
+    }
+  }, []);
+
+  const handleScanPress = useCallback(() => {
+    router.push("/scanner");
+  }, [router]);
+
+  const dismissScan = useCallback(() => {
+    setScanState({ status: "idle" });
+  }, []);
 
   const renderItem = useCallback(
     ({ item }: { item: SearchResult }) => (
@@ -273,13 +305,14 @@ export default function SearchScreen() {
   );
 
   const hasQuery = search.trim().length > 0;
+  const showScan = scanState.status !== "idle";
 
   return (
     <View style={{ flex: 1, paddingTop: insets.top }}>
       <View className="px-4 pt-4 pb-2">
         <Text className="text-2xl font-bold mb-3">Search</Text>
 
-        <View className="flex-row items-center">
+        <View className="flex-row items-center gap-2">
           <View className="flex-1 flex-row items-center">
             <Search
               size={16}
@@ -306,16 +339,96 @@ export default function SearchScreen() {
               </Pressable>
             )}
           </View>
+
+          <Pressable
+            onPress={handleScanPress}
+            style={({ pressed }) => ({
+              backgroundColor: pressed ? theme.secondary : theme.card,
+              borderColor: theme.border,
+              borderWidth: 1,
+            })}
+            className="w-10 h-10 rounded-lg items-center justify-center"
+          >
+            <Camera size={20} color={theme.foreground} strokeWidth={1.8} />
+          </Pressable>
         </View>
       </View>
 
-      {!hasQuery ? (
+      {/* Scan result area */}
+      {showScan && (
+        <View className="px-4 pb-3">
+          {scanState.status === "loading" && (
+            <View
+              style={{ backgroundColor: theme.card, borderColor: theme.border, borderWidth: 1 }}
+              className="rounded-xl p-6 items-center gap-3"
+            >
+              <Image
+                source={{ uri: scanState.imageUri }}
+                style={{ width: 80, height: 80, borderRadius: 12 }}
+                resizeMode="cover"
+              />
+              <ActivityIndicator size="small" />
+              <Text className="text-sm text-muted-foreground">
+                Identifying item...
+              </Text>
+            </View>
+          )}
+
+          {scanState.status === "result" && (
+            <View>
+              <View className="flex-row items-center justify-between mb-2">
+                <Text className="text-xs font-medium tracking-widest uppercase text-muted-foreground">
+                  Scan Result
+                </Text>
+                <Pressable onPress={dismissScan}>
+                  <X size={16} color={theme.mutedForeground} />
+                </Pressable>
+              </View>
+              <ClassifierResultCard
+                prediction={{
+                  label: scanState.result.label,
+                  confidence: scanState.result.confidence,
+                }}
+                top3={scanState.result.top3}
+              />
+            </View>
+          )}
+
+          {scanState.status === "error" && (
+            <View
+              style={{ backgroundColor: theme.card, borderColor: theme.border, borderWidth: 1 }}
+              className="rounded-xl p-4"
+            >
+              <View className="flex-row items-center justify-between mb-1">
+                <Text className="text-sm font-semibold">Scan Failed</Text>
+                <Pressable onPress={dismissScan}>
+                  <X size={16} color={theme.mutedForeground} />
+                </Pressable>
+              </View>
+              <Text className="text-sm text-muted-foreground">
+                {scanState.message}
+              </Text>
+              <Pressable
+                onPress={handleScanPress}
+                style={{ backgroundColor: theme.secondary }}
+                className="rounded-lg px-4 py-2 mt-3 self-start"
+              >
+                <Text className="text-sm font-medium">Try Again</Text>
+              </Pressable>
+            </View>
+          )}
+        </View>
+      )}
+
+      {!hasQuery && !showScan ? (
         <View className="flex-1 items-center justify-center px-8">
           <Search size={48} color={theme.border} />
           <Text className="text-muted-foreground text-center mt-4 text-sm">
             Search items, classes, abilities, sets, and effects
           </Text>
         </View>
+      ) : !hasQuery && showScan ? (
+        <View className="flex-1" />
       ) : sections.length === 0 ? (
         <View className="flex-1 items-center justify-center px-8">
           <Text className="text-muted-foreground text-center text-sm">

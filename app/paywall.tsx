@@ -249,7 +249,7 @@ export default function PaywallScreen() {
             Unlock everything
           </Text>
           <Text className="text-base text-muted-foreground text-center mt-1.5 leading-6">
-            Get full access to Kickd Pro
+            Get full access to Whiskered Pro
           </Text>
         </View>
 

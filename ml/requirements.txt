@@ -1,0 +1,7 @@
+torch
+torchvision
+albumentations
+pillow
+scikit-learn
+matplotlib
+coremltools

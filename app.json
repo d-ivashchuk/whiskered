@@ -1,20 +1,21 @@
 {
   "expo": {
-    "name": "Kickd",
-    "slug": "kickd",
+    "name": "Whiskered",
+    "slug": "whiskered",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "kickd",
+    "scheme": "whiskered",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "runtimeVersion": "1.0.0",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.divashchuk.kickd",
+      "bundleIdentifier": "com.divashchuk.whiskered",
       "appleTeamId": "T268ZABW3C",
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSCameraUsageDescription": "Whiskered needs camera access to scan game items in real-time."
       }
     },
     "android": {
@@ -26,7 +27,7 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.divashchuk.kickd"
+      "package": "com.divashchuk.whiskered"
     },
     "web": {
       "output": "static",
@@ -53,7 +54,8 @@
         }
       ],
       "@react-native-community/datetimepicker",
-      "expo-localization"
+      "expo-localization",
+      "./plugins/with-coreml-model"
     ],
     "experiments": {
       "typedRoutes": true,
