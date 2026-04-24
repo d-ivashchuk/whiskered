@@ -218,14 +218,6 @@ export default Sentry.wrap(function RootLayout() {
           <Stack screenOptions={{ headerShown: false }}>
             <Stack.Screen name="(tabs)" />
             <Stack.Screen
-              name="paywall"
-              options={{
-                gestureEnabled: true,
-                headerShown: false,
-                animation: "slide_from_bottom",
-              }}
-            />
-            <Stack.Screen
               name="settings"
               options={{
                 headerShown: false,

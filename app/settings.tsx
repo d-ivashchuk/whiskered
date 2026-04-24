@@ -1,20 +1,14 @@
 import { Text } from "@/components/ui/text";
 import { Switch } from "@/components/ui/switch";
 
-import { useIsPremium } from "@/lib/hooks/use-premium";
-import {
-	restorePurchases,
-} from "@/lib/services/revenue-cat";
 import { useSettingsStore } from "@/lib/stores/settings-store";
-import { useSubscriptionStore } from "@/lib/stores/subscription-store";
 import { useThemeColors } from "@/lib/theme";
 
-import { ChevronLeft, ChevronRight, Crown, FileText, Shield, Star, Wrench } from "lucide-react-native";
+import { ChevronLeft, ChevronRight, FileText, Shield, Star, Wrench } from "lucide-react-native";
 import SegmentedControl from "@react-native-segmented-control/segmented-control";
 import * as Application from "expo-application";
 import * as Updates from "expo-updates";
-import { useCallback } from "react";
-import { Alert, Linking, Platform, Pressable, ScrollView, View } from "react-native";
+import { Linking, Platform, Pressable, ScrollView, View } from "react-native";
 import { requestStoreReview } from "@/lib/services/rate-app";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -31,29 +25,6 @@ export default function SettingsScreen() {
 	const setSoundEnabled = useSettingsStore((s) => s.setSoundEnabled);
 	const analyticsEnabled = useSettingsStore((s) => s.analyticsEnabled);
 	const setAnalyticsEnabled = useSettingsStore((s) => s.setAnalyticsEnabled);
-
-	const { isTrialActive, trialDaysRemaining } = useIsPremium();
-	const isPurchased = useSubscriptionStore((s) => s.isPurchasedPremium);
-	const updateFromCustomerInfo = useSubscriptionStore(
-		(s) => s.updateFromCustomerInfo,
-	);
-
-	const handleRestore = useCallback(async () => {
-		try {
-			const result = await restorePurchases();
-			if (result.success && result.customerInfo) {
-				updateFromCustomerInfo(result.customerInfo);
-				Alert.alert("Restored!", "Your premium access has been restored.");
-			} else {
-				Alert.alert(
-					"No Purchases Found",
-					"We couldn't find any previous purchases to restore.",
-				);
-			}
-		} catch {
-			Alert.alert("Error", "Something went wrong. Please try again.");
-		}
-	}, [updateFromCustomerInfo]);
 
 	const appVersion = Application.nativeApplicationVersion ?? "0.0.0";
 	const buildNumber = Application.nativeBuildVersion ?? "0";
@@ -90,66 +61,6 @@ export default function SettingsScreen() {
 				style={{ flex: 1 }}
 				contentContainerStyle={{ paddingBottom: insets.bottom + 32 }}
 			>
-				{/* Subscription section */}
-				<View className="px-6 mb-8">
-					<Text className="text-base font-semibold uppercase tracking-[0.08em] text-muted-foreground mb-2">
-						Subscription
-					</Text>
-					<View className="bg-card rounded-2xl overflow-hidden">
-						{isPurchased ? (
-							<View className="px-4 py-4">
-								<View className="flex-row items-center gap-2 mb-1">
-									<Crown size={16} color={colors.crown} strokeWidth={2.5} fill={colors.crown} />
-									<Text className="text-base font-semibold text-foreground">
-										Premium Active
-									</Text>
-								</View>
-								<Text className="text-sm text-muted-foreground">
-									You have full access to all premium features.
-								</Text>
-							</View>
-						) : isTrialActive ? (
-							<Pressable onPress={() => router.push("/paywall")} className="px-4 py-4 flex-row items-center">
-								<View className="flex-1">
-									<View className="flex-row items-center gap-2 mb-1">
-										<Crown size={16} color={colors.crown} strokeWidth={2.5} fill={colors.crown} />
-										<Text className="text-base font-semibold text-foreground">
-											Free Trial — {trialDaysRemaining} day{trialDaysRemaining !== 1 ? "s" : ""} left
-										</Text>
-									</View>
-									<Text className="text-sm text-muted-foreground">
-										Upgrade to keep premium features after your trial ends
-									</Text>
-								</View>
-								<ChevronRight size={18} color={colors.mutedForeground} strokeWidth={2} />
-							</Pressable>
-						) : (
-							<Pressable onPress={() => router.push("/paywall")} className="px-4 py-4 flex-row items-center">
-								<View className="flex-1">
-									<View className="flex-row items-center gap-2 mb-1">
-										<Crown size={16} color={colors.crown} strokeWidth={2.5} fill={colors.crown} />
-										<Text className="text-base font-semibold text-foreground">
-											Upgrade to Premium
-										</Text>
-									</View>
-									<Text className="text-sm text-muted-foreground">
-										Unlock all premium features
-									</Text>
-								</View>
-								<ChevronRight size={18} color={colors.mutedForeground} strokeWidth={2} />
-							</Pressable>
-						)}
-
-						<View className="h-px bg-border mx-4" />
-
-						<Pressable onPress={handleRestore} className="px-4 py-3.5">
-							<Text className="text-base text-muted-foreground">
-								Restore purchases
-							</Text>
-						</Pressable>
-					</View>
-				</View>
-
 				{/* Preferences section */}
 				<View className="px-6 mb-8">
 					<Text className="text-base font-semibold uppercase tracking-[0.08em] text-muted-foreground mb-2">
@@ -251,7 +162,7 @@ export default function SettingsScreen() {
 						<View className="h-px bg-border mx-4" />
 
 						<Pressable
-							onPress={() => Linking.openURL("https://example.com/terms")}
+							onPress={() => Linking.openURL("https://d-ivashchuk.github.io/whiskered-legal/terms-of-service")}
 							className="px-4 py-4 flex-row items-center"
 						>
 							<FileText size={18} color={colors.mutedForeground} strokeWidth={2} />
@@ -262,7 +173,7 @@ export default function SettingsScreen() {
 						<View className="h-px bg-border mx-4" />
 
 						<Pressable
-							onPress={() => Linking.openURL("https://example.com/privacy")}
+							onPress={() => Linking.openURL("https://d-ivashchuk.github.io/whiskered-legal/privacy-policy")}
 							className="px-4 py-4 flex-row items-center"
 						>
 							<Shield size={18} color={colors.mutedForeground} strokeWidth={2} />

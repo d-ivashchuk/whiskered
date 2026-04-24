@@ -40,8 +40,8 @@ const SCAN_INTERVAL_MS = 2500;
 const MIN_CONFIDENCE = 0.005;
 const STABILITY_THRESHOLD = 1;
 // Viewfinder size range as fraction of screen width
-const MIN_SQUARE_FRAC = 0.2;
-const MAX_SQUARE_FRAC = 0.8;
+const MIN_SQUARE_FRAC = 0.25;
+const MAX_SQUARE_FRAC = 0.65;
 
 /** Wrap a promise with a timeout */
 function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
@@ -100,14 +100,18 @@ export default function ScannerScreen() {
     }
   }, [hasPermission, requestPermission]);
 
-  // Layout: camera ~55%, results ~45%
-  const resultsHeight = 320;
+  // Layout: results sheet sized to fit exactly 2 rows of 5 items
+  const gridPadding = 12;
+  const gridGap = 6;
+  const gridColumns = 5;
+  const cellSize = Math.floor((screenWidth - gridPadding * 2 - gridGap * (gridColumns - 1)) / gridColumns);
+  const resultsHeight = 36 + cellSize * 3 + gridGap * 2 + gridPadding * 2; // header + 3 rows + gaps + padding
   const cameraHeight = screenHeight - resultsHeight - insets.bottom;
   const squareSize =
     screenWidth * (MIN_SQUARE_FRAC + squareFrac * (MAX_SQUARE_FRAC - MIN_SQUARE_FRAC));
 
-  // Slider
-  const sliderHeight = cameraHeight - insets.top - 100;
+  // Slider — compact, vertically centered
+  const sliderHeight = Math.min(160, cameraHeight - insets.top - 140);
   const sliderRef = useRef<View>(null);
   const sliderYRef = useRef(0);
 
@@ -422,15 +426,17 @@ export default function ScannerScreen() {
             <Pressable onPress={handleGridScanner} style={styles.topBarButton}>
               <Grid3X3 size={22} color="#fff" />
             </Pressable>
-            <Pressable
-              onPress={() => setShowDebug((v) => !v)}
-              style={[
-                styles.topBarButton,
-                showDebug && { backgroundColor: "rgba(34,197,94,0.6)" },
-              ]}
-            >
-              <Bug size={20} color="#fff" />
-            </Pressable>
+            {__DEV__ && (
+              <Pressable
+                onPress={() => setShowDebug((v) => !v)}
+                style={[
+                  styles.topBarButton,
+                  showDebug && { backgroundColor: "rgba(34,197,94,0.6)" },
+                ]}
+              >
+                <Bug size={20} color="#fff" />
+              </Pressable>
+            )}
           </View>
           <Pressable onPress={handleClose} style={styles.topBarButton}>
             <X size={24} color="#fff" />
@@ -482,11 +488,14 @@ export default function ScannerScreen() {
           </View>
         )}
 
-        {/* Frame size slider — right side */}
+        {/* Frame size slider — right side, vertically centered */}
         <View
           style={[
             styles.sliderContainer,
-            { top: insets.top + 60, height: sliderHeight },
+            {
+              top: insets.top + (cameraHeight - insets.top - sliderHeight) / 2,
+              height: sliderHeight,
+            },
           ]}
         >
           <Scan size={14} color="rgba(255,255,255,0.6)" style={{ marginBottom: 8 }} />

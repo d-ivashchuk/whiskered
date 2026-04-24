@@ -8,13 +8,13 @@
       "developmentClient": true,
       "distribution": "internal",
       "env": {
-        "EXPO_APPLE_TEAM_ID": "T268ZABW3C"
+        "EXPO_APPLE_TEAM_ID": "CBM2584J3R"
       }
     },
     "preview": {
       "distribution": "internal",
       "env": {
-        "EXPO_APPLE_TEAM_ID": "T268ZABW3C",
+        "EXPO_APPLE_TEAM_ID": "CBM2584J3R",
         "EXPO_PUBLIC_POSTHOG_API_KEY": "phc_AyuDa26CnGYZwkubF9QULhmbGBLkJjws9hrXLpntSqEx",
         "EXPO_PUBLIC_REVENUECAT_API_KEY_APPLE": "appl_HJGzFbaVxlrqZCLLLblUvXzjYnI"
       }
@@ -23,7 +23,7 @@
       "autoIncrement": true,
       "channel": "production",
       "env": {
-        "EXPO_APPLE_TEAM_ID": "T268ZABW3C",
+        "EXPO_APPLE_TEAM_ID": "CBM2584J3R",
         "SENTRY_DISABLE_AUTO_UPLOAD": "true",
         "EXPO_PUBLIC_POSTHOG_API_KEY": "phc_AyuDa26CnGYZwkubF9QULhmbGBLkJjws9hrXLpntSqEx",
         "EXPO_PUBLIC_REVENUECAT_API_KEY_APPLE": "appl_HJGzFbaVxlrqZCLLLblUvXzjYnI"
@@ -33,7 +33,7 @@
   "submit": {
     "production": {
       "ios": {
-        "appleTeamId": "T268ZABW3C",
+        "appleTeamId": "CBM2584J3R",
         "ascAppId": "6761140803",
         "ascApiKeyPath": "./AuthKey_XK2KQVKB32.p8",
         "ascApiKeyId": "XK2KQVKB32",

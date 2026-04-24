@@ -52,12 +52,17 @@ app-example
 # original sound source files (large)
 assets/sounds/sources/
 
-# Crawled data (regenerable)
-data/
+# Crawled data (regenerable) — except files needed for build
+data/*
+!data/sprite-fingerprints.bin
+!data/sprites
+data/sprites/*
+!data/sprites/png
 
-# ML pipeline (generated)
+# ML pipeline (generated) — except compiled model
 ml/dataset/
-ml/output/
+ml/output/*
+!ml/output/mewgenics_items.mlmodelc
 ml/.venv/
 
 .env.local

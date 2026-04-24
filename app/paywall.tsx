@@ -357,11 +357,11 @@ export default function PaywallScreen() {
           <Text className="text-xs text-muted-foreground underline">Restore purchases</Text>
         </Pressable>
         <Text className="text-xs text-muted-foreground">{"\u00B7"}</Text>
-        <Pressable onPress={() => Linking.openURL("https://example.com/terms")}>
+        <Pressable onPress={() => Linking.openURL("https://d-ivashchuk.github.io/whiskered-legal/terms-of-service")}>
           <Text className="text-xs text-muted-foreground underline">Terms</Text>
         </Pressable>
         <Text className="text-xs text-muted-foreground">{"\u00B7"}</Text>
-        <Pressable onPress={() => Linking.openURL("https://example.com/privacy")}>
+        <Pressable onPress={() => Linking.openURL("https://d-ivashchuk.github.io/whiskered-legal/privacy-policy")}>
           <Text className="text-xs text-muted-foreground underline">Privacy</Text>
         </Pressable>
       </View>

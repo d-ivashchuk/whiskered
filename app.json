@@ -12,10 +12,11 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.divashchuk.whiskered",
-      "appleTeamId": "T268ZABW3C",
+      "appleTeamId": "CBM2584J3R",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
-        "NSCameraUsageDescription": "Whiskered needs camera access to scan game items in real-time."
+        "NSCameraUsageDescription": "Whiskered needs camera access to scan game items in real-time.",
+        "NSPhotoLibraryUsageDescription": "Whiskered needs photo library access to identify game items from your screenshots."
       }
     },
     "android": {
@@ -64,7 +65,8 @@
     "extra": {
       "router": {},
       "eas": {
-        "build": {}
+        "build": {},
+        "projectId": "f5d3f57c-06f9-4eab-87b2-e23768b14d5c"
       }
     },
     "owner": "d-ivashchuk"
