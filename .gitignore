@@ -66,4 +66,5 @@ ml/output/*
 ml/.venv/
 
 .env.local
+AuthKey_*.p8
 ml/__pycache__/
