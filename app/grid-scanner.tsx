@@ -28,6 +28,7 @@ type CellResult = {
   row: number;
   col: number;
   topLabel: string;
+  croppedUri?: string;
   results: Array<{ label: string; score: number }>;
 };
 
@@ -223,6 +224,7 @@ export default function GridScannerScreen() {
             row,
             col,
             topLabel: matchResult.topLabel,
+            croppedUri: cropped.uri,
             results: matchResult.results,
           });
         } catch {
@@ -397,7 +399,8 @@ export default function GridScannerScreen() {
           styles.controls,
           {
             bottom: insets.bottom + 8,
-            backgroundColor: "rgba(0,0,0,0.85)",
+            backgroundColor:
+              phase === "results" ? theme.background : "rgba(0,0,0,0.85)",
           },
         ]}
       >
@@ -436,8 +439,8 @@ export default function GridScannerScreen() {
           </>
         )}
         {phase === "results" && (
-          <Pressable onPress={handleReset} style={styles.identifyButton}>
-            <Text style={styles.identifyText}>Re-align & Scan Again</Text>
+          <Pressable onPress={handleReset} style={styles.resetButton}>
+            <Text style={styles.resetText}>Re-align & Scan Again</Text>
           </Pressable>
         )}
       </View>
@@ -572,5 +575,19 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 15,
     fontWeight: "700",
+  },
+  resetButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 12,
+    paddingVertical: 12,
+    borderWidth: 1.5,
+    borderColor: "rgba(128,128,128,0.3)",
+  },
+  resetText: {
+    color: "#888",
+    fontSize: 15,
+    fontWeight: "600",
   },
 });

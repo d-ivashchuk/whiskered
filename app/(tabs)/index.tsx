@@ -2,10 +2,11 @@ import { Text } from "@/components/ui/text";
 import { useThemeColors } from "@/lib/theme";
 import { items, classes, sets, abilities, statusEffects, dataLoaded } from "@/lib/game-data";
 import { getTierColor } from "@/lib/game-colors";
+import { getClassSprite, getAbilitySprite, getItemSprite, getStatusEffectSprite } from "@/lib/sprites";
 import { useRouter } from "expo-router";
-import { Pressable, ScrollView, View } from "react-native";
+import { Image, Pressable, ScrollView, View, type ImageSourcePropType } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { Sword, Shield, Layers, Zap, Sparkles, ChevronRight } from "lucide-react-native";
+import { ChevronRight } from "lucide-react-native";
 
 const TIERS = ["S", "A", "B", "C", "D"] as const;
 
@@ -20,14 +21,14 @@ function TierDot({ tier, count }: { tier: string; count: number }) {
 }
 
 function NavCard({
-  icon,
+  sprites,
   title,
   count,
   subtitle,
   onPress,
   tierCounts,
 }: {
-  icon: React.ReactNode;
+  sprites: (ImageSourcePropType | null)[];
   title: string;
   count: number;
   subtitle: string;
@@ -35,6 +36,8 @@ function NavCard({
   tierCounts?: Array<{ tier: string; count: number }>;
 }) {
   const theme = useThemeColors();
+  const validSprites = sprites.filter((s): s is ImageSourcePropType => s != null).slice(0, 4);
+
   return (
     <Pressable
       onPress={onPress}
@@ -45,7 +48,20 @@ function NavCard({
       })}
       className="flex-row items-center rounded-xl p-4"
     >
-      <View className="mr-3.5">{icon}</View>
+      {/* 2x2 sprite grid */}
+      <View
+        style={{ width: 40, height: 40, flexDirection: "row", flexWrap: "wrap" }}
+        className="mr-3.5"
+      >
+        {validSprites.map((sp, i) => (
+          <Image
+            key={i}
+            source={sp}
+            style={{ width: 20, height: 20 }}
+            resizeMode="contain"
+          />
+        ))}
+      </View>
       <View className="flex-1">
         <View className="flex-row items-baseline gap-2">
           <Text className="text-base font-bold">{title}</Text>
@@ -84,6 +100,18 @@ export default function HomeScreen() {
   const abilityTiers = TIERS.map((t) => ({ tier: t, count: abilities.filter((a) => a.tier === t).length }));
   const setTiers = TIERS.map((t) => ({ tier: t, count: sets.filter((s) => s.avgTier === t).length }));
 
+  // Pick a few representative sprites for each category
+  const classSprites = classes.slice(0, 4).map((c) => getClassSprite(c.name));
+  const abilitySprites = abilities.slice(0, 4).map((a) => getAbilitySprite(a.name, a.id));
+  const itemSprites = items.filter((i) => i.hasSprite).slice(0, 4).map((i) => getItemSprite(i.name, i.internalName));
+  const setSprites = sets.slice(0, 4).flatMap((s) => {
+    const first = s.items[0];
+    if (!first) return [];
+    const item = items.find((i) => i.name === first);
+    return [getItemSprite(first, item?.internalName)];
+  });
+  const effectSprites = statusEffects.slice(0, 4).map((e) => getStatusEffectSprite(e.name));
+
   return (
     <View style={{ flex: 1, paddingTop: insets.top }}>
       <ScrollView
@@ -99,14 +127,14 @@ export default function HomeScreen() {
 
         <View className="gap-3">
           <NavCard
-            icon={<Shield size={22} color="#3b82f6" strokeWidth={1.5} />}
+            sprites={classSprites}
             title="Classes"
             count={classes.length}
             subtitle="Stats, abilities, recommended sets"
             onPress={() => router.push("/classes")}
           />
           <NavCard
-            icon={<Zap size={22} color="#eab308" strokeWidth={1.5} />}
+            sprites={abilitySprites}
             title="Abilities"
             count={abilities.length}
             subtitle="All abilities by class"
@@ -114,7 +142,7 @@ export default function HomeScreen() {
             tierCounts={abilityTiers}
           />
           <NavCard
-            icon={<Sword size={22} color="#ef4444" strokeWidth={1.5} />}
+            sprites={itemSprites}
             title="Items"
             count={items.length}
             subtitle="Weapons, armor, trinkets"
@@ -122,7 +150,7 @@ export default function HomeScreen() {
             tierCounts={itemTiers}
           />
           <NavCard
-            icon={<Layers size={22} color="#a855f7" strokeWidth={1.5} />}
+            sprites={setSprites}
             title="Sets"
             count={sets.length}
             subtitle="Item set bonuses and synergies"
@@ -130,7 +158,7 @@ export default function HomeScreen() {
             tierCounts={setTiers}
           />
           <NavCard
-            icon={<Sparkles size={22} color="#14b8a6" strokeWidth={1.5} />}
+            sprites={effectSprites}
             title="Effects"
             count={statusEffects.length}
             subtitle="Status effects and cross-references"

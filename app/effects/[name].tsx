@@ -1,4 +1,5 @@
 import { Text } from "@/components/ui/text";
+import { ItemRow } from "@/components/item-row";
 import { useThemeColors } from "@/lib/theme";
 import {
   getStatusEffect,
@@ -88,40 +89,19 @@ export default function EffectDetailScreen() {
           {/* Items */}
           {effectItems.length > 0 && (
             <Section title={`Items (${effectItems.length})`}>
-              {effectItems.map((item) => {
-                const sprite = getItemSprite(item.name, item.internalName);
-                const tierColor = getTierColor(item.tier);
-
-                return (
-                  <Pressable
-                    key={item.name}
-                    onPress={() => router.push(`/items/${encodeURIComponent(item.name)}`)}
-                    style={({ pressed }) => ({
-                      backgroundColor: pressed ? theme.secondary : "transparent",
-                    })}
-                    className="flex-row items-center py-2.5 border-b border-border"
-                  >
-                    <View className="w-8 h-8 mr-2.5 items-center justify-center">
-                      {sprite ? (
-                        <Image source={sprite} style={{ width: 28, height: 28 }} resizeMode="contain" />
-                      ) : null}
-                    </View>
-
-                    <View className="flex-1 mr-2">
-                      <Text className="text-sm font-medium" numberOfLines={1}>{item.name}</Text>
-                      <Text className="text-xs text-muted-foreground" numberOfLines={1}>
-                        {[item.slot, item.rarity].filter(Boolean).join(" · ")}
-                      </Text>
-                    </View>
-
-                    {item.tier ? (
-                      <View style={{ backgroundColor: tierColor.bg }} className="rounded px-1.5 py-0.5">
-                        <Text style={{ color: tierColor.text }} className="text-[10px] font-black">{item.tier}</Text>
-                      </View>
-                    ) : null}
-                  </Pressable>
-                );
-              })}
+              {effectItems.map((item) => (
+                <ItemRow
+                  key={item.name}
+                  item={{
+                    name: item.name,
+                    internalName: item.internalName,
+                    slot: item.slot,
+                    rarity: item.rarity,
+                    tier: item.tier,
+                  }}
+                  onPress={() => router.push(`/items/${encodeURIComponent(item.name)}`)}
+                />
+              ))}
             </Section>
           )}
 

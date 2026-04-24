@@ -1,11 +1,9 @@
 import { useThemeColors } from "@/lib/theme";
-import { Stack, useRouter } from "expo-router";
-import { Pressable } from "react-native";
-import { Home } from "lucide-react-native";
+import { HeaderBackButton, HeaderHomeButton } from "@/components/stack-header";
+import { Stack } from "expo-router";
 
 export default function EffectsLayout() {
   const colors = useThemeColors();
-  const router = useRouter();
 
   return (
     <Stack
@@ -15,11 +13,9 @@ export default function EffectsLayout() {
         headerTitleStyle: { fontWeight: "600" },
         headerShadowVisible: false,
         headerBackTitleVisible: false,
-        headerRight: () => (
-          <Pressable onPress={() => router.navigate("/(tabs)")} hitSlop={8}>
-            <Home size={20} color={colors.mutedForeground} strokeWidth={1.8} />
-          </Pressable>
-        ),
+        headerBackVisible: false,
+        headerLeft: () => <HeaderBackButton />,
+        headerRight: () => <HeaderHomeButton />,
       }}
     />
   );

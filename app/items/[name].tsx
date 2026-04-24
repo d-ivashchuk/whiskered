@@ -1,8 +1,9 @@
 import { Text } from "@/components/ui/text";
+import { ItemRow } from "@/components/item-row";
 import { useThemeColors } from "@/lib/theme";
 import { getItem, getSet } from "@/lib/game-data";
 import { getTierColor, getRarityTextColor } from "@/lib/game-colors";
-import { getItemSprite, getStatusEffectSprite } from "@/lib/sprites";
+import { getItemSprite, getStatusEffectSprite, getSlotSprite } from "@/lib/sprites";
 import { useLocalSearchParams, useRouter, Stack } from "expo-router";
 import { Image, Pressable, ScrollView, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -66,9 +67,17 @@ export default function ItemDetailScreen() {
             {item.rarity ? (
               <Text style={{ color: rarityColor }} className="text-sm font-medium">{item.rarity}</Text>
             ) : null}
-            {item.slot ? (
-              <Text className="text-sm text-muted-foreground">{item.slot}</Text>
-            ) : null}
+            {item.slot ? (() => {
+              const slotSprite = getSlotSprite(item.slot);
+              return (
+                <View className="flex-row items-center gap-1">
+                  {slotSprite ? (
+                    <Image source={slotSprite} style={{ width: 16, height: 16, opacity: 0.6 }} resizeMode="contain" />
+                  ) : null}
+                  <Text className="text-sm text-muted-foreground">{item.slot}</Text>
+                </View>
+              );
+            })() : null}
             {item.tier ? (
               <View style={{ backgroundColor: tierColor.bg }} className="rounded px-2 py-0.5">
                 <Text style={{ color: tierColor.text }} className="text-xs font-black">
@@ -112,6 +121,11 @@ export default function ItemDetailScreen() {
             <Section title="Sets">
               {item.sets.map((setName) => {
                 const setData = getSet(setName);
+                const setTierColor = setData?.avgTier ? getTierColor(setData.avgTier) : null;
+                const previewSprites = (setData?.items ?? []).slice(0, 4).map((itemName) => {
+                  const it = getItem(itemName);
+                  return getItemSprite(itemName, it?.internalName);
+                });
                 return (
                   <Pressable
                     key={setName}
@@ -119,8 +133,25 @@ export default function ItemDetailScreen() {
                     style={{ backgroundColor: theme.secondary, borderColor: theme.border, borderWidth: 1 }}
                     className="rounded-xl p-3 mb-2 flex-row items-center"
                   >
+                    {/* 2x2 sprite grid */}
+                    <View style={{ width: 40, height: 40, flexDirection: "row", flexWrap: "wrap" }} className="mr-3">
+                      {previewSprites.map((sp, i) =>
+                        sp ? (
+                          <Image key={i} source={sp} style={{ width: 20, height: 20 }} resizeMode="contain" />
+                        ) : (
+                          <View key={i} style={{ width: 20, height: 20, backgroundColor: theme.border, borderRadius: 2 }} />
+                        )
+                      )}
+                    </View>
                     <View className="flex-1">
-                      <Text className="font-semibold text-sm">{setName}</Text>
+                      <View className="flex-row items-center gap-2">
+                        <Text className="font-semibold text-sm">{setName}</Text>
+                        {setTierColor ? (
+                          <View style={{ backgroundColor: setTierColor.bg }} className="rounded px-1.5 py-0.5">
+                            <Text style={{ color: setTierColor.text }} className="text-[10px] font-black">{setData!.avgTier}</Text>
+                          </View>
+                        ) : null}
+                      </View>
                       {setData?.description ? (
                         <Text className="text-muted-foreground text-xs mt-0.5" numberOfLines={2}>
                           {setData.description}
@@ -166,31 +197,18 @@ export default function ItemDetailScreen() {
             <Section title="Related Items">
               {item.relatedItems.map((relName) => {
                 const rel = getItem(relName);
-                const relSprite = getItemSprite(relName, rel?.internalName);
                 return (
-                  <Pressable
+                  <ItemRow
                     key={relName}
+                    item={{
+                      name: relName,
+                      internalName: rel?.internalName,
+                      slot: rel?.slot,
+                      rarity: rel?.rarity,
+                      tier: rel?.tier,
+                    }}
                     onPress={() => router.push(`/items/${encodeURIComponent(relName)}`)}
-                    style={({ pressed }) => ({
-                      backgroundColor: pressed ? theme.secondary : "transparent",
-                    })}
-                    className="flex-row items-center py-2 border-b border-border"
-                  >
-                    <View className="w-8 h-8 mr-3 items-center justify-center">
-                      {relSprite ? (
-                        <Image source={relSprite} style={{ width: 28, height: 28 }} resizeMode="contain" />
-                      ) : null}
-                    </View>
-                    <Text className="flex-1 text-sm">{relName}</Text>
-                    {rel?.tier ? (
-                      <View style={{ backgroundColor: getTierColor(rel.tier).bg }} className="rounded px-1.5 py-0.5 mr-2">
-                        <Text style={{ color: getTierColor(rel.tier).text }} className="text-[10px] font-black">{rel.tier}</Text>
-                      </View>
-                    ) : null}
-                    {rel?.slot ? (
-                      <Text className="text-muted-foreground text-xs">{rel.slot}</Text>
-                    ) : null}
-                  </Pressable>
+                  />
                 );
               })}
             </Section>

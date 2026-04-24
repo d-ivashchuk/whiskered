@@ -124,12 +124,20 @@ export const dataLoaded = _loaded;
 // ─── Lookup helpers ──────────────────────────────────────────────────────────
 
 const itemMap = new Map(_items.map((i) => [i.name, i]));
+// Normalized lookup: lowercase, stripped of special chars for fuzzy matching
+const itemMapNormalized = new Map(
+  _items.map((i) => [i.name.toLowerCase().replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim(), i])
+);
 const classMap = new Map(_classes.map((c) => [c.name, c]));
 const setMap = new Map(_sets.map((s) => [s.name, s]));
 const abilityMap = new Map(_abilities.map((a) => [a.name, a]));
 
 export function getItem(name: string): GameItem | undefined {
-  return itemMap.get(name);
+  const exact = itemMap.get(name);
+  if (exact) return exact;
+  // Fuzzy fallback: strip special chars and compare
+  const normalized = name.toLowerCase().replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
+  return itemMapNormalized.get(normalized);
 }
 
 export function getClass(name: string): GameClass | undefined {

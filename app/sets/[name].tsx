@@ -1,12 +1,12 @@
 import { Text } from "@/components/ui/text";
+import { ItemRow } from "@/components/item-row";
 import { useThemeColors } from "@/lib/theme";
 import { getSet, getItem } from "@/lib/game-data";
 import { getTierColor } from "@/lib/game-colors";
-import { getItemSprite, getClassSprite, getStatusEffectSprite } from "@/lib/sprites";
+import { getItemSprite, getSlotSprite, getStatusEffectSprite } from "@/lib/sprites";
 import { useLocalSearchParams, useRouter, Stack } from "expo-router";
 import { Image, Pressable, ScrollView, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { ChevronRight } from "lucide-react-native";
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -48,18 +48,25 @@ export default function SetDetailScreen() {
         style={{ flex: 1 }}
         contentContainerStyle={{ paddingBottom: insets.bottom + 40 }}
       >
-        {/* Hero */}
+        {/* Hero — sprite grid */}
         <View className="items-center pt-6 pb-4 px-5">
-          {/* Show up to 5 item sprites stacked */}
-          <View className="flex-row items-center mb-3">
-            {set.items.slice(0, 5).map((itemName, i) => {
+          <View className="flex-row flex-wrap justify-center gap-1.5 mb-3">
+            {set.items.slice(0, 8).map((itemName) => {
               const item = getItem(itemName);
               const sprite = getItemSprite(itemName, item?.internalName);
-              return sprite ? (
-                <View key={itemName} style={{ marginLeft: i > 0 ? -16 : 0, zIndex: 5 - i }}>
-                  <Image source={sprite} style={{ width: 48, height: 48 }} resizeMode="contain" />
+              return (
+                <View
+                  key={itemName}
+                  style={{ backgroundColor: theme.secondary, borderColor: theme.border, borderWidth: 1 }}
+                  className="w-11 h-11 rounded-lg items-center justify-center"
+                >
+                  {sprite ? (
+                    <Image source={sprite} style={{ width: 32, height: 32 }} resizeMode="contain" />
+                  ) : (
+                    <Text className="text-muted-foreground text-[10px]">?</Text>
+                  )}
                 </View>
-              ) : null;
+              );
             })}
           </View>
           <Text className="text-xl font-bold text-center">{set.name}</Text>
@@ -110,36 +117,6 @@ export default function SetDetailScreen() {
             </Section>
           )}
 
-          {/* Recommended Classes */}
-          {set.recommendations.length > 0 && (
-            <Section title="Recommended Classes">
-              {set.recommendations.map((rec) => {
-                const classSprite = getClassSprite(rec.className);
-                return (
-                  <Pressable
-                    key={rec.className}
-                    onPress={() => router.push(`/classes/${encodeURIComponent(rec.className)}`)}
-                    style={{ backgroundColor: theme.secondary, borderColor: theme.border, borderWidth: 1 }}
-                    className="flex-row items-center rounded-xl p-3 mb-2"
-                  >
-                    <View className="w-8 h-8 mr-3 items-center justify-center">
-                      {classSprite ? (
-                        <Image source={classSprite} style={{ width: 28, height: 28 }} resizeMode="contain" />
-                      ) : (
-                        <Text className="text-sm font-bold text-muted-foreground">{rec.className[0]}</Text>
-                      )}
-                    </View>
-                    <View className="flex-1">
-                      <Text className="text-sm font-semibold">{rec.className}</Text>
-                      <Text className="text-muted-foreground text-xs">{rec.reason}</Text>
-                    </View>
-                    <ChevronRight size={16} color={theme.mutedForeground} />
-                  </Pressable>
-                );
-              })}
-            </Section>
-          )}
-
           {/* Items in set — grouped by slot */}
           <Section title={`Items (${set.itemDetails.length})`}>
             {(() => {
@@ -158,50 +135,37 @@ export default function SetDetailScreen() {
                   return a.name.localeCompare(b.name);
                 });
               }
-              return Array.from(bySlot.entries()).map(([slot, slotItems]) => (
-                <View key={slot} className="mb-3">
-                  <Text className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-1 mt-2">
-                    {slot}
-                  </Text>
-                  {slotItems.map((detail) => {
-                    const item = getItem(detail.name);
-                    const sprite = getItemSprite(detail.name, item?.internalName);
-                    const itemTierColor = getTierColor(detail.tier);
-
-                    return (
-                      <Pressable
-                        key={detail.name}
-                        onPress={() => router.push(`/items/${encodeURIComponent(detail.name)}`)}
-                        style={({ pressed }) => ({
-                          backgroundColor: pressed ? theme.secondary : "transparent",
-                        })}
-                        className="flex-row items-center py-2.5 border-b border-border"
-                      >
-                        <View className="w-8 h-8 mr-2.5 items-center justify-center">
-                          {sprite ? (
-                            <Image source={sprite} style={{ width: 28, height: 28 }} resizeMode="contain" />
-                          ) : null}
-                        </View>
-
-                        <View className="flex-1 mr-2">
-                          <Text className="text-sm font-medium" numberOfLines={1}>{detail.name}</Text>
-                          <Text className="text-xs text-muted-foreground" numberOfLines={1}>
-                            {detail.rarity}
-                          </Text>
-                        </View>
-
-                        <View className="flex-row items-center gap-2">
-                          {detail.tier ? (
-                            <View style={{ backgroundColor: itemTierColor.bg }} className="rounded px-1.5 py-0.5">
-                              <Text style={{ color: itemTierColor.text }} className="text-[10px] font-black">{detail.tier}</Text>
-                            </View>
-                          ) : null}
-                        </View>
-                      </Pressable>
-                    );
-                  })}
-                </View>
-              ));
+              return Array.from(bySlot.entries()).map(([slot, slotItems]) => {
+                const slotSprite = getSlotSprite(slot);
+                return (
+                  <View key={slot} className="mb-3">
+                    <View className="flex-row items-center gap-1.5 mb-1 mt-2">
+                      {slotSprite ? (
+                        <Image source={slotSprite} style={{ width: 14, height: 14, opacity: 0.6 }} resizeMode="contain" />
+                      ) : null}
+                      <Text className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+                        {slot}
+                      </Text>
+                    </View>
+                    {slotItems.map((detail) => {
+                      const item = getItem(detail.name);
+                      return (
+                        <ItemRow
+                          key={detail.name}
+                          item={{
+                            name: detail.name,
+                            internalName: item?.internalName,
+                            slot: detail.slot,
+                            rarity: detail.rarity,
+                            tier: detail.tier,
+                          }}
+                          onPress={() => router.push(`/items/${encodeURIComponent(detail.name)}`)}
+                        />
+                      );
+                    })}
+                  </View>
+                );
+              });
             })()}
           </Section>
         </View>

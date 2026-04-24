@@ -18,6 +18,8 @@ const statCtx = require.context("../data/sprites/stats", false, /\.png$/);
 const elementCtx = require.context("../data/sprites/elements", false, /\.png$/);
 // @ts-expect-error
 const statusEffectCtx = require.context("../data/sprites/status-effects", false, /\.png$/);
+// @ts-expect-error
+const slotCtx = require.context("../data/sprites/slots", false, /\.png$/);
 
 type RequireContext = {
   keys(): string[];
@@ -42,6 +44,7 @@ const abilitySprites = buildMap(abilityCtx as RequireContext);
 const statSprites = buildMap(statCtx as RequireContext);
 const elementSprites = buildMap(elementCtx as RequireContext);
 const statusEffectSprites = buildMap(statusEffectCtx as RequireContext);
+const slotSprites = buildMap(slotCtx as RequireContext);
 
 // ─── Name → sprite key conversion ───────────────────────────────────────────
 
@@ -76,6 +79,14 @@ export function getItemSprite(name: string, internalName?: string): ImageSourceP
   return null;
 }
 
+/**
+ * Look up a sprite directly by ML label (the sprite filename without extension).
+ * This bypasses name conversion issues with apostrophes/special chars.
+ */
+export function getItemSpriteByLabel(label: string): ImageSourcePropType | null {
+  return itemSprites.get(label) ?? null;
+}
+
 export function getClassSprite(className: string): ImageSourcePropType | null {
   return classSprites.get(className) ?? null;
 }
@@ -106,4 +117,8 @@ export function getStatusEffectSprite(name: string): ImageSourcePropType | null 
   // Sprites are named like "Poison_Icon.png"
   const key = name.replace(/\s+/g, "_") + "_Icon";
   return statusEffectSprites.get(key) ?? null;
+}
+
+export function getSlotSprite(slot: string): ImageSourcePropType | null {
+  return slotSprites.get(slot) ?? null;
 }

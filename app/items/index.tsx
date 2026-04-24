@@ -1,73 +1,18 @@
 import { Text } from "@/components/ui/text";
 import { Input } from "@/components/ui/input";
+import { ItemRow } from "@/components/item-row";
 import { useThemeColors } from "@/lib/theme";
 import { items, getAllSlots } from "@/lib/game-data";
-import { getTierColor, getRarityTextColor } from "@/lib/game-colors";
-import { getItemSprite } from "@/lib/sprites";
+import { getTierColor } from "@/lib/game-colors";
 import { useRouter, Stack } from "expo-router";
 import { useCallback, useMemo, useState } from "react";
-import { FlatList, Image, Pressable, View } from "react-native";
+import { FlatList, Pressable, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Search, X } from "lucide-react-native";
 import type { GameItem } from "@/lib/game-data";
 
 const TIERS = ["All", "S", "A", "B", "C", "D"] as const;
 const TIER_ORDER: Record<string, number> = { S: 0, A: 1, B: 2, C: 3, D: 4, "": 5 };
-
-function ItemRow({ item, onPress }: { item: GameItem; onPress: () => void }) {
-  const theme = useThemeColors();
-  const sprite = getItemSprite(item.name, item.internalName);
-  const tierColor = getTierColor(item.tier);
-  const rarityColor = getRarityTextColor(item.rarity);
-
-  return (
-    <Pressable
-      onPress={onPress}
-      style={({ pressed }) => ({
-        backgroundColor: pressed ? theme.secondary : "transparent",
-      })}
-      className="flex-row items-center px-4 py-2.5 border-b border-border"
-    >
-      {/* Sprite */}
-      <View className="w-10 h-10 mr-3 items-center justify-center">
-        {sprite ? (
-          <Image source={sprite} style={{ width: 36, height: 36 }} resizeMode="contain" />
-        ) : (
-          <View
-            style={{ backgroundColor: theme.secondary }}
-            className="w-9 h-9 rounded items-center justify-center"
-          >
-            <Text className="text-muted-foreground text-xs">?</Text>
-          </View>
-        )}
-      </View>
-
-      {/* Name + description */}
-      <View className="flex-1 mr-2">
-        <Text className="font-semibold text-sm" numberOfLines={1}>{item.name}</Text>
-        <Text className="text-muted-foreground text-xs" numberOfLines={1}>
-          {[item.rarity, item.slot].filter(Boolean).join(" · ")}
-          {item.sets.length > 0 ? (
-            <>
-              {"  "}
-              <Text style={{ color: rarityColor }} className="text-xs font-medium">{item.sets.join(", ")}</Text>
-            </>
-          ) : null}
-        </Text>
-      </View>
-
-      {/* Tier badge */}
-      {item.tier ? (
-        <View
-          style={{ backgroundColor: tierColor.bg }}
-          className="w-6 h-6 items-center justify-center rounded"
-        >
-          <Text style={{ color: tierColor.text }} className="text-xs font-black">{item.tier}</Text>
-        </View>
-      ) : null}
-    </Pressable>
-  );
-}
 
 export default function ItemsScreen() {
   const insets = useSafeAreaInsets();
@@ -100,7 +45,19 @@ export default function ItemsScreen() {
 
   const renderItem = useCallback(
     ({ item }: { item: GameItem }) => (
-      <ItemRow item={item} onPress={() => router.push(`/items/${encodeURIComponent(item.name)}`)} />
+      <View className="px-4">
+        <ItemRow
+          item={{
+            name: item.name,
+            internalName: item.internalName,
+            slot: item.slot,
+            rarity: item.rarity,
+            tier: item.tier,
+            subtitle: [item.rarity, ...item.sets].filter(Boolean).join(" · ") || undefined,
+          }}
+          onPress={() => router.push(`/items/${encodeURIComponent(item.name)}`)}
+        />
+      </View>
     ),
     [router]
   );
@@ -188,7 +145,7 @@ export default function ItemsScreen() {
           initialNumToRender={20}
           maxToRenderPerBatch={20}
           windowSize={10}
-          getItemLayout={(_, index) => ({ length: 56, offset: 56 * index, index })}
+          getItemLayout={(_, index) => ({ length: 52, offset: 52 * index, index })}
           contentContainerStyle={{ paddingBottom: insets.bottom + 80 }}
         />
       </View>
