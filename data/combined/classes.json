@@ -1,0 +1,2604 @@
+[
+  {
+    "name": "Butcher",
+    "id": "10",
+    "description": "Butchers get +3 [[stat:CON]] and +2 [[stat:STR]], but -2 [[stat:SPD]] as well. When leveling up, they can gain [[stat:CON]], [[stat:STR]], and [[stat:LCK]]. They also begin with an innate [[item:Meat Hook]] Butchers act as [[class:Fighter]], [[class:Tank]] units, with solid Melee and close-range damage, along with multiple abilities that increase their survivability. Their damage output can exceed what Fighters manage, since they accrue [[stat:LCK]] from level-ups for more critical hits, and their sustainability can exceed that of Tanks through abilities that raise [[stat:CON]] or produce Unlike these classes, though, Butchers leverage this health through \"self-harming\" abilities, trading health for various benefits. Butchers must work for their damage, though, as most of their abilities are melee-ranged, and Butchers naturally have a massive Speed penalty. However, they can work around this speed deficiency through smart usage of their [[item:Meat Hook]] to reposition enemies.",
+    "buffs": {
+      "CON": 3,
+      "STR": 2
+    },
+    "debuffs": {
+      "SPD": 2
+    },
+    "levelStats": [
+      "CON",
+      "STR",
+      "LCK"
+    ],
+    "basicAction": "",
+    "archetypes": [
+      {
+        "name": "Blood Thirsty",
+        "description": "Take self damage in exchange for buffs or extra damage. Abilities like [[ability:Lighten the Load]], [[ability:Self Harm]] and [[ability:Blood Magic]] are sources of on-command self-damage, providing buffs and activating abilities like [[ability:Masochist]]. [[ability:Swallow]] allows units to be instantly killed in exchange of taking damage."
+      },
+      {
+        "name": "Unhygienic",
+        "description": "Summon Rot Flies out of meat and living creatures. Abilities like [[ability:Duke of Flies]], [[ability:Cough]] or [[ability:Burp]] can consistently keep a sustainable flow of familiar flies. [[ability:Lord of the Flies]] provides buffs to flies and makes them allied."
+      },
+      {
+        "name": "Hoggish",
+        "description": "Provide and collect pickups for the Butcher and the team. [[ability:Hog Rush]], [[ability:Track]] and [[ability:Lunch Time]] provide extra movement towards food pickups. [[ability:Gib]] and [[ability:Regurge]] spawn food pickups. [[ability:Supersize Me!]] strengthens spawned food pickups"
+      },
+      {
+        "name": "Greedy",
+        "description": "Focus on gaining health, and receive buffs for doing so. [[ability:Chomp]] allows for damage-dealing while receiving health. [[ability:Gurgitator]], [[ability:Never Full]], [[ability:Incubator]] and [[ability:Indigestion]] creates an incentive to heal past maximum health."
+      },
+      {
+        "name": "Chef",
+        "description": "Apply on food pickups, strengthening their effects. [[ability:Grill]] can be used on enemies standing on top of food pickups, applying fire onto them. [[ability:Roast]] cooks all food pickups within range."
+      },
+      {
+        "name": "Hook, Line and Butcher",
+        "description": "Turn Meat Hook into a versatile tool with alternative uses. Abilities such as [[ability:Rehook]], [[ability:Harpooner]] and [[ability:Hooked]] provides additional uses of their Meat Hook. [[ability:Grapnel]] and [[ability:Grappling Hook]] allows Meat Hook to be used as an alternative form of movement. Abilities like [[ability:Contaminate]], [[ability:Lodge Hook]], [[ability:Barbed]] and [[ability:Heave Hook]] provides unique uses for Meat Hook, resulting in extra damage."
+      }
+    ],
+    "unlocks": [
+      {
+        "name": "Slice and Dice",
+        "requirement": "Complete The Caves with the Butcher."
+      },
+      {
+        "name": "Indigestion",
+        "requirement": "Complete The Boneyard with the Butcher."
+      },
+      {
+        "name": "Path of the Butcher",
+        "requirement": "Complete The Core with the Butcher."
+      },
+      {
+        "name": "Butcher's Soul",
+        "requirement": "Complete The Moon with the Butcher."
+      },
+      {
+        "name": "Butcher's Cleaver",
+        "requirement": "Complete The Jurassic with the Butcher."
+      },
+      {
+        "name": "Cookbook",
+        "requirement": "Complete The End with the Butcher."
+      },
+      {
+        "name": "Flesh Shroud",
+        "requirement": "Defeat The King with the Butcher."
+      },
+      {
+        "name": "Iron Jaw",
+        "requirement": "Defeat Chaos! with the Butcher."
+      },
+      {
+        "name": "Hooked Necklace",
+        "requirement": "Defeat The Creator with the Butcher."
+      },
+      {
+        "name": "Sack o' Meat",
+        "requirement": "Complete all areas with the Butcher."
+      }
+    ],
+    "abilities": [
+      "Bad Gas (Ability)",
+      "Barbed",
+      "Binge",
+      "Blood Magic",
+      "Body Slam",
+      "Bowl",
+      "Bowling Ball",
+      "Burp",
+      "Butcher (Ability)",
+      "Cannon Ball!",
+      "Chomp",
+      "Chonkwalk",
+      "Cleave (Basic Attack)",
+      "Confrontational",
+      "Consume",
+      "Contaminate",
+      "Cough",
+      "Crushinator",
+      "Death Wind",
+      "Delicious Scent",
+      "Duke of Flies",
+      "Fartoom!",
+      "Fire Fart",
+      "Force Feed",
+      "Fresh Meat",
+      "Gib",
+      "Glutton",
+      "Grapnel",
+      "Grappling Hook (Ability)",
+      "Grill",
+      "Gurgitator",
+      "Hack",
+      "Harpooner",
+      "Heave Hook",
+      "Hog Rush",
+      "Hook Bind",
+      "Hooked",
+      "Incubator",
+      "Indigestion",
+      "Lighten the Load",
+      "Lodge Hook",
+      "Loose Meat",
+      "Lord of the Flies",
+      "Lunch Time",
+      "Masochist",
+      "Monch",
+      "Mutilate",
+      "My Turn!",
+      "Never Full",
+      "Purge",
+      "Putrefy",
+      "Rankle",
+      "Reflux",
+      "Regurge",
+      "Rehook",
+      "Roast",
+      "Rough Toss",
+      "SUCC",
+      "Schadenfreude",
+      "Self Harm",
+      "Sharpen",
+      "Shred",
+      "Skull Bash",
+      "Slice and Dice",
+      "Smell Blood",
+      "Spin Cleave",
+      "Spin to Win",
+      "Spoil",
+      "Stompy!",
+      "Supersize Me!",
+      "Swallow",
+      "Tainted Offering",
+      "Testy",
+      "Track",
+      "Tromp",
+      "Trudge",
+      "Vurp",
+      "Yawn"
+    ],
+    "abilityCount": 78,
+    "recommendedSets": [
+      "Barbed",
+      "Bone",
+      "Butcher",
+      "Cool",
+      "Demonic",
+      "Gimp",
+      "Guts",
+      "Hybrid",
+      "Leech",
+      "Medical",
+      "Mother",
+      "Obelisk",
+      "Paper",
+      "Prowler",
+      "Rag",
+      "Thief",
+      "Tinkerer",
+      "Twine",
+      "Used",
+      "Wood"
+    ]
+  },
+  {
+    "name": "Cleric",
+    "id": "6",
+    "description": "Clerics get +2 [[stat:CHA]] and +2 [[stat:CON]], but -1 [[stat:DEX]] and -1 [[stat:SPD]] as well. When leveling up, they can gain [[stat:CHA]], [[stat:INT]], and [[stat:CON]]. Clerics are unique in that their basic action changes depending on the context. It damages enemies and neutral entities like normal, but will heal allies. This is a unique capability that all Clerics have, and it greatly helps survivability. However, they will need to find other ways to heal themselves, such as consumables or abilities, though their high [[stat:CON]] still lets them take hits. Players will need to look out for their decreased [[stat:SPD]], which is a vital stat for them since the higher it is, the easier it is to approach allies and keep them healthy. To mitigate this [[stat:SPD]] issue, Clerics should be kept in the middle of all other allies, so they can be equally available when in danger.",
+    "buffs": {
+      "CHA": 2,
+      "CON": 2
+    },
+    "debuffs": {
+      "DEX": 1,
+      "SPD": 1
+    },
+    "levelStats": [
+      "CHA",
+      "INT",
+      "CON"
+    ],
+    "basicAction": "A Cleric's basic action is Melee Attack/Heal. At melee range, it deals Holy damage to enemies and healing to allies, both equal to the user's [[stat:STR]]. The healing is also Holy element, meaning Undead allies will take damage from it. When a Cleric has [[ability:Ranged Medic]], its basic action becomes Ranged Attack/Heal. It acts the same when it comes to damage and healing, but can be used at a range, and the amount of healing instead scales with the user's [[stat:DEX]].",
+    "archetypes": [
+      {
+        "name": "White Mage",
+        "description": "Generalist playstyle that uses abilities to heal allies, apply buffs, dispel debuffs, and even revive allies. Uses a countless variety of abilities like [[ability:Revive]], [[ability:Holy Dash]], and [[ability:Friend or Foe]]. [[ability:Adoubment]], [[ability:Cleanse]], and [[ability:Purifier]] are reliable means of removing debuffs—which can be used to enable allies' abilities that may apply harmful status effects like [[status:Madness]]."
+      },
+      {
+        "name": "Mass Healer",
+        "description": "Heals multiple allies at a time, often gaining buffs for itself in the process. Abilities like [[ability:Prayer]], [[ability:Healing Aura]], and [[ability:Benediction]] allow for mass healing, often ignoring range altogether. Some Passive Abilities including [[ability:Godspeed]] and [[ability:Top Off]] can provide massive buffs for the user if enough units are healed at once."
+      },
+      {
+        "name": "Paladin",
+        "description": "Uses healing abilities, buffs, and to supplement aggressive melee playstyles. Abilities like [[ability:Crusade]], [[ability:Circle of Protection]], and [[ability:Stimulants]] can buff the Cleric and adjacent teammates before a offensive charge."
+      },
+      {
+        "name": "Holy Damage",
+        "description": "Focused on dealing damage with abilities. [[ability:An Eye for an Eye]], [[ability:Holy Weapon]], and [[ability:Open Wounds]] are powerful melee attacks that do not necessarily require [[stat:STR]] investment. [[ability:Wrath of God]] and [[ability:Holy Light]] allow for long-ranged damage. [[ability:Blessing of Holy Fire]] and [[ability:Evil Patron]] convert or healing abilities into damaging ones."
+      },
+      {
+        "name": "Hexer",
+        "description": "[[status:Weakness]] enemies, turns them against each other, and hinders their ability to harm allies. Abilities like [[ability:Heathens!]] and [[ability:Blinding Lights]] apply crippling status effects in wide areas. [[ability:Heretic Mark]] uniquely applies [[status:Ostracized]], turning enemies against each other and thus greatly stalling their advance."
+      },
+      {
+        "name": "Kingmaker",
+        "description": "Gives [[status:The Alpha]] status to allies. Numerous abilities like [[ability:Adoubment]] or [[ability:Chosen Warrior]] will grant the status and further buff the Alpha on continued use. [[ability:Guardian Angel]] works similarly but additionally allows for the status to be alternated between allies."
+      }
+    ],
+    "unlocks": [
+      {
+        "name": "Ethereal",
+        "requirement": "Complete The Caves with the Cleric."
+      },
+      {
+        "name": "Evil Patron",
+        "requirement": "Complete The Boneyard with the Cleric."
+      },
+      {
+        "name": "Path of the Cleric",
+        "requirement": "Complete The Core with the Cleric."
+      },
+      {
+        "name": "Cleric's Soul",
+        "requirement": "Complete The Moon with the Cleric."
+      },
+      {
+        "name": "Anointing Oil",
+        "requirement": "Complete The Jurassic with the Cleric."
+      },
+      {
+        "name": "Holy Water",
+        "requirement": "Complete The End with the Cleric."
+      },
+      {
+        "name": "Cleric's Mitre",
+        "requirement": "Defeat The King with the Cleric."
+      },
+      {
+        "name": "Cleric's Tears",
+        "requirement": "Defeat Chaos! with the Cleric."
+      },
+      {
+        "name": "Cleric's Relic",
+        "requirement": "Defeat The Creator with the Cleric."
+      },
+      {
+        "name": "Prayer Card",
+        "requirement": "Complete all areas with the Cleric."
+      }
+    ],
+    "abilities": [
+      "Adoubment",
+      "Alms for the Poor",
+      "An Eye for an Eye",
+      "Angelic Inspiration",
+      "Anoint",
+      "Awaken",
+      "Benediction",
+      "Blessed",
+      "Blessing of Holy Fire",
+      "Blessing of Spirit",
+      "Blinding Lights",
+      "Booster",
+      "Born Again",
+      "Breath of Life",
+      "Buddy Up",
+      "Call Over",
+      "Caretaker",
+      "Chosen Warrior",
+      "Circle of Protection",
+      "Cleanse",
+      "Convert",
+      "Crusade",
+      "Cure Wounds",
+      "Divine Gift",
+      "Divine Protection",
+      "Emergency",
+      "Enchanted Relic",
+      "Enlighten",
+      "Eternal",
+      "Ethereal",
+      "Evil Patron",
+      "Friend or Foe",
+      "Fury Heal",
+      "God Warrior",
+      "Godspeed",
+      "Grace",
+      "Guardian Angel",
+      "Hallowed Ground",
+      "Haste",
+      "Healing Aura",
+      "Healing Fall",
+      "Healing Salve",
+      "Healing Word",
+      "Heathens!",
+      "Heretic Mark",
+      "Holy Dash",
+      "Holy Light",
+      "Holy Weapon",
+      "Malaise",
+      "Melee Attack - Heal",
+      "Morale Boost",
+      "Natural Healer",
+      "Open Wounds",
+      "Pray",
+      "Prayer",
+      "Protect the Weak",
+      "Purge (Cleric)",
+      "Purifier",
+      "Rally",
+      "Ranged Attack - Heal",
+      "Ranged Medic",
+      "Rebuke",
+      "Reverse Damage",
+      "Revive",
+      "Sharing is Caring",
+      "Stand In",
+      "Stimulants",
+      "Swift Servant",
+      "Thou Shalt Not Covet",
+      "Thou Shalt Not Kill",
+      "Thou Shalt Obey",
+      "Top Off",
+      "Turn Foe",
+      "Venerated Touch",
+      "Wish",
+      "Witch Hunt",
+      "Wrath of God",
+      "Zealot"
+    ],
+    "abilityCount": 78,
+    "recommendedSets": [
+      "Cleric"
+    ]
+  },
+  {
+    "name": "Collarless",
+    "id": "1",
+    "description": "Collarless cats receive no positive or negative stat changes, and only learn Collarless abilities, which are also offered to all other classes. Therefore Collarless cats have the smallest ability pool of all classes. Although it can be difficult for Collarless cats to fill a particular role, Collarless abilities serve a wide variety of purposes including offense, support, and utility, and typically interact with fundamental mechanics that are generally useful for all cats. The Collarless class is unique in that it can be \"assigned\" to cats without the use of a collar, allowing the player to depart with any number of Collarless cats. This is not possible for other classes unless the player buys a Blank Collar from Tracy or departs with a cat that already has a collar—possible if, for example, a cat is transformed into a kitten mid-adventure, allowing it to return home without being retired.",
+    "buffs": {},
+    "debuffs": {},
+    "levelStats": [],
+    "basicAction": "Collarless cats are unusual for having three different possible starting attacks. These are the Melee Attack (akin to the Fighter's Basic Attack), the Short Shot (which travels in a straight line and is interrupted by obstacles), and the Short Lobbed Shot (which flies over obstacles in an arc).",
+    "archetypes": [],
+    "unlocks": [
+      {
+        "name": "Metronome",
+        "requirement": "Complete Caves with a Collarless cat."
+      },
+      {
+        "name": "Skill Share",
+        "requirement": "Complete Boneyard with a Collarless cat."
+      },
+      {
+        "name": "Path Of The Void",
+        "requirement": "Complete Core with a Collarless cat."
+      },
+      {
+        "name": "Void Soul",
+        "requirement": "Complete Moon with a Collarless cat."
+      },
+      {
+        "name": "Lil' Kitty",
+        "requirement": "Complete Jurassic with a Collarless cat."
+      },
+      {
+        "name": "Ball of Yarn",
+        "requirement": "Complete End with a Collarless cat."
+      },
+      {
+        "name": "Normal Ears",
+        "requirement": "Defeat The King with a Collarless cat."
+      },
+      {
+        "name": "Ordinary Whiskers",
+        "requirement": "Defeat Chaos! with a Collarless cat."
+      },
+      {
+        "name": "Mundane Collar",
+        "requirement": "Defeat The Creator with a Collarless cat."
+      },
+      {
+        "name": "Skill Split",
+        "requirement": "Complete all areas with a Collarless cat."
+      },
+      {
+        "name": "Copycat Hat",
+        "requirement": "Defeat The King with only Collarless cats."
+      },
+      {
+        "name": "Copycat Mask",
+        "requirement": "Defeat Chaos! with only Collarless cats."
+      },
+      {
+        "name": "Copycat Scarf",
+        "requirement": "Defeat The Creator with only Collarless cats."
+      }
+    ],
+    "abilities": [
+      "180",
+      "Amped",
+      "Amplify",
+      "Animal Handler",
+      "BBQ",
+      "Bare Minimum",
+      "Barf Ball",
+      "Barrage",
+      "Block",
+      "Blow",
+      "Blow Kiss",
+      "Boost",
+      "Borrow Mana",
+      "Brace",
+      "Brainstorm",
+      "Burgeoning Barrier",
+      "Burgeoning Battery",
+      "Burgeoning Blast",
+      "Burst",
+      "Butcher's Soul",
+      "Butt Scoot",
+      "Buy Catnip",
+      "CPR",
+      "Careful",
+      "Cat Nap",
+      "Charming",
+      "Claws Out",
+      "Cleric's Soul",
+      "Cold Shoulder",
+      "Confusion (Ability)",
+      "Copycat",
+      "Cry",
+      "Dart",
+      "Daunt",
+      "Dealer",
+      "Death Boon",
+      "Death's Door",
+      "Deathproof",
+      "Desecrate",
+      "Dexterous Hit",
+      "Dirty Claws",
+      "Doll Up",
+      "Druid's Soul",
+      "Dump",
+      "E-Tank",
+      "Eject!",
+      "Explosive Shot",
+      "Fast Footsies",
+      "Feather Feet",
+      "Fighter's Soul",
+      "Find a Rock",
+      "First Impression",
+      "Flex",
+      "Focus",
+      "Forbidden Fart",
+      "Furious",
+      "Gamble",
+      "Gassy (Ability)",
+      "Gerd Shot",
+      "Groom",
+      "Gym Membership",
+      "Healing Bolt",
+      "Hire Hitman",
+      "Hiss",
+      "Hop",
+      "Hose Off",
+      "Hot-Blooded",
+      "Hunt",
+      "Hunter's Soul",
+      "Infested",
+      "Interchange",
+      "Invert",
+      "Itch",
+      "Jester's Soul",
+      "Knead",
+      "Landscape",
+      "Late Bloomer",
+      "Leader",
+      "Lick",
+      "Longshot",
+      "Look at me!",
+      "Luck Drain",
+      "Lucky",
+      "Mage's Soul",
+      "Make a Wish",
+      "Mange",
+      "Mania",
+      "Mech Punch",
+      "Melee Attack",
+      "Meow",
+      "Metabolize",
+      "Metal Detector",
+      "Metronome (Ability)",
+      "Might of the Meek",
+      "Mini-Me",
+      "Minihook",
+      "Monk's Soul",
+      "Natural Healing",
+      "Necromancer's Soul",
+      "Nerf",
+      "Number One",
+      "Over There!",
+      "Overconfident",
+      "Path Of The Void",
+      "Path of the Butcher",
+      "Path of the Cleric",
+      "Path of the Druid",
+      "Path of the Fighter",
+      "Path of the Hunter",
+      "Path of the Jester",
+      "Path of the Mage",
+      "Path of the Monk",
+      "Path of the Necromancer",
+      "Path of the Psychic",
+      "Path of the Tank",
+      "Path of the Thief",
+      "Path of the Tinkerer",
+      "Patience",
+      "Play Dead",
+      "Ponder",
+      "Proliferate",
+      "Protection (Collarless)",
+      "Psychic's Soul",
+      "Puke Shot",
+      "Pulp",
+      "Purr",
+      "Randomize",
+      "Rat Roulette",
+      "Reach (Ability)",
+      "Reduce",
+      "Reflect",
+      "Rest",
+      "Rockin'",
+      "Roll",
+      "Rouse",
+      "Russian Shorthair Roulette",
+      "Santa Sangre",
+      "Scavenger",
+      "Second Wind",
+      "Self-Assured",
+      "Serial Killer",
+      "Sharpen Claws",
+      "Shift",
+      "Short Lobbed Shot",
+      "Short Shot",
+      "Shrug It Off",
+      "Skill Share",
+      "Slip Through",
+      "Slugger",
+      "Smack",
+      "Snacks",
+      "Soothing Glow",
+      "Soul Reap",
+      "Spit",
+      "Stack the Deck",
+      "Steam Roller",
+      "Step",
+      "Strength in Numbers",
+      "Study",
+      "Stun",
+      "Subway Ride",
+      "Sudden Affliction",
+      "Sunburn",
+      "Super Crate Box",
+      "Swat",
+      "Tank's Soul",
+      "Thief's Soul",
+      "Thrusters",
+      "Tinkerer's Soul",
+      "Toast",
+      "Trip",
+      "Tunnel",
+      "Unrestricted",
+      "Unscarred",
+      "Vet Visit",
+      "Void Soul",
+      "Waste Time",
+      "Whipcracker",
+      "Wiggly",
+      "Worms",
+      "Zap",
+      "Zenkai Boost"
+    ],
+    "abilityCount": 182,
+    "recommendedSets": [
+      "Collarless"
+    ]
+  },
+  {
+    "name": "Druid",
+    "id": "11",
+    "description": "The Druid has increased [[stat:CHA]] and [[stat:LCK]], but reduced [[stat:CON]]. When leveing up, they can gain [[stat:CHA]], [[stat:INT]], or [[stat:STR]]. At the start of each battle, the Druid spawns a crow familiar that copies the stats of the Druid. Given the fact the Druid has a non-damaging, strictly supportive basic attack (in base form), as well as having poor [[stat:CON]], the Druid typically has its crow or other allies do the fighting for it. However, the bulk of the Druid's utility lies in their extremely diverse ability pool, which they can make use of instantly with their greatly increased [[stat:CHA]]. Druids have many abilities that directly heal allies and grant them buffs, but they also support their team through other means, such as tile replacements that heal and conceal allies and hinder enemies. Druids also have a host of transformation abilities, changing their basic attack, stats, and granting bonus abilities.",
+    "buffs": {
+      "LUCK": 1
+    },
+    "debuffs": {},
+    "levelStats": [
+      "CHA",
+      "INT",
+      "STR"
+    ],
+    "basicAction": "Druids are unusual for having a non-damaging basic attack at base, which Druid's Passives and Actives call a \"basic action\". This is called [[ability:Sing]]. It has somewhat-low impact that doesn't scale with stats, but it covers both the targeted tile and everything within 2 tiles of it. Despite the differing notation, this \"basic action\" is still a \"basic attack\", and thus employs any basic attack modifiers the user has. Many basic attack modifiers will outright ruin its effectiveness at support, or will at least make it risky to use. The [[ability:Versatile Vocalist]] passive replaces Sing with something more akin to the [[class:Cleric]]'s Melee Attack/Heal. Instead of healing and buffing enemies in its area-of-effect, it now deals magic damage and applies a debuff to them. This passive rectifies the issue of basic attack modifiers, by restricting all of their damage and Debuffs to only affect enemies. Many of the Druid's active abilities replace their basic action with an alternate function, for the duration of the battle.",
+    "archetypes": [
+      {
+        "name": "Area Healer",
+        "description": "Provides healing to multiple allies at once. [[ability:Inspirational Song]] and [[ability:Safety Dance]] are cheap, spammable options that heal the entire team. [[ability:Serenade]] and [[ability:Good Vibrations]] provide passive , which works well for longer battles. Healing item support (through [[item:Cleric's Mitre]], [[item:Nurse Necklace]], etc.) buffs [[ability:Sing]]'s poor base healing. Alternatively, abilities like [[ability:Cheerlead]] and [[ability:Grant Life]] can buff individual allies."
+      },
+      {
+        "name": "Area Hinderer",
+        "description": "Exploits its naturally large basic attack to debuff numerous enemies at once. Many trinkets, such as [[item:Bird Head]], [[item:Bee Stinger]], and [[item:Magic Seed]], apply widespread debuffs. Many abilities from other classes, like [[ability:Animal Control]], [[ability:Beckon]], [[ability:Leech Mother]], and [[ability:Purifier]], work similarly. [[ability:Versatile Vocalist]] prevents Druids from inadvertently debuffing allies or buffing enemies. [[ability:Love Song]] extends Sing's already large area coverage."
+      },
+      {
+        "name": "Commander",
+        "description": ": Summons powerful familiars or swarms of weak familiars, then buffs them. [[ability:Summon Bear]] and [[ability:Summon Caterpillar]] summon destructive familiars. Abilities like [[ability:Encourage]], [[ability:Empty Vessels]], and [[ability:Super Friends]] buff their damage and health. [[ability:Form of the Squirrel]] and [[ability:Squirrel Squad]] flood the board with . [[ability:Battle Cry]] and [[ability:War Cry]] buff groups of familiars. [[ability:Poison Ivy]], [[ability:Sneak Attack]], and [[ability:Suicide Squad]] allow frail familiars to deal heavy damage before their death. [[ability:Super Crow!]], [[ability:Resummon Crow]], and [[ability:Buddy System]] buff the into a formidable tank."
+      },
+      {
+        "name": "One with the Earth",
+        "description": "Exerts control over the battlefield with terrain and elemental abilities. Abilities like [[ability:Flower Feet]], [[ability:Nature's Blessing]], [[ability:Song of Spring]] cover the arena with beneficial tiles. [[ability:Bramble Burst]] and [[ability:Thorny Feet]] spawn hindering . Passive abilities such as [[ability:Nature's Guidance]], [[ability:Like a Fish]], and [[ability:Pathfinder]] compound tiles' benefits."
+      },
+      {
+        "name": "Peacekeeper",
+        "description": "Repositions allies and keeps enemies at bay. Abilities like [[ability:Cha Cha Slide]], [[ability:Stand By Me]], and [[ability:Step In]] can reposition units. [[ability:Call the Wind]], [[ability:Control Air]], and [[ability:Windy Step]] work similarly and also have element synergy."
+      },
+      {
+        "name": "Shapeshifter",
+        "description": "Goes on the offensive with powerful animal forms. Forms occupy a variety of roles, like [[ability:Form of the Mockingbird]]'s debuffs and [[ability:Form of the Turtle]]'s tankiness, allowing for rotation depending on the situation. [[ability:Animalistic]] and [[ability:Wild Style]] grant offensive boosts when shapeshifting, which buffs hyper-offensive forms like [[ability:Form of the Elk]] and [[ability:Form of the Wolf]]."
+      },
+      {
+        "name": "Virtuoso",
+        "description": "Uses abilities in harmony with each other. [[ability:Encore]] and [[ability:Maestro]] allow for Music abilities to be cycled between each other. [[ability:Death Metal]] and [[ability:Lullaby]] in particular benefit from the Mana Cost reduction provided by these abilities."
+      }
+    ],
+    "unlocks": [
+      {
+        "name": "Summon Bear",
+        "requirement": "Complete The Caves with the Druid."
+      },
+      {
+        "name": "Suicide Squad",
+        "requirement": "Complete The Boneyard with the Druid."
+      },
+      {
+        "name": "Path of the Druid",
+        "requirement": "Complete The Core with the Druid."
+      },
+      {
+        "name": "Druid's Soul",
+        "requirement": "Complete The Moon with the Druid."
+      },
+      {
+        "name": "Rain Staff",
+        "requirement": "Complete The Jurassic with the Druid."
+      },
+      {
+        "name": "Druid's Whistle",
+        "requirement": "Complete The End with the Druid."
+      },
+      {
+        "name": "Mushroom Hat",
+        "requirement": "Defeat The King with the Druid."
+      },
+      {
+        "name": "Greenman Mask",
+        "requirement": "Defeat Chaos! with the Druid."
+      },
+      {
+        "name": "Ring of Mushrooms",
+        "requirement": "Defeat The Creator with the Druid."
+      },
+      {
+        "name": "Tiny Cage",
+        "requirement": "Complete all areas with the Druid."
+      }
+    ],
+    "abilities": [
+      "Aeroblast",
+      "Animalistic",
+      "Antler Swipe",
+      "Bark Skin",
+      "Battle Cry",
+      "Bestow Wisdom",
+      "Birth Squirrel",
+      "Bloom",
+      "Bouquet",
+      "Bramble Burst",
+      "Buddy System",
+      "Call the Wind",
+      "Cha Cha Slide",
+      "Cheerlead",
+      "Chitter",
+      "Control Air",
+      "Control Plants",
+      "Control Water",
+      "Death Metal",
+      "Empty Vessels",
+      "Encore",
+      "Encourage",
+      "Entangle",
+      "Feral",
+      "Feral Attack",
+      "Flower Feet",
+      "Flower Power",
+      "Flutter",
+      "Form of the Elk",
+      "Form of the Mockingbird",
+      "Form of the Monkey",
+      "Form of the Raccoon",
+      "Form of the Squirrel",
+      "Form of the Tree",
+      "Form of the Turtle",
+      "Form of the Wolf",
+      "From the Trees!",
+      "Good Vibrations",
+      "Grant Life",
+      "Harden Shell",
+      "Head Bash",
+      "Hydro Pump",
+      "Inspirational Song",
+      "Like a Fish",
+      "Love Song",
+      "Lullaby",
+      "Maestro",
+      "Mega Minions",
+      "Mock Song",
+      "Monkey Toss",
+      "Nature's Blessing",
+      "Nature's Guidance",
+      "Pathfinder",
+      "Pilfer",
+      "Plant Mushroom",
+      "Poison Ivy",
+      "Pounce",
+      "Prance",
+      "Promote",
+      "Protection (Druid)",
+      "Rap God",
+      "Resummon Crow",
+      "Safety Dance",
+      "Scavenge",
+      "Self-destruct",
+      "Serenade",
+      "Sing",
+      "Sleep Powder",
+      "Sneak Attack",
+      "Song of Spring",
+      "Squirrel Squad",
+      "Stand By Me",
+      "Step In",
+      "Suicide Squad",
+      "Summon Bear",
+      "Summon Caterpillar",
+      "Summon Snake",
+      "Summon Squirrel",
+      "Summon Toad",
+      "Summon Turtle",
+      "Super Crow!",
+      "Super Friends",
+      "Synthesize (Druid)",
+      "Teamwork",
+      "Tease",
+      "Thorny Feet",
+      "Throw Egg",
+      "Throw Poop",
+      "Timber",
+      "Versatile Vocalist",
+      "War Cry",
+      "We Are the Champions",
+      "We Will Rock You",
+      "Wild Animals",
+      "Wild Style",
+      "Windy Step",
+      "Wolf Claws"
+    ],
+    "abilityCount": 97,
+    "recommendedSets": [
+      "Bionic",
+      "Cyborg",
+      "Demonic",
+      "Druid",
+      "Feathered",
+      "Gimp",
+      "Hybrid",
+      "Mage",
+      "Paper",
+      "Phoenix",
+      "Psychic",
+      "Rag",
+      "Recycled",
+      "Thrumming",
+      "Wood"
+    ]
+  },
+  {
+    "name": "Fighter",
+    "id": "2",
+    "description": "Fighters get +2 [[stat:STR]] and +1 [[stat:SPD]], but -1 [[stat:INT]] as well. When leveling up, they can gain [[stat:STR]], [[stat:CON]], or [[stat:SPD]]. Fighters are meant to do as much damage as possible, using their high [[stat:SPD]] to get to the frontlines and then hitting hard thanks to their high [[stat:STR]]. Many of their active abilities are dedicated to either dealing high damage to one target or damage to multiple targets. Other active abilities and passive abilities are typically meant to strengthen their combat abilities. However, their lowered [[stat:INT]] causes them to regenerate less mana at the end of their turn compared to other cats, so their most expensive active abilities should be used with caution and only when necessary. This can be alleviated by high [[stat:CHA]] so the player can use spells that benefit from low [[stat:INT]].",
+    "buffs": {
+      "STR": 2,
+      "SPD": 1
+    },
+    "debuffs": {
+      "INT": 1
+    },
+    "levelStats": [
+      "STR",
+      "CON",
+      "SPD"
+    ],
+    "basicAction": "A Fighter's basic action is Melee Attack. It deals damage to an adjacent unit equal to the user's [[stat:STR]].",
+    "archetypes": [
+      {
+        "name": "Hyper Offense",
+        "description": "Using abilities and temporary buffs to deal as much damage to one target as possible. [[ability:Berserk]], in particular, trades in what little toughness Fighters have for excellent damage and mobility. [[ability:Exert]] allows for multiple basic attacks and movements in a single turn, which allows Fighters to tear apart enemies one-by-one. Abilities like [[ability:Punch Face]] and [[ability:Vengeful]] can guarantee critical hits."
+      },
+      {
+        "name": "Low Intelligence",
+        "description": "Lowering the [[stat:INT]] stat as much as possible to reap the most benefit out of low-intelligence-scaling active/passive abilities. [[ability:Think Too Hard]] and [[ability:Math?]] allow for spells to be used for free, making the lack of mana much less constricting. Abilities such as [[ability:1D Chess]] and [[ability:Dumb Muscle]] are much stronger at low [[stat:INT]]. [[ability:Thick Skull]] is a crucial passive ability for leaning into this archetype, as it allows one to consistently lower their Fighter's [[stat:INT]] without risk of permanently lowering other important stats. Alternatively, using [[ability:Stoopzerk]] at the start of a battle can immediately lower the Fighter's [[stat:INT]] to 0. Certain disorders such as Down's Syndrome, Williams Syndrome, and GIGACHAD can drop the Fighter's [[stat:INT]] while boosting [[stat:CON]] and [[stat:CHA]]."
+      },
+      {
+        "name": "Bodyguard",
+        "description": "Uses strong mobility and positioning moves to control the battlefield and pick fights with enemies. Abilities such as [[ability:Gravity Slam]] and [[ability:Taunt!]] can pull enemies into favorable positions, hopefully away from threatened allies. [[ability:Grapple]] and [[ability:Sleeper Hold]] can hold back a troublesome enemy from the rest of the party."
+      },
+      {
+        "name": "Mini-Tank/Counterattacker",
+        "description": "Built like the [[class:Tank]] class through focus on raising [[stat:CON]], [[status:Shield]], and [[status:Brace]], allowing them to shrug off hits on the front lines. With enough survivability, the fighter can get extra mileage out of counterattack-foc[[ability:Breaking Point]]used abilities such as [[ability:Counter]], [[ability:Vengeful]], [[ability:Patellar Reflex]], and [[ability:Hit Me]]. The extra tankiness allows for effective use of abilities like [[ability:Breaking Point]] and [[ability:Hulk Up]] that get stronger when taking damage."
+      },
+      {
+        "name": "Weapon Master",
+        "description": "Focuses on buffing or generating melee weapons. Abilities like [[ability:Stick!]], [[ability:Boned]], and [[ability:Smash!]] can generate temporary weapons mid-combat. [[ability:Dual Wield]] and [[ability:Weapon Master]] can enhance the power of these weapons or get even more benefit from a powerful permanent weapon like [[item:Jitte]]."
+      }
+    ],
+    "unlocks": [
+      {
+        "name": "Paw Breaker",
+        "requirement": "Complete The Caves with the Fighter."
+      },
+      {
+        "name": "Dual Wield",
+        "requirement": "Complete The Boneyard with the Fighter."
+      },
+      {
+        "name": "Path of the Fighter",
+        "requirement": "Complete The Core with the Fighter."
+      },
+      {
+        "name": "Fighter's Soul",
+        "requirement": "Complete The Moon with the Fighter."
+      },
+      {
+        "name": "Battle Axe",
+        "requirement": "Complete The Jurassic with the Fighter."
+      },
+      {
+        "name": "Rage Juice",
+        "requirement": "Complete The End with the Fighter."
+      },
+      {
+        "name": "Fighter's Helm",
+        "requirement": "Defeat The King with the Fighter."
+      },
+      {
+        "name": "Fighter's Scar",
+        "requirement": "Defeat Chaos! with the Fighter."
+      },
+      {
+        "name": "Fighter's Shoulder Pad",
+        "requirement": "Defeat The Creator with the Fighter."
+      },
+      {
+        "name": "Steroids",
+        "requirement": "Complete all areas with the Fighter."
+      }
+    ],
+    "abilities": [
+      "1D Chess",
+      "Assert Dominance",
+      "Avenger",
+      "Berserk",
+      "Berserker Dash",
+      "Big Punch",
+      "Bloodzerk",
+      "Boned",
+      "Breaking Point",
+      "Bull Rush",
+      "Chaos Rampage",
+      "Confront",
+      "Cosmic Punch",
+      "Counter",
+      "Dual Wield",
+      "Dumb Muscle",
+      "Enrage",
+      "Exert",
+      "Exhausting Blow",
+      "Falcon Punch",
+      "Fervor",
+      "Fire Punch",
+      "Flex Off",
+      "Frenzy",
+      "Fury Swipes",
+      "Grapple",
+      "Gravity Slam",
+      "Hamster Style",
+      "Hit Me",
+      "Huddle",
+      "Hulk Up",
+      "Hurl",
+      "Ice Punch",
+      "Inhale",
+      "Juiced",
+      "Lacerate",
+      "Leap",
+      "MORE ANGRIER!!!",
+      "Math?",
+      "Merciless",
+      "Meteor Slam",
+      "Mock",
+      "Most Valuable Cat",
+      "Muscle Memory",
+      "Nip",
+      "OVERPOWERED!!!",
+      "One-Two Punch",
+      "Patellar Reflex",
+      "Paw Breaker",
+      "Poke",
+      "Punch Face",
+      "Push",
+      "Rage Punch",
+      "Ram",
+      "Rat Style",
+      "Reposition",
+      "Scars",
+      "Shoulder Check",
+      "Side Slash",
+      "Skullcrack",
+      "Slap",
+      "Sleeper Hold",
+      "Smash!",
+      "Spin",
+      "Stick!",
+      "Stoopzerk",
+      "Sucker Punch",
+      "Synchro Spin",
+      "Tail Whip",
+      "Taunt!",
+      "Thick Skull",
+      "Think Too Hard",
+      "Thunder Punch",
+      "Tumble",
+      "Turtle Style",
+      "Underdog",
+      "Uppercut",
+      "Vengeful",
+      "Weapon Master",
+      "Zoomzerk"
+    ],
+    "abilityCount": 80,
+    "recommendedSets": [
+      "Advanced Alloy",
+      "Alloy",
+      "Amoeba",
+      "Barbed",
+      "Bone",
+      "Butcher",
+      "Cactus",
+      "Cathide",
+      "Caveman",
+      "Cleric",
+      "Cool",
+      "Debris",
+      "Demonic",
+      "Druid",
+      "Elite Alloy",
+      "Fatty",
+      "Fighter",
+      "Gemstone",
+      "Gimp",
+      "Jank Alloy",
+      "Leafy",
+      "Leather",
+      "Monk",
+      "Mother",
+      "Paper",
+      "Parasite",
+      "Planet",
+      "Radioactive",
+      "Rag",
+      "Rock",
+      "Scrap",
+      "Space",
+      "Tank",
+      "Thrumming",
+      "Transmitter",
+      "Twine",
+      "Wood",
+      "Wooly"
+    ]
+  },
+  {
+    "name": "Hunter",
+    "id": "3",
+    "description": "Hunters get +3 [[stat:DEX]] and +2 [[stat:LCK]], but -2 [[stat:SPD]] and -1 [[stat:CON]] as well. When leveling up, they can gain [[stat:DEX]], [[stat:SPD]], or [[stat:INT]]. Hunters are meant to attack from a distance. Most of their attacks take advantage of their high [[stat:DEX]] and can be shot past obstacles and even allies, letting them stay safe behind cover while still fighting. Maintaining distance is especially important due to Hunters not being able to attack up close by default, as well as their compromised [[stat:CON]]. If a Hunter needs to be moved, it must be done with caution, as their lowered [[stat:SPD]] gives them limited movement options outside of abilities.",
+    "buffs": {
+      "DEX": 3,
+      "LCK": 2
+    },
+    "debuffs": {
+      "CON": 1,
+      "SPD": 2
+    },
+    "levelStats": [
+      "DEX",
+      "SPD",
+      "INT"
+    ],
+    "basicAction": "A Hunter's basic action is Lobbed Shot. It deals damage to a unit based on the user's [[stat:DEX]], with a base damage (at 4-to-6 DEX) of 4. It has long range and can be used on units over obstacles, but has a blind spot within 2 tiles of the Hunter.",
+    "archetypes": [
+      {
+        "name": "Marksman",
+        "description": "Applies to ensure all attacks from the Hunter and its allies deal extra damage to a target and never miss. [[ability:Marked]] or [[ability:Persistent Hunt]] are easy ways to apply for the whole team. [[ability:Bullseye]] works similarly, but is only applicable for the Ranger. Without the risk of missing, inaccurate spells like [[ability:Heavy Shot]] and [[ability:Arrow Flurry]] can deal extreme damage."
+      },
+      {
+        "name": "Sniper",
+        "description": "Punishes enemies from long-range while hiding elsewhere. [[ability:Scout Me]] and [[ability:Spotters]] allow Hunters to target enemies that may otherwise be out of range. [[ability:Hedge In]] and [[ability:Take Aim]] reward Hunters for staying in one place. [[ability:Terrain Walk]] can help reposition quickly in an emergency."
+      },
+      {
+        "name": "Herd Thinner",
+        "description": "Attacks many units at once. [[ability:Scatter Shot]] or [[ability:Split Shot]] allow Hunters to hit many targets at once. Passives like [[ability:Rubber Arrows]] or [[ability:Tower Defense]] can further extend their area control. Units that take up several tiles can take damage multiple times at once, dealing absurd damage."
+      },
+      {
+        "name": "Familiars",
+        "description": "Spawns familiars, then bolster them with abilities. Hunters have access to a variety of familiars for different purposes, through abilities like [[ability:Spawn Pooter Friend]], [[ability:Flea Shot]], and [[ability:Call of the Wild]]. Abilities like [[ability:Brood Mother]], [[ability:Tainted Mother]], or [[ability:Slop the Pigs]] can strengthen and heal familiars. Many of these abilities can also buff enemies, obtainable through spells like [[ability:Cupid's Arrow]] or [[ability:Pheromones]]."
+      },
+      {
+        "name": "Trapper",
+        "description": "Sets up traps on the battlefield to control enemy movement. Abilities like [[ability:Web Trap]] and [[ability:Bear Trap]] can immobilize enemies, and [[ability:Bear Trap]] allows for enemies to be directed to specific tiles. [[ability:Hazardous]] and [[ability:Tricky Traps]] greatly increase trap damage, while [[ability:Traps]] will increase [[stat:DEX]] for each trap activated. [[ability:Diversion]] can force enemies into traps."
+      }
+    ],
+    "unlocks": [
+      {
+        "name": "Ball of Spiders",
+        "requirement": "Complete The Caves with the Hunter."
+      },
+      {
+        "name": "Thrill of the Hunt",
+        "requirement": "Complete The Boneyard with the Hunter."
+      },
+      {
+        "name": "Path of the Hunter",
+        "requirement": "Complete The Core with the Hunter."
+      },
+      {
+        "name": "Hunter's Soul",
+        "requirement": "Complete The Moon with the Hunter."
+      },
+      {
+        "name": "Arrow of Infinity",
+        "requirement": "Complete The Jurassic with the Hunter."
+      },
+      {
+        "name": "Hunter's Flute",
+        "requirement": "Complete The End with the Hunter."
+      },
+      {
+        "name": "Hunter's Cap",
+        "requirement": "Defeat The King with the Hunter."
+      },
+      {
+        "name": "Hunter's Monocle",
+        "requirement": "Defeat Chaos! with the Hunter."
+      },
+      {
+        "name": "Hunter's Quiver",
+        "requirement": "Defeat The Creator with the Hunter."
+      },
+      {
+        "name": "Bag of Seeds",
+        "requirement": "Complete all areas with the Hunter."
+      }
+    ],
+    "abilities": [
+      "Animal Control",
+      "Arrow Flurry",
+      "Arrowsmith",
+      "Bait Trap",
+      "Ball of Spiders",
+      "Bear Trap",
+      "Bomb Shot",
+      "Bounce Shot",
+      "Bramble Shot",
+      "Brood Mother",
+      "Bullseye (Ability)",
+      "Call of the Wild",
+      "Catch Projectiles",
+      "Chaos Shot",
+      "Charm Trap",
+      "Collect Pelt",
+      "Craft Arrow",
+      "Cross Shot",
+      "Cupid's Arrow",
+      "Diversion",
+      "Egg Sac Trap",
+      "Extend",
+      "Fire Shot",
+      "Flea Shot",
+      "Fleabag",
+      "Focus Shot",
+      "Gravity Falls",
+      "Hail of Nails",
+      "Harpoon",
+      "Hazardous",
+      "Heavy Shot",
+      "Hedge In",
+      "Host (Ability)",
+      "Hunter's Boon",
+      "Infest",
+      "Last Hit",
+      "Line Shot",
+      "Lobbed Shot (Hunter)",
+      "Luck Swing",
+      "Marked",
+      "Needle Shot",
+      "Persistent Hunt",
+      "Pheromones",
+      "Picnic",
+      "Poison Lace",
+      "Quiver",
+      "Rubber Arrows",
+      "Scatter Shot",
+      "Scout Me",
+      "Sentry Mode",
+      "Shards",
+      "Shoot Here!",
+      "Sleep Darts",
+      "Slop the Pigs",
+      "Snipe",
+      "Sniper",
+      "Soothing Shot",
+      "Spawn Maggot Friend",
+      "Spawn Pooter Friend",
+      "Spike Trap",
+      "Split Shot",
+      "Spotters",
+      "Stake Out",
+      "Summon Brambles",
+      "Survivalist",
+      "Tactical Retreat",
+      "Tainted Mother",
+      "Take Aim",
+      "Talk to Animals",
+      "Terrain Walk",
+      "Thorn Arrows",
+      "Thrill of the Hunt",
+      "Tower Defense",
+      "Trail Blazer",
+      "Traps (Ability)",
+      "Tricky Traps",
+      "Twin Shot",
+      "Vivisect",
+      "Web Trap"
+    ],
+    "abilityCount": 79,
+    "recommendedSets": [
+      "Barbed",
+      "Bone",
+      "Butcher",
+      "Cool",
+      "Demonic",
+      "Gimp",
+      "Guts",
+      "Hunter",
+      "Hybrid",
+      "Leech",
+      "Medical",
+      "Mother",
+      "Obelisk",
+      "Paper",
+      "Prowler",
+      "Rag",
+      "Thief",
+      "Tinkerer",
+      "Twine",
+      "Used",
+      "Wood"
+    ]
+  },
+  {
+    "name": "Jester",
+    "id": "14",
+    "description": "The Jester is the true wild card of Mewgenics. It has no base stat modifiers and only 6 abilities unique to it, albeit with the caveat that the rest of its ability pool randomly pulls from the active and passive abilities of all the other classes. The Jester is a random and unpredictable class, a \"blank slate\" with no pre-defined role or playstyle, rather it tends to develop over the course of a run, forcing players to adapt as every Jester will play differently each run. The Jester can be viewed as a more extreme counterpart to the [[class:Collarless]] class, as they both have ability pools which deviate from the norm and which emphasize no particular archetype or playstyle when taken as a whole.",
+    "buffs": {},
+    "debuffs": {},
+    "levelStats": [],
+    "basicAction": "A Jester's Basic Attack is determined randomly after the player locks in their class collar. This Basic Attack can be any another class's starting Basic Attack except for: * Any [[class:Collarless]] Basic Attack. ** [[ability:Melee Attack (Collarless)]] is identical to [[ability:Melee Attack (Fighter)]], which the Jester learns instead. ** [[ability:Short Shot]] functions almost identically to [[ability:Magic Dart]], except Magic Dart is additionally considered Magic Damage. ** The Jester has no true alternative to [[ability:Short Lobbed Shot]], as the other ranged collared Basic Attacks have different damage values and ranges. * [[class:Druid]] [[ability:Sing]]. ** Jesters do not start with a for damage output naturally, which would lead to theoretically unwinnable single-class runs if a Jester did learn Sing. * [[class:Monk]] [[ability:Melee Attack (Monk)]]/[[ability:Lobbed Shot (Monk)]]. ** Jesters have no access to [[item:Stance Switcher]] or [[item:Monk Fist]] to compensate for their reduced scaling, essentially making these Basic Attacks lower-damage versions of [[ability:Melee Attack (Fighter)]] and the Jester’s other ranged options respectively. * [[class:Tinkerer]] [[ability:Craft Weapon]]. ** Jesters do not learn Tinkerer skills as often as the Tinkerer does, which are important to use in conjunction with Craft Weapon, such as through accumulating . * Basic Attacks usually afforded by a passive ability or mutation, unless of course the Jester has a passive or mutation that changes its basic attack. ** If the Jester already has such a passive or mutation, it will keep the respective Basic Attack from it instead of using the random one they roll at the beginning of an Adventure.",
+    "archetypes": [
+      {
+        "name": "Physical Comic",
+        "description": "Uses a variety of melee spells from multiple classes. [[class:Monk]], [[class:Fighter]] and [[class:Butcher]] all learn powerful skills for melee attackers, which the Jester is likely to come across. The Jester has the added benefit of learning skills from ranged or support classes that most melee cats have difficulty accessing, such as [[ability:Assassinate]] or [[ability:Sniper]]."
+      },
+      {
+        "name": "Multi-Ranger",
+        "description": "Takes advantage of both [[stat:STR]] and [[stat:DEX]] to output damage up close or far away. Unlike the base skillset of the [[class:Monk]], the Jester can easily make use of the added range or damage scaling granted by skills from classes like the [[class:Hunter]] or [[class:Fighter]]. This playstyle combines naturally with some of the [[class:Monk]]'s skills."
+      },
+      {
+        "name": "Mixed Support",
+        "description": "Uses non-damaging support moves from various classes. Spells like [[ability:Leeches]] or [[ability:Death Wind]] can spread powerful status effects to enemies or bosses. [[ability:Pass]], [[ability:Chosen Warrior]] and other spells which give allies extra attacks or turns are especially potent. This playstyle remains useful even in the event a Jester develops a poor stat spread or has difficulty keeping a consistent damage output."
+      },
+      {
+        "name": "Cheat Code",
+        "description": "Exploits spells and passives that become stronger when used outside of their intended class. A majority of the [[class:Butcher]]'s hook skills apply to any and all weapons, allowing the Jester to use their weapon multiple times with [[ability:Hooked]] or [[ability:Harpooner]]. Some of the [[class:Psychic]]'s skills become stronger when in the hands of a class that can output reliable damage, such as [[ability:Soul Shatter]] or [[ability:Full Power]]. [[ability:Psychic Pull]] can apply effects granted to the primary attack at infinite range, such as obtained from [[ability:Lightning Paws]] or [[ability:Feed]]."
+      }
+    ],
+    "unlocks": [
+      {
+        "name": "Path of the Jester",
+        "requirement": "Complete The Core with the Jester."
+      },
+      {
+        "name": "Jester's Soul",
+        "requirement": "Complete The Moon with the Jester."
+      },
+      {
+        "name": "Ninny Stick",
+        "requirement": "Complete The Jurassic with the Jester."
+      },
+      {
+        "name": "Toy Gun",
+        "requirement": "Complete The End with the Jester."
+      },
+      {
+        "name": "Cap and Bells",
+        "requirement": "Defeat Throbbing King with the Jester."
+      },
+      {
+        "name": "Clown Makeup",
+        "requirement": "Defeat Chaos! with the Jester."
+      },
+      {
+        "name": "Ruffle",
+        "requirement": "Defeat The Creator with the Jester."
+      },
+      {
+        "name": "Joker Card",
+        "requirement": "Complete all areas with the Jester."
+      }
+    ],
+    "abilities": [
+      "Bump",
+      "Goofball",
+      "Power Up (Jester)",
+      "RNG Cannon",
+      "Smart Metronome",
+      "Super Luck"
+    ],
+    "abilityCount": 6,
+    "recommendedSets": [
+      "Jester"
+    ]
+  },
+  {
+    "name": "Mage",
+    "id": "4",
+    "description": "Mages get +2 [[stat:INT]] and +2 [[stat:CHA]], but -1 [[stat:CON]] and -1 [[stat:STR]] as well. When leveling up, they can gain [[stat:INT]], [[stat:CHA]], or [[stat:DEX]]. Mages learn a variety of magical abilities. They often cast more spells than other classes due to their high [[stat:INT]] and [[stat:CHA]]. Their spells range from powerful attacks, including easy access to elemental effects, to robust support and utility options, including movement and bolstering the abilities of allies. Due to their lowered focus on [[stat:CON]], Mages can easily become 'glass cannons' as they get stronger.",
+    "buffs": {
+      "INT": 2,
+      "CHA": 2
+    },
+    "debuffs": {
+      "CON": 1,
+      "STR": 1
+    },
+    "levelStats": [
+      "INT",
+      "CHA",
+      "DEX"
+    ],
+    "basicAction": "A Mage's basic attack is Magic Dart. It deals physical and magical damage that scales with [[stat:DEX]] to a unit within Range 3. It has a base damage (at 4-to-6 DEX) of 5. Being both physical and magical, Magic Dart is affected by stacks of , while still reaping the benefits of being a physical attack (, Critical Hits, et cetera). The [[ability:Paw Missile]] passive replaces Magic Dart with a basic attack version of Magic Missile, which has infinite range, ignores obstacles, and never misses. It deals only magical damage; but unlike most magic damage, it scales with [[stat:INT]], identically to how most ranged abilities scale with [[stat:DEX]]. On the other hand, it has a base damage (at 4-to-6 INT) of only 3.",
+    "archetypes": [
+      {
+        "name": "Elementalist",
+        "description": "Use fire, ice, electric, etc. attacks to inflict status effects and interact with the environment in unique ways."
+      },
+      {
+        "name": "Teleporter",
+        "description": "Warp to distant tiles or even swap positions with allies to get around."
+      },
+      {
+        "name": "Mana Master",
+        "description": "Boost allies' mana regeneration with [[ability:Magic Guru]] or make their spells cost less with [[ability:Teach]]."
+      },
+      {
+        "name": "Artillery",
+        "description": "Expend large amounts of Mana to damage multiple foes from medium-to-long range."
+      },
+      {
+        "name": "Offensive",
+        "description": "Few utility and defensive abilities, instead focusing on damaging abilities like [[ability:Paw Missile]], [[ability:Long Cast]], and [[ability:Mega Blast]]."
+      },
+      {
+        "name": "Glass Cannon",
+        "description": "Use self-destructive abilities such as [[ability:Corrupt]] and [[ability:Black Magic]] to build large quantities of mana and stacks with the trade-off of losing health and gaining injuries. Alternatively, \"Forbidden\" spells such as [[ability:Forbidden Flame]] and [[ability:Forbidden Frost]] are free to use with extremely powerful effects at the cost of inflicting the Mage that casts them with disorders."
+      }
+    ],
+    "unlocks": [
+      {
+        "name": "Hyper Beam",
+        "requirement": "Complete The Caves with the Mage."
+      },
+      {
+        "name": "Three",
+        "requirement": "Complete The Boneyard with the Mage."
+      },
+      {
+        "name": "Path of the Mage",
+        "requirement": "Complete The Core with the Mage."
+      },
+      {
+        "name": "Mage's Soul",
+        "requirement": "Complete The Moon with the Mage."
+      },
+      {
+        "name": "Staff of Flame",
+        "requirement": "Complete The Jurassic with the Mage."
+      },
+      {
+        "name": "Ring of Frost",
+        "requirement": "Complete The End with the Mage."
+      },
+      {
+        "name": "Mage's Hat",
+        "requirement": "Defeat The King with the Mage."
+      },
+      {
+        "name": "Mage's Robe",
+        "requirement": "Defeat Chaos! with the Mage."
+      },
+      {
+        "name": "Mage's Scarf",
+        "requirement": "Defeat The Creator with the Mage."
+      },
+      {
+        "name": "Spell Book",
+        "requirement": "Complete all areas with the Mage."
+      }
+    ],
+    "abilities": [
+      "Absorb",
+      "Black Magic",
+      "Blizzard",
+      "Bolt",
+      "Burning Paws",
+      "Chain Lightning",
+      "Chaos Teleport",
+      "Charge Up",
+      "Chill",
+      "Corrupt",
+      "Crescendo",
+      "Cryo-Heal",
+      "Deal with the Devil",
+      "Divide",
+      "Elemental Attunement",
+      "Energy Blast",
+      "Enlarge",
+      "Epiphany",
+      "Fire Aspect",
+      "Fire Blast",
+      "Fire Surge",
+      "Firebolt",
+      "Five",
+      "Forbidden Flame",
+      "Forbidden Flood",
+      "Forbidden Frost",
+      "Forbidden Fulmination",
+      "Force Field",
+      "Four",
+      "Freezer Burn",
+      "Frost Blast",
+      "Gust",
+      "Homing Blasts",
+      "Hyper Beam",
+      "Ice Aspect",
+      "Ice Paws",
+      "Ice Surge",
+      "Icicle Zapper",
+      "Inferno",
+      "Inspire",
+      "Jolt",
+      "Latent Energy",
+      "Learn From Me",
+      "Light Up the Stage",
+      "Lightning Aspect",
+      "Lightning Paws",
+      "Lightning Surge",
+      "Long Cast",
+      "Magic Dart",
+      "Magic Guru",
+      "Magic Missile",
+      "Magnify",
+      "Mana Meld",
+      "Mega Blast",
+      "Meteor Storm",
+      "One",
+      "Overload",
+      "Paw Missile",
+      "Replicate",
+      "Resonance",
+      "Shatter",
+      "Smolder",
+      "Splash Damage",
+      "Surf",
+      "Switch",
+      "Synthesize (Mage)",
+      "Teach",
+      "Telefrag",
+      "Teleport",
+      "Three",
+      "Thunderburst",
+      "Tri-Attack",
+      "Two",
+      "Wall of Fire",
+      "Warp",
+      "Whirlpool",
+      "Wind Slash"
+    ],
+    "abilityCount": 77,
+    "recommendedSets": [
+      "Bionic",
+      "Cyborg",
+      "Demonic",
+      "Feathered",
+      "Gimp",
+      "Hybrid",
+      "Mage",
+      "Paper",
+      "Phoenix",
+      "Psychic",
+      "Rag",
+      "Recycled",
+      "Thrumming",
+      "Wood"
+    ]
+  },
+  {
+    "name": "Monk",
+    "id": "13",
+    "description": "The Monk gets +2 [[stat:INT]] and +2 [[stat:CHA]], but -1 [[stat:STR]] and -1 [[stat:DEX]] as well. When leveling up, they can gain [[stat:INT]], [[stat:STR]], and [[stat:LCK]]. The Monk is unique in the fact that it starts with two innate items: the [[item:Stance Switcher]], which allows it to switch between Ranged and Melee stance, and the [[item:Monk Fist]], which gives it the ability to attack an additional time each turn.",
+    "buffs": {},
+    "debuffs": {},
+    "levelStats": [
+      "INT",
+      "STR",
+      "LCK"
+    ],
+    "basicAction": "The properties of the Monk's basic attack depends on its current stance, which by default can be changed once per turn with its innate trinket, [[item:Stance Switcher]]. In melee stance, the Monk can use Melee Attack, which hits an adjacent tile. This attack is comparable to the [[class:Fighter]]'s. Its damage scales slightly with [[stat:STR]]. In ranged stance, the Monk can use Lobbed Shot, which hits tiles at a range with a blind spot on each adjacent tile to the Monk, comparable to the [[class:Hunter]]. Its damage scales with [[stat:DEX]], but at a worse rate than the Melee Attack, giving it lower damage on average. Thanks to its innate weapon, [[item:Monk Fist]], the Monk can use two basic attacks per turn. However, the Monk has naturally subpar damage and damage scaling on these attacks, as well as reductions to both [[stat:STR]] and [[stat:DEX]].",
+    "archetypes": [
+      {
+        "name": "The Thick-Skinned",
+        "description": "Gather high amounts of , and convert it to extra damage with [[ability:Stone Fists]]."
+      },
+      {
+        "name": "The Finisher",
+        "description": "Do as much in a single turn as possible, then round up with [[ability:Finisher]]."
+      },
+      {
+        "name": "The Ki-Fighter",
+        "description": "Take advantage of [[ability:Mind Breaker]], by wiping targets with [[ability:Kamehameha]] and similar spells."
+      },
+      {
+        "name": "Omae Wa Mou Shindeiru",
+        "description": "Delete obnoxious standard foes, and (riskily) chip at Bosses, with [[ability:One Punch]] and [[ability:Five Point Palm Exploding Heart Technique]]."
+      },
+      {
+        "name": "Glass Cannon",
+        "description": "Forgo armour and instead benefit from buffs from abilities like [[ability:Unburdened Motion]] and [[ability:Unburdened Thoughts]]."
+      }
+    ],
+    "unlocks": [
+      {
+        "name": "Hundred Hand Slap",
+        "requirement": "Complete The Caves with the Monk."
+      },
+      {
+        "name": "Unstoppable!",
+        "requirement": "Complete The Boneyard with the Monk."
+      },
+      {
+        "name": "Path of the Monk",
+        "requirement": "Complete The Core with the Monk."
+      },
+      {
+        "name": "Monk's Soul",
+        "requirement": "Complete The Moon with the Monk."
+      },
+      {
+        "name": "Bo",
+        "requirement": "Complete The Jurassic with the Monk."
+      },
+      {
+        "name": "Empty Hand",
+        "requirement": "Complete The End with the Monk."
+      },
+      {
+        "name": "Head Brand",
+        "requirement": "Defeat The King with the Monk."
+      },
+      {
+        "name": "Face Brand",
+        "requirement": "Defeat Chaos! with the Monk."
+      },
+      {
+        "name": "Prayer Beads",
+        "requirement": "Defeat The Creator with the Monk."
+      },
+      {
+        "name": "Tiny Pebble",
+        "requirement": "Complete all areas with the Monk."
+      }
+    ],
+    "abilities": [
+      "Air Burst",
+      "Anneal",
+      "Brick Skin",
+      "Bruise",
+      "Cartwheel",
+      "Charge Fists",
+      "Charge Spirit Bomb",
+      "Cobra Style",
+      "Combo Pull",
+      "Combo Throw",
+      "Counter Barrage",
+      "Dancing Lights",
+      "Deep Dive",
+      "Donate Energy",
+      "Double Dragon",
+      "Dragon Punch",
+      "Empty Mind",
+      "Energy Fists",
+      "Finisher",
+      "Fist of Fate",
+      "Five Point Palm Exploding Heart Technique",
+      "Flow State",
+      "Flying Fist",
+      "Hadouken",
+      "Harden",
+      "Hip Toss",
+      "Hop n' Block",
+      "Hundred Hand Slap",
+      "Iron Skin Technique",
+      "Jagged Edges",
+      "Jet Fists",
+      "Kamehameha",
+      "Ki Burst",
+      "Kinetic Charge",
+      "Long Arms",
+      "Meditate",
+      "Mind Breaker",
+      "Mixup",
+      "Monk Basic Attack",
+      "Monkey Style",
+      "Nirvana",
+      "Ocular Pat Down",
+      "One Punch",
+      "One With the Wind",
+      "Perfect Form",
+      "Perfect Technique",
+      "Pogo",
+      "Porcupine",
+      "Position",
+      "Propel",
+      "Pummel",
+      "Quick Attack",
+      "Rapid Flow",
+      "Really Fast Run",
+      "Release Energy",
+      "Reverberate",
+      "Running Jab",
+      "Safe Switching",
+      "Sidestep",
+      "Slapback",
+      "Spread the Pain",
+      "Stone Fists",
+      "Summon Apprentice",
+      "Tenderize",
+      "Throw Spirit Bomb",
+      "Transcend",
+      "Turnabout",
+      "Unbridled Hits",
+      "Unburdened Motion",
+      "Unburdened Strikes",
+      "Unburdened Thoughts",
+      "Unimpeded Lunge",
+      "Unstoppable!",
+      "Warm Up Stretch",
+      "Way of the Hare",
+      "Way of the Mantis",
+      "Way of the Owl",
+      "Way of the Turtle"
+    ],
+    "abilityCount": 78,
+    "recommendedSets": [
+      "Advanced Alloy",
+      "Alloy",
+      "Amoeba",
+      "Barbed",
+      "Bone",
+      "Butcher",
+      "Cactus",
+      "Cathide",
+      "Caveman",
+      "Cleric",
+      "Cool",
+      "Debris",
+      "Demonic",
+      "Druid",
+      "Elite Alloy",
+      "Fatty",
+      "Fighter",
+      "Gemstone",
+      "Gimp",
+      "Jank Alloy",
+      "Leafy",
+      "Leather",
+      "Monk",
+      "Mother",
+      "Paper",
+      "Parasite",
+      "Planet",
+      "Radioactive",
+      "Rag",
+      "Rock",
+      "Scrap",
+      "Space",
+      "Tank",
+      "Thrumming",
+      "Transmitter",
+      "Twine",
+      "Wood",
+      "Wooly"
+    ]
+  },
+  {
+    "name": "Necromancer",
+    "id": "8",
+    "description": "Necromancers get +2 [[stat:CON]] and +1 [[stat:CHA]], but -2 [[stat:STR]] as well. When leveling up, they can gain [[stat:DEX]], [[stat:CHA]], and [[stat:CON]]. Necromancers all innately have the ability to steal health from other units. This, combined with their greater [[stat:CON]] lets them stay in the fight and take hits over their more frail allies. can stack an infinite number of times across all units except for those enemies who are immune to them, so the lifesteal is versatile in that it can drain a little from multiple units or a lot from one, including bosses. When up close, they can also take advantage of corpses or inflict inhibiting status effects such as or . Most importantly, should a Necromancer go down, it can still put up a fight; many Necromancer actives can still be used while downed, and most are even stronger when that's the case. The problems Necromancers have are somewhat few: They do not gain [[stat:INT]] through level-ups, despite being a relatively [[stat:MANA]]-intensive class. Their damage output is typically rather low, especially against groups of enemies.",
+    "buffs": {
+      "CON": 2,
+      "CHA": 1
+    },
+    "debuffs": {
+      "STR": 2
+    },
+    "levelStats": [
+      "DEX",
+      "CHA",
+      "CON"
+    ],
+    "basicAction": "",
+    "archetypes": [
+      {
+        "name": "Leech Mother",
+        "description": "Maximize and other life draining abilities. Abilities like [[ability:Leeches]] and [[ability:Feed]] directly apply . Passive abilities like [[ability:Spread Sorrow]] and [[ability:Immortal Leeches]] can compound their effects. [[ability:Numbing Leeches]] synergizes extremely well with [[ability:Immortal Leeches]], as leeches from the cat’s basic attack will scale exponentially. Synergizes with items like [[item:Leech Brood]] and [[item:Jar of Leeches]]. Some abilities that apply leech can also apply , which can further expand the Necromancer's damage and survivability."
+      },
+      {
+        "name": "Gravedigger",
+        "description": "Focuses on manipulating corpses to travel and deal damage. Numerous abilities like [[ability:Dark Ritual]], [[ability:Death Bloom]], and [[ability:Decompose]] grant benefits from destroying corpses. Alternatively, [[ability:Reanimate]] and [[ability:Summon Bones]] can resurrect bodies into familiars. Abilities like [[ability:Gravecrawl]] and [[ability:Corpse Connoisseur]] can summon additional bodies. Synergizes with items like [[item:Shovel]] and [[item:Spider Hat]]."
+      },
+      {
+        "name": "Martyr",
+        "description": "Focused on enhancing the team while the Necromancer is downed. Abilities like [[ability:Flatline]] or [[ability:Trade Life]] can consistently down the Necromancer, often without injury. Numerous abilities either become stronger (such as [[ability:Carrion Shot]] or [[ability:Seance]]) or grant buffs to allies (such as [[ability:Cambion Conception]] or [[ability:Sacrificial Lamb]]) when downed. Synergizes with items like [[item:Uranium Rod]], [[item:Death Shroud]], and [[item:Charon's Obol]]."
+      },
+      {
+        "name": "Reanimator",
+        "description": "Summons and controls familiars and the undead. Abilities like [[ability:Leech Mother]] and [[ability:Parasitic]] can swarm the battlefield with . [[ability:Flesh Golem]] and [[ability:Summon Shade]] are alternative options that summon a single powerful familiar. Synergizes with items like [[item:Hunter's Flute]], [[item:Necronomicon]], and [[item:Feed Bag]]."
+      },
+      {
+        "name": "Swarm Killer",
+        "description": "Deals weak damage to all enemies at once. [[ability:Pestilence]] and [[ability:Offload Pain]] can filter out weak enemies. Abilities like [[ability:Soul Bond]] apply , further improving the swarm-clearing ability of the Necromancer and their allies."
+      },
+      {
+        "name": "Debuffer",
+        "description": "Disrupts enemies with various negative status effects. Abilities like [[ability:Shriek]], [[ability:Weakness]], and [[ability:Superstition]] can apply powerful debuffs."
+      },
+      {
+        "name": "Mad Killer",
+        "description": "Buffs itself by harming or downing allies. This synergizes with having a separate Martyr Necromancer or having expendable familiars. Abilities like [[ability:Absorb Soul]] or [[ability:Dark Priest]] down allies in exchange for benefits."
+      }
+    ],
+    "unlocks": [
+      {
+        "name": "Summon Shade",
+        "requirement": "Complete The Caves with the Necromancer."
+      },
+      {
+        "name": "Servus Mortem",
+        "requirement": "Complete The Boneyard with the Necromancer."
+      },
+      {
+        "name": "Path of the Necromancer",
+        "requirement": "Complete The Core with the Necromancer."
+      },
+      {
+        "name": "Necromancer's Soul",
+        "requirement": "Complete The Moon with the Necromancer."
+      },
+      {
+        "name": "Staff of the Underworld",
+        "requirement": "Complete The Jurassic with the Necromancer."
+      },
+      {
+        "name": "Satanic Bible",
+        "requirement": "Complete End with the Necromancer."
+      },
+      {
+        "name": "Spider Hat",
+        "requirement": "Defeat The King with the Necromancer."
+      },
+      {
+        "name": "Death Mask",
+        "requirement": "Defeat Chaos! with the Necromancer."
+      },
+      {
+        "name": "Leech Necklace",
+        "requirement": "Defeat The Creator with the Necromancer."
+      },
+      {
+        "name": "Cambion Conception",
+        "requirement": "Complete all areas with the Necromancer."
+      }
+    ],
+    "abilities": [
+      "Absorb Soul",
+      "Bed Bugs",
+      "Blood Geyser",
+      "Blood Rain",
+      "Bloodletting",
+      "Cambion Conception (Ability)",
+      "Carrion Shot",
+      "Chains of Guilt",
+      "Clew of Leeches",
+      "Coffin Flop",
+      "Corpse Connoisseur",
+      "Curse (Ability)",
+      "Dark Priest",
+      "Dark Ritual",
+      "Dark Step",
+      "Death Bloom",
+      "Debone",
+      "Decompose",
+      "Demonic Pact",
+      "Dig Up the Dead",
+      "Donate Blood",
+      "Eternal Health",
+      "Eternal Servitude",
+      "Evil Incarnate",
+      "Feed",
+      "Flatline",
+      "Flesh Golem",
+      "Forbidden Famine",
+      "Full Moon",
+      "Giga Drain",
+      "Go Limp",
+      "Gravecrawl",
+      "Hush",
+      "Immortal Leeches",
+      "Infected",
+      "Infinite Rebirth",
+      "Last Grasp",
+      "Leech Mother",
+      "Leech Shot",
+      "Leech Swarm",
+      "Leeches",
+      "Lifedrain",
+      "Mass Psychosis",
+      "Numbing Leeches",
+      "Offload Pain",
+      "One With Nothing",
+      "Parasitic",
+      "Pestilence",
+      "Reanimate",
+      "Reap",
+      "Reaper Step",
+      "Rebirth",
+      "Relentless Dead",
+      "Replace",
+      "Sacrificial Lamb",
+      "Scare",
+      "Seance",
+      "Seppuku",
+      "Servus Mortem",
+      "Shriek",
+      "Slit Wrists",
+      "Soul Bond",
+      "Soul Link (Ability)",
+      "Soul Transfer",
+      "Spider Egg (Ability)",
+      "Spread Sorrow",
+      "Summon Bones",
+      "Summon Shade",
+      "Superstition",
+      "Torpor",
+      "Trade Life",
+      "Undeath",
+      "Unearth",
+      "Vampirism",
+      "We Are One",
+      "Weakness",
+      "Whisper",
+      "Worm Lord"
+    ],
+    "abilityCount": 78,
+    "recommendedSets": [
+      "Bionic",
+      "Cyborg",
+      "Demonic",
+      "Fecal",
+      "Fighter",
+      "Flower",
+      "Human Flesh",
+      "Hybrid",
+      "Man",
+      "Medical",
+      "Miner",
+      "Necromancer",
+      "Psychic",
+      "Radioactive",
+      "Rat",
+      "Recycled",
+      "Scrap",
+      "Steven",
+      "Thief",
+      "Used",
+      "Wood"
+    ]
+  },
+  {
+    "name": "Psychic",
+    "id": "12",
+    "description": "Psychics get +1 [[stat:INT]], +1 [[stat:CHA]], and +1 [[stat:SPD]] but get -1 [[stat:CON]] as well. When leveling up, they can gain either [[stat:INT]], [[stat:CHA]], or [[stat:SPD]]. Uniquely, Psychics start every battle with +5 Mana. Psychics are versatile yet unorthodox units, able to consistently cast many offensive and supportive spells with increased starting Mana, [[stat:INT]], and [[stat:CHA]]. With relatively few spells that deal direct damage and one of the weakest basic attacks in the game damage-wise, they instead contribute offensively by spreading debilitating status through enemies such as [[status:Madness]] [[status:Charmed]] and [[status:Immobile]] through their numerous spells. Supportively, Psychics offer a myriad of very unique boons, such as changing turn order, upgrading allied spells, and favorably repositioning units. Despite their lowered [[stat:CON]], the survivability of Psychics cannot be underestimated given their varied mobility, with naturally elevated [[stat:SPD]], access to a vast amount of teleportation spells, and conditional [[status:Flying]] This mobility is incredibly important for the Psychic's abilities, as many of their spells either require line of sight to function, or backfire if it is not taken into account.",
+    "buffs": {
+      "MANA": 5
+    },
+    "debuffs": {},
+    "levelStats": [
+      "INT",
+      "CHA",
+      "SPD"
+    ],
+    "basicAction": "The Psychic's basic attack, [[ability:Psychic Pull]], is a Magic -element attack with infinite range. Its base damage is 2. Psychic Pull does not scale with [[stat:DEX]] or [[stat:INT]], but its damage can be increased by . Like the Push Attack of the [[class:Tank]], Psychic Pull then moves the target. This is effectively 1 Knockback, but towards the user. It inflicts 1 point of Knockback damage, if the target ends up making contact with another unit. Note that the moving happens after the damage; units blown up by critical hits or overkill will not move after dying, and thus can't deal knockback damage to whoever they would (otherwise) bump into.",
+    "archetypes": [
+      {
+        "name": "Uber Long Ranger",
+        "description": "Their basic attack can hit across the entire field, meaning nothing is truly out of their reach. Also powerful line of sight abilities like [[ability:Become Entropy]] or [[ability:Asteroid]] have extremely far range when the Psychics vision isn't too obscured."
+      },
+      {
+        "name": "Puppet Master",
+        "description": "The Psychic is adept at controlling units' positions, dragging them towards themself, teleporting them with abilites like [[ability:Withdraw]] or [[ability:Reality Scramble]], and controlling foes with [[ability:Mind Control]]."
+      },
+      {
+        "name": "Enabler",
+        "description": "Rather than handle foes directly, the Psychic can have their allies do it, via powerful support abilities such as [[ability:Mind Meld]]."
+      },
+      {
+        "name": "Psychic Crusher",
+        "description": "With the help of the [[item:Fish Hook]] and other knockback buffing items, the Psychic can crush their enemies with their knockback abilities like [[ability:Telekinesis]] or [[ability:Mindblast]] and passives like [[ability:Psy Smack]] and [[ability:Drag]], using [[item:Fish Hook]] the knockback damage is considered magical and benefits from"
+      }
+    ],
+    "unlocks": [
+      {
+        "name": "Supernova",
+        "requirement": "Complete The Caves with the Psychic."
+      },
+      {
+        "name": "Gravity Well",
+        "requirement": "Complete The Boneyard with the Psychic."
+      },
+      {
+        "name": "Path of the Psychic",
+        "requirement": "Complete The Core with the Psychic."
+      },
+      {
+        "name": "Psychic's Soul",
+        "requirement": "Complete The Moon with the Psychic."
+      },
+      {
+        "name": "Bent Spoon",
+        "requirement": "Complete The Jurassic with the Psychic."
+      },
+      {
+        "name": "Tarot Deck",
+        "requirement": "Complete The End with the Psychic."
+      },
+      {
+        "name": "Tinfoil Hat",
+        "requirement": "Defeat The King with the Psychic."
+      },
+      {
+        "name": "Mystic Eye",
+        "requirement": "Defeat Chaos! with the Psychic."
+      },
+      {
+        "name": "Diviner's Cloth",
+        "requirement": "Defeat The Creator with the Psychic."
+      },
+      {
+        "name": "Friendship Bracelet",
+        "requirement": "Complete all areas with the Psychic."
+      }
+    ],
+    "abilities": [
+      "Alter DNA",
+      "Ancestral Recall",
+      "Antigravity",
+      "Asteroid (Ability)",
+      "Beckon",
+      "Become Entropy",
+      "Blinding Flash",
+      "Blink",
+      "Braingeyser",
+      "Chaos Swap",
+      "Cumulative Blast",
+      "Drag",
+      "Echo",
+      "Eldritch Visage",
+      "Enlightened",
+      "Extra Turn?",
+      "Fast Forward",
+      "Flash Forward",
+      "Flicker",
+      "Flip",
+      "Flourish",
+      "Full Power",
+      "Future Sight",
+      "Glare",
+      "Glow",
+      "Gravity Blast",
+      "Gravity Pull",
+      "Gravity Wave",
+      "Gravity Well",
+      "Grow Head",
+      "Hallucinate",
+      "Increase Gravity",
+      "Inversion",
+      "Look Away",
+      "Mad Visage",
+      "Manifest",
+      "Mass Hysteria",
+      "Mass Mana Leech",
+      "Mega Grav",
+      "Mental Storm",
+      "Mimic",
+      "Mind Control",
+      "Mind Meld",
+      "Mind Tempest",
+      "Mindblast",
+      "Mindcrack",
+      "Omniscience",
+      "Order",
+      "Overflow",
+      "Pass",
+      "Ping",
+      "Power Up (Psychic)",
+      "Psionic Repel",
+      "Psy Smack",
+      "Psychic Choke",
+      "Psychic Pull",
+      "Psyflutter",
+      "Puppet",
+      "Read Mind",
+      "Reality Scramble",
+      "Reality Shatter",
+      "Repressed Memories",
+      "Reset",
+      "Shatter the Sky",
+      "Slipstream",
+      "Snatch",
+      "Soul Shatter",
+      "Stasis",
+      "Suggestion",
+      "Supernova",
+      "Telekinesis",
+      "Temporal Shards",
+      "Think Deep",
+      "True Sight",
+      "Twiddle",
+      "Vacuum",
+      "Withdraw",
+      "Wither"
+    ],
+    "abilityCount": 78,
+    "recommendedSets": [
+      "Bionic",
+      "Cyborg",
+      "Demonic",
+      "Feathered",
+      "Gimp",
+      "Hybrid",
+      "Mage",
+      "Paper",
+      "Phoenix",
+      "Psychic",
+      "Rag",
+      "Recycled",
+      "Thrumming",
+      "Wood"
+    ]
+  },
+  {
+    "name": "Tank",
+    "id": "5",
+    "description": "Tanks get +4 [[stat:CON]], but -1 [[stat:DEX]] and -1 [[stat:INT]] as well. When leveling up, they can gain [[stat:CON]], [[stat:STR]], or [[stat:SPD]]. Tanks are designed for survivibility and suppression. They have the biggest [[stat:CON]] modifier of any class in the game, making them good for getting in the way of enemies. Their basic action also doubles as a knockback tool, meaning every Tank has the ability to push around enemies, preventing them from advancing, drawing aggravation away from allies, or letting them set up advantageous positions. Their decreased [[stat:INT]] is circumvented by a variety of cheap actives that can help with movement or set up enemies.",
+    "buffs": {
+      "CON": 4
+    },
+    "debuffs": {
+      "DEX": 1,
+      "INT": 1
+    },
+    "levelStats": [
+      "CON",
+      "STR",
+      "SPD"
+    ],
+    "basicAction": "A Tank's basic action is Push Attack. When used, the Tank will move forward by one tile, damaging the first unit within melee range and pushing it in the direction the Tank is facing by one tile. It deals damage equal to [[stat:STR]]. Push Attack uses both Range and Reach. Its Range (default 1) is how many tiles this attack will move the user, in a single direction. Its Reach is how far away (after moving) the Tank can hit a target from, along the direction the Tank is facing.",
+    "archetypes": [
+      {
+        "name": "Frontline Suppressor",
+        "description": "Pushes enemies or otherwise force them to move away from the rest of the team. Abilities like [[ability:Gore]], [[ability:Suplex]], and [[ability:Toss]] can fling enemies across the map while dealing great damage. [[ability:Wrestlemaniac]] provides additional map control through bonus abilities."
+      },
+      {
+        "name": "Damage Sponge",
+        "description": "Takes extreme beatings, while diverting enemy attention to them. [[ability:Goad]], [[ability:Body Guard]], [[ability:Priority Target]], and [[ability:Wide Load]] force enemy units to hard-focus their attacks on the Tank, sparing the rest of the player's team from unwarranted damage. Abilities that apply , such as [[ability:Barbed Wire]], allows Tanks to deal damage while taking beatings. [[ability:Steelskin]] and [[ability:Hard Head]] can negate damage altogether."
+      },
+      {
+        "name": "Chain Reactions",
+        "description": "Repeated use of knockback abilities to repeatedly hit multiple enemies into each other, or into hazards. Abilities like [[ability:Heavy Handed]], [[ability:Chain Knockback]], and [[ability:Home Run]] can create devastating knockback combos."
+      },
+      {
+        "name": "Earth Elementalist",
+        "description": "enemies to keep them under control or use them through various means. [[ability:Eat Rock]] instantly kills most afflicted units, and additionally grants shield and stat boosts. [[ability:Rock Aspect]] has a chance to any units that make contact, which should be frequent with the Tank's playstyle."
+      },
+      {
+        "name": "Rockstar",
+        "description": "Floods the arena with rocks—through abilities like [[ability:Mountain Form]] or inflicting on units—to gain various benefits. [[ability:Pet Rocks]] transforms rocks into tanky familiars. [[ability:Rock Song]] turns every rock into potent sources of damage and area denial. [[ability:Rock Crusher]] allows for distant movement and powerful damage across the board."
+      },
+      {
+        "name": "Low Speed",
+        "description": "Lowering the [[stat:SPD]] stat as much as possible allows Tanks to benefit from low-speed-scaling abilities. [[ability:Flip Flop]] and other movement abilities give Tanks a presence on the battlefield despite their low speed. [[ability:My Leg!]] works similarly and additionally grants . [[ability:Plant Your Feet]] allows Tanks to gain hefty amounts of Shield and cleanse debuffs. [[ability:Slow and Steady]] gives an additional attack at 0 [[stat:SPD]], greatly increasing damage output."
+      }
+    ],
+    "unlocks": [
+      {
+        "name": "Suplex",
+        "requirement": "Complete The Caves with the Tank."
+      },
+      {
+        "name": "Bouncer",
+        "requirement": "Complete The Boneyard with the Tank."
+      },
+      {
+        "name": "Path of the Tank",
+        "requirement": "Complete The Core with the Tank."
+      },
+      {
+        "name": "Tank's Soul",
+        "requirement": "Complete The Moon with the Tank."
+      },
+      {
+        "name": "Girder",
+        "requirement": "Complete The Jurassic with the Tank."
+      },
+      {
+        "name": "Tank Juice",
+        "requirement": "Complete The End with the Tank."
+      },
+      {
+        "name": "Tank's Helmet",
+        "requirement": "Defeat The King with the Tank."
+      },
+      {
+        "name": "Tank's Tattoo",
+        "requirement": "Defeat Chaos! with the Tank."
+      },
+      {
+        "name": "Tank's Pads",
+        "requirement": "Defeat The Creator with the Tank."
+      },
+      {
+        "name": "Tank Toy",
+        "requirement": "Complete all areas with the Tank."
+      }
+    ],
+    "abilities": [
+      "Aftershock",
+      "Anchor",
+      "Ass Blast",
+      "Backbreaker",
+      "Barbed Wire",
+      "Batter Up",
+      "Belly Flop",
+      "Big Rock",
+      "Body Guard",
+      "Bouncer",
+      "Bowl Over",
+      "Cat-A-Pult",
+      "Chain Knockback",
+      "Chew",
+      "Chew Cud",
+      "Clap",
+      "Demolish",
+      "Earthquake",
+      "Eat Rock",
+      "Fault Line",
+      "Fissure",
+      "Flip Flop",
+      "Follow Up",
+      "Full Force",
+      "Gang Up",
+      "Goad",
+      "Gore",
+      "Gorgon Glare",
+      "Grab",
+      "Hard Head",
+      "Hardy",
+      "Headbutt",
+      "Heavy Handed",
+      "Home Run",
+      "Intimidate",
+      "Iron Head",
+      "Lunge",
+      "Mountain Form",
+      "My Leg!",
+      "Nudge",
+      "Pet Rocks",
+      "Pincushion",
+      "Plant Your Feet",
+      "Plow",
+      "Priority Target",
+      "Protective",
+      "Push Attack",
+      "Push Through",
+      "Rock Aspect",
+      "Rock Blast",
+      "Rock Crusher",
+      "Rock Song",
+      "Rock Tomb",
+      "Rock Toss",
+      "Sandstorm (Ability)",
+      "Scabs",
+      "Shoving Match",
+      "Slack Off",
+      "Slow and Steady",
+      "Steelskin",
+      "Stoic",
+      "Stone Breath",
+      "Suplex",
+      "Supper",
+      "Swap",
+      "Tantrum",
+      "Thicken",
+      "Thorns (Ability)",
+      "Throw Scrap",
+      "Thunder Thighs",
+      "To the Rescue!",
+      "Toad Style",
+      "Toss",
+      "Trample Dash",
+      "Wide Load",
+      "Wrestlemaniac"
+    ],
+    "abilityCount": 76,
+    "recommendedSets": [
+      "Advanced Alloy",
+      "Alloy",
+      "Amoeba",
+      "Barbed",
+      "Bone",
+      "Butcher",
+      "Cactus",
+      "Cathide",
+      "Caveman",
+      "Cleric",
+      "Cool",
+      "Debris",
+      "Demonic",
+      "Druid",
+      "Elite Alloy",
+      "Fatty",
+      "Fighter",
+      "Gemstone",
+      "Gimp",
+      "Jank Alloy",
+      "Leafy",
+      "Leather",
+      "Monk",
+      "Mother",
+      "Paper",
+      "Parasite",
+      "Planet",
+      "Radioactive",
+      "Rag",
+      "Rock",
+      "Scrap",
+      "Space",
+      "Tank",
+      "Thrumming",
+      "Transmitter",
+      "Twine",
+      "Wood",
+      "Wooly"
+    ]
+  },
+  {
+    "name": "Thief",
+    "id": "7",
+    "description": "Thieves get +4 [[stat:SPD]] and +1 [[stat:LCK]], but -1 [[stat:STR]] and -1 [[stat:CON]] as well. When leveling up, they can gain [[stat:SPD]], [[stat:DEX]], and [[stat:LCK]]. On their own, Thieves have a solid ranged attack and great movement thanks to their massively increased [[stat:SPD]], but their capabilities are heavily bolstered by their abilities, which include more movement options, the ability to remain stealthy and avoid attacks, and modifiers to their basic action. Their decreased [[stat:STR]] tends not to get in the way of their occasional melee abilities, since they usually have more emphasis on secondary effects. Their decreased [[stat:CON]] can get them in trouble however, so long as they don't keep distance.",
+    "buffs": {
+      "SPD": 4,
+      "LCK": 1
+    },
+    "debuffs": {
+      "STR": 1,
+      "CON": 1
+    },
+    "levelStats": [
+      "SPD",
+      "DEX",
+      "LCK"
+    ],
+    "basicAction": "A Thief's basic action is Nail Throw. It has the user attack in a straight line within Range 3.",
+    "archetypes": [
+      {
+        "name": "Affliction",
+        "description": "Stack myriads of status effects thanks to abilities such as [[ability:Declaw]], [[ability:Sever Artery]], with alternatives such as [[ability:Triple Nails]] benefiting from Passive's such as [[ability:Razor Claws]] & [[ability:Poison Tips]]."
+      },
+      {
+        "name": "Money Hungry",
+        "description": "Spawn more coins with [[ability:Cut Purse]] or [[ability:Shake Down]], then take advantage of them using [[ability:Coin Toss]] or [[ability:Swift Looter]]."
+      },
+      {
+        "name": "Disruptor",
+        "description": "Help improve the evasion of the Thief or its allies using abilities that inflict or give ."
+      },
+      {
+        "name": "Lightning Quick",
+        "description": "Thieves are quick on their feet and on average will be first to move, making them invaluable for disrupting enemy turns along with the long distances they can move. Their movement can be further enhanced with abilities like [[ability:Move Again]] or [[ability:Quick Roll]]."
+      },
+      {
+        "name": "Glass Cannon",
+        "description": "Despite being so quick, the Thief is very frail defensively, and should be kept at an arm’s length away from any hard hitting enemies if possible. When behind an enemy, however, active abilities like [[ability:Assassinate]] or passives like [[ability:Shank]] and [[ability:Backstabber]] can decimate foes who dare turn their back to the Thief."
+      },
+      {
+        "name": "Gambler",
+        "description": "The Thief often relies on crits for more offensive pressure. Thus, increases to raw [[stat:LCK]] through means such as [[ability:Cheat]] or multi attack abilities such as [[ability:Double Throw]] and [[ability:Triple Nails]] may increase the probability for criticals."
+      },
+      {
+        "name": "Shield Buster",
+        "description": "Thieves have access to many abilities that ignore Shield such as [[ability:Weak Spot]], [[ability:Nail Flurry]], and [[ability:Pierce Shot]]. Thieves can take out enemies that rely on Shield by completely ignoring it. These also ignore . This strategy is extremely effective against robotic or skeletal enemies such as or , who can be one-shot by armor-piercing abilities. On runs that take you through the , , or , heavily consider trying to build your Thief with these enemies in mind."
+      }
+    ],
+    "unlocks": [
+      {
+        "name": "Nail Flurry",
+        "requirement": "Complete The Caves with the Thief."
+      },
+      {
+        "name": "First Strike",
+        "requirement": "Complete The Boneyard with the Thief."
+      },
+      {
+        "name": "Path of the Thief",
+        "requirement": "Complete The Core with the Thief."
+      },
+      {
+        "name": "Thief's Soul",
+        "requirement": "Complete The Moon with the Thief."
+      },
+      {
+        "name": "Laced Needle",
+        "requirement": "Complete The Jurassic with the Thief."
+      },
+      {
+        "name": "Lucky Coin Purse",
+        "requirement": "Complete The End with the Thief."
+      },
+      {
+        "name": "Thief's Hood",
+        "requirement": "Defeat The King with the Thief."
+      },
+      {
+        "name": "Thief's Tattoo",
+        "requirement": "Defeat Chaos! with the Thief."
+      },
+      {
+        "name": "Thief's Cloak",
+        "requirement": "Defeat The Creator with the Thief."
+      },
+      {
+        "name": "Bag o' Bags",
+        "requirement": "Complete all areas with the Thief."
+      }
+    ],
+    "abilities": [
+      "After Image",
+      "Agile",
+      "Assassinate",
+      "Backflip",
+      "Backstabber",
+      "Blur",
+      "Boost Backstab",
+      "Bounty Hunter (Ability)",
+      "Burgle",
+      "Caltrops",
+      "Camouflage",
+      "Chakram",
+      "Cheat",
+      "Coin Toss",
+      "Cripple",
+      "Critical",
+      "Cut Purse",
+      "Declaw",
+      "Distract",
+      "Double Throw",
+      "Eagle Eye",
+      "Fade",
+      "First Strike",
+      "Flip a Coin",
+      "Golden Claws",
+      "Greedstep",
+      "Jitter",
+      "Loot Corpse",
+      "Loot Hoarder",
+      "Lucky Penny (Ability)",
+      "More!",
+      "Move Again",
+      "Nail Flurry",
+      "Nail Throw",
+      "Nightshade (Ability)",
+      "Outskirts",
+      "Over Here, Over There",
+      "Penetrate",
+      "Pickpocket",
+      "Pierce",
+      "Pierce Shot",
+      "Pinpoint",
+      "Pocket Sand",
+      "Poison Dip",
+      "Poison Gas",
+      "Poison Nail",
+      "Poison Tips",
+      "Quick Roll",
+      "Razor Claws",
+      "Rearm",
+      "Rebound",
+      "Sever Artery",
+      "Shadow",
+      "Shadow Shift",
+      "Shake Down",
+      "Shank (Passive)",
+      "Sharp Nail",
+      "Sharpen Nail",
+      "Shiv",
+      "Skin Disguise",
+      "Slice",
+      "Slingshade",
+      "Sneak Up",
+      "Stalk",
+      "Steal Kidney",
+      "Steal Luck",
+      "Steal Time",
+      "Stealthed",
+      "Sweetspot",
+      "Swift Looter",
+      "Time Walk",
+      "Triple Nails",
+      "Venom Barrage",
+      "Weak Spot",
+      "Weakening Nail",
+      "Wind Up",
+      "ZIP!"
+    ],
+    "abilityCount": 77,
+    "recommendedSets": [
+      "Barbed",
+      "Bone",
+      "Butcher",
+      "Cool",
+      "Demonic",
+      "Gimp",
+      "Guts",
+      "Hybrid",
+      "Leech",
+      "Medical",
+      "Mother",
+      "Obelisk",
+      "Paper",
+      "Prowler",
+      "Rag",
+      "Survivalist",
+      "Thief",
+      "Tinkerer",
+      "Twine",
+      "Used",
+      "Wood"
+    ]
+  },
+  {
+    "name": "Tinkerer",
+    "id": "9",
+    "description": "Tinkerers get +4 [[stat:INT]], but -1 [[stat:CHA]] and -1 [[stat:LCK]] as well. When leveling up, they can gain [[stat:DEX]], [[stat:CHA]], and [[stat:INT]]. Tinkerers will often be at their full spell-casting potential on each turn, due to their massive [[stat:INT]] and decreased [[stat:CHA]]. Tinkerers have one of the most varied ability lists, including stationary units, mobile familiars with different utilities, unconventional movement options, and ways to take advantage of their unique basic action and the weapons spawned from it. All of these revolve around the class's unique status effect: . Tinkerers can consume up to three on pertinent skills, which will be exchanged for improved weapon quality, improved armor quality or an for spawned familiars.",
+    "buffs": {
+      "INT": 4
+    },
+    "debuffs": {
+      "LCK": 1,
+      "CHA": 1
+    },
+    "levelStats": [
+      "DEX",
+      "CHA",
+      "INT"
+    ],
+    "basicAction": "A Tinkerer's basic action is conditional upon if their weapon slot is empty: * By Default; [[ability:Craft Weapon]] - the cat crafts a random weapon from a specific pool and equips it. * While a weapon is equipped; [[ability:Throw Weapon]] - The cat throws their weapon at a target in range dealing damage and activating the weapon's other effects. ** This destroys the equipped weapon, swapping back to Craft Weapon. ** Applies status Effects listed in the weapon's description ** Certain items explode (e.g. [[item:Bomb]])",
+    "archetypes": [
+      {
+        "name": "Robot Servants",
+        "description": "Spawn robots to help fight or perform other utilities. Robots are extremely versatile, with each one providing something unique for the team: [[ability:Robo-Vac]] collects pickups, [[ability:Catbot]] inherits the cat's weapon, [[ability:Nurse Bot]] heals allies. All robots can be boosted by electric damage as well, providing an extra turn."
+      },
+      {
+        "name": "Weapon Disposer",
+        "description": "Specialize in creating weapons, making quick but effective uses of them. Gaining through abilities like [[ability:Research]] or [[ability:V2.0]] allow higher quality weapons to be crafted. [[ability:Recycle]] allows weapons to be repurposed into potentially stronger ones."
+      },
+      {
+        "name": "Craftsman",
+        "description": "Specialize in maintaining equipment, improving the durability and effectiveness of your equipped items. [[ability:Catbot]] and [[ability:Fabricate]] allow Tinkerers to pass on their weapons to their allies, arming their entire team with destructive firepower. [[ability:Electrolyze]] and [[ability:Blacksmith]] provides bonus damage to existing weapons."
+      },
+      {
+        "name": "Armorer",
+        "description": "Manipulate and create armor to provide buffs to the Tinkerer and the team. Abilities like [[ability:Instant Barrier]], [[ability:Fresh off the Forge]] and [[ability:Unreliable Shield Generator]] provide for the Tinkerer with some sort of drawback. [[ability:Repair Armor]] and [[ability:Shed Scrap]] remove to provide alternative buffs. [[ability:Armor Up]] and [[ability:Experimental Teleporter]] create unique armor pieces for the Tinkerer and the team."
+      },
+      {
+        "name": "Electric Power",
+        "description": "Zap enemies using electricity, with a chance to . [[ability:Discharge]] allows Tinkerers to do damage equal to their mana each turn, getting excellent use from their naturally high [[stat:INT]]. [[ability:Shock Therapy]] lets Tinkerers zap allies, cleansing debuffs and energizing any robot allies."
+      },
+      {
+        "name": "Demolitionist",
+        "description": "Deal area-of-effect damage and effects through crafted bombs and explosive abilities, potentially hurting the Tinkerer in process. [[ability:Rocket Skates]] and [[ability:Shoddy Jetpack]] are consistent ways of creating explosions, but damages the Tinkerer in exchange. [[ability:Demo Man]] provides Tinkerers with a consistent supply of bombs. [[ability:EMP]], [[ability:Mr. Mega]], and [[ability:Napalm]] further enhance bombs' damage and reach."
+      },
+      {
+        "name": "Destroyer of Worlds",
+        "description": "Prioritize saving as much mana as possible to use [[ability:Split the Atom]] and clear the board with ease. [[ability:Living Battery]], or any mana-gaining abilities like those inherent to the , can greatly speed this up."
+      }
+    ],
+    "unlocks": [
+      {
+        "name": "Mech Suit",
+        "requirement": "Complete The Caves with the Tinkerer."
+      },
+      {
+        "name": "Armor Specialist",
+        "requirement": "Complete The Boneyard with the Tinkerer."
+      },
+      {
+        "name": "Path of the Tinkerer",
+        "requirement": "Complete The Core with the Tinkerer."
+      },
+      {
+        "name": "Tinkerer's Soul",
+        "requirement": "Complete The Moon with the Tinkerer."
+      },
+      {
+        "name": "Ball-Peen Hammer",
+        "requirement": "Complete The Jurassic with the Tinkerer."
+      },
+      {
+        "name": "Scrap Bag",
+        "requirement": "Complete The End with the Tinkerer."
+      },
+      {
+        "name": "Scrapper's Hat",
+        "requirement": "Defeat The King with the Tinkerer."
+      },
+      {
+        "name": "Scrapper's Mask",
+        "requirement": "Defeat Chaos! with the Tinkerer."
+      },
+      {
+        "name": "Scrapper's Backpack",
+        "requirement": "Defeat The Creator with the Tinkerer."
+      },
+      {
+        "name": "Fireworks",
+        "requirement": "Complete all areas with the Tinkerer."
+      }
+    ],
+    "abilities": [
+      "Armor Specialist",
+      "Armor Up",
+      "Armored Plating",
+      "Autopilot",
+      "Blacksmith",
+      "Bombchu (Ability)",
+      "Booby Trap",
+      "Build Nuke",
+      "Build Turret",
+      "Catbot (Ability)",
+      "Conductor (Passive)",
+      "Craft",
+      "Craft Weapon",
+      "Demo Man",
+      "Discharge",
+      "Drill Down",
+      "Duct Tape",
+      "EMP",
+      "Eject Button",
+      "Electric Nail",
+      "Electrolyze",
+      "Energizer",
+      "Escape Sequence",
+      "Eureka!",
+      "Experimental Teleporter",
+      "Fabricate",
+      "Fast Hands",
+      "Firecracker",
+      "Fresh off the Forge",
+      "Fuzzy Feet",
+      "Hone",
+      "IT'S ALIVE!",
+      "Improve",
+      "Ingenuity",
+      "Instant Barrier",
+      "Item Proxy",
+      "Lightning Rod",
+      "Living Battery",
+      "Mech Suit",
+      "Mr. Mega",
+      "Nanobots",
+      "Napalm",
+      "Nurse Bot (Ability)",
+      "Punchbot",
+      "Reactive Armor",
+      "Recycle",
+      "Refine Materials",
+      "Remote Detonator",
+      "Repair",
+      "Repair Armor",
+      "Reprogram",
+      "Research",
+      "Robo-Vac",
+      "Robot Arms",
+      "Rocket Ride",
+      "Rocket Skates",
+      "Scrapper",
+      "Shed Scrap",
+      "Shock Therapy",
+      "Shockwave",
+      "Shoddy Jetpack",
+      "Short Circuit",
+      "Shrapnel",
+      "Smash",
+      "Spare Parts (Ability)",
+      "Sparks",
+      "Spawn Decoy",
+      "Split the Atom",
+      "Spring Shoes",
+      "Switcheroo",
+      "Tesla Coil (Ability)",
+      "Throw Weapon",
+      "Unreliable Missile Launcher",
+      "Unreliable Shield Generator",
+      "Upgrade",
+      "V2.0",
+      "Volt Tackle",
+      "Weapon Proficiency"
+    ],
+    "abilityCount": 78,
+    "recommendedSets": [
+      "Tinkerer"
+    ]
+  }
+]

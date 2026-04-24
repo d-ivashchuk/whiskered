@@ -1,0 +1,542 @@
+[
+  {
+    "name": "Adrenaline",
+    "description": "Keeps  at 0. +25% Crit Chance. +25% Block Chance. Stack count reduces by 1 at the end of each turn."
+  },
+  {
+    "name": "All Stats Down",
+    "description": "-1 Strength, -1 Dexterity, -1 Constitution, -1 Speed, -1 Intelligence, -1 Charisma, & -1 Luck per stack."
+  },
+  {
+    "name": "All Stats Up",
+    "description": "+1 Strength, +1 Dexterity, +1 Constitution, +1 Speed, +1 Intelligence, +1 Charisma, & +1 Luck per stack."
+  },
+  {
+    "name": "Attraction",
+    "description": "Moves towards the applier at the start of its turn. Attempts to consume  to move closer, if possible."
+  },
+  {
+    "name": "Auto Revive",
+    "description": "Revives at the end of the round."
+  },
+  {
+    "name": "Backflip",
+    "description": "Backflips away to an unoccupied adjacent tile the next time it's targeted by a spell or attack."
+  },
+  {
+    "name": "Backstab Bonus",
+    "description": "+X% Backstab Damage this turn. (Plus the default 25% backstab bonus.)"
+  },
+  {
+    "name": "Bleed",
+    "description": "This unit takes 1 Bleed damage per stack at the end of the round. Ignores Shield and Holy Shield. Stack increases by 1 at the end of the round.  Units downed by Bleed damage receive the Exsanguinated Injury (-1 Strength, -1 Dexterity)"
+  },
+  {
+    "name": "Bleed Thorns",
+    "description": "Applies 1 stack of  to any unit that makes contact with this unit per stack."
+  },
+  {
+    "name": "Blessing of Peace",
+    "description": "Gain +1 18x18px|link=Status Effects#Holy Shield at the end of your turn. Lose this when you deal damage."
+  },
+  {
+    "name": "Blind",
+    "description": "30% miss chance for the next turn. Stack count reduces by 1 at the end of each turn."
+  },
+  {
+    "name": "Bloodzerked",
+    "description": "When you deal health damage to a bleeding unit, heal that much health. Unlike , this only works against units with stacks of . The advantage is that it works on all damage dealt and is an effect that lasts for the battle."
+  },
+  {
+    "name": "Body Guard",
+    "description": "The next time an ally is targeted, swap places with them first."
+  },
+  {
+    "name": "Bonus Attack",
+    "description": "1 extra basic attack, per stack, that are saved across turns if unused."
+  },
+  {
+    "name": "Bonus Knockback",
+    "description": "Knockback you inflict is increased per stack."
+  },
+  {
+    "name": "Bonus Knockback Damage",
+    "description": "Knockback damage you deal is increased per stack."
+  },
+  {
+    "name": "Bonus Move",
+    "description": "1 extra basic move, per stack, that are saved across turns if unused."
+  },
+  {
+    "name": "Bonus Range",
+    "description": "Your next basic attack has +1 range per stack. This is saved across turns if unused. This range increase is applied to all basic attacks, including melee basic attacks."
+  },
+  {
+    "name": "Bounty",
+    "description": "Takes 25% extra damage. If killed, gain coins."
+  },
+  {
+    "name": "Brace",
+    "description": "Takes 1 less damage from all sources per stack."
+  },
+  {
+    "name": "Brittle",
+    "description": "This item has a 25% chance to break when you take damage."
+  },
+  {
+    "name": "Bruise",
+    "description": "Increases all physical damage taken by 1 per stack."
+  },
+  {
+    "name": "Burn",
+    "description": "Takes 1 damage per stack at start of its turn, then decrease Burn by 1. Ignores Shield and Holy Shield. Inflicted units light flammable tiles like grass or webs on fire and melt ice when moving onto or past them. Rat Bombs are also ignited by burning units moving through their tile. Removed when becoming . Attacks that inflict  instead cause . Units downed by  damage receive the Immolated Injury (-1 Charisma, -1 Luck) Associated with the  Element."
+  },
+  {
+    "name": "Captured Familiar",
+    "description": "Was once an enemy, is now on your team. Will follow you to future battles if it doesn't die."
+  },
+  {
+    "name": "Charge",
+    "description": "Gains 1 Mana per stack at the start of its next turn."
+  },
+  {
+    "name": "Charge Fists",
+    "description": "Your basic attack emits a  until the end of the turn."
+  },
+  {
+    "name": "Charisma Down",
+    "description": "-1 Charisma per stack. Charisma affects max mana and initial mana."
+  },
+  {
+    "name": "Charisma Up",
+    "description": "+1 Charisma per stack. Charisma affects max mana and initial mana."
+  },
+  {
+    "name": "Charmed",
+    "description": "It's brainwashed!"
+  },
+  {
+    "name": "Cleave",
+    "description": "Cuts a chunk of meat off what it hits, generating pickups."
+  },
+  {
+    "name": "Confusion",
+    "description": "33% chance to hit itself when attempting any actions except for basic movement. Stack count reduces by 1 at the end of each turn. (Confusion Damage = Strength) (Most enemies have 5 nolabel=y Strength, independent from what is shown on tooltip) Actions interrupted by the unit hitting themselves are wasted."
+  },
+  {
+    "name": "Constitution Down",
+    "description": "-1 Constitution per stack. Constitution affects max health and post-battle health regen."
+  },
+  {
+    "name": "Constitution Up",
+    "description": "+1 Constitution per stack. Constitution affects max health and post-battle health regen."
+  },
+  {
+    "name": "Counter Attack",
+    "description": "Attack the next thing that damages you automatically."
+  },
+  {
+    "name": "Crit Chance Up",
+    "description": "Crit Chance increased by x%."
+  },
+  {
+    "name": "Damage Down",
+    "description": "Decreases the damage (or heal) of its basic attack by 1 per stack."
+  },
+  {
+    "name": "Damage Up",
+    "description": "Increases the damage (or heal) of its basic attack by 1 per stack."
+  },
+  {
+    "name": "Delayed Pain",
+    "description": "Delayed damage is taken all at once at the end of your turn."
+  },
+  {
+    "name": "Dexterity Down",
+    "description": "-1 Dexterity per stack. Dexterity affects ranged attack and ranged ability damage."
+  },
+  {
+    "name": "Dexterity Up",
+    "description": "+1 Dexterity per stack. Dexterity affects ranged attack and ranged ability damage."
+  },
+  {
+    "name": "Dodge Chance",
+    "description": "Dodge Chance increased by x%."
+  },
+  {
+    "name": "Doomed",
+    "description": "Stack count reduces by 1 at the end of each turn. Unit dies when Doomed removes itself."
+  },
+  {
+    "name": "Double Action",
+    "description": "Doubles the next basic attack or active ability you use, having you cast it again for free, and then reduces its own stack count by 1."
+  },
+  {
+    "name": "Double Cast",
+    "description": "Doubles the next active ability you use, having you cast it again for free, and then reduces its own stack count by 1."
+  },
+  {
+    "name": "Double Ranged Damage",
+    "description": "All ranged physical attacks and abilities deal double damage."
+  },
+  {
+    "name": "Drowsy",
+    "description": "Falls  at the end of its turn."
+  },
+  {
+    "name": "Empty Mind",
+    "description": "Spells are disabled. Whenever it gets a kill, it takes an extra turn."
+  },
+  {
+    "name": "Energized",
+    "description": "Gets an extra turn at the end of the round. Cannot gain additional extra turns on that turn."
+  },
+  {
+    "name": "Entangled",
+    "description": "Immobile. Replaces the unit's basic attack with Break Free, which removes 1 stack of . Has no effect on Immobile bosses."
+  },
+  {
+    "name": "Exhaustion",
+    "description": "Takes 1 unblockable damage per stack at the start of its turn, then increase Exhaustion by 1. Whenever it would gain Mana or health, gain 1 less mana or health per stack of Exhaustion. Combat regen disabled. Cannot be removed."
+  },
+  {
+    "name": "Extra Attacks",
+    "description": "Can attack 1 extra time each turn, per stack."
+  },
+  {
+    "name": "Extra Moves",
+    "description": "Can move 1 extra time each turn, per stack."
+  },
+  {
+    "name": "Fear",
+    "description": "Automatically moves as far away from enemies as it can at the start of its turn. This uses up the unit's basic movement.  Attempts to consume  to move further away, if possible.  Will not activate if the unit is already at the furthest location from enemies."
+  },
+  {
+    "name": "Flammable",
+    "description": "This item burns up when hit with fire."
+  },
+  {
+    "name": "Flying",
+    "description": "Ignores tiles and can pass over units and objects."
+  },
+  {
+    "name": "Fragile",
+    "description": "This item breaks when you are downed."
+  },
+  {
+    "name": "Free Spell",
+    "description": "The next spell you cast costs 0 mana."
+  },
+  {
+    "name": "Freeze",
+    "description": "Skip the next turn. Stack count reduces by 1 at the end of each turn. If the last stack is removed, the unit becomes  at end of turn. Immune to incoming damage, unless it's of the  Element or unit has Mage's ability Ice Aspect. When hit, slides in the opposite direction, damaging units it collides with and freezes tiles it moves across (i.e. turns Water tiles into ice, turns Grass and Bramble tiles into Frozen Grass, etc.). Removed when receiving  or during Heat Wave, immediately becoming ."
+  },
+  {
+    "name": "Grappled",
+    "description": "as long as it's next to the thing that grappled it."
+  },
+  {
+    "name": "Health Regen",
+    "description": "Heals the bearer by 1 point per stack at the end of their turn."
+  },
+  {
+    "name": "Health Regen (Diminishing)",
+    "description": "Regen X (per stack) health at the end of its turn, then decreases Health Regen by 1."
+  },
+  {
+    "name": "Heat Wave",
+    "description": "Heals are reduced by 1. Does not heal after battle. Can be mitigated with water. (This includes  and Water Bottle.)"
+  },
+  {
+    "name": "Heavy Hits",
+    "description": "Basic attack inflicts  1 this turn."
+  },
+  {
+    "name": "Hex",
+    "description": "Spells cost 1 more mana to cast per stack."
+  },
+  {
+    "name": "Holy Shield",
+    "description": "The next time this unit gets hit, take no damage and lose 1 stack."
+  },
+  {
+    "name": "Immobile",
+    "description": "Cannot move. Stack count reduces by 1 at the end of each turn."
+  },
+  {
+    "name": "Infested",
+    "description": "When downed, an Infested unit dies, its corpse is destroyed, and a  is spawned for each stack, aligned with the team that inflicted the status. Champion units spawn Champion Spiderlings instead."
+  },
+  {
+    "name": "Initiative Down",
+    "description": "Take your turn later in the round."
+  },
+  {
+    "name": "Initiative Up",
+    "description": "Take your turn earlier in the round."
+  },
+  {
+    "name": "Injury Immunity",
+    "description": "Cannot receive Injuries for any reason. Lasts X turns."
+  },
+  {
+    "name": "Insight",
+    "description": "Spells cost 1 less mana to cast per stack."
+  },
+  {
+    "name": "Intelligence Down",
+    "description": "-1 Intelligence per stack. Intelligence affects mana regen."
+  },
+  {
+    "name": "Intelligence Up",
+    "description": "+1 Intelligence per stack. Intelligence affects mana regen."
+  },
+  {
+    "name": "Kinetic Spikes",
+    "description": "When this unit takes damage, it emits 1  per stack."
+  },
+  {
+    "name": "Late Bloomer",
+    "description": "Gain All Stats Up 3 in a number of turns equal to the stacks remaining."
+  },
+  {
+    "name": "Leeches",
+    "description": "Drains 1 health per stack from all afflicted units at the end of the applier's turn and gives it to the applier (as appropriate)."
+  },
+  {
+    "name": "Lifesteal",
+    "description": "This is both a status effect and a keyword that share an icon and a name, but have slightly different effects. There is a version where you gain a stack of Lifesteal for usage with the Basic Attack and there is a version where the spell itself has Lifesteal."
+  },
+  {
+    "name": "Luck Down",
+    "description": "-1 Luck per stack. Luck affects base crit chance and all randomness."
+  },
+  {
+    "name": "Luck Up",
+    "description": "+1 Luck per stack. Luck affects base crit chance and all randomness."
+  },
+  {
+    "name": "Madness",
+    "description": "Thinks everything is an enemy. Uncontrollable."
+  },
+  {
+    "name": "Magic Damage Up",
+    "description": "Magic damage you inflict does 1 extra damage per stack. Also boosts healing."
+  },
+  {
+    "name": "Magic Weakness",
+    "description": "Incoming magic damage has 100% Crit Chance and can't miss. Stack count reduces by 1 at the end of each turn."
+  },
+  {
+    "name": "Mana Leeches",
+    "description": "Drains 1 Mana per stack from all afflicted units at the end of the applier's turn and gives it to the applier."
+  },
+  {
+    "name": "Marked",
+    "description": "Incoming physical damage has 100% Crit Chance, ignores shield, and can't miss. Stack count reduces by 1 at the end of each turn."
+  },
+  {
+    "name": "Meaty",
+    "description": "Turns into meat when it dies."
+  },
+  {
+    "name": "Metal",
+    "description": "This item is electrically conductive."
+  },
+  {
+    "name": "Miss Chance",
+    "description": "Miss Chance increased by x%."
+  },
+  {
+    "name": "Movement Down",
+    "description": "Basic movement range decreased by 1 per stack."
+  },
+  {
+    "name": "Movement Up",
+    "description": "Basic movement range increased by 1 per stack."
+  },
+  {
+    "name": "Muted",
+    "description": "Your leftmost spell is disabled until applier dies. Additional stacks of Muted disable the spell to the right of the leftmost spell, then the spell to the left of the rightmost spell, then the rightmost spell."
+  },
+  {
+    "name": "No Health Regen",
+    "description": "Health won't regen automatically and does not regen at the end of battle."
+  },
+  {
+    "name": "No Mana Regen",
+    "description": "Mana won't regen automatically at the end of its turn."
+  },
+  {
+    "name": "Ostracized",
+    "description": "Every unit of the same team sees this as an enemy and will attack it with priority."
+  },
+  {
+    "name": "Petrify",
+    "description": "Skip the next turn. While petrified, they function like a Rock (all damage is reduced to 1, attacks on it have +1 knockback, deals 5 knockback damage when making contact with others) for the duration."
+  },
+  {
+    "name": "Poison",
+    "description": "This unit takes 1 Poison damage per stack at the end of their turn. Ignores Shield and Holy Shield."
+  },
+  {
+    "name": "Poison Lace",
+    "description": "Basic attack inflicts +1 , per stack."
+  },
+  {
+    "name": "Poison Lace (Weapon)",
+    "description": "Your weapon inflicts +1 , per stack."
+  },
+  {
+    "name": "Poisonous",
+    "description": "Applies 1 stack of  to any unit that makes contact with this unit per stack."
+  },
+  {
+    "name": "Possessed",
+    "description": "Takes 1 extra turn per stack, and is uncontrollable and charmed on those turns.   Additionally, familiars summoned by this unit during this turn are permanently on the same team that inflicted ."
+  },
+  {
+    "name": "Possessed by Dybbuk",
+    "description": "This cat is possessed by Dybbuk. Down this cat to exorcise him."
+  },
+  {
+    "name": "Preemptive Counter",
+    "description": "Attack things that target you before they attack you, automatically."
+  },
+  {
+    "name": "Probed",
+    "description": "The unit is permanently charmed until the probe is destroyed by being attacked from behind."
+  },
+  {
+    "name": "Promote",
+    "description": "The next familiar you spawn becomes a Champion."
+  },
+  {
+    "name": "Range Up",
+    "description": "Increases the range of your basic attack and projectile abilities by 1 per stack."
+  },
+  {
+    "name": "Range Up (Temporary)",
+    "description": "Increases the range of your basic attack and projectile abilities until the end of the turn."
+  },
+  {
+    "name": "Reflect",
+    "description": "Reflects the next projectile you are hit with back at the attacker. Stack count reduces by 1 each time you reflect a projectile."
+  },
+  {
+    "name": "RELOAD",
+    "description": "Items or abilities that refresh after a specific action."
+  },
+  {
+    "name": "Rot",
+    "description": "At the end of each turn, a unit with Rot spawns a  on an adjacent tile. Downed units with Rot spawn Rot Flies at the end of each round. Stack count reduces by 1 at the end of each turn. When Rot flies spawn from a unit inflicted with Rot, they will always spawn as the opposing team of the unit that it spawned from."
+  },
+  {
+    "name": "Scrambled",
+    "description": "Abilities are scrambled, temporarily. All of a cat's spells are turned into random spells. Scrambled can only be applied to player controlled cats."
+  },
+  {
+    "name": "Sentry Mode",
+    "description": "The next time an enemy ends its movement in your basic attack range, attack it."
+  },
+  {
+    "name": "Serrated Claws",
+    "description": "Basic attack inflicts 1  per stack."
+  },
+  {
+    "name": "Short Circuit",
+    "description": "All actions are disabled. Cast Break Circuit to break."
+  },
+  {
+    "name": "Sleep",
+    "description": "Skip the next turn, and remove stack count by 1."
+  },
+  {
+    "name": "Sleep (Paralysis)",
+    "description": "Will stay  until its  is killed."
+  },
+  {
+    "name": "Slow",
+    "description": "Reduces this unit's movement to 2. Stack count reduces by 1 at the end of each turn."
+  },
+  {
+    "name": "Soul Link",
+    "description": "Whenever a soul linked character loses health, all soul linked characters lose that health as well."
+  },
+  {
+    "name": "Sparkle",
+    "description": "A projectile that deals 1 magic damage to a random enemy."
+  },
+  {
+    "name": "Speed Down",
+    "description": "-1 Speed per stack. Speed affects movement range and turn order."
+  },
+  {
+    "name": "Speed Up",
+    "description": "+1 Speed per stack. Speed affects movement range and turn order."
+  },
+  {
+    "name": "Stat Bounty",
+    "description": "on kill. Whoever kills this gets All Stats Up."
+  },
+  {
+    "name": "Stealth",
+    "description": "50% Dodge Chance. Lose Stealth when you get hit."
+  },
+  {
+    "name": "Strength Down",
+    "description": "-1 Strength per stack. Strength affects melee attack and melee ability damage."
+  },
+  {
+    "name": "Strength Up",
+    "description": "+1 Strength per stack. Strength affects melee attack and melee ability damage."
+  },
+  {
+    "name": "Stun",
+    "description": "Skip the next turn. Stack count reduces by 1 at the end of each turn."
+  },
+  {
+    "name": "Sucker Punch",
+    "description": "Indicator that Sucker Punch is active. No tooltip."
+  },
+  {
+    "name": "Tarred",
+    "description": "-2 Speed Flammable; if contacted by  Element, will convert to"
+  },
+  {
+    "name": "Tech",
+    "description": "Whenever you equip a temporary Item or 24pxSpawn a Familiar, expend up to 3 stacks of Tech to improve the result."
+  },
+  {
+    "name": "The Alpha",
+    "description": "No effects on its own. Only one unit can be The Alpha. Certain spells and abilities provide bonuses for The Alpha."
+  },
+  {
+    "name": "Thorns",
+    "description": "Deals 1 damage to any unit that makes contact with this unit per stack."
+  },
+  {
+    "name": "Trample",
+    "description": "Move through or onto units, damaging and displacing them."
+  },
+  {
+    "name": "Transformation",
+    "description": "Transforms when the timer hits 0."
+  },
+  {
+    "name": "Weakness",
+    "description": "-2 Dexterity, -2 Strength, -2 Speed temporarily. Stack count reduces by 1 at the end of each turn."
+  },
+  {
+    "name": "Webbed",
+    "description": ". Replaces the unit's basic attack with Break Free, which removes 1 stack of Webbed."
+  },
+  {
+    "name": "Wet",
+    "description": "Units conduct  and cannot be , but will always be  by . Units apply  to tiles they pass over. Removed when starting turn outside of a Water tile."
+  },
+  {
+    "name": "Zombie",
+    "description": "-2 Strength, -2 Intelligence."
+  }
+]

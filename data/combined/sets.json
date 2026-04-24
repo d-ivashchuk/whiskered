@@ -1,0 +1,9215 @@
+[
+  {
+    "name": "Advanced Alloy",
+    "description": "Advanced Alloy Set Pieces are no longer Brittle.",
+    "items": [
+      "Advanced Alloy Armor",
+      "Advanced Alloy Hat",
+      "Advanced Alloy Mask"
+    ],
+    "itemDetails": [
+      {
+        "name": "Advanced Alloy Armor",
+        "slot": "Neck",
+        "rarity": "",
+        "tier": "B"
+      },
+      {
+        "name": "Advanced Alloy Hat",
+        "slot": "Head",
+        "rarity": "",
+        "tier": "B"
+      },
+      {
+        "name": "Advanced Alloy Mask",
+        "slot": "Face",
+        "rarity": "",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Brace",
+      "Brittle",
+      "Metal",
+      "Thorns"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Thorns synergy with melee class"
+      }
+    ]
+  },
+  {
+    "name": "Alloy",
+    "description": "Alloy Set Pieces are no longer Brittle.",
+    "items": [
+      "Alloy Armor",
+      "Alloy Hat",
+      "Alloy Mask"
+    ],
+    "itemDetails": [
+      {
+        "name": "Alloy Armor",
+        "slot": "Neck",
+        "rarity": "",
+        "tier": "C"
+      },
+      {
+        "name": "Alloy Hat",
+        "slot": "Head",
+        "rarity": "",
+        "tier": "C"
+      },
+      {
+        "name": "Alloy Mask",
+        "slot": "Face",
+        "rarity": "",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Brace",
+      "Brittle",
+      "Metal",
+      "Thorns"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Thorns synergy with melee class"
+      }
+    ]
+  },
+  {
+    "name": "Amoeba",
+    "description": "Permanent Madness.",
+    "items": [
+      "Alien Stalk",
+      "Amoeba (Face)",
+      "Amoeba (Head)",
+      "Amoeba (Neck)",
+      "Conjoined Ameoba",
+      "Friendly Amoeba"
+    ],
+    "itemDetails": [
+      {
+        "name": "Alien Stalk",
+        "slot": "Head",
+        "rarity": "Very Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Amoeba (Face)",
+        "slot": "Face",
+        "rarity": "",
+        "tier": "D"
+      },
+      {
+        "name": "Amoeba (Head)",
+        "slot": "Head",
+        "rarity": "",
+        "tier": "D"
+      },
+      {
+        "name": "Amoeba (Neck)",
+        "slot": "Neck",
+        "rarity": "",
+        "tier": "D"
+      },
+      {
+        "name": "Conjoined Ameoba",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Friendly Amoeba",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "A"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Brace",
+      "Health Regen",
+      "Miss Chance"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Brace synergy with defensive class"
+      }
+    ]
+  },
+  {
+    "name": "Ancestor",
+    "description": "Spawn a spectral copy of yourself when you die. The copy dies at the end of its turn.",
+    "items": [
+      "Ancestor's Bones",
+      "Ancestor's Jaw",
+      "Ancestor's Skull"
+    ],
+    "itemDetails": [
+      {
+        "name": "Ancestor's Bones",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Ancestor's Jaw",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Ancestor's Skull",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "A"
+      }
+    ],
+    "avgTier": "A",
+    "statusEffects": [],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Baby",
+    "description": "Start battle with a baby version of yourself.",
+    "items": [
+      "Cambion Conception (Item)",
+      "Charming Baby",
+      "Fetus in a Jar",
+      "Freezing Baby",
+      "Scary Baby",
+      "Weird Egg"
+    ],
+    "itemDetails": [
+      {
+        "name": "Cambion Conception (Item)",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Charming Baby",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Fetus in a Jar",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Freezing Baby",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Scary Baby",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Weird Egg",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Captured Familiar",
+      "Charmed",
+      "Fear",
+      "Freeze"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Barbed",
+    "description": "+2 Constitution Thorns.",
+    "items": [
+      "Barbed Hat",
+      "Barbed Mask",
+      "Barbed Necklace",
+      "Barbed Paw",
+      "Barbed Scrap",
+      "Bloody Meat Hook",
+      "Crown of Horns",
+      "Fish Hook",
+      "Grappling Hook",
+      "Hell Hook",
+      "Meat Hook"
+    ],
+    "itemDetails": [
+      {
+        "name": "Barbed Hat",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Barbed Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Barbed Necklace",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Barbed Paw",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Barbed Scrap",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Bloody Meat Hook",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Crown of Horns",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Fish Hook",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Grappling Hook",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Hell Hook",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Meat Hook",
+        "slot": "Weapon",
+        "rarity": "Innate",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Bleed",
+      "Cleave",
+      "Damage Up",
+      "Metal",
+      "Thorns"
+    ],
+    "recommendedClasses": [
+      "Butcher",
+      "Fighter",
+      "Hunter",
+      "Monk",
+      "Tank",
+      "Thief"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Butcher",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Thief",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Hunter",
+        "reason": "Bleed synergy with aggressive class"
+      }
+    ]
+  },
+  {
+    "name": "Bionic",
+    "description": "Your movement action becomes an infinite range Teleport. Bionic Set Pieces are no longer Fragile.",
+    "items": [
+      "Bionic Face Plating",
+      "Bionic Neck Plating",
+      "Bionic Skull Plating",
+      "Dirty Bionic Armor",
+      "Frank Bolts",
+      "Happy Helmet",
+      "Radar Dish",
+      "Receiver Antenna",
+      "Robo Arm",
+      "Robo Fart Face",
+      "Signal Amplifier",
+      "Technology",
+      "Transmitter Antenna",
+      "Ultra Vision 3000",
+      "Ultra Vision 3000 v1.1",
+      "Vision Plugin"
+    ],
+    "itemDetails": [
+      {
+        "name": "Bionic Face Plating",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "S"
+      },
+      {
+        "name": "Bionic Neck Plating",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "S"
+      },
+      {
+        "name": "Bionic Skull Plating",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "S"
+      },
+      {
+        "name": "Dirty Bionic Armor",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Frank Bolts",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Happy Helmet",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Radar Dish",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Receiver Antenna",
+        "slot": "Head",
+        "rarity": "Quest",
+        "tier": "C"
+      },
+      {
+        "name": "Robo Arm",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Robo Fart Face",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Signal Amplifier",
+        "slot": "Weapon",
+        "rarity": "Quest",
+        "tier": "C"
+      },
+      {
+        "name": "Technology",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Transmitter Antenna",
+        "slot": "Head",
+        "rarity": "Quest",
+        "tier": "B"
+      },
+      {
+        "name": "Ultra Vision 3000",
+        "slot": "Face",
+        "rarity": "Side Quest",
+        "tier": "D"
+      },
+      {
+        "name": "Ultra Vision 3000 v1.1",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Vision Plugin",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "All Stats Up",
+      "Bonus Attack",
+      "Charge",
+      "Fragile",
+      "Health Regen",
+      "Madness",
+      "Marked",
+      "Metal",
+      "Poison"
+    ],
+    "recommendedClasses": [
+      "Druid",
+      "Mage",
+      "Necromancer",
+      "Psychic"
+    ],
+    "recommendations": [
+      {
+        "className": "Mage",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Psychic",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Druid",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Necromancer",
+        "reason": "Poison synergy with Necromancer"
+      }
+    ]
+  },
+  {
+    "name": "Bone",
+    "description": "Shield Find a random common bone item at the end of each battle.",
+    "items": [
+      "Ancestor's Bones",
+      "Ancestor's Jaw",
+      "Ancestor's Skull",
+      "Bone Club",
+      "Bone Marrow",
+      "Bone Necklace",
+      "Bunga's Bone",
+      "Cat Rib",
+      "Child's Skull",
+      "Cow Skull",
+      "Dino Hat",
+      "Dino Mask",
+      "Dino Necklace",
+      "Dry Bone Helm",
+      "Dry Bone Mask",
+      "Dry Bone Necklace",
+      "Dybbuk's Rib",
+      "Finger Bone",
+      "Gemstone Bones",
+      "Glowing Bone",
+      "Human Leg Bone",
+      "Jawbone",
+      "Molars",
+      "Mysterious Bone",
+      "Skull Cap",
+      "Skull Of Glorg",
+      "Snaggle Tooth",
+      "Staff of the Underworld",
+      "The Kandarian",
+      "Vibrating Skull",
+      "Wish Bone"
+    ],
+    "itemDetails": [
+      {
+        "name": "Ancestor's Bones",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Ancestor's Jaw",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Ancestor's Skull",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Bone Club",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Bone Marrow",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Bone Necklace",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Bunga's Bone",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Cat Rib",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Child's Skull",
+        "slot": "Head",
+        "rarity": "",
+        "tier": "D"
+      },
+      {
+        "name": "Cow Skull",
+        "slot": "Head",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Dino Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Dino Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Dino Necklace",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Dry Bone Helm",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Dry Bone Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Dry Bone Necklace",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Dybbuk's Rib",
+        "slot": "Trinket",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Finger Bone",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Gemstone Bones",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Glowing Bone",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Human Leg Bone",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Jawbone",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Molars",
+        "slot": "Weapon",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Mysterious Bone",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Skull Cap",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Skull Of Glorg",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Snaggle Tooth",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Staff of the Underworld",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "The Kandarian",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Vibrating Skull",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Wish Bone",
+        "slot": "Consumable",
+        "rarity": "Very Rare",
+        "tier": "A"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Bleed",
+      "Bruise",
+      "Charmed",
+      "Health Regen",
+      "Immobile",
+      "Kinetic Spikes",
+      "Magic Weakness",
+      "Thorns"
+    ],
+    "recommendedClasses": [
+      "Butcher",
+      "Fighter",
+      "Hunter",
+      "Monk",
+      "Tank",
+      "Thief"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Butcher",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Thief",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Hunter",
+        "reason": "Bleed synergy with aggressive class"
+      }
+    ]
+  },
+  {
+    "name": "Brick",
+    "description": "Shield Knockback immunity.",
+    "items": [
+      "Brick Hat",
+      "Brick Mask",
+      "Brick Necklace",
+      "Bricks"
+    ],
+    "itemDetails": [
+      {
+        "name": "Brick Hat",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Brick Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Brick Necklace",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Bricks",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Bruise",
+      "Stun"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Butcher",
+    "description": "Food and scrap pickups you spawn are bigger.",
+    "items": [
+      "Bloody Meat Hook",
+      "Butcher Seal",
+      "Butcher's Cleaver",
+      "Chef's Apron",
+      "Cookbook",
+      "Flesh Shroud",
+      "Hell Hook",
+      "Hooked Necklace",
+      "Iron Jaw",
+      "Meat Cleaver",
+      "Meat Hook",
+      "Sack o' Meat"
+    ],
+    "itemDetails": [
+      {
+        "name": "Bloody Meat Hook",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Butcher Seal",
+        "slot": "Consumable",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Butcher's Cleaver",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Chef's Apron",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Cookbook",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Flesh Shroud",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Hell Hook",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Hooked Necklace",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Iron Jaw",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Meat Cleaver",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Meat Hook",
+        "slot": "Weapon",
+        "rarity": "Innate",
+        "tier": "C"
+      },
+      {
+        "name": "Sack o' Meat",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Bleed",
+      "Cleave",
+      "Lifesteal",
+      "Metal",
+      "Thorns"
+    ],
+    "recommendedClasses": [
+      "Butcher",
+      "Fighter",
+      "Hunter",
+      "Monk",
+      "Tank",
+      "Thief"
+    ],
+    "recommendations": [
+      {
+        "className": "Butcher",
+        "reason": "Butcher class set"
+      },
+      {
+        "className": "Thief",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Hunter",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Tank",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Thorns synergy with melee class"
+      }
+    ]
+  },
+  {
+    "name": "Cactus",
+    "description": "Thorns. Whenever any Cactus armor breaks, increase all your stats by 1, permanently.",
+    "items": [
+      "Cactus Hat",
+      "Cactus Mask",
+      "Cactus Necklace"
+    ],
+    "itemDetails": [
+      {
+        "name": "Cactus Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Cactus Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Cactus Necklace",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Brittle",
+      "Thorns"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Thorns synergy with melee class"
+      }
+    ]
+  },
+  {
+    "name": "Carapace",
+    "description": "Gain 3 random stat ups at the end of your turn.",
+    "items": [
+      "Carapace Hat",
+      "Carapace Mask",
+      "Carapace Necklace"
+    ],
+    "itemDetails": [
+      {
+        "name": "Carapace Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Carapace Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Carapace Necklace",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Cardboard",
+    "description": "Shield Cardboard Set Pieces are no longer Fragile.",
+    "items": [
+      "Breakfast",
+      "Cardboard Hat",
+      "Cardboard Mask",
+      "Cardboard Necklace",
+      "Prayer Card",
+      "Tarot Deck",
+      "The Box (1)"
+    ],
+    "itemDetails": [
+      {
+        "name": "Breakfast",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Cardboard Hat",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Cardboard Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Cardboard Necklace",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Prayer Card",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Tarot Deck",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "The Box (1)",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Brittle",
+      "Flammable",
+      "Fragile",
+      "Health Regen"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Cathide",
+    "description": "5% chance to spawn a Flea each turn. Familiars have +1 Damage and +1 movement range.",
+    "items": [
+      "Cathide Armor",
+      "Cathide Hat",
+      "Cathide Mask",
+      "Leather Hide Mask",
+      "Thick Hide"
+    ],
+    "itemDetails": [
+      {
+        "name": "Cathide Armor",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Cathide Hat",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Cathide Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Leather Hide Mask",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Thick Hide",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Brace",
+      "Freeze",
+      "Health Regen",
+      "Slow"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Brace synergy with defensive class"
+      }
+    ]
+  },
+  {
+    "name": "Caveman",
+    "description": "If your nolabel=y Int is 1 or less, gain Brace 5.",
+    "items": [
+      "Caveman Eyebrows",
+      "Caveman Necklace",
+      "Caveman Wig",
+      "Wooly Beard"
+    ],
+    "itemDetails": [
+      {
+        "name": "Caveman Eyebrows",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "A"
+      },
+      {
+        "name": "Caveman Necklace",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Caveman Wig",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Wooly Beard",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Brace"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Brace synergy with defensive class"
+      }
+    ]
+  },
+  {
+    "name": "Chip",
+    "description": "When you end your turn, if you cast exactly 5 spells, double cast your next spell.",
+    "items": [
+      "Brain Chip",
+      "Cerebral Chip",
+      "Ocular Chip",
+      "Spinal Chip",
+      "Vision Plugin"
+    ],
+    "itemDetails": [
+      {
+        "name": "Brain Chip",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "D"
+      },
+      {
+        "name": "Cerebral Chip",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "A"
+      },
+      {
+        "name": "Ocular Chip",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Spinal Chip",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Vision Plugin",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Cleric",
+    "description": "If an attack would down you, instead lower your HP to 1. While at 1 HP, this has no effect.",
+    "items": [
+      "Angelic Protection",
+      "Anointing Oil",
+      "Blessed Anointing Oil",
+      "Blessed Ashes",
+      "Cleric Seal",
+      "Cleric's Mitre",
+      "Cleric's Relic",
+      "Cleric's Tears",
+      "Crown Of Thorns",
+      "Crucifix",
+      "Glyph of Protection",
+      "Halo",
+      "Holy Grail",
+      "Holy Tears",
+      "Holy Water",
+      "Prayer Card",
+      "Sacred Heart",
+      "Scapular",
+      "The Bible",
+      "The Relic",
+      "Wafer"
+    ],
+    "itemDetails": [
+      {
+        "name": "Angelic Protection",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Anointing Oil",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Blessed Anointing Oil",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Blessed Ashes",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Cleric Seal",
+        "slot": "Consumable",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Cleric's Mitre",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Cleric's Relic",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Cleric's Tears",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Crown Of Thorns",
+        "slot": "Head",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Crucifix",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "B"
+      },
+      {
+        "name": "Glyph of Protection",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "S"
+      },
+      {
+        "name": "Halo",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Holy Grail",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Holy Tears",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "S"
+      },
+      {
+        "name": "Holy Water",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Prayer Card",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Sacred Heart",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Scapular",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "The Bible",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "The Relic",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Wafer",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Brace",
+      "Fear",
+      "Sparkle",
+      "Thorns"
+    ],
+    "recommendedClasses": [
+      "Cleric",
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Cleric",
+        "reason": "Cleric class set"
+      },
+      {
+        "className": "Tank",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Brace synergy with defensive class"
+      }
+    ]
+  },
+  {
+    "name": "Collarless",
+    "description": "Collarless spells cost -1 mana to cast.",
+    "items": [
+      "Mundane Collar",
+      "Normal Ears",
+      "Ordinary Whiskers"
+    ],
+    "itemDetails": [
+      {
+        "name": "Mundane Collar",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Normal Ears",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Ordinary Whiskers",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [],
+    "recommendedClasses": [
+      "Collarless"
+    ],
+    "recommendations": [
+      {
+        "className": "Collarless",
+        "reason": "Collarless class set"
+      }
+    ]
+  },
+  {
+    "name": "Cool",
+    "description": "Cool Set Pieces are no longer Fragile.",
+    "items": [
+      "Butterfly Knife",
+      "Chainsaw",
+      "Cool Glasses",
+      "Cool Hat",
+      "Cool Rocks",
+      "Cool Shirt",
+      "Leather Jacket",
+      "Lighter",
+      "Rad Glasses",
+      "The Loner",
+      "The Loner Mark 2",
+      "Top Hat",
+      "Zodiac's Six Shooter"
+    ],
+    "itemDetails": [
+      {
+        "name": "Butterfly Knife",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Chainsaw",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Cool Glasses",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Cool Hat",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Cool Rocks",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Cool Shirt",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Leather Jacket",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Lighter",
+        "slot": "Weapon",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Rad Glasses",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "The Loner",
+        "slot": "Weapon",
+        "rarity": "Side Quest",
+        "tier": "D"
+      },
+      {
+        "name": "The Loner Mark 2",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Top Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Zodiac's Six Shooter",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "A"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Bleed",
+      "Burn",
+      "Cleave",
+      "Fragile",
+      "RELOAD",
+      "Thorns"
+    ],
+    "recommendedClasses": [
+      "Butcher",
+      "Fighter",
+      "Hunter",
+      "Monk",
+      "Tank",
+      "Thief"
+    ],
+    "recommendations": [
+      {
+        "className": "Butcher",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Thief",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Hunter",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Tank",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Thorns synergy with melee class"
+      }
+    ]
+  },
+  {
+    "name": "Copycat",
+    "description": "Copies your trinket's passive effects.",
+    "items": [
+      "Copycat Hat",
+      "Copycat Mask",
+      "Copycat Scarf"
+    ],
+    "itemDetails": [
+      {
+        "name": "Copycat Hat",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Copycat Mask",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Copycat Scarf",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Cyborg",
+    "description": "Take an AI controlled bonus turn at the end of the first round. Count as a Robot. Can get extra turn if effect by Electric.",
+    "items": [
+      "Cerebellum Implant",
+      "Frank Bolts",
+      "Frontal Lobe Implant",
+      "Happy Helmet",
+      "Miner Implant",
+      "Optic Nerve Implant",
+      "Radar Dish",
+      "Receiver Antenna",
+      "Robo Arm",
+      "Robotic Arm",
+      "Signal Amplifier",
+      "Technology",
+      "Transmitter Antenna",
+      "Vision Plugin"
+    ],
+    "itemDetails": [
+      {
+        "name": "Cerebellum Implant",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Frank Bolts",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Frontal Lobe Implant",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Happy Helmet",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Miner Implant",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "S"
+      },
+      {
+        "name": "Optic Nerve Implant",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Radar Dish",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Receiver Antenna",
+        "slot": "Head",
+        "rarity": "Quest",
+        "tier": "C"
+      },
+      {
+        "name": "Robo Arm",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Robotic Arm",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Signal Amplifier",
+        "slot": "Weapon",
+        "rarity": "Quest",
+        "tier": "C"
+      },
+      {
+        "name": "Technology",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Transmitter Antenna",
+        "slot": "Head",
+        "rarity": "Quest",
+        "tier": "B"
+      },
+      {
+        "name": "Vision Plugin",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "All Stats Up",
+      "Bonus Attack",
+      "Charge",
+      "Fragile",
+      "Madness",
+      "Marked",
+      "Metal"
+    ],
+    "recommendedClasses": [
+      "Druid",
+      "Mage",
+      "Necromancer",
+      "Psychic"
+    ],
+    "recommendations": [
+      {
+        "className": "Mage",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Psychic",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Druid",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Necromancer",
+        "reason": "Madness synergy with Necromancer"
+      }
+    ]
+  },
+  {
+    "name": "Debris",
+    "description": "Your basic attack deals damage and has a +10% chance to Stun.",
+    "items": [
+      "Debris",
+      "Debris Armor",
+      "Debris Hat",
+      "Debris Mask"
+    ],
+    "itemDetails": [
+      {
+        "name": "Debris",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Debris Armor",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Debris Hat",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Debris Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Brace",
+      "Kinetic Spikes",
+      "Metal"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Brace synergy with defensive class"
+      }
+    ]
+  },
+  {
+    "name": "Demonic",
+    "description": "When you get a kill, gain Shield.",
+    "items": [
+      "Black Candle",
+      "Book Of Belial",
+      "Cambion Conception (Item)",
+      "Crown of Horns",
+      "Cursed Stickman",
+      "Dark Friend",
+      "Demonic Hat",
+      "Demonic Mask",
+      "Demonic Necklace",
+      "Hell Hook",
+      "Hexagram Sigil",
+      "Lucifer Sigil",
+      "My Shadow",
+      "Necronomicon",
+      "Odd Medallion",
+      "Pentagram Sigil",
+      "Puzzle Box",
+      "Satanic Bible",
+      "Soul Claw",
+      "Stickman",
+      "The Kandarian",
+      "The Pact"
+    ],
+    "itemDetails": [
+      {
+        "name": "Black Candle",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Book Of Belial",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Cambion Conception (Item)",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Crown of Horns",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Cursed Stickman",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "D"
+      },
+      {
+        "name": "Dark Friend",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Demonic Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "A"
+      },
+      {
+        "name": "Demonic Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Demonic Necklace",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Hell Hook",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Hexagram Sigil",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Lucifer Sigil",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "My Shadow",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Necronomicon",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Odd Medallion",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Pentagram Sigil",
+        "slot": "Trinket",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Puzzle Box",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Satanic Bible",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Soul Claw",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Stickman",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "The Kandarian",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "The Pact",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "All Stats Up",
+      "Bleed",
+      "Bleed Thorns",
+      "Bruise",
+      "Charge",
+      "Damage Up",
+      "Fear",
+      "Madness",
+      "Magic Damage Up",
+      "RELOAD",
+      "Thorns",
+      "Trample"
+    ],
+    "recommendedClasses": [
+      "Butcher",
+      "Druid",
+      "Fighter",
+      "Hunter",
+      "Mage",
+      "Monk",
+      "Necromancer",
+      "Psychic",
+      "Tank",
+      "Thief"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Necromancer",
+        "reason": "Madness synergy with Necromancer"
+      },
+      {
+        "className": "Butcher",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Thief",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Hunter",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Mage",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Psychic",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Druid",
+        "reason": "Charge synergy with spellcasting class"
+      }
+    ]
+  },
+  {
+    "name": "Dino",
+    "description": "Allies gain Shield at the start of each battle.",
+    "items": [
+      "Dino Hat",
+      "Dino Mask",
+      "Dino Necklace"
+    ],
+    "itemDetails": [
+      {
+        "name": "Dino Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Dino Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Dino Necklace",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Dirt Clod",
+    "description": "Grow flowers under yourself at the end of each turn.",
+    "items": [
+      "Dirt Clod Hat",
+      "Dirt Clod Mask",
+      "Dirt Clod Necklace",
+      "Dirty Bionic Armor",
+      "Modeling Clay",
+      "Mud Mask",
+      "Scorched Earth"
+    ],
+    "itemDetails": [
+      {
+        "name": "Dirt Clod Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Dirt Clod Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Dirt Clod Necklace",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Dirty Bionic Armor",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Modeling Clay",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Mud Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Scorched Earth",
+        "slot": "Trinket",
+        "rarity": "Very Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Brittle",
+      "Fragile",
+      "Health Regen",
+      "Metal"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Druid",
+    "description": "Your Familiars gain +4 HP and +1 Damage.",
+    "items": [
+      "Bag of Seeds",
+      "Black Mushroom",
+      "Druid Seal",
+      "Druid's Whistle",
+      "Feed Bag",
+      "Friendship Bracelet",
+      "Greenman Mask",
+      "Mushroom Hat",
+      "Mushrooms",
+      "Purple Mushroom",
+      "Rain Staff",
+      "Red Mushroom",
+      "Ring of Mushrooms",
+      "Spotted Mushroom",
+      "Tiny Cage",
+      "Whistle"
+    ],
+    "itemDetails": [
+      {
+        "name": "Bag of Seeds",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Black Mushroom",
+        "slot": "Weapon",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Druid Seal",
+        "slot": "Consumable",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Druid's Whistle",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Feed Bag",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Friendship Bracelet",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Greenman Mask",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Mushroom Hat",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Mushrooms",
+        "slot": "Consumable",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Purple Mushroom",
+        "slot": "Weapon",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Rain Staff",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Red Mushroom",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Ring of Mushrooms",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Spotted Mushroom",
+        "slot": "Trinket",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Tiny Cage",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Whistle",
+        "slot": "Trinket",
+        "rarity": "Common",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "All Stats Up",
+      "Brace",
+      "Captured Familiar",
+      "Charmed",
+      "Confusion",
+      "Weakness"
+    ],
+    "recommendedClasses": [
+      "Druid",
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Druid",
+        "reason": "Druid class set"
+      },
+      {
+        "className": "Tank",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Brace synergy with defensive class"
+      }
+    ]
+  },
+  {
+    "name": "Elite Alloy",
+    "description": "Elite Alloy Set Pieces are no longer Brittle.",
+    "items": [
+      "Elite Alloy Armor",
+      "Elite Alloy Hat",
+      "Elite Alloy Mask"
+    ],
+    "itemDetails": [
+      {
+        "name": "Elite Alloy Armor",
+        "slot": "Neck",
+        "rarity": "",
+        "tier": "B"
+      },
+      {
+        "name": "Elite Alloy Hat",
+        "slot": "Head",
+        "rarity": "",
+        "tier": "B"
+      },
+      {
+        "name": "Elite Alloy Mask",
+        "slot": "Face",
+        "rarity": "",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "All Stats Up",
+      "Brace",
+      "Brittle",
+      "Metal",
+      "Thorns"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Thorns synergy with melee class"
+      }
+    ]
+  },
+  {
+    "name": "Experimental",
+    "description": "Find a pill at the end of each battle. Whenever you eat a pill, gain a random stat and lose another random stat, permanently.",
+    "items": [
+      "Chaos Controller",
+      "Chaos Device",
+      "Disorder Decoder",
+      "Experiment X",
+      "Experimental Treatment (Face)",
+      "Experimental Treatment (Head)",
+      "Experimental Treatment (Neck)",
+      "Experimental Treatment (Quest)",
+      "Mini Jetpack",
+      "Odd Remote",
+      "Rainbow Remote",
+      "Teleport!",
+      "Tesla Cannon"
+    ],
+    "itemDetails": [
+      {
+        "name": "Chaos Controller",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Chaos Device",
+        "slot": "Head",
+        "rarity": "Side Quest",
+        "tier": "B"
+      },
+      {
+        "name": "Disorder Decoder",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Experiment X",
+        "slot": "Consumable",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Experimental Treatment (Face)",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Experimental Treatment (Head)",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Experimental Treatment (Neck)",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Experimental Treatment (Quest)",
+        "slot": "Face",
+        "rarity": "Side Quest",
+        "tier": "D"
+      },
+      {
+        "name": "Mini Jetpack",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Odd Remote",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Rainbow Remote",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Teleport!",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Tesla Cannon",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "A"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Stun"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Fatty",
+    "description": "+3 Constitution",
+    "items": [
+      "Blubber",
+      "Bucket of Lard",
+      "Fatty Hat",
+      "Fatty Mask",
+      "Fatty Necklace",
+      "Gobbler"
+    ],
+    "itemDetails": [
+      {
+        "name": "Blubber",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Bucket of Lard",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "D"
+      },
+      {
+        "name": "Fatty Hat",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Fatty Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Fatty Necklace",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Gobbler",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Brace"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Brace synergy with defensive class"
+      }
+    ]
+  },
+  {
+    "name": "Feathered",
+    "description": "Flying.",
+    "items": [
+      "Angel Wing",
+      "Bird Head",
+      "Dead Hummingbird",
+      "Feather",
+      "Feather Darts",
+      "Feathered Cap",
+      "Feathered Mask",
+      "Feathered Necklace",
+      "Feathered Veil",
+      "Feathered Wing",
+      "Phoenix Hat",
+      "Phoenix Mask",
+      "Phoenix Necklace",
+      "Raven Feather"
+    ],
+    "itemDetails": [
+      {
+        "name": "Angel Wing",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Bird Head",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Dead Hummingbird",
+        "slot": "Consumable",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Feather",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "A"
+      },
+      {
+        "name": "Feather Darts",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Feathered Cap",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "A"
+      },
+      {
+        "name": "Feathered Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Feathered Necklace",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Feathered Veil",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Feathered Wing",
+        "slot": "Weapon",
+        "rarity": "",
+        "tier": "B"
+      },
+      {
+        "name": "Phoenix Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Phoenix Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Phoenix Necklace",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Raven Feather",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Charge",
+      "Dodge Chance",
+      "Movement Up",
+      "Soul Link"
+    ],
+    "recommendedClasses": [
+      "Druid",
+      "Mage",
+      "Psychic"
+    ],
+    "recommendations": [
+      {
+        "className": "Mage",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Psychic",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Druid",
+        "reason": "Charge synergy with spellcasting class"
+      }
+    ]
+  },
+  {
+    "name": "Fecal",
+    "description": "Poisonous 1. Your basic attack inflicts Poison.",
+    "items": [
+      "Alluring Doodie",
+      "Bird Poop",
+      "Colostomy Bag",
+      "Crown of Feculence",
+      "Doodie Mask",
+      "Enchanting Poop",
+      "Fecal Hood",
+      "Fecal Mask",
+      "Fecal Necklace",
+      "Mega Poop",
+      "Petrified Poop",
+      "Zaratana's Turd"
+    ],
+    "itemDetails": [
+      {
+        "name": "Alluring Doodie",
+        "slot": "Head",
+        "rarity": "",
+        "tier": "D"
+      },
+      {
+        "name": "Bird Poop",
+        "slot": "Head",
+        "rarity": "",
+        "tier": "D"
+      },
+      {
+        "name": "Colostomy Bag",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Crown of Feculence",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Doodie Mask",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Enchanting Poop",
+        "slot": "Trinket",
+        "rarity": "",
+        "tier": "D"
+      },
+      {
+        "name": "Fecal Hood",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Fecal Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Fecal Necklace",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Mega Poop",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Petrified Poop",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Zaratana's Turd",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "A"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Poison",
+      "Poisonous"
+    ],
+    "recommendedClasses": [
+      "Necromancer"
+    ],
+    "recommendations": [
+      {
+        "className": "Necromancer",
+        "reason": "Poison synergy with Necromancer"
+      }
+    ]
+  },
+  {
+    "name": "Fighter",
+    "description": "Shield +15% chance to refresh your basic attack, movement, weapon and trinket actions when you get a kill. This chance scales with",
+    "items": [
+      "Boxing Charm",
+      "Brass Knuckles",
+      "Fighter Seal",
+      "Fighter's Helm",
+      "Fighter's Scar",
+      "Fighter's Shoulder Pad",
+      "Grip Trainer",
+      "Heavy Mace",
+      "Medieval Helmet",
+      "Rage Juice",
+      "Steroids"
+    ],
+    "itemDetails": [
+      {
+        "name": "Boxing Charm",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "B"
+      },
+      {
+        "name": "Brass Knuckles",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Fighter Seal",
+        "slot": "Consumable",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Fighter's Helm",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Fighter's Scar",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Fighter's Shoulder Pad",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Grip Trainer",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Heavy Mace",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Medieval Helmet",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Rage Juice",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Steroids",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Bonus Attack",
+      "Brace",
+      "Bruise",
+      "Madness",
+      "Metal"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Necromancer",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Fighter",
+        "reason": "Fighter class set"
+      },
+      {
+        "className": "Tank",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Necromancer",
+        "reason": "Madness synergy with Necromancer"
+      }
+    ]
+  },
+  {
+    "name": "Flower",
+    "description": "Enemies have a 10% chance to become Entangled when walking through flower tiles.",
+    "items": [
+      "Fire Flower",
+      "Flower",
+      "Flower Hat",
+      "Flower Mask",
+      "Flower Mix",
+      "Flower Necklace",
+      "Nightshade (Item)"
+    ],
+    "itemDetails": [
+      {
+        "name": "Fire Flower",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Flower",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Flower Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Flower Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Flower Mix",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Flower Necklace",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Nightshade (Item)",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Burn",
+      "Entangled",
+      "Health Regen",
+      "Poison"
+    ],
+    "recommendedClasses": [
+      "Necromancer"
+    ],
+    "recommendations": [
+      {
+        "className": "Necromancer",
+        "reason": "Poison synergy with Necromancer"
+      }
+    ]
+  },
+  {
+    "name": "Fly",
+    "description": "Flying. You do not take extra damage from backstabs. 50% Chance to spawn a Fly each turn.",
+    "items": [
+      "Fly Carapace",
+      "Fly Hat",
+      "Fly Larva",
+      "Fly Mask",
+      "Tina's Best Friend"
+    ],
+    "itemDetails": [
+      {
+        "name": "Fly Carapace",
+        "slot": "Neck",
+        "rarity": "",
+        "tier": "D"
+      },
+      {
+        "name": "Fly Hat",
+        "slot": "Head",
+        "rarity": "",
+        "tier": "D"
+      },
+      {
+        "name": "Fly Larva",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Fly Mask",
+        "slot": "Face",
+        "rarity": "",
+        "tier": "D"
+      },
+      {
+        "name": "Tina's Best Friend",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "A"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Dodge Chance",
+      "Rot"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Frozen",
+    "description": "Shield You can damage Freeze units.",
+    "items": [
+      "Dry Ice",
+      "Frozen Hat",
+      "Frozen Mask",
+      "Frozen Necklace",
+      "Ice Cubes",
+      "Liquid Nitrogen",
+      "Ring of Frost"
+    ],
+    "itemDetails": [
+      {
+        "name": "Dry Ice",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "D"
+      },
+      {
+        "name": "Frozen Hat",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Frozen Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Frozen Necklace",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Ice Cubes",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Liquid Nitrogen",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Ring of Frost",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Freeze",
+      "Slow"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Gemstone",
+    "description": "Gain Shield at the end of each turn.",
+    "items": [
+      "Gemstone Bones",
+      "Gemstone Crown",
+      "Gemstone Mask",
+      "Gemstone Necklace",
+      "Geode",
+      "Jewel of Drog",
+      "Meek Stone",
+      "Neverstone",
+      "Quartz Necklace",
+      "Rhinestone Stickers"
+    ],
+    "itemDetails": [
+      {
+        "name": "Gemstone Bones",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Gemstone Crown",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Gemstone Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Gemstone Necklace",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Geode",
+        "slot": "Weapon",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Jewel of Drog",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Meek Stone",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "B"
+      },
+      {
+        "name": "Neverstone",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "D"
+      },
+      {
+        "name": "Quartz Necklace",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Rhinestone Stickers",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "All Stats Up",
+      "Brace",
+      "Kinetic Spikes"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Brace synergy with defensive class"
+      }
+    ]
+  },
+  {
+    "name": "Gimp",
+    "description": "Gain +1 Random Stat Up whenever you take damage.",
+    "items": [
+      "Ball Gag",
+      "Cat o' Nine Tails",
+      "Horse Blinders",
+      "Leather Collar",
+      "Leather Hood",
+      "Muzzle",
+      "Pins and Needles",
+      "Puzzle Box",
+      "Recycled Ball Gag"
+    ],
+    "itemDetails": [
+      {
+        "name": "Ball Gag",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Cat o' Nine Tails",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Horse Blinders",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Leather Collar",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Leather Hood",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Muzzle",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Pins and Needles",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Puzzle Box",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Recycled Ball Gag",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Bleed",
+      "Charge",
+      "Metal",
+      "Thorns"
+    ],
+    "recommendedClasses": [
+      "Butcher",
+      "Druid",
+      "Fighter",
+      "Hunter",
+      "Mage",
+      "Monk",
+      "Psychic",
+      "Tank",
+      "Thief"
+    ],
+    "recommendations": [
+      {
+        "className": "Mage",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Psychic",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Druid",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Tank",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Butcher",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Thief",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Hunter",
+        "reason": "Bleed synergy with aggressive class"
+      }
+    ]
+  },
+  {
+    "name": "Godhead",
+    "description": "Eternal Life (Heal up to 50% HP at the start of each round, even if downed)",
+    "items": [
+      "The Body",
+      "The Mind",
+      "The Soul"
+    ],
+    "itemDetails": [
+      {
+        "name": "The Body",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "The Mind",
+        "slot": "Head",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "The Soul",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "A"
+      }
+    ],
+    "avgTier": "A",
+    "statusEffects": [],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Grub",
+    "description": "Grubs spawned by items gain +5 HP.",
+    "items": [
+      "Face Grub",
+      "Head Grub",
+      "Neck Grub"
+    ],
+    "itemDetails": [
+      {
+        "name": "Face Grub",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Head Grub",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Neck Grub",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Guts",
+    "description": "Health Regen.",
+    "items": [
+      "Bag Of Chum",
+      "Blinking Eyeball",
+      "Boris' Brain",
+      "Brain In A Jar",
+      "Chum Bucket",
+      "Chupacabra Tongue",
+      "Eyeball",
+      "Gizzard",
+      "Gorgon's Eye",
+      "Guillotina's Head",
+      "Heart",
+      "Human Brain",
+      "Human Eye",
+      "Human Heart",
+      "Intestines",
+      "Leaky Brain",
+      "Liver",
+      "Rat Heart",
+      "Rotten Guts",
+      "Small Eye",
+      "Stomach",
+      "Tina's Larynx"
+    ],
+    "itemDetails": [
+      {
+        "name": "Bag Of Chum",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Blinking Eyeball",
+        "slot": "Trinket",
+        "rarity": "",
+        "tier": "A"
+      },
+      {
+        "name": "Boris' Brain",
+        "slot": "Head",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Brain In A Jar",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Chum Bucket",
+        "slot": "Weapon",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Chupacabra Tongue",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Eyeball",
+        "slot": "Consumable",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Gizzard",
+        "slot": "Consumable",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Gorgon's Eye",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Guillotina's Head",
+        "slot": "Face",
+        "rarity": "Quest",
+        "tier": "C"
+      },
+      {
+        "name": "Heart",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Human Brain",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Human Eye",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Human Heart",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Intestines",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Leaky Brain",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Liver",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Rat Heart",
+        "slot": "Trinket",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Rotten Guts",
+        "slot": "Head",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Small Eye",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Stomach",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "A"
+      },
+      {
+        "name": "Tina's Larynx",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Dodge Chance",
+      "Fear",
+      "Health Regen",
+      "Lifesteal",
+      "Petrify",
+      "Trample"
+    ],
+    "recommendedClasses": [
+      "Butcher",
+      "Hunter",
+      "Thief"
+    ],
+    "recommendations": [
+      {
+        "className": "Butcher",
+        "reason": "Lifesteal synergy with aggressive class"
+      },
+      {
+        "className": "Thief",
+        "reason": "Lifesteal synergy with aggressive class"
+      },
+      {
+        "className": "Hunter",
+        "reason": "Lifesteal synergy with aggressive class"
+      }
+    ]
+  },
+  {
+    "name": "Hippie",
+    "description": "Spawn 5 Catnip pickups at the start of each battle.",
+    "items": [
+      "Peace Symbol",
+      "Peace Symbol Face Paint",
+      "Tie Dye Bandana"
+    ],
+    "itemDetails": [
+      {
+        "name": "Peace Symbol",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Peace Symbol Face Paint",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Tie Dye Bandana",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Blessing of Peace"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Human Flesh",
+    "description": "+50% Crit Chance on humanoid enemies. When downed, inflict Fear 2 on all enemies.",
+    "items": [
+      "A Friends Foot",
+      "Big Toe (Consumable)",
+      "Empty Sack",
+      "Fart Face",
+      "Flesh Kid",
+      "Flesh Shroud",
+      "Human Brain",
+      "Human Eye",
+      "Human Face",
+      "Human Foot",
+      "Human Hand",
+      "Human Head",
+      "Human Heart",
+      "Human Hide",
+      "Human Scalp",
+      "Human Toe",
+      "Lucky Toe",
+      "Polyp"
+    ],
+    "itemDetails": [
+      {
+        "name": "A Friends Foot",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Big Toe (Consumable)",
+        "slot": "Consumable",
+        "rarity": "",
+        "tier": "B"
+      },
+      {
+        "name": "Empty Sack",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Fart Face",
+        "slot": "Face",
+        "rarity": "Side Quest",
+        "tier": "C"
+      },
+      {
+        "name": "Flesh Kid",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "S"
+      },
+      {
+        "name": "Flesh Shroud",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Human Brain",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Human Eye",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Human Face",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Human Foot",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Human Hand",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Human Head",
+        "slot": "Trinket",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Human Heart",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Human Hide",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Human Scalp",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Human Toe",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Lucky Toe",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Polyp",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Fear",
+      "Health Regen",
+      "Poison"
+    ],
+    "recommendedClasses": [
+      "Necromancer"
+    ],
+    "recommendations": [
+      {
+        "className": "Necromancer",
+        "reason": "Poison synergy with Necromancer"
+      }
+    ]
+  },
+  {
+    "name": "Hunter",
+    "description": "+50% Crit Chance while standing in tall grass.",
+    "items": [
+      "Arrow of Infinity",
+      "Bear Traps",
+      "Bloody Bear Traps",
+      "Feed Bag",
+      "Hunter Seal",
+      "Hunter's Cap",
+      "Hunter's Flute",
+      "Hunter's Monocle",
+      "Hunter's Quiver",
+      "Whistle"
+    ],
+    "itemDetails": [
+      {
+        "name": "Arrow of Infinity",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Bear Traps",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Bloody Bear Traps",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Feed Bag",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Hunter Seal",
+        "slot": "Consumable",
+        "rarity": "Rare",
+        "tier": "D"
+      },
+      {
+        "name": "Hunter's Cap",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Hunter's Flute",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Hunter's Monocle",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Hunter's Quiver",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Whistle",
+        "slot": "Trinket",
+        "rarity": "Common",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "All Stats Up",
+      "Crit Chance Up"
+    ],
+    "recommendedClasses": [
+      "Hunter"
+    ],
+    "recommendations": [
+      {
+        "className": "Hunter",
+        "reason": "Hunter class set"
+      }
+    ]
+  },
+  {
+    "name": "Hybrid",
+    "description": "Bruise 1. Poison 1. Bleed 1. The first spell you cast each turn is cast twice.",
+    "items": [
+      "Cat Paw",
+      "Conjoined Eye",
+      "Crown of Chaos",
+      "Extra Limb",
+      "Eye Of God",
+      "Hybrid Hat",
+      "Hybrid Mask",
+      "Hybrid Necklace",
+      "Third Eye"
+    ],
+    "itemDetails": [
+      {
+        "name": "Cat Paw",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Conjoined Eye",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "B"
+      },
+      {
+        "name": "Crown of Chaos",
+        "slot": "Head",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Extra Limb",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Eye Of God",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Hybrid Hat",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "B"
+      },
+      {
+        "name": "Hybrid Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "B"
+      },
+      {
+        "name": "Hybrid Necklace",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "B"
+      },
+      {
+        "name": "Third Eye",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "A"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Bleed",
+      "Bonus Attack",
+      "Bonus Move",
+      "Bruise",
+      "Charge",
+      "Dodge Chance",
+      "Poison"
+    ],
+    "recommendedClasses": [
+      "Butcher",
+      "Druid",
+      "Hunter",
+      "Mage",
+      "Necromancer",
+      "Psychic",
+      "Thief"
+    ],
+    "recommendations": [
+      {
+        "className": "Butcher",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Thief",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Hunter",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Necromancer",
+        "reason": "Poison synergy with Necromancer"
+      },
+      {
+        "className": "Mage",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Psychic",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Druid",
+        "reason": "Charge synergy with spellcasting class"
+      }
+    ]
+  },
+  {
+    "name": "Jank Alloy",
+    "description": "Jank Alloy Set Pieces are no longer Brittle.",
+    "items": [
+      "Jank Alloy Armor",
+      "Jank Alloy Hat",
+      "Jank Alloy Mask"
+    ],
+    "itemDetails": [
+      {
+        "name": "Jank Alloy Armor",
+        "slot": "Head",
+        "rarity": "",
+        "tier": "C"
+      },
+      {
+        "name": "Jank Alloy Hat",
+        "slot": "Neck",
+        "rarity": "",
+        "tier": "C"
+      },
+      {
+        "name": "Jank Alloy Mask",
+        "slot": "Face",
+        "rarity": "",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Brace",
+      "Brittle",
+      "Metal"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Brace synergy with defensive class"
+      }
+    ]
+  },
+  {
+    "name": "Jester",
+    "description": "+3 Rerolls when leveling up.",
+    "items": [
+      "Bozo",
+      "Cap and Bells",
+      "Clown Makeup",
+      "Jester Cap",
+      "Jester Seal",
+      "Joker Card",
+      "Metronome (Item)",
+      "Ninny Stick",
+      "Ruffle",
+      "Toy Gun"
+    ],
+    "itemDetails": [
+      {
+        "name": "Bozo",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Cap and Bells",
+        "slot": "Head",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Clown Makeup",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Jester Cap",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Jester Seal",
+        "slot": "Consumable",
+        "rarity": "Rare",
+        "tier": "D"
+      },
+      {
+        "name": "Joker Card",
+        "slot": "Consumable",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Metronome (Item)",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Ninny Stick",
+        "slot": "Trinket",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Ruffle",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Toy Gun",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Bruise",
+      "Fear"
+    ],
+    "recommendedClasses": [
+      "Jester"
+    ],
+    "recommendations": [
+      {
+        "className": "Jester",
+        "reason": "Jester class set"
+      }
+    ]
+  },
+  {
+    "name": "Lead",
+    "description": "Shield -1 Speed Trample 9.",
+    "items": [
+      "Bear Trap Mask",
+      "Dumbbell",
+      "Frying Pan",
+      "Infamous Mask",
+      "Lead Helmet",
+      "Lead Mask",
+      "Lead Shoulder Pads",
+      "Pipe",
+      "Railroad Spikes",
+      "Weight"
+    ],
+    "itemDetails": [
+      {
+        "name": "Bear Trap Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Dumbbell",
+        "slot": "Trinket",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Frying Pan",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Infamous Mask",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Lead Helmet",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Lead Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Lead Shoulder Pads",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Pipe",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Railroad Spikes",
+        "slot": "Weapon",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Weight",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Bleed Thorns",
+      "Metal",
+      "Stun",
+      "Trample"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Leafy",
+    "description": "If you end your turn with unused movement actions, heal 3 HP and gain Charge.",
+    "items": [
+      "Brambles",
+      "Greenman Mask",
+      "Leafy Hat",
+      "Leafy Mask",
+      "Leafy Necklace",
+      "Lucky Clover"
+    ],
+    "itemDetails": [
+      {
+        "name": "Brambles",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Greenman Mask",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Leafy Hat",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Leafy Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Leafy Necklace",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Lucky Clover",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "D"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Brace",
+      "Dodge Chance",
+      "Fragile",
+      "Health Regen",
+      "Thorns"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Thorns synergy with melee class"
+      }
+    ]
+  },
+  {
+    "name": "Leather",
+    "description": "Shield",
+    "items": [
+      "Chub's Collar",
+      "Empty Sack",
+      "Fanny Pack",
+      "Horse Blinders",
+      "Hunter's Quiver",
+      "Leather Cap",
+      "Leather Choker",
+      "Leather Hide Mask",
+      "Leather Jacket",
+      "Leather Mask",
+      "Mundane Collar",
+      "Nightmare Hat",
+      "Nubs Collar",
+      "Old Shoe",
+      "Snakeskin Hat"
+    ],
+    "itemDetails": [
+      {
+        "name": "Chub's Collar",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Empty Sack",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Fanny Pack",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "B"
+      },
+      {
+        "name": "Horse Blinders",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Hunter's Quiver",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Leather Cap",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Leather Choker",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Leather Hide Mask",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Leather Jacket",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Leather Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Mundane Collar",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Nightmare Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Nubs Collar",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Old Shoe",
+        "slot": "Trinket",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Snakeskin Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Brace",
+      "Health Regen"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Brace synergy with defensive class"
+      }
+    ]
+  },
+  {
+    "name": "Leech",
+    "description": "Start battle with 4 beefy Leech familiars.",
+    "items": [
+      "Jar of Leeches",
+      "Leech Brood",
+      "Leech Necklace",
+      "Mama Leech",
+      "Putrid Leech"
+    ],
+    "itemDetails": [
+      {
+        "name": "Jar of Leeches",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Leech Brood",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Leech Necklace",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Mama Leech",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Putrid Leech",
+        "slot": "Head",
+        "rarity": "Quest",
+        "tier": "D"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Leeches",
+      "Lifesteal"
+    ],
+    "recommendedClasses": [
+      "Butcher",
+      "Hunter",
+      "Thief"
+    ],
+    "recommendations": [
+      {
+        "className": "Butcher",
+        "reason": "Lifesteal synergy with aggressive class"
+      },
+      {
+        "className": "Thief",
+        "reason": "Lifesteal synergy with aggressive class"
+      },
+      {
+        "className": "Hunter",
+        "reason": "Lifesteal synergy with aggressive class"
+      }
+    ]
+  },
+  {
+    "name": "Lucky",
+    "description": "+1 Luck Spawn 5-10 extra coins on each map. Lucky Set Pieces are no longer Fragile.",
+    "items": [
+      "Furry Dice",
+      "Lucky Clover",
+      "Lucky Coin",
+      "Lucky Coin Purse",
+      "Lucky Hat",
+      "Lucky Horseshoe",
+      "Lucky Penny",
+      "Lucky Toe",
+      "Lucky Twine",
+      "White Rabbit Paw"
+    ],
+    "itemDetails": [
+      {
+        "name": "Furry Dice",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Lucky Clover",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Lucky Coin",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Lucky Coin Purse",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Lucky Hat",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Lucky Horseshoe",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Lucky Penny",
+        "slot": "Trinket",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Lucky Toe",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Lucky Twine",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "White Rabbit Paw",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "A"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Fragile"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Mage",
+    "description": "+5 starting mana.",
+    "items": [
+      "Mage Seal",
+      "Mage's Hat",
+      "Mage's Robe",
+      "Mage's Scarf",
+      "Ring of Frost",
+      "Spell Book",
+      "Staff of Flame"
+    ],
+    "itemDetails": [
+      {
+        "name": "Mage Seal",
+        "slot": "Consumable",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Mage's Hat",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Mage's Robe",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Mage's Scarf",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Ring of Frost",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Spell Book",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Staff of Flame",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Burn",
+      "Charge",
+      "Freeze"
+    ],
+    "recommendedClasses": [
+      "Druid",
+      "Mage",
+      "Psychic"
+    ],
+    "recommendations": [
+      {
+        "className": "Mage",
+        "reason": "Mage class set"
+      },
+      {
+        "className": "Psychic",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Druid",
+        "reason": "Charge synergy with spellcasting class"
+      }
+    ]
+  },
+  {
+    "name": "Man",
+    "description": "Gain 1-9 coins at the end of each battle.",
+    "items": [
+      "Hitler's Mustache",
+      "Hitler's Toupe",
+      "Man's Glasses",
+      "Man's Hairpiece",
+      "Man's Tie",
+      "Miner's Beard",
+      "Mustache"
+    ],
+    "itemDetails": [
+      {
+        "name": "Hitler's Mustache",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "S"
+      },
+      {
+        "name": "Hitler's Toupe",
+        "slot": "Head",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Man's Glasses",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Man's Hairpiece",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Man's Tie",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Miner's Beard",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Mustache",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "D"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Madness"
+    ],
+    "recommendedClasses": [
+      "Necromancer"
+    ],
+    "recommendations": [
+      {
+        "className": "Necromancer",
+        "reason": "Madness synergy with Necromancer"
+      }
+    ]
+  },
+  {
+    "name": "Meat",
+    "description": "+1 Damage. Gain +1 Damage when you get a kill. After three kills, gains , Health Regen and Madness for the rest of the battle.",
+    "items": [
+      "Bag o' Meat",
+      "Bone Marrow",
+      "Chum Bucket",
+      "Crimson Mask",
+      "Flesh Kid",
+      "Guillotina's Head",
+      "Meat Bomb",
+      "Meat Cube",
+      "Polyp",
+      "Pound of Flesh",
+      "Red Cap",
+      "Rotten Meat",
+      "Throbbing Gristle"
+    ],
+    "itemDetails": [
+      {
+        "name": "Bag o' Meat",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Bone Marrow",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Chum Bucket",
+        "slot": "Weapon",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Crimson Mask",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Flesh Kid",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "S"
+      },
+      {
+        "name": "Guillotina's Head",
+        "slot": "Face",
+        "rarity": "Quest",
+        "tier": "C"
+      },
+      {
+        "name": "Meat Bomb",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Meat Cube",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Polyp",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Pound of Flesh",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Red Cap",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Rotten Meat",
+        "slot": "Consumable",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Throbbing Gristle",
+        "slot": "Weapon",
+        "rarity": "Quest",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Damage Up",
+      "Fear",
+      "Health Regen"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Medical",
+    "description": "You have Health Regen for each disorder you have.",
+    "items": [
+      "Empty Syringe",
+      "Face Covering",
+      "Ipecac",
+      "Medic Hat",
+      "Medical Hat",
+      "Medical Mask",
+      "Medical Necklace",
+      "Morphine Drip",
+      "Scrubs"
+    ],
+    "itemDetails": [
+      {
+        "name": "Empty Syringe",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Face Covering",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Ipecac",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Medic Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Medical Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Medical Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Medical Necklace",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Morphine Drip",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Scrubs",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Bleed",
+      "Delayed Pain",
+      "Poison"
+    ],
+    "recommendedClasses": [
+      "Butcher",
+      "Hunter",
+      "Necromancer",
+      "Thief"
+    ],
+    "recommendations": [
+      {
+        "className": "Necromancer",
+        "reason": "Poison synergy with Necromancer"
+      },
+      {
+        "className": "Butcher",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Thief",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Hunter",
+        "reason": "Bleed synergy with aggressive class"
+      }
+    ]
+  },
+  {
+    "name": "Miner",
+    "description": "+3 Luck 2 more pickups spawn in each battle.",
+    "items": [
+      "Golden Pickaxe",
+      "Miner Hat",
+      "Miner Implant",
+      "Miner Mask",
+      "Miner Pack",
+      "Miner's Beard",
+      "Pickaxe"
+    ],
+    "itemDetails": [
+      {
+        "name": "Golden Pickaxe",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Miner Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Miner Implant",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "S"
+      },
+      {
+        "name": "Miner Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Miner Pack",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Miner's Beard",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Pickaxe",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Metal",
+      "Poison"
+    ],
+    "recommendedClasses": [
+      "Necromancer"
+    ],
+    "recommendations": [
+      {
+        "className": "Necromancer",
+        "reason": "Poison synergy with Necromancer"
+      }
+    ]
+  },
+  {
+    "name": "Molten",
+    "description": "immunity.",
+    "items": [
+      "Burning Coals",
+      "Ember",
+      "Molten Hat",
+      "Molten Mask",
+      "Molten Necklace",
+      "Scalding Orb"
+    ],
+    "itemDetails": [
+      {
+        "name": "Burning Coals",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Ember",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Molten Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Molten Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Molten Necklace",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Scalding Orb",
+        "slot": "Weapon",
+        "rarity": "Quest",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Burn",
+      "Movement Up"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Monk",
+    "description": "Gain Shield at the end of each turn.",
+    "items": [
+      "Bo",
+      "Empty Hand",
+      "Face Brand",
+      "Head Brand",
+      "Monk Seal",
+      "Prayer Beads"
+    ],
+    "itemDetails": [
+      {
+        "name": "Bo",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Empty Hand",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Face Brand",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Head Brand",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Monk Seal",
+        "slot": "Consumable",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Prayer Beads",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Brace"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Monk",
+        "reason": "Monk class set"
+      },
+      {
+        "className": "Tank",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Brace synergy with defensive class"
+      }
+    ]
+  },
+  {
+    "name": "Mother",
+    "description": "Familiars you spawn gain +2 Damage and +2 HP.",
+    "items": [
+      "Cancer (Item)",
+      "Coin Purse",
+      "Lil' Tumor",
+      "Mama Leech",
+      "Mom's Knife",
+      "Mom's Ring",
+      "Mom's Toenail",
+      "Mother's Hat",
+      "Mother's Love",
+      "Mother's Mask",
+      "Mother's Necklace",
+      "Mother's Teeth"
+    ],
+    "itemDetails": [
+      {
+        "name": "Cancer (Item)",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Coin Purse",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Lil' Tumor",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "D"
+      },
+      {
+        "name": "Mama Leech",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Mom's Knife",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Mom's Ring",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Mom's Toenail",
+        "slot": "Weapon",
+        "rarity": "",
+        "tier": "D"
+      },
+      {
+        "name": "Mother's Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Mother's Love",
+        "slot": "Trinket",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Mother's Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Mother's Necklace",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Mother's Teeth",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Bleed",
+      "Bleed Thorns",
+      "Health Regen",
+      "Thorns"
+    ],
+    "recommendedClasses": [
+      "Butcher",
+      "Fighter",
+      "Hunter",
+      "Monk",
+      "Tank",
+      "Thief"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Butcher",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Thief",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Hunter",
+        "reason": "Bleed synergy with aggressive class"
+      }
+    ]
+  },
+  {
+    "name": "Mummy",
+    "description": "When downed, inflict Rot 1 and Weakness 1 on all enemies. When downed, revive with +30% HP at the end of the round.",
+    "items": [
+      "Face Wrap",
+      "Head Wrap",
+      "Healing Gauze",
+      "Neck Wrap"
+    ],
+    "itemDetails": [
+      {
+        "name": "Face Wrap",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Head Wrap",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Healing Gauze",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Neck Wrap",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Health Regen"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Necromancer",
+    "description": "When downed, spawn a shadow copy of yourself that fades away after one turn.",
+    "items": [
+      "Cambion Conception (Item)",
+      "Charon's Obol",
+      "Crown of Pestilence",
+      "Death Mask",
+      "Emo Wig",
+      "Leech Necklace",
+      "Muertos Mask",
+      "Necromancer Seal",
+      "Necronomicon",
+      "Spider Baby",
+      "Spider Hat",
+      "Staff of the Underworld"
+    ],
+    "itemDetails": [
+      {
+        "name": "Cambion Conception (Item)",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Charon's Obol",
+        "slot": "Trinket",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Crown of Pestilence",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Death Mask",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Emo Wig",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Leech Necklace",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Muertos Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Necromancer Seal",
+        "slot": "Consumable",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Necronomicon",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Spider Baby",
+        "slot": "Head",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Spider Hat",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Staff of the Underworld",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "All Stats Down",
+      "Madness"
+    ],
+    "recommendedClasses": [
+      "Necromancer"
+    ],
+    "recommendations": [
+      {
+        "className": "Necromancer",
+        "reason": "Necromancer class set"
+      }
+    ]
+  },
+  {
+    "name": "Ninja",
+    "description": "Start battle with a Bonus Attack.",
+    "items": [
+      "Fukumen",
+      "Grappling Hook",
+      "Jitte",
+      "Ninja Bandana",
+      "Obi",
+      "Zukin"
+    ],
+    "itemDetails": [
+      {
+        "name": "Fukumen",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Grappling Hook",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Jitte",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Ninja Bandana",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Obi",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Zukin",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Backflip",
+      "Weakness"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Nurse",
+    "description": "Your basic attack becomes and can heal allies.",
+    "items": [
+      "Ball of Bandages",
+      "Bandage",
+      "Bandages",
+      "Face Covering",
+      "Healing Gauze",
+      "Medic Hat",
+      "Morphine Drip",
+      "Nurse Hat",
+      "Nurse Mask",
+      "Nurse Necklace",
+      "Scrubs",
+      "Super Bandage"
+    ],
+    "itemDetails": [
+      {
+        "name": "Ball of Bandages",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Bandage",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Bandages",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Face Covering",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Healing Gauze",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Medic Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Morphine Drip",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Nurse Hat",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "B"
+      },
+      {
+        "name": "Nurse Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "B"
+      },
+      {
+        "name": "Nurse Necklace",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "B"
+      },
+      {
+        "name": "Scrubs",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Super Bandage",
+        "slot": "Consumable",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Delayed Pain",
+      "Health Regen"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Obelisk",
+    "description": "Holy Shield If you end your turn with unused movement actions, gain Divine Shield.",
+    "items": [
+      "Black Shard",
+      "Obelisk Helmet",
+      "Obelisk Jewel",
+      "Obelisk Pauldrons",
+      "Obsidian Chunk"
+    ],
+    "itemDetails": [
+      {
+        "name": "Black Shard",
+        "slot": "Weapon",
+        "rarity": "Quest",
+        "tier": "A"
+      },
+      {
+        "name": "Obelisk Helmet",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "S"
+      },
+      {
+        "name": "Obelisk Jewel",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "S"
+      },
+      {
+        "name": "Obelisk Pauldrons",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "S"
+      },
+      {
+        "name": "Obsidian Chunk",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "A",
+    "statusEffects": [
+      "Burn",
+      "Lifesteal"
+    ],
+    "recommendedClasses": [
+      "Butcher",
+      "Hunter",
+      "Thief"
+    ],
+    "recommendations": [
+      {
+        "className": "Butcher",
+        "reason": "Lifesteal synergy with aggressive class"
+      },
+      {
+        "className": "Thief",
+        "reason": "Lifesteal synergy with aggressive class"
+      },
+      {
+        "className": "Hunter",
+        "reason": "Lifesteal synergy with aggressive class"
+      }
+    ]
+  },
+  {
+    "name": "Paper",
+    "description": "Bleed Thorns. Paper Set Pieces are no longer Fragile nor Brittle.",
+    "items": [
+      "Anarchist Cookbook",
+      "Angry Face",
+      "Book",
+      "Book Of Belial",
+      "Bullseye (Item)",
+      "Cookbook",
+      "Crisp Paper",
+      "Dunce Cap",
+      "Happy Face",
+      "Hot Lunch",
+      "Joker Card",
+      "Paper Hat",
+      "Paper Mask",
+      "Paper Rags",
+      "Paper Shoulder Pads",
+      "Pinwheel",
+      "Prayer Card",
+      "Satanic Bible",
+      "Spell Book",
+      "Tarot Deck",
+      "Textbook"
+    ],
+    "itemDetails": [
+      {
+        "name": "Anarchist Cookbook",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Angry Face",
+        "slot": "Face",
+        "rarity": "Side Quest",
+        "tier": "D"
+      },
+      {
+        "name": "Book",
+        "slot": "Trinket",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Book Of Belial",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Bullseye (Item)",
+        "slot": "Consumable",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Cookbook",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Crisp Paper",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Dunce Cap",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Happy Face",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Hot Lunch",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "D"
+      },
+      {
+        "name": "Joker Card",
+        "slot": "Consumable",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Paper Hat",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Paper Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Paper Rags",
+        "slot": "Head",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Paper Shoulder Pads",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Pinwheel",
+        "slot": "Weapon",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Prayer Card",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Satanic Bible",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Spell Book",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Tarot Deck",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Textbook",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Bleed",
+      "Bleed Thorns",
+      "Brittle",
+      "Charge",
+      "Damage Up",
+      "Dodge Chance",
+      "Flammable",
+      "Fragile",
+      "RELOAD",
+      "Thorns"
+    ],
+    "recommendedClasses": [
+      "Butcher",
+      "Druid",
+      "Fighter",
+      "Hunter",
+      "Mage",
+      "Monk",
+      "Psychic",
+      "Tank",
+      "Thief"
+    ],
+    "recommendations": [
+      {
+        "className": "Butcher",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Thief",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Hunter",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Tank",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Mage",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Psychic",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Druid",
+        "reason": "Charge synergy with spellcasting class"
+      }
+    ]
+  },
+  {
+    "name": "Parasite",
+    "description": "At the end of each battle, lose a random stat permanently and gain a random mutation.",
+    "items": [
+      "Angry Worm",
+      "Bean Parasite",
+      "Best Bud",
+      "Brain Maggot",
+      "Cordyceps",
+      "Cymothoa Exigua",
+      "Eye Worm",
+      "Heal Worm",
+      "Malaria",
+      "Naegleria Fowleri",
+      "Pinworm",
+      "Ringworm",
+      "Scabies",
+      "Soul Sucker",
+      "The Tick"
+    ],
+    "itemDetails": [
+      {
+        "name": "Angry Worm",
+        "slot": "Head",
+        "rarity": "",
+        "tier": "C"
+      },
+      {
+        "name": "Bean Parasite",
+        "slot": "Head",
+        "rarity": "",
+        "tier": "C"
+      },
+      {
+        "name": "Best Bud",
+        "slot": "Head",
+        "rarity": "",
+        "tier": "C"
+      },
+      {
+        "name": "Brain Maggot",
+        "slot": "Head",
+        "rarity": "",
+        "tier": "C"
+      },
+      {
+        "name": "Cordyceps",
+        "slot": "Head",
+        "rarity": "",
+        "tier": "D"
+      },
+      {
+        "name": "Cymothoa Exigua",
+        "slot": "Face",
+        "rarity": "",
+        "tier": "C"
+      },
+      {
+        "name": "Eye Worm",
+        "slot": "Face",
+        "rarity": "",
+        "tier": "D"
+      },
+      {
+        "name": "Heal Worm",
+        "slot": "Neck",
+        "rarity": "",
+        "tier": "C"
+      },
+      {
+        "name": "Malaria",
+        "slot": "Head",
+        "rarity": "",
+        "tier": "D"
+      },
+      {
+        "name": "Naegleria Fowleri",
+        "slot": "Head",
+        "rarity": "",
+        "tier": "D"
+      },
+      {
+        "name": "Pinworm",
+        "slot": "Neck",
+        "rarity": "",
+        "tier": "C"
+      },
+      {
+        "name": "Ringworm",
+        "slot": "Face",
+        "rarity": "",
+        "tier": "C"
+      },
+      {
+        "name": "Scabies",
+        "slot": "Face",
+        "rarity": "",
+        "tier": "C"
+      },
+      {
+        "name": "Soul Sucker",
+        "slot": "Face",
+        "rarity": "",
+        "tier": "C"
+      },
+      {
+        "name": "The Tick",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "All Stats Down",
+      "Brace",
+      "Bruise",
+      "Confusion",
+      "Health Regen",
+      "Miss Chance",
+      "Weakness"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Brace synergy with defensive class"
+      }
+    ]
+  },
+  {
+    "name": "Phoenix",
+    "description": "Flying. You can move an extra time each turn.",
+    "items": [
+      "Phoenix Hat",
+      "Phoenix Mask",
+      "Phoenix Necklace"
+    ],
+    "itemDetails": [
+      {
+        "name": "Phoenix Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Phoenix Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Phoenix Necklace",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Charge",
+      "Dodge Chance"
+    ],
+    "recommendedClasses": [
+      "Druid",
+      "Mage",
+      "Psychic"
+    ],
+    "recommendations": [
+      {
+        "className": "Mage",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Psychic",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Druid",
+        "reason": "Charge synergy with spellcasting class"
+      }
+    ]
+  },
+  {
+    "name": "Planet",
+    "description": "Flying. Inflict Bruise 1 on units you make contact with. Pull every unit within 2 tiles toward you at the end of each round.",
+    "items": [
+      "Asteroid (Item)",
+      "Asteroid Belt",
+      "Large Meteor",
+      "Mini Moon",
+      "Small Meteor",
+      "Stone Orbit",
+      "Tiny Planet"
+    ],
+    "itemDetails": [
+      {
+        "name": "Asteroid Belt",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Asteroid (Item)",
+        "slot": "Head",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Large Meteor",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Mini Moon",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Small Meteor",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Stone Orbit",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Tiny Planet",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Brace",
+      "Bruise"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Brace synergy with defensive class"
+      }
+    ]
+  },
+  {
+    "name": "Prowler",
+    "description": "Backstabs are always critical.",
+    "items": [
+      "Blackjack",
+      "Prowler's Cap",
+      "Prowler's Mask",
+      "Prowler's Vial"
+    ],
+    "itemDetails": [
+      {
+        "name": "Blackjack",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Prowler's Cap",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Prowler's Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Prowler's Vial",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Bleed",
+      "Stun"
+    ],
+    "recommendedClasses": [
+      "Butcher",
+      "Hunter",
+      "Thief"
+    ],
+    "recommendations": [
+      {
+        "className": "Butcher",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Thief",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Hunter",
+        "reason": "Bleed synergy with aggressive class"
+      }
+    ]
+  },
+  {
+    "name": "Psychic",
+    "description": "When you gain excess mana, reduce the cost of all your spells by that amount until you cast them.",
+    "items": [
+      "Bent Spoon",
+      "Diviner's Cloth",
+      "Mystic Eye",
+      "Psychic Seal",
+      "Spoon Bender",
+      "Tarot Deck",
+      "Third Eye",
+      "Tinfoil Hat"
+    ],
+    "itemDetails": [
+      {
+        "name": "Bent Spoon",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Diviner's Cloth",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Mystic Eye",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Psychic Seal",
+        "slot": "Consumable",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Spoon Bender",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Tarot Deck",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Third Eye",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Tinfoil Hat",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "A"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Charge",
+      "Charmed",
+      "Confusion",
+      "Dodge Chance",
+      "Fear",
+      "Madness",
+      "Metal",
+      "Reflect"
+    ],
+    "recommendedClasses": [
+      "Druid",
+      "Mage",
+      "Necromancer",
+      "Psychic"
+    ],
+    "recommendations": [
+      {
+        "className": "Psychic",
+        "reason": "Psychic class set"
+      },
+      {
+        "className": "Mage",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Druid",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Necromancer",
+        "reason": "Madness synergy with Necromancer"
+      }
+    ]
+  },
+  {
+    "name": "Radioactive",
+    "description": "Gain a random mutation at the end of each battle. Explode when downed. This explosion doesn't damage you.",
+    "items": [
+      "Demon Core",
+      "Irradiated Object",
+      "Jar Of Chaos",
+      "Jar of Radiated Blood",
+      "Jar of Radiation",
+      "Mini Nuke",
+      "Nuclear Gun",
+      "Nuclear Knife",
+      "Nuke",
+      "Radioactive Hat",
+      "Radioactive Mask",
+      "Radioactive Necklace",
+      "Toxic Canister",
+      "Uranium Rod"
+    ],
+    "itemDetails": [
+      {
+        "name": "Demon Core",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Irradiated Object",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Jar Of Chaos",
+        "slot": "Consumable",
+        "rarity": "Quest",
+        "tier": "S"
+      },
+      {
+        "name": "Jar of Radiated Blood",
+        "slot": "Trinket",
+        "rarity": "Quest",
+        "tier": "A"
+      },
+      {
+        "name": "Jar of Radiation",
+        "slot": "Trinket",
+        "rarity": "Quest",
+        "tier": "C"
+      },
+      {
+        "name": "Mini Nuke",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Nuclear Gun",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Nuclear Knife",
+        "slot": "Weapon",
+        "rarity": "Side Quest",
+        "tier": "D"
+      },
+      {
+        "name": "Nuke",
+        "slot": "Neck",
+        "rarity": "Quest",
+        "tier": "C"
+      },
+      {
+        "name": "Radioactive Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Radioactive Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Radioactive Necklace",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Toxic Canister",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Uranium Rod",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "All Stats Down",
+      "Brace",
+      "Drowsy",
+      "Metal",
+      "Poison",
+      "Weakness"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Necromancer",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Necromancer",
+        "reason": "Poison synergy with Necromancer"
+      },
+      {
+        "className": "Tank",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Brace synergy with defensive class"
+      }
+    ]
+  },
+  {
+    "name": "Rag",
+    "description": "",
+    "items": [
+      "Death Shroud",
+      "Diviner's Cloth",
+      "Ether Soaked Rag",
+      "Mystical Blindfold",
+      "Paper Rags",
+      "Rag Hood",
+      "Rag Mask",
+      "Rags",
+      "Zodiacs Poncho"
+    ],
+    "itemDetails": [
+      {
+        "name": "Death Shroud",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Diviner's Cloth",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Ether Soaked Rag",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Mystical Blindfold",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Paper Rags",
+        "slot": "Head",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Rag Hood",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "B"
+      },
+      {
+        "name": "Rag Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "B"
+      },
+      {
+        "name": "Rags",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "B"
+      },
+      {
+        "name": "Zodiacs Poncho",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Bleed",
+      "Bounty",
+      "Charge",
+      "Dodge Chance",
+      "Health Regen",
+      "Sleep",
+      "Thorns"
+    ],
+    "recommendedClasses": [
+      "Butcher",
+      "Druid",
+      "Fighter",
+      "Hunter",
+      "Mage",
+      "Monk",
+      "Psychic",
+      "Tank",
+      "Thief"
+    ],
+    "recommendations": [
+      {
+        "className": "Mage",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Psychic",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Druid",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Tank",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Butcher",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Thief",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Hunter",
+        "reason": "Bleed synergy with aggressive class"
+      }
+    ]
+  },
+  {
+    "name": "Rat",
+    "description": "Start battle with 2 Charmed Rats.",
+    "items": [
+      "Hybrid Mask",
+      "Petrified Pinky",
+      "Rat Bezoar",
+      "Rat Bomb (Item)",
+      "Rat Hat",
+      "Rat Heart",
+      "Rat Mask",
+      "Rat Necklace",
+      "Rat Tail"
+    ],
+    "itemDetails": [
+      {
+        "name": "Hybrid Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "B"
+      },
+      {
+        "name": "Petrified Pinky",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Rat Bezoar",
+        "slot": "Trinket",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Rat Bomb (Item)",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Rat Hat",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Rat Heart",
+        "slot": "Trinket",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Rat Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Rat Necklace",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Rat Tail",
+        "slot": "Trinket",
+        "rarity": "Common",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Bonus Attack",
+      "Poison",
+      "Poisonous"
+    ],
+    "recommendedClasses": [
+      "Necromancer"
+    ],
+    "recommendations": [
+      {
+        "className": "Necromancer",
+        "reason": "Poison synergy with Necromancer"
+      }
+    ]
+  },
+  {
+    "name": "Recycled",
+    "description": "Also find a rare item when a recycled set piece breaks.",
+    "items": [
+      "Garbage",
+      "Recycled Ball Gag",
+      "Recycled Hat",
+      "Recycled Mask",
+      "Recycled Necklace"
+    ],
+    "itemDetails": [
+      {
+        "name": "Garbage",
+        "slot": "Weapon",
+        "rarity": "",
+        "tier": "D"
+      },
+      {
+        "name": "Recycled Ball Gag",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Recycled Hat",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Recycled Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Recycled Necklace",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Brittle",
+      "Charge",
+      "Metal",
+      "Poison"
+    ],
+    "recommendedClasses": [
+      "Druid",
+      "Mage",
+      "Necromancer",
+      "Psychic"
+    ],
+    "recommendations": [
+      {
+        "className": "Necromancer",
+        "reason": "Poison synergy with Necromancer"
+      },
+      {
+        "className": "Mage",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Psychic",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Druid",
+        "reason": "Charge synergy with spellcasting class"
+      }
+    ]
+  },
+  {
+    "name": "Rock",
+    "description": "Brace. Spawn a pet rock familiar whenever you lose Shield.",
+    "items": [
+      "Bag of Rocks",
+      "Big Rock Hat",
+      "Big Rock Mask",
+      "Big Rock Necklace",
+      "Cinder Block",
+      "Cool Rocks",
+      "Geode",
+      "Gorgon's Eye",
+      "Heavy Rock",
+      "Me Stone",
+      "Mind Stone",
+      "Mundane Stone",
+      "Neverstone",
+      "Petrified Pinky",
+      "Petrified Poop",
+      "Rock Hat",
+      "Rock Mask",
+      "Rock Necklace",
+      "Rocks",
+      "Rocky Hat",
+      "Rocky Mask",
+      "Rocky Necklace",
+      "Skill Stone",
+      "Slag Might",
+      "Stone Helmet",
+      "Stone Orbit",
+      "Suck Stone",
+      "Tiny Pebble",
+      "Tombstone",
+      "Whetstone",
+      "Zaratana's Turd"
+    ],
+    "itemDetails": [
+      {
+        "name": "Bag of Rocks",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Big Rock Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Big Rock Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Big Rock Necklace",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Cinder Block",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Cool Rocks",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Geode",
+        "slot": "Weapon",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Gorgon's Eye",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Heavy Rock",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Me Stone",
+        "slot": "Trinket",
+        "rarity": "Side Quest",
+        "tier": "C"
+      },
+      {
+        "name": "Mind Stone",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Mundane Stone",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Neverstone",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "D"
+      },
+      {
+        "name": "Petrified Pinky",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Petrified Poop",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Rock Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Rock Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Rock Necklace",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Rocks",
+        "slot": "Weapon",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Rocky Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Rocky Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Rocky Necklace",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Skill Stone",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Slag Might",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Stone Helmet",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Stone Orbit",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Suck Stone",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Tiny Pebble",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Tombstone",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Whetstone",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Zaratana's Turd",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "A"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Brace",
+      "Brittle",
+      "Bruise",
+      "Dodge Chance",
+      "Petrify",
+      "Stun"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Brace synergy with defensive class"
+      }
+    ]
+  },
+  {
+    "name": "Rotten",
+    "description": "All Bugs and Maggots you spawn are upgraded to champions.",
+    "items": [
+      "Fish Necklace",
+      "Rotten Guts",
+      "Rotten Meat",
+      "Rotten Meat Armor",
+      "Rotten Meat Hat",
+      "Rotten Meat Mask"
+    ],
+    "itemDetails": [
+      {
+        "name": "Fish Necklace",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Rotten Guts",
+        "slot": "Head",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Rotten Meat",
+        "slot": "Consumable",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Rotten Meat Armor",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Rotten Meat Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Rotten Meat Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Damage Up",
+      "Poisonous",
+      "Rot"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Rubber",
+    "description": "+3 Knockback damage.",
+    "items": [
+      "Old Hose",
+      "Rubber Band",
+      "Rubber Bat",
+      "Rubber Cement",
+      "Rubber Fist",
+      "Rubber Hat",
+      "Rubber Mask",
+      "Tire"
+    ],
+    "itemDetails": [
+      {
+        "name": "Old Hose",
+        "slot": "Weapon",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Rubber Band",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Rubber Bat",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Rubber Cement",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Rubber Fist",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Rubber Hat",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Rubber Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Tire",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Confusion"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Rune",
+    "description": "Divine Shield",
+    "items": [
+      "Rune of Hagalaz",
+      "Rune of Jera",
+      "Rune of Perthro",
+      "Small Rune"
+    ],
+    "itemDetails": [
+      {
+        "name": "Rune of Hagalaz",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Rune of Jera",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Rune of Perthro",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Small Rune",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "A",
+    "statusEffects": [
+      "Dodge Chance"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Scrap",
+    "description": "Shield Thorns.",
+    "items": [
+      "Barbed Scrap",
+      "Debris",
+      "Head Spring",
+      "Metal Plate",
+      "Pull Tab",
+      "Scrap Bag",
+      "Scrap Metal Armor",
+      "Scrap Metal Hat",
+      "Scrap Metal Mask",
+      "Scrapper's Hat",
+      "Scrapper's Mask",
+      "Spare Parts (Item)",
+      "Spring",
+      "Tattered Scrap",
+      "Tinfoil Hat"
+    ],
+    "itemDetails": [
+      {
+        "name": "Barbed Scrap",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Debris",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Head Spring",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Metal Plate",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Pull Tab",
+        "slot": "Trinket",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Scrap Bag",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Scrap Metal Armor",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Scrap Metal Hat",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Scrap Metal Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Scrapper's Hat",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Scrapper's Mask",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Spare Parts (Item)",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Spring",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Tattered Scrap",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Tinfoil Hat",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "A"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Brace",
+      "Charmed",
+      "Confusion",
+      "Damage Up",
+      "Fear",
+      "Madness",
+      "Metal",
+      "Thorns"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Necromancer",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Necromancer",
+        "reason": "Madness synergy with Necromancer"
+      }
+    ]
+  },
+  {
+    "name": "Slimy",
+    "description": "Poisonous 2.",
+    "items": [
+      "Glue",
+      "Rubber Cement",
+      "Slimy Hat",
+      "Slimy Mask",
+      "Slimy Necklace"
+    ],
+    "itemDetails": [
+      {
+        "name": "Glue",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "D"
+      },
+      {
+        "name": "Rubber Cement",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Slimy Hat",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Slimy Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Slimy Necklace",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Confusion",
+      "Dodge Chance",
+      "Immobile"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Sludge",
+    "description": "Gain Shield at the end of each turn.",
+    "items": [
+      "Sludge Hat",
+      "Sludge Mask",
+      "Sludge Necklace"
+    ],
+    "itemDetails": [
+      {
+        "name": "Sludge Hat",
+        "slot": "Head",
+        "rarity": "",
+        "tier": "D"
+      },
+      {
+        "name": "Sludge Mask",
+        "slot": "Face",
+        "rarity": "",
+        "tier": "D"
+      },
+      {
+        "name": "Sludge Necklace",
+        "slot": "Neck",
+        "rarity": "",
+        "tier": "D"
+      }
+    ],
+    "avgTier": "D",
+    "statusEffects": [],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Space",
+    "description": "Your movement action is Jump. Units you land on take damage.",
+    "items": [
+      "Alien Blaster",
+      "Alien Stalk",
+      "Alien Tech",
+      "Extra Set of Eyes",
+      "Libra",
+      "Mega Alien Blaster",
+      "Probe",
+      "Radar Dish",
+      "Space Antenna",
+      "Space Boosters",
+      "Space Helmet",
+      "Tractor Beam",
+      "Vibrating Skull"
+    ],
+    "itemDetails": [
+      {
+        "name": "Alien Blaster",
+        "slot": "Weapon",
+        "rarity": "",
+        "tier": "B"
+      },
+      {
+        "name": "Alien Stalk",
+        "slot": "Head",
+        "rarity": "Very Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Alien Tech",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Extra Set of Eyes",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Libra",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Mega Alien Blaster",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Probe",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Radar Dish",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Space Antenna",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Space Boosters",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Space Helmet",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Tractor Beam",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Vibrating Skull",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Brace",
+      "Charmed",
+      "Magic Weakness",
+      "Marked",
+      "Metal",
+      "Preemptive Counter"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Brace synergy with defensive class"
+      }
+    ]
+  },
+  {
+    "name": "Steven",
+    "description": "Your name is now Steven! Hello Steven!",
+    "items": [
+      "Steven (Consumable 1)",
+      "Steven (Consumable 2)",
+      "Steven (Face Armor 1)",
+      "Steven (Face Armor 2)",
+      "Steven (Head Armor 1)",
+      "Steven (Head Armor 2)",
+      "Steven (Neck Armor 1)",
+      "Steven (Neck Armor 2)",
+      "Steven (Trinket 1)",
+      "Steven (Trinket 2)",
+      "Steven (Weapon 1)",
+      "Steven (Weapon 2)",
+      "Steven Marrow",
+      "Steven Stone",
+      "Steven's Bag of Rocks",
+      "Steven's Bottle",
+      "Steven's Fart Face",
+      "Steven's Friend",
+      "Steven's Gobbler",
+      "Steven's Gristle",
+      "Steven's Hat",
+      "Steven's Helmet",
+      "Steven's Mustache",
+      "The boX (3)",
+      "The box (4)"
+    ],
+    "itemDetails": [
+      {
+        "name": "Steven Marrow",
+        "slot": "Trinket",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Steven Stone",
+        "slot": "Trinket",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Steven (Consumable 1)",
+        "slot": "Consumable",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Steven (Consumable 2)",
+        "slot": "Consumable",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Steven (Face Armor 1)",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Steven (Face Armor 2)",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Steven (Head Armor 1)",
+        "slot": "Head",
+        "rarity": "Very Rare",
+        "tier": "S"
+      },
+      {
+        "name": "Steven (Head Armor 2)",
+        "slot": "Head",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Steven (Neck Armor 1)",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Steven (Neck Armor 2)",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Steven (Trinket 1)",
+        "slot": "Trinket",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Steven (Trinket 2)",
+        "slot": "Trinket",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Steven (Weapon 1)",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Steven (Weapon 2)",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Steven's Bag of Rocks",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Steven's Bottle",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Steven's Fart Face",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Steven's Friend",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Steven's Gobbler",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Steven's Gristle",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Steven's Hat",
+        "slot": "Head",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Steven's Helmet",
+        "slot": "Head",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Steven's Mustache",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "The boX (3)",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "The box (4)",
+        "slot": "Trinket",
+        "rarity": "Very Rare",
+        "tier": "A"
+      }
+    ],
+    "avgTier": "A",
+    "statusEffects": [
+      "Bruise",
+      "Confusion",
+      "Fragile",
+      "Freeze",
+      "Petrify",
+      "Poison",
+      "RELOAD",
+      "Slow",
+      "Tarred"
+    ],
+    "recommendedClasses": [
+      "Necromancer"
+    ],
+    "recommendations": [
+      {
+        "className": "Necromancer",
+        "reason": "Poison synergy with Necromancer"
+      }
+    ]
+  },
+  {
+    "name": "Stunning",
+    "description": "Your weapon and trinket's passive and active effects are tripled.",
+    "items": [
+      "Bag o' Glitter",
+      "Stunning Beard",
+      "Stunning Chain",
+      "Stunning Haircut"
+    ],
+    "itemDetails": [
+      {
+        "name": "Bag o' Glitter",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Stunning Beard",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "S"
+      },
+      {
+        "name": "Stunning Chain",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "S"
+      },
+      {
+        "name": "Stunning Haircut",
+        "slot": "Head",
+        "rarity": "Very Rare",
+        "tier": "S"
+      }
+    ],
+    "avgTier": "S",
+    "statusEffects": [
+      "Blind"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Superhero",
+    "description": "The first spell you cast each turn inflicts Webbed.",
+    "items": [
+      "Mjolnir",
+      "Superhero Cape",
+      "Superhero Hat",
+      "Superhero Mask",
+      "USA Shield"
+    ],
+    "itemDetails": [
+      {
+        "name": "Mjolnir",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Superhero Cape",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Superhero Hat",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Superhero Mask",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "USA Shield",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "A",
+    "statusEffects": [
+      "Flying"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Survivalist",
+    "description": "Find a consumable item at the end of each battle. When you use up a consumable or trinket, equip a new consumable from your inventory if you have any.",
+    "items": [
+      "Backpack",
+      "Bear Traps",
+      "Bloody Bear Traps",
+      "Fanny Pack",
+      "Scrapper's Backpack",
+      "Survivalist Hat",
+      "Survivalist's Gaiter",
+      "Survivalist's Mask"
+    ],
+    "itemDetails": [
+      {
+        "name": "Backpack",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Bear Traps",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Bloody Bear Traps",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Fanny Pack",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "B"
+      },
+      {
+        "name": "Scrapper's Backpack",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Survivalist Hat",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Survivalist's Gaiter",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Survivalist's Mask",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Dodge Chance",
+      "Stealth"
+    ],
+    "recommendedClasses": [
+      "Thief"
+    ],
+    "recommendations": [
+      {
+        "className": "Thief",
+        "reason": "Stealth synergy with Thief"
+      }
+    ]
+  },
+  {
+    "name": "Tank",
+    "description": "+1 Knockback damage.",
+    "items": [
+      "Girder",
+      "Tank Juice",
+      "Tank Seal",
+      "Tank Toy",
+      "Tank's Helmet",
+      "Tank's Pads",
+      "Tank's Tattoo"
+    ],
+    "itemDetails": [
+      {
+        "name": "Girder",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Tank Juice",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Tank Seal",
+        "slot": "Consumable",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Tank Toy",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Tank's Helmet",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Tank's Pads",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Tank's Tattoo",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Brace",
+      "Metal",
+      "Stun",
+      "Trample"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Tank class set"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Brace synergy with defensive class"
+      }
+    ]
+  },
+  {
+    "name": "Tentacle",
+    "description": "Cleanse all your debuffs at the end of each turn.",
+    "items": [
+      "Back Tentacles",
+      "Face Tentacle",
+      "Head Tentacle"
+    ],
+    "itemDetails": [
+      {
+        "name": "Back Tentacles",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Face Tentacle",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Head Tentacle",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Entangled"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Thief",
+    "description": "+5% Dodge Chance and +5% Crit Chance.",
+    "items": [
+      "Bandit Mask",
+      "Blackjack",
+      "Laced Needle",
+      "Les Toxin",
+      "Lucky Coin Purse",
+      "Thief Seal",
+      "Thief's Cloak",
+      "Thief's Hood",
+      "Thief's Tattoo"
+    ],
+    "itemDetails": [
+      {
+        "name": "Bandit Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Blackjack",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Laced Needle",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Les Toxin",
+        "slot": "Weapon",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Lucky Coin Purse",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Thief Seal",
+        "slot": "Consumable",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Thief's Cloak",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Thief's Hood",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Thief's Tattoo",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "A"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Bleed",
+      "Dodge Chance",
+      "Poison",
+      "Stun"
+    ],
+    "recommendedClasses": [
+      "Butcher",
+      "Hunter",
+      "Necromancer",
+      "Thief"
+    ],
+    "recommendations": [
+      {
+        "className": "Thief",
+        "reason": "Thief class set"
+      },
+      {
+        "className": "Necromancer",
+        "reason": "Poison synergy with Necromancer"
+      },
+      {
+        "className": "Butcher",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Hunter",
+        "reason": "Bleed synergy with aggressive class"
+      }
+    ]
+  },
+  {
+    "name": "Thrumming",
+    "description": "If you end your turn without using your basic attack, movement action, or casting a spell, gain All Stats Up.",
+    "items": [
+      "Thrumming Charm",
+      "Thrumming Circlet",
+      "Thrumming Spectacles"
+    ],
+    "itemDetails": [
+      {
+        "name": "Thrumming Charm",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Thrumming Circlet",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Thrumming Spectacles",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Charge",
+      "Health Regen",
+      "Thorns"
+    ],
+    "recommendedClasses": [
+      "Druid",
+      "Fighter",
+      "Mage",
+      "Monk",
+      "Psychic",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Mage",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Psychic",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Druid",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Tank",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Thorns synergy with melee class"
+      }
+    ]
+  },
+  {
+    "name": "Tinkerer",
+    "description": "Spawn 4 Scrap pickups at the start of each battle.",
+    "items": [
+      "Ball-Peen Hammer",
+      "Deathbot (Item)",
+      "Fireworks",
+      "Iron Jaw",
+      "Scrap Bag",
+      "Scrapper's Backpack",
+      "Scrapper's Hat",
+      "Scrapper's Mask",
+      "Spare Parts (Item)",
+      "Tattered Scrap",
+      "Tinker Tools",
+      "Tinkerer Seal",
+      "Tool Box"
+    ],
+    "itemDetails": [
+      {
+        "name": "Ball-Peen Hammer",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Deathbot (Item)",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Fireworks",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Iron Jaw",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Scrap Bag",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Scrapper's Backpack",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Scrapper's Hat",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Scrapper's Mask",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Spare Parts (Item)",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Tattered Scrap",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Tinker Tools",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Tinkerer Seal",
+        "slot": "Consumable",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Tool Box",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "A"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Lifesteal",
+      "Metal",
+      "Sparkle"
+    ],
+    "recommendedClasses": [
+      "Butcher",
+      "Hunter",
+      "Thief",
+      "Tinkerer"
+    ],
+    "recommendations": [
+      {
+        "className": "Tinkerer",
+        "reason": "Tinkerer class set"
+      },
+      {
+        "className": "Butcher",
+        "reason": "Lifesteal synergy with aggressive class"
+      },
+      {
+        "className": "Thief",
+        "reason": "Lifesteal synergy with aggressive class"
+      },
+      {
+        "className": "Hunter",
+        "reason": "Lifesteal synergy with aggressive class"
+      }
+    ]
+  },
+  {
+    "name": "Transmitter",
+    "description": "All allies gain and .",
+    "items": [
+      "Damage Transmitter",
+      "Energy Transmitter",
+      "Protection Transmitter"
+    ],
+    "itemDetails": [
+      {
+        "name": "Damage Transmitter",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Energy Transmitter",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Protection Transmitter",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "Brace",
+      "Bruise",
+      "Damage Down",
+      "Damage Up",
+      "Metal"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Brace synergy with defensive class"
+      }
+    ]
+  },
+  {
+    "name": "Twine",
+    "description": "+10% Dodge Chance. Bruise units that contact you.",
+    "items": [
+      "Ball of Yarn",
+      "Boxing Charm",
+      "Dream Catcher",
+      "Fish Necklace",
+      "Furry Dice",
+      "Large Shark Tooth",
+      "Lucky Toe",
+      "Lucky Twine",
+      "Odd Medallion",
+      "Peace Symbol",
+      "Prayer Beads",
+      "Quartz Necklace",
+      "Ring of Mushrooms",
+      "Small Rune",
+      "Twine Armor",
+      "Twine Hat",
+      "Twine Mask",
+      "Two of Spades",
+      "White Rabbit Paw"
+    ],
+    "itemDetails": [
+      {
+        "name": "Ball of Yarn",
+        "slot": "Trinket",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Boxing Charm",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "B"
+      },
+      {
+        "name": "Dream Catcher",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Fish Necklace",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Furry Dice",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Large Shark Tooth",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Lucky Toe",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Lucky Twine",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Odd Medallion",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Peace Symbol",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Prayer Beads",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Quartz Necklace",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Ring of Mushrooms",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Small Rune",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Twine Armor",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Twine Hat",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Twine Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Two of Spades",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "A"
+      },
+      {
+        "name": "White Rabbit Paw",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "A"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "All Stats Up",
+      "Bleed",
+      "Blessing of Peace",
+      "Bonus Attack",
+      "Brace",
+      "Damage Up",
+      "Dodge Chance",
+      "Flammable",
+      "Poisonous",
+      "Rot"
+    ],
+    "recommendedClasses": [
+      "Butcher",
+      "Fighter",
+      "Hunter",
+      "Monk",
+      "Tank",
+      "Thief"
+    ],
+    "recommendations": [
+      {
+        "className": "Butcher",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Thief",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Hunter",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Tank",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Brace synergy with defensive class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Brace synergy with defensive class"
+      }
+    ]
+  },
+  {
+    "name": "Used",
+    "description": "+1 Constitution",
+    "items": [
+      "Attractive Hair Clip",
+      "Broken Mirror (Head Armor)",
+      "Broken Mirror (Trinket)",
+      "Colostomy Bag",
+      "Crusty Sock",
+      "Emo Wig",
+      "Hitler's Mustache",
+      "Hitler's Toupe",
+      "Johnny's Undies",
+      "Mangy Wig",
+      "Odd Medallion",
+      "Old Shoe",
+      "Pyrophina's Collar",
+      "Rusting Helmet",
+      "The Loner Mark 2",
+      "Used Glasses",
+      "Used Hat",
+      "Used Princess Hat",
+      "Used Shirt",
+      "Video Game Cart",
+      "Wig",
+      "Zaratana's Collar"
+    ],
+    "itemDetails": [
+      {
+        "name": "Attractive Hair Clip",
+        "slot": "Face",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Broken Mirror (Head Armor)",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Broken Mirror (Trinket)",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "D"
+      },
+      {
+        "name": "Colostomy Bag",
+        "slot": "Neck",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Crusty Sock",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Emo Wig",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Hitler's Mustache",
+        "slot": "Face",
+        "rarity": "Very Rare",
+        "tier": "S"
+      },
+      {
+        "name": "Hitler's Toupe",
+        "slot": "Head",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Johnny's Undies",
+        "slot": "Head",
+        "rarity": "Very Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Mangy Wig",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Odd Medallion",
+        "slot": "Neck",
+        "rarity": "Very Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Old Shoe",
+        "slot": "Trinket",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Pyrophina's Collar",
+        "slot": "Trinket",
+        "rarity": "Quest",
+        "tier": "A"
+      },
+      {
+        "name": "Rusting Helmet",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "The Loner Mark 2",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Used Glasses",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Used Hat",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Used Princess Hat",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Used Shirt",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "D"
+      },
+      {
+        "name": "Video Game Cart",
+        "slot": "Trinket",
+        "rarity": "Very Rare",
+        "tier": "D"
+      },
+      {
+        "name": "Wig",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Zaratana's Collar",
+        "slot": "Trinket",
+        "rarity": "Quest",
+        "tier": "A"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "All Stats Down",
+      "Bleed",
+      "Bleed Thorns",
+      "Madness",
+      "Metal",
+      "RELOAD"
+    ],
+    "recommendedClasses": [
+      "Butcher",
+      "Hunter",
+      "Necromancer",
+      "Thief"
+    ],
+    "recommendations": [
+      {
+        "className": "Butcher",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Thief",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Hunter",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Necromancer",
+        "reason": "Madness synergy with Necromancer"
+      }
+    ]
+  },
+  {
+    "name": "Veiny",
+    "description": "Your basic attack inflicts Bleed. Whenever you inflict Bleed, trigger Bleed damage immediately.",
+    "items": [
+      "Veiny Hat",
+      "Veiny Mask",
+      "Veiny Necklace"
+    ],
+    "itemDetails": [
+      {
+        "name": "Veiny Hat",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Veiny Mask",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Veiny Necklace",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Witch",
+    "description": "Your movement action becomes a Jump with infinite range. Your tile-targeted spells have infinite range.",
+    "items": [
+      "Witch's Cape",
+      "Witch's Hat",
+      "Witch's Nose"
+    ],
+    "itemDetails": [
+      {
+        "name": "Witch's Cape",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Witch's Hat",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Witch's Nose",
+        "slot": "Face",
+        "rarity": "Rare",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Magic Damage Up"
+    ],
+    "recommendedClasses": [],
+    "recommendations": []
+  },
+  {
+    "name": "Wood",
+    "description": "Brace. Wood Set Pieces are no longer Fragile.",
+    "items": [
+      "Bloody Stick",
+      "Bo",
+      "Broken Window",
+      "Coffin Armor",
+      "Crossbow",
+      "Cursed Stickman",
+      "Johnny's Stool",
+      "Lil' Slugger",
+      "Log",
+      "Nail Board",
+      "Oak Helmet",
+      "Rain Staff",
+      "Slingshot",
+      "Splintered Crown",
+      "Spring Board",
+      "Stick",
+      "Stickman",
+      "The bOx (2)",
+      "Wood Hat",
+      "Wood Mask",
+      "Wood Shoulder Pads"
+    ],
+    "itemDetails": [
+      {
+        "name": "Bloody Stick",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Bo",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Broken Window",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Coffin Armor",
+        "slot": "Neck",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Crossbow",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Cursed Stickman",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "D"
+      },
+      {
+        "name": "Johnny's Stool",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Lil' Slugger",
+        "slot": "Weapon",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Log",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Nail Board",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Oak Helmet",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Rain Staff",
+        "slot": "Weapon",
+        "rarity": "Rare",
+        "tier": "C"
+      },
+      {
+        "name": "Slingshot",
+        "slot": "Weapon",
+        "rarity": "Uncommon",
+        "tier": "C"
+      },
+      {
+        "name": "Splintered Crown",
+        "slot": "Head",
+        "rarity": "Uncommon",
+        "tier": "B"
+      },
+      {
+        "name": "Spring Board",
+        "slot": "Weapon",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Stick",
+        "slot": "Weapon",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Stickman",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "The bOx (2)",
+        "slot": "Trinket",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Wood Hat",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Wood Mask",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "C"
+      },
+      {
+        "name": "Wood Shoulder Pads",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [
+      "All Stats Up",
+      "Bleed",
+      "Bleed Thorns",
+      "Blind",
+      "Charge",
+      "Flammable",
+      "Fragile",
+      "Health Regen",
+      "Madness",
+      "Thorns"
+    ],
+    "recommendedClasses": [
+      "Butcher",
+      "Druid",
+      "Fighter",
+      "Hunter",
+      "Mage",
+      "Monk",
+      "Necromancer",
+      "Psychic",
+      "Tank",
+      "Thief"
+    ],
+    "recommendations": [
+      {
+        "className": "Butcher",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Thief",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Hunter",
+        "reason": "Bleed synergy with aggressive class"
+      },
+      {
+        "className": "Tank",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Necromancer",
+        "reason": "Madness synergy with Necromancer"
+      },
+      {
+        "className": "Mage",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Psychic",
+        "reason": "Charge synergy with spellcasting class"
+      },
+      {
+        "className": "Druid",
+        "reason": "Charge synergy with spellcasting class"
+      }
+    ]
+  },
+  {
+    "name": "Wooly",
+    "description": "Start with a Charmed Mammoth Baby.",
+    "items": [
+      "Mammoth Tusk",
+      "Pale Sabertooth Pelt",
+      "Sabertooth Hat",
+      "Sabertooth Pelt",
+      "Wooly Beard"
+    ],
+    "itemDetails": [
+      {
+        "name": "Mammoth Tusk",
+        "slot": "Weapon",
+        "rarity": "Very Rare",
+        "tier": "A"
+      },
+      {
+        "name": "Pale Sabertooth Pelt",
+        "slot": "Head",
+        "rarity": "Rare",
+        "tier": "B"
+      },
+      {
+        "name": "Sabertooth Hat",
+        "slot": "Head",
+        "rarity": "Common",
+        "tier": "B"
+      },
+      {
+        "name": "Sabertooth Pelt",
+        "slot": "Neck",
+        "rarity": "Common",
+        "tier": "B"
+      },
+      {
+        "name": "Wooly Beard",
+        "slot": "Face",
+        "rarity": "Common",
+        "tier": "B"
+      }
+    ],
+    "avgTier": "B",
+    "statusEffects": [
+      "Brace",
+      "Bruise",
+      "Confusion",
+      "Drowsy",
+      "Health Regen",
+      "Thorns"
+    ],
+    "recommendedClasses": [
+      "Fighter",
+      "Monk",
+      "Tank"
+    ],
+    "recommendations": [
+      {
+        "className": "Tank",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Fighter",
+        "reason": "Thorns synergy with melee class"
+      },
+      {
+        "className": "Monk",
+        "reason": "Thorns synergy with melee class"
+      }
+    ]
+  },
+  {
+    "name": "Worm -- Unused Set -->",
+    "description": "",
+    "items": [
+      "Parous Worm"
+    ],
+    "itemDetails": [
+      {
+        "name": "Parous Worm",
+        "slot": "Trinket",
+        "rarity": "",
+        "tier": "C"
+      }
+    ],
+    "avgTier": "C",
+    "statusEffects": [],
+    "recommendedClasses": [],
+    "recommendations": []
+  }
+]

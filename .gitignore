@@ -54,6 +54,7 @@ assets/sounds/sources/
 
 # Crawled data (regenerable) — except files needed for build
 data/*
+!data/combined
 !data/sprite-fingerprints.bin
 !data/sprites
 data/sprites/*
