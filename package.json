@@ -21,7 +21,9 @@
     "generate-tiers": "npx tsx scripts/generate-tiers.ts",
     "combine": "npx tsx scripts/combine-data.ts",
     "build-fingerprints": "npx tsx scripts/build-fingerprints.ts",
-    "compile-model": "xcrun coremlcompiler compile ml/output/mewgenics_items.mlpackage ml/output/"
+    "compile-model": "xcrun coremlcompiler compile ml/output/mewgenics_items.mlpackage ml/output/",
+    "ship:ios": "eas build --platform ios --profile production --auto-submit --non-interactive",
+    "ship:ios:local": "./scripts/ship-local.sh ios"
   },
   "dependencies": {
     "@expo/cli": "^54.0.23",
