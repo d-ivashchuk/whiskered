@@ -1,4 +1,5 @@
 import { Text } from "@/components/ui/text";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ClassifierResultCard } from "@/components/classifier-result-card";
 import { useThemeColors } from "@/lib/theme";
@@ -21,6 +22,7 @@ import { useRouter } from "expo-router";
 import { useCallback, useMemo, useRef, useState } from "react";
 import {
   ActivityIndicator,
+  Keyboard,
   SectionList,
   Image,
   Pressable,
@@ -421,20 +423,34 @@ export default function SearchScreen() {
       )}
 
       {!hasQuery && !showScan ? (
-        <View className="flex-1 items-center justify-center px-8">
+        <Pressable
+          className="flex-1 items-center justify-center px-8"
+          onPress={Keyboard.dismiss}
+        >
           <Search size={48} color={theme.border} />
           <Text className="text-muted-foreground text-center mt-4 text-sm">
             Search items, classes, abilities, sets, and effects
           </Text>
-        </View>
+          <Button
+            onPress={handleScanPress}
+            size="lg"
+            className="mt-6 rounded-2xl px-7"
+          >
+            <Camera size={20} color={theme.primaryForeground} strokeWidth={2} />
+            <Text>Scan Item</Text>
+          </Button>
+        </Pressable>
       ) : !hasQuery && showScan ? (
-        <View className="flex-1" />
+        <Pressable className="flex-1" onPress={Keyboard.dismiss} />
       ) : sections.length === 0 ? (
-        <View className="flex-1 items-center justify-center px-8">
+        <Pressable
+          className="flex-1 items-center justify-center px-8"
+          onPress={Keyboard.dismiss}
+        >
           <Text className="text-muted-foreground text-center text-sm">
             No results for "{search}"
           </Text>
-        </View>
+        </Pressable>
       ) : (
         <>
           <View className="px-4 py-1.5 border-b border-border">
@@ -450,6 +466,7 @@ export default function SearchScreen() {
             stickySectionHeadersEnabled
             contentContainerStyle={{ paddingBottom: insets.bottom + 80 }}
             keyboardShouldPersistTaps="handled"
+            keyboardDismissMode="on-drag"
           />
         </>
       )}

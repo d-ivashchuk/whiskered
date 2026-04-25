@@ -4,8 +4,7 @@ import { Pressable } from "react-native";
 import { ChevronLeft, Home } from "lucide-react-native";
 
 /**
- * Circular back button for stack headers.
- * Only renders when there's a screen to go back to.
+ * Back button for stack headers.
  */
 export function HeaderBackButton() {
   const colors = useThemeColors();

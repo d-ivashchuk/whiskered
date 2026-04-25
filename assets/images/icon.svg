@@ -1,8 +1,8 @@
 <svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="1024" height="1024" rx="224" fill="#1a1714"/>
 
-  <!-- Cat paw adapted from reference, centered and scaled up -->
-  <g transform="translate(152, 100) scale(1.4)">
+  <!-- Cat paw centered and scaled up -->
+  <g transform="translate(7, 37) scale(1.85)">
     <!-- Main pad (bottom shape) -->
     <path d="M324.5,282.26c-11.49-19.8-36.22-33.5-64.9-33.5s-53.41,13.7-64.9,33.5c-20.53,9.58-33.5,23.62-33.5,39.28,0,28.87,44.05,52.27,98.4,52.27s98.4-23.4,98.4-52.27c0-15.66-12.97-29.7-33.5-39.28Z"
       fill="#d4a67a" stroke="#3d3530" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"/>
@@ -35,9 +35,4 @@
       fill="#e8c4a0" opacity="0.35"/>
   </g>
 
-  <!-- Sparkles -->
-  <path d="M 810 195 L 820 170 L 832 195 L 858 205 L 832 216 L 820 242 L 810 216 L 784 205 Z"
-    fill="#f9f4ec" opacity="0.6"/>
-  <path d="M 235 170 L 242 155 L 250 170 L 265 177 L 250 184 L 242 200 L 235 184 L 220 177 Z"
-    fill="#f9f4ec" opacity="0.35"/>
 </svg>

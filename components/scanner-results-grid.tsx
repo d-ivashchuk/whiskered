@@ -11,8 +11,6 @@ import {
   StyleSheet,
   useWindowDimensions,
 } from "react-native";
-import { useRouter } from "expo-router";
-import { useCallback } from "react";
 
 type Prediction = {
   label: string;
@@ -26,20 +24,17 @@ const MAX_ITEMS = 15; // 3 rows of 5
 
 export function ScannerResultsGrid({
   predictions,
+  onItemPress,
 }: {
   predictions: Prediction[];
+  onItemPress: (displayName: string) => void;
 }) {
   const theme = useThemeColors();
-  const router = useRouter();
   const { width: screenWidth } = useWindowDimensions();
 
   const cellSize = Math.floor(
     (screenWidth - GRID_PADDING * 2 - GAP * (COLUMNS + 1)) / COLUMNS
   );
-
-  const handleCellPress = useCallback((displayName: string) => {
-    router.push(`/items/${encodeURIComponent(displayName)}`);
-  }, [router]);
 
   if (predictions.length === 0) {
     return (
@@ -67,7 +62,7 @@ export function ScannerResultsGrid({
           return (
             <Pressable
               key={pred.label}
-              onPress={() => handleCellPress(displayName)}
+              onPress={() => onItemPress(displayName)}
               style={({ pressed }) => [
                 styles.cell,
                 {

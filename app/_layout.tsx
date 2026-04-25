@@ -18,7 +18,7 @@ import Constants from "expo-constants";
 import { Stack, usePathname } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import React, { Component, useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { AppState, Text, View } from "react-native";
+import { Appearance, AppState, Text, View } from "react-native";
 import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { PostHogProvider, usePostHog } from "posthog-react-native";
@@ -73,6 +73,12 @@ class StartupErrorBoundary extends Component<
 
   render() {
     if (this.state.error) {
+      const isDark = Appearance.getColorScheme() === "dark";
+      const bg = isDark ? "#0a0a0f" : "#ffffff";
+      const fg = isDark ? "#fafafa" : "#2D2D2D";
+      const muted = isDark ? "#a1a1aa" : "#888";
+      const subtle = isDark ? "#71717a" : "#AAA";
+
       return (
         <View
           style={{
@@ -80,15 +86,15 @@ class StartupErrorBoundary extends Component<
             justifyContent: "center",
             alignItems: "center",
             padding: 32,
-            backgroundColor: "#ffffff",
+            backgroundColor: bg,
           }}
         >
-          <Text style={{ fontSize: 48, marginBottom: 16 }}>:(</Text>
+          <Text style={{ fontSize: 48, marginBottom: 16, color: fg }}>:(</Text>
           <Text
             style={{
               fontSize: 20,
               fontWeight: "700",
-              color: "#2D2D2D",
+              color: fg,
               marginBottom: 8,
               textAlign: "center",
             }}
@@ -98,7 +104,7 @@ class StartupErrorBoundary extends Component<
           <Text
             style={{
               fontSize: 15,
-              color: "#888",
+              color: muted,
               textAlign: "center",
               lineHeight: 22,
               marginBottom: 24,
@@ -106,7 +112,7 @@ class StartupErrorBoundary extends Component<
           >
             We&apos;ve been notified and are working on a fix.
           </Text>
-          <Text style={{ fontSize: 14, color: "#AAA", textAlign: "center" }}>
+          <Text style={{ fontSize: 14, color: subtle, textAlign: "center" }}>
             Please try restarting the app.
           </Text>
         </View>
@@ -231,7 +237,7 @@ export default Sentry.wrap(function RootLayout() {
                 headerShown: false,
                 gestureEnabled: true,
                 animation: "slide_from_bottom",
-                presentation: "fullScreenModal",
+                presentation: "modal",
               }}
             />
           </Stack>

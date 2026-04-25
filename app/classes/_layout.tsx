@@ -9,6 +9,7 @@ export default function ClassesLayout() {
     <Stack
       screenOptions={{
         headerStyle: { backgroundColor: colors.background },
+        contentStyle: { backgroundColor: colors.background },
         headerTintColor: colors.foreground,
         headerTitleStyle: { fontWeight: "600" },
         headerShadowVisible: false,

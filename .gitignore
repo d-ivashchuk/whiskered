@@ -59,6 +59,12 @@ data/*
 !data/sprites
 data/sprites/*
 !data/sprites/png
+!data/sprites/abilities
+!data/sprites/classes
+!data/sprites/elements
+!data/sprites/slots
+!data/sprites/stats
+!data/sprites/status-effects
 
 # ML pipeline (generated) — except compiled model
 ml/dataset/

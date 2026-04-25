@@ -4,7 +4,7 @@ import { Switch } from "@/components/ui/switch";
 import { useSettingsStore } from "@/lib/stores/settings-store";
 import { useThemeColors } from "@/lib/theme";
 
-import { ChevronLeft, ChevronRight, FileText, Shield, Star, Wrench } from "lucide-react-native";
+import { ChevronLeft, ChevronRight, ExternalLink, FileText, Shield, Star, Wrench } from "lucide-react-native";
 import SegmentedControl from "@react-native-segmented-control/segmented-control";
 import * as Application from "expo-application";
 import * as Updates from "expo-updates";
@@ -199,6 +199,28 @@ export default function SettingsScreen() {
 								</Pressable>
 							</>
 						) : null}
+					</View>
+				</View>
+
+				{/* Data attribution */}
+				<View className="px-6 mb-8">
+					<Text className="text-base font-semibold uppercase tracking-[0.08em] text-muted-foreground mb-2">
+						Data
+					</Text>
+					<View className="bg-card rounded-2xl overflow-hidden">
+						<Pressable
+							onPress={() => Linking.openURL("https://mewgenics.wiki.gg")}
+							className="px-4 py-4 flex-row items-center"
+						>
+							<ExternalLink size={18} color={colors.mutedForeground} strokeWidth={2} />
+							<View className="flex-1 ml-3">
+								<Text className="text-base font-medium text-foreground">Mewgenics Wiki</Text>
+								<Text className="text-sm text-muted-foreground mt-0.5">
+									Item data and sprites sourced from mewgenics.wiki.gg
+								</Text>
+							</View>
+							<ChevronRight size={18} color={colors.mutedForeground} strokeWidth={2} />
+						</Pressable>
 					</View>
 				</View>
 

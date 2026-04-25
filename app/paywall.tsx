@@ -8,6 +8,7 @@ import {
 } from "@/lib/services/revenue-cat";
 import { useSubscriptionStore } from "@/lib/stores/subscription-store";
 import { router } from "expo-router";
+import { useThemeColors } from "@/lib/theme";
 import { Crown, Infinity as InfinityIcon, Sparkles, Star, X, Zap } from "lucide-react-native";
 import { useCallback, useEffect, useState } from "react";
 import {
@@ -62,10 +63,6 @@ const BENEFITS = [
   { icon: Zap, text: "No ads" },
 ];
 
-const colors = {
-  primary: "hsl(240, 5.9%, 10%)",
-  mutedForeground: "hsl(240, 3.8%, 46.1%)",
-};
 
 /** Optional helper to open the paywall. */
 export function openPaywall() {
@@ -226,16 +223,16 @@ export default function PaywallScreen() {
   }, [updateFromCustomerInfo, dismiss]);
 
   const selectedPlanData = plans.find((p) => p.id === selectedPlan);
+  const theme = useThemeColors();
 
   return (
     <SafeAreaView className="flex-1 bg-background">
       <Pressable
         onPress={dismiss}
         hitSlop={12}
-        className="absolute top-14 right-5 z-10 w-8 h-8 items-center justify-center rounded-full"
-        style={{ backgroundColor: "rgba(0,0,0,0.1)" }}
+        className="absolute top-14 right-5 z-10 w-8 h-8 items-center justify-center rounded-full bg-secondary"
       >
-        <X size={18} color={colors.mutedForeground} strokeWidth={2.5} />
+        <X size={18} color={theme.mutedForeground} strokeWidth={2.5} />
       </Pressable>
 
       <ScrollView
@@ -258,10 +255,9 @@ export default function PaywallScreen() {
             <View key={b.text}>
               <View className="flex-row items-center gap-4 py-3">
                 <View
-                  className="w-11 h-11 rounded-full items-center justify-center"
-                  style={{ backgroundColor: "rgba(26,23,20,0.1)" }}
+                  className="w-11 h-11 rounded-full items-center justify-center bg-secondary"
                 >
-                  <b.icon size={22} color={colors.primary} strokeWidth={2} />
+                  <b.icon size={22} color={theme.primary} strokeWidth={2} />
                 </View>
                 <Text className="text-lg text-foreground">{b.text}</Text>
               </View>
@@ -279,20 +275,20 @@ export default function PaywallScreen() {
                 onPress={() => setSelectedPlan(plan.id)}
                 className="flex-row items-center py-3.5 px-4 rounded-2xl border-2"
                 style={{
-                  borderColor: isSelected ? "#1a1714" : "#e5e5e5",
-                  backgroundColor: isSelected ? "rgba(26,23,20,0.05)" : "#fff",
+                  borderColor: isSelected ? theme.primary : theme.border,
+                  backgroundColor: isSelected ? theme.secondary : theme.card,
                 }}
               >
                 <View
                   className="w-5 h-5 rounded-full border-2 mr-3 items-center justify-center"
-                  style={{ borderColor: isSelected ? "#1a1714" : "rgba(116,113,122,0.4)" }}
+                  style={{ borderColor: isSelected ? theme.primary : theme.mutedForeground }}
                 >
                   {isSelected ? <View className="w-2.5 h-2.5 rounded-full bg-primary" /> : null}
                 </View>
 
                 <View className="flex-1">
                   <View className="flex-row items-center gap-2">
-                    <Text style={{ fontSize: 16, fontWeight: "600", color: "#1a1714" }}>
+                    <Text className="text-base font-semibold text-foreground">
                       {plan.label}
                     </Text>
                     {plan.badge ? (
@@ -307,13 +303,11 @@ export default function PaywallScreen() {
                 </View>
 
                 <View className="items-end">
-                  <Text style={{ fontSize: 18, fontWeight: "800", color: "#1a1714" }}>
+                  <Text className="text-lg font-extrabold text-foreground">
                     {plan.billedPrice}
                   </Text>
                   {plan.calculatedPrice ? (
-                    <Text
-                      style={{ fontSize: 10, color: "rgba(116,113,122,0.7)", marginTop: 2 }}
-                    >
+                    <Text className="text-[10px] text-muted-foreground mt-0.5">
                       ({plan.calculatedPrice})
                     </Text>
                   ) : null}

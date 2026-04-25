@@ -3,6 +3,7 @@ import { ScannerViewfinder } from "@/components/scanner-viewfinder";
 import { ScannerResultsGrid } from "@/components/scanner-results-grid";
 import { useThemeColors } from "@/lib/theme";
 import { useRouter } from "expo-router";
+import { useIsFocused } from "@react-navigation/native";
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
   ActivityIndicator,
@@ -16,8 +17,9 @@ import {
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { CameraView, useCameraPermissions } from "expo-camera";
 import { manipulateAsync, SaveFormat } from "expo-image-manipulator";
-import { X, ImageIcon, Scan, Bug, Grid3X3, Play } from "lucide-react-native";
+import { X, ImageIcon, Scan, Bug, Grid3X3, Play, Plus, Minus } from "lucide-react-native";
 import * as ImagePicker from "expo-image-picker";
+import { triggerImpact } from "@/lib/haptics";
 
 type Prediction = {
   label: string;
@@ -63,6 +65,8 @@ export default function ScannerScreen() {
   const [permission, requestPermission] = useCameraPermissions();
   const hasPermission = permission?.granted ?? false;
 
+  const isFocused = useIsFocused();
+
   const [predictions, setPredictions] = useState<Prediction[]>([]);
   const [isScanning, setIsScanning] = useState(false);
   const [isActive, setIsActive] = useState(true);
@@ -100,6 +104,27 @@ export default function ScannerScreen() {
     }
   }, [hasPermission, requestPermission]);
 
+  // Pause scanning when navigating away, resume when returning.
+  // Camera stays mounted to avoid flash on return.
+  const wasScanningRef = useRef(false);
+  useEffect(() => {
+    if (!isFocused) {
+      wasScanningRef.current = isScanning;
+      setIsScanning(false);
+      if (scanTimerRef.current) {
+        clearTimeout(scanTimerRef.current);
+        scanTimerRef.current = null;
+      }
+      isBusyRef.current = false;
+    } else if (!isFrozen) {
+      setIsActive(true);
+      if (wasScanningRef.current) {
+        setIsScanning(true);
+      }
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- only react to focus changes
+  }, [isFocused]);
+
   // Layout: results sheet sized to fit exactly 2 rows of 5 items
   const gridPadding = 12;
   const gridGap = 6;
@@ -110,26 +135,15 @@ export default function ScannerScreen() {
   const squareSize =
     screenWidth * (MIN_SQUARE_FRAC + squareFrac * (MAX_SQUARE_FRAC - MIN_SQUARE_FRAC));
 
-  // Slider — compact, vertically centered
-  const sliderHeight = Math.min(160, cameraHeight - insets.top - 140);
-  const sliderRef = useRef<View>(null);
-  const sliderYRef = useRef(0);
-
-  const handleSliderLayout = useCallback(() => {
-    sliderRef.current?.measureInWindow((_x, y) => {
-      sliderYRef.current = y;
-    });
+  const STEP = 0.15;
+  const handleZoomIn = useCallback(() => {
+    triggerImpact();
+    setSquareFrac((v) => Math.min(1, v + STEP));
   }, []);
-
-  const handleSliderMove = useCallback(
-    (pageY: number) => {
-      const relY = pageY - sliderYRef.current;
-      // Top = small square, bottom = large square
-      const progress = Math.max(0, Math.min(1, relY / sliderHeight));
-      setSquareFrac(1 - progress);
-    },
-    [sliderHeight]
-  );
+  const handleZoomOut = useCallback(() => {
+    triggerImpact();
+    setSquareFrac((v) => Math.max(0, v - STEP));
+  }, []);
 
   const doScan = useCallback(async () => {
     if (isBusyRef.current || !isActiveRef.current || !cameraReadyRef.current) {
@@ -292,7 +306,9 @@ export default function ScannerScreen() {
 
   // Start/stop the scan loop
   useEffect(() => {
+    console.log(`[Scanner] scan loop effect: isScanning=${isScanning} cameraReady=${cameraReady} hasPermission=${hasPermission}`);
     if (isScanning && cameraReady && hasPermission) {
+      console.log("[Scanner] starting scan timer");
       scanTimerRef.current = setTimeout(doScan, 1500);
     }
     return () => {
@@ -304,6 +320,7 @@ export default function ScannerScreen() {
   }, [isScanning, cameraReady, hasPermission, doScan]);
 
   const handleCameraReady = useCallback(() => {
+    console.log("[Scanner] onCameraReady fired");
     setCameraReady(true);
     setIsScanning(true);
   }, []);
@@ -367,7 +384,15 @@ export default function ScannerScreen() {
   const handleClose = useCallback(() => {
     setIsActive(false);
     setIsScanning(false);
-    router.back();
+    if (router.canDismiss()) {
+      router.dismiss();
+    } else {
+      router.back();
+    }
+  }, [router]);
+
+  const handleItemPress = useCallback((displayName: string) => {
+    router.push(`/items/${encodeURIComponent(displayName)}`);
   }, [router]);
 
   if (!hasPermission) {
@@ -488,46 +513,29 @@ export default function ScannerScreen() {
           </View>
         )}
 
-        {/* Frame size slider — right side, vertically centered */}
+        {/* Frame size stepper — right side, vertically centered */}
         <View
           style={[
-            styles.sliderContainer,
+            styles.stepperContainer,
             {
-              top: insets.top + (cameraHeight - insets.top - sliderHeight) / 2,
-              height: sliderHeight,
+              top: insets.top + (cameraHeight - insets.top - 120) / 2,
             },
           ]}
         >
-          <Scan size={14} color="rgba(255,255,255,0.6)" style={{ marginBottom: 8 }} />
-          <View
-            ref={sliderRef}
-            onLayout={handleSliderLayout}
-            style={styles.sliderTrack}
-            onStartShouldSetResponder={() => true}
-            onMoveShouldSetResponder={() => true}
-            onResponderGrant={(e) => handleSliderMove(e.nativeEvent.pageY)}
-            onResponderMove={(e) => handleSliderMove(e.nativeEvent.pageY)}
-          >
-            {/* Fill */}
-            <View
-              style={[
-                styles.sliderFill,
-                { height: `${(1 - squareFrac) * 100}%` },
-              ]}
-            />
-            {/* Thumb */}
-            <View
-              style={[
-                styles.sliderThumb,
-                { top: `${(1 - squareFrac) * 100}%` },
-              ]}
-            />
+          <Pressable onPress={handleZoomIn} style={styles.stepperButton}>
+            <Plus size={18} color="#fff" />
+          </Pressable>
+          <View style={styles.stepperLabel}>
+            <Scan size={12} color="rgba(255,255,255,0.6)" />
+            <Text style={styles.stepperLabelText}>
+              {Math.round(
+                (MIN_SQUARE_FRAC + squareFrac * (MAX_SQUARE_FRAC - MIN_SQUARE_FRAC)) * 100
+              )}%
+            </Text>
           </View>
-          <Text style={styles.sliderLabel}>
-            {Math.round(
-              (MIN_SQUARE_FRAC + squareFrac * (MAX_SQUARE_FRAC - MIN_SQUARE_FRAC)) * 100
-            )}%
-          </Text>
+          <Pressable onPress={handleZoomOut} style={styles.stepperButton}>
+            <Minus size={18} color="#fff" />
+          </Pressable>
         </View>
       </View>
 
@@ -554,7 +562,9 @@ export default function ScannerScreen() {
             />
           )}
         </View>
-        <ScannerResultsGrid predictions={predictions} />
+        {isFocused && (
+          <ScannerResultsGrid predictions={predictions} onItemPress={handleItemPress} />
+        )}
       </View>
     </View>
   );
@@ -632,44 +642,28 @@ const styles = StyleSheet.create({
     fontFamily: "monospace" as const,
     marginBottom: 3,
   },
-  sliderContainer: {
+  stepperContainer: {
     position: "absolute",
-    right: 16,
-    width: 36,
+    right: 12,
+    width: 40,
     alignItems: "center",
+    gap: 6,
   },
-  sliderTrack: {
-    flex: 1,
-    width: 4,
-    backgroundColor: "rgba(255,255,255,0.2)",
-    borderRadius: 2,
-    position: "relative",
+  stepperButton: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    backgroundColor: "rgba(0,0,0,0.45)",
+    alignItems: "center",
+    justifyContent: "center",
   },
-  sliderFill: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    backgroundColor: "#22c55e",
-    borderRadius: 2,
+  stepperLabel: {
+    alignItems: "center",
+    gap: 2,
   },
-  sliderThumb: {
-    position: "absolute",
-    left: -8,
-    width: 20,
-    height: 20,
-    borderRadius: 10,
-    backgroundColor: "#fff",
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.3,
-    shadowRadius: 3,
-    marginTop: -10,
-  },
-  sliderLabel: {
+  stepperLabelText: {
     color: "rgba(255,255,255,0.6)",
     fontSize: 10,
-    marginTop: 8,
     fontWeight: "600",
   },
   resultsArea: {

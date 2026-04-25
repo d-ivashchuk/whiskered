@@ -1,0 +1,34 @@
+{
+  "configVersion": 0,
+  "apple": {
+    "version": "1.0.0",
+    "copyright": "2026 Dimitri Ivashchuk",
+    "categories": ["REFERENCE", "GAMES"],
+    "info": {
+      "en-US": {
+        "title": "Whiskered: Mewgenics Scanner",
+        "subtitle": "Item ID & Build Wiki Companion",
+        "description": "Point your camera at any Mewgenics item and identify it instantly with AI-powered recognition. Whiskered is the ultimate companion app for Mewgenics players.\n\nSCAN ANY ITEM\nUse your camera to scan items in real-time. Our ML model recognizes 900+ items and shows the top matches with confidence scores. Works with screenshots and photos too — crop multiple items from inventory shots for batch identification.\n\nSEARCH EVERY DETAIL\nFind any item, ability, set, class, or status effect instantly. Search across the entire Mewgenics database with one unified search bar.\n\nEXPLORE ITEM BUILDS\nDive deep into item details — see tier ratings (S through D), set bonuses, status effects, and related items. Discover synergies and plan your perfect build.\n\nCOMPLETE GAME DATABASE\n• 900+ items with descriptions, slots, rarities, and tier rankings\n• All classes with stats, archetypes, and recommended sets\n• Every ability organized by class and tier\n• Full set listings with item breakdowns\n• Status effects with item and set cross-references\n\nBUILT FOR PLAYERS\n• Works offline — no internet required for database browsing\n• Dark mode support\n• Fast and lightweight\n• Privacy-first — no accounts, no cloud sync\n\nWhether you're a theorycrafter optimizing builds or a new player learning the ropes, Whiskered puts the entire Mewgenics wiki in your pocket.",
+        "keywords": [
+          "mewgenics",
+          "game",
+          "wiki",
+          "scanner",
+          "item",
+          "identifier",
+          "build",
+          "guide",
+          "companion",
+          "set",
+          "tier",
+          "ability",
+          "class",
+          "inventory"
+        ],
+        "releaseNotes": "Initial release! Scan Mewgenics items with your camera, search the full game database, and explore item builds, sets, abilities, and status effects.",
+        "promoText": "Scan any Mewgenics item with your camera and get instant AI-powered matches. Browse 900+ items, sets, abilities & status effects. Your ultimate game companion awaits!",
+        "privacyPolicyUrl": "https://whiskered.app/privacy"
+      }
+    }
+  }
+}

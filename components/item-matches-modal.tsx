@@ -87,9 +87,9 @@ export function ItemMatchesModal({
                   style={styles.comparisonImage}
                   resizeMode="cover"
                 />
-                <Text style={styles.comparisonLabel}>Original</Text>
+                <Text style={[styles.comparisonLabel, { color: theme.mutedForeground }]}>Original</Text>
               </View>
-              <Text style={styles.comparisonArrow}>→</Text>
+              <Text style={[styles.comparisonArrow, { color: theme.mutedForeground }]}>→</Text>
               <View style={styles.comparisonItem}>
                 {topSprite ? (
                   <Image
@@ -105,7 +105,7 @@ export function ItemMatchesModal({
                     ]}
                   />
                 )}
-                <Text style={styles.comparisonLabel}>Best match</Text>
+                <Text style={[styles.comparisonLabel, { color: theme.mutedForeground }]}>Best match</Text>
               </View>
             </View>
           )}
@@ -165,7 +165,7 @@ export function ItemMatchesModal({
                     router.push(`/items/${encodeURIComponent(name)}`);
                   }}
                 >
-                  <Text style={styles.rankText}>#{i + 1}</Text>
+                  <Text style={[styles.rankText, { color: theme.mutedForeground }]}>#{i + 1}</Text>
                   {matchSprite ? (
                     <Image
                       source={matchSprite}
@@ -250,16 +250,14 @@ const styles = StyleSheet.create({
     height: 64,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: "rgba(128,128,128,0.2)",
+    borderColor: "rgba(128,128,128,0.3)",
   },
   comparisonLabel: {
     fontSize: 11,
-    color: "#888",
     fontWeight: "500",
   },
   comparisonArrow: {
     fontSize: 20,
-    color: "#888",
     marginBottom: 16,
   },
   header: {
@@ -293,7 +291,6 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: "600",
     width: 24,
-    color: "#888",
   },
   rowSprite: {
     width: 36,
