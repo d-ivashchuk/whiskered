@@ -10,7 +10,7 @@
     "newArchEnabled": true,
     "runtimeVersion": "1.0.0",
     "ios": {
-      "supportsTablet": true,
+      "supportsTablet": false,
       "bundleIdentifier": "com.divashchuk.whiskered",
       "appleTeamId": "CBM2584J3R",
       "infoPlist": {

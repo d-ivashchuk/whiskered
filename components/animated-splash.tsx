@@ -99,9 +99,7 @@ export function AnimatedSplash({ onComplete }: { onComplete: () => void }) {
 				/>
 			</Animated.View>
 			<Animated.View style={titleStyle}>
-				<Text style={styles.title}>
-					Whisk<Text style={styles.titleAccent}>ered</Text>
-				</Text>
+				<Text style={styles.title}>Whiskered</Text>
 			</Animated.View>
 		</Animated.View>
 	);
@@ -130,8 +128,5 @@ const styles = StyleSheet.create({
 		fontWeight: "300",
 		letterSpacing: 3,
 		color: "rgba(249, 244, 236, 0.6)",
-	},
-	titleAccent: {
-		color: "rgba(249, 244, 236, 0.9)",
 	},
 });
