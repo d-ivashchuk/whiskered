@@ -55,6 +55,7 @@ assets/sounds/sources/
 # Crawled data (regenerable) — except files needed for build
 data/*
 !data/combined
+!data/bosses-hydrated
 !data/sprite-fingerprints.bin
 !data/sprites
 data/sprites/*
@@ -65,6 +66,7 @@ data/sprites/*
 !data/sprites/slots
 !data/sprites/stats
 !data/sprites/status-effects
+!data/sprites/bosses
 
 # ML pipeline (generated) — except compiled model
 ml/dataset/

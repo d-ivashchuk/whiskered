@@ -1,0 +1,92 @@
+{
+  "name": "Spinnerette",
+  "hydratedAt": "2026-04-26T00:00:00.000Z",
+  "model": "claude-opus-4-6",
+  "synthesizer": "agent",
+  "confidence": "medium",
+  "signalNotes": "6 Reddit threads (mostly fan art/memes) with some tactical nuggets, plus a detailed wiki Strategies section.",
+  "commonStrategies": [
+    {
+      "text": "Don't kill the first Spider Kitten on turn 1. Spinnerette stays on the ceiling for the first round, giving you a free turn to buff up. She descends after round 1 regardless.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Spinnerette"]
+    },
+    {
+      "text": "Never attack Spinnerette from behind. Backstabs enrage her, boosting damage and speed. Hit her from the front or sides only.",
+      "sources": [
+        "https://mewgenics.wiki.gg/wiki/Spinnerette",
+        "https://www.reddit.com/r/mewgenics/comments/1suyk6g/which_boss_is_harder_dybbuk_or_spinnerette/"
+      ]
+    },
+    {
+      "text": "AoE attacks are king here. Her 2x2 body takes multiple hits from area attacks, and you can clear Spider Kitten swarms at the same time.",
+      "sources": [
+        "https://www.reddit.com/r/mewgenics/comments/1r3aska/let_me_tell_you_how_much_i_hate_you_spinnerette/",
+        "https://www.reddit.com/r/mewgenics/comments/1suyk6g/which_boss_is_harder_dybbuk_or_spinnerette/"
+      ]
+    }
+  ],
+  "counters": [
+    {
+      "text": "Fire effects counter her main mechanic. [[status:Burn]] stacks and [[ability:Fire Aspect]] make your cats immune to [[status:Webbed]] and instantly break free.",
+      "sources": [
+        "https://mewgenics.wiki.gg/wiki/Spinnerette",
+        "https://www.reddit.com/r/mewgenics/comments/1suyk6g/which_boss_is_harder_dybbuk_or_spinnerette/"
+      ]
+    },
+    {
+      "text": "[[ability:Heretic Mark]] redirects her spider spawns back into her. [[ability:Butcher]] one-shots all 2 HP Spiderlings and converts them into meat pickups. Both turn her own mechanic against her.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Spinnerette"]
+    },
+    {
+      "text": "[[ability:Soul Reap]] with cost reduced by [[status:Insight]] lets you farm Spiderlings for mana, then spend it on damage spells that spawn more Spiderlings. Infinite combo.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Spinnerette"]
+    }
+  ],
+  "keyStatuses": [
+    {
+      "text": "[[status:Webbed]] replaces your basic attack with \"Break Free\" and prevents movement. Spider units prioritize webbed cats, so getting stuck snowballs fast. Knockback, mobility abilities, and fire all break webs.",
+      "sources": [
+        "https://mewgenics.wiki.gg/wiki/Spinnerette",
+        "https://www.reddit.com/r/mewgenics/comments/1suyk6g/which_boss_is_harder_dybbuk_or_spinnerette/"
+      ]
+    }
+  ],
+  "notableInteractions": [
+    {
+      "text": "Her bite destroys a downed cat's body permanently. No revive, no corpse abilities. Keep fragile cats away from her front.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Spinnerette"]
+    },
+    {
+      "text": "Enraging her (hitting from behind) actually prevents her from going to the ceiling to spawn more spiders. Some players deliberately trigger it as a trade-off: harder hits but no more swarm.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Spinnerette"]
+    },
+    {
+      "text": "Pull moves like [[item:Meat Hook]], [[ability:Minihook]], and [[ability:Summon Toad]] familiars can accidentally enrage her even when hitting from the front.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Spinnerette"]
+    }
+  ],
+  "partyComps": [
+    {
+      "text": "[[class:Mage]] with AoE and [[status:Blood Frenzy]] can solo the fight. AoE hits her 2x2 body and clears spiders, Blood Frenzy chains off the kills.",
+      "sources": ["https://www.reddit.com/r/mewgenics/comments/1r3aska/let_me_tell_you_how_much_i_hate_you_spinnerette/"]
+    }
+  ],
+  "communityTips": [
+    {
+      "text": "On Normal, most players find Spinnerette easier than Dybbuk. On Hard mode it flips. Champion spider spawns with boosted HP and damage make her significantly harder.",
+      "sources": ["https://www.reddit.com/r/mewgenics/comments/1suyk6g/which_boss_is_harder_dybbuk_or_spinnerette/"]
+    },
+    {
+      "text": "She can die to [[status:Thorns]] or [[status:Burn]] stacks while descending from the ceiling. Stack enough damage beforehand and she face-plants on arrival.",
+      "sources": ["https://www.reddit.com/r/mewgenics/comments/1rg4lr7/spinnerette_falls_off_the_ceiling_and_dies/"]
+    },
+    {
+      "text": "If you get [[status:Elite Buff: Twin]] Spinnerette, the twin starts on the ground instead of the ceiling. No free buff turn in that scenario.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Spinnerette"]
+    }
+  ],
+  "threadCount": {
+    "reddit": 6,
+    "steam": 0
+  }
+}

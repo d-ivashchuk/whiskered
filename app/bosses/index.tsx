@@ -92,20 +92,18 @@ function BossRow({ boss, onPress, isLast }: { boss: GameBoss; onPress: () => voi
       </View>
 
       <View className="flex-1 mr-2">
-        <View className="flex-row items-center gap-2">
-          <Text className="text-base font-bold">{boss.name}</Text>
-          {hydration ? (
-            <View style={{ backgroundColor: "#16a34a20" }} className="rounded px-1.5 py-0.5">
-              <Text style={{ color: "#16a34a" }} className="text-[10px] font-bold">Guide</Text>
-            </View>
-          ) : null}
-        </View>
+        <Text className="text-base font-bold">{boss.name}</Text>
         <Text className="text-muted-foreground text-xs" numberOfLines={1}>
           {boss.size ? `${boss.size}` : ""}
           {boss.stats.health ? `${boss.size ? " · " : ""}${boss.stats.health} HP` : ""}
         </Text>
       </View>
 
+      {hydration ? (
+        <View style={{ backgroundColor: "#16a34a20" }} className="rounded px-1.5 py-0.5 mr-2">
+          <Text style={{ color: "#16a34a" }} className="text-[10px] font-bold">Guide</Text>
+        </View>
+      ) : null}
       <ChevronRight size={16} color={theme.mutedForeground} />
     </Pressable>
   );
@@ -175,9 +173,12 @@ export default function BossesScreen() {
 
           return (
             <View key={`${group.act}-${group.zone}`}>
+              {showActHeader && group.act !== "Tutorial" && (
+                <View style={{ backgroundColor: theme.secondary, height: 16 }} />
+              )}
               {showActHeader && (
                 <View className="px-4 pt-4 pb-1">
-                  <Text className="text-base font-bold">{group.act}</Text>
+                  <Text className="text-lg font-bold">{group.act}</Text>
                 </View>
               )}
               <View

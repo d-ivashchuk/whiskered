@@ -24,6 +24,7 @@ import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { PostHogProvider, usePostHog } from "posthog-react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import * as Font from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import * as Sentry from "@sentry/react-native";
 import { AnimatedSplash } from "@/components/animated-splash";
@@ -227,7 +228,14 @@ function OnboardingGate({ splashDone }: { splashDone: boolean }) {
 export default Sentry.wrap(function RootLayout() {
   const posthogClient = useMemo(() => getPostHogClient(), []);
   const [splashDone, setSplashDone] = useState(false);
+  const [fontsLoaded, setFontsLoaded] = useState(false);
   const handleSplashComplete = useCallback(() => setSplashDone(true), []);
+
+  useEffect(() => {
+    Font.loadAsync({
+      FredokaOne: require("../assets/fonts/FredokaOne-Regular.ttf"),
+    }).then(() => setFontsLoaded(true)).catch(() => setFontsLoaded(true));
+  }, []);
 
   if (StorybookUI) {
     return <StorybookUI />;
@@ -278,7 +286,7 @@ export default Sentry.wrap(function RootLayout() {
   );
 
   const splash = !splashDone ? (
-    <AnimatedSplash onComplete={handleSplashComplete} />
+    <AnimatedSplash onComplete={handleSplashComplete} fontsLoaded={fontsLoaded} />
   ) : null;
 
   if (posthogClient) {

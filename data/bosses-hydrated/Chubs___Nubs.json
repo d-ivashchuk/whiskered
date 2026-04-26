@@ -1,0 +1,63 @@
+{
+  "name": "Chubs & Nubs",
+  "hydratedAt": "2026-04-26T00:00:00.000Z",
+  "model": "claude-opus-4-6",
+  "synthesizer": "agent",
+  "confidence": "medium",
+  "signalNotes": "6 Reddit threads mostly focused on the ping-pong cheese, plus a solid wiki Strategies section. No detailed stat or attack data on the wiki.",
+  "commonStrategies": [
+    {
+      "text": "Line them up facing each other with 2 tiles between them, then hit one. Chubs shoots a straight-line projectile and Nubs shoots 3 tiles ahead when damaged, so they ping-pong reaction shots until one dies. Use [[class:Tank]] knockback or Mage swap spells to set this up.",
+      "sources": [
+        "https://mewgenics.wiki.gg/wiki/Chubs_%26_Nubs",
+        "https://www.reddit.com/r/mewgenics/comments/1rf58q3/chubs_and_nubs_in_one_round/",
+        "https://www.reddit.com/r/mewgenics/comments/1r40ar3/chubs_nubs_fun_interaction/"
+      ]
+    },
+    {
+      "text": "If you can't set up the ping-pong, damage both dogs evenly. Whichever one dies first enrages the survivor, so you want the remaining dog low enough to finish fast.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Chubs_%26_Nubs"]
+    },
+    {
+      "text": "They're blind, so they don't always beeline for your cats. Use that breathing room to set up positioning before engaging.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Chubs_%26_Nubs"]
+    }
+  ],
+  "counters": [
+    {
+      "text": "High [[stat:SPD]] cats can target Chubs first and outrun Nubs's Nuke attack. Chubs hits harder and moves faster, so removing him first makes the cleanup safer.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Chubs_%26_Nubs"]
+    },
+    {
+      "text": "Avoid flooding the field with summons or familiars. The dogs' reaction attacks proc off every hit, so more targets means more chaos working against you.",
+      "sources": ["https://www.reddit.com/r/mewgenics/comments/1r4988m/never_underestimate_chubs_nubs/"]
+    }
+  ],
+  "keyStatuses": [
+    {
+      "text": "When the ping-pong triggers, the surviving dog racks up [[status:Poison]] stacks from the repeated hits. Even the \"winner\" often dies shortly after from the accumulated damage.",
+      "sources": ["https://www.reddit.com/r/mewgenics/comments/1rf58q3/chubs_and_nubs_in_one_round/"]
+    },
+    {
+      "text": "Nubs places Creep tiles that debilitate your cats. Watch where you step, especially after Nubs enrages.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Chubs_%26_Nubs"]
+    }
+  ],
+  "notableInteractions": [
+    {
+      "text": "They can't gain [[status:Elite Buff: Twin]], so you'll never face a third dog in Champion variants.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Chubs_%26_Nubs"]
+    }
+  ],
+  "partyComps": [],
+  "communityTips": [
+    {
+      "text": "If you kill Nubs first, Chubs enrages with higher damage and closes distance fast. If you kill Chubs first, Nubs enrages with Creep tiles everywhere. Pick based on your team's mobility.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Chubs_%26_Nubs"]
+    }
+  ],
+  "threadCount": {
+    "reddit": 6,
+    "steam": 0
+  }
+}

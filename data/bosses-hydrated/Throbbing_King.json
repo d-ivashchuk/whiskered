@@ -1,0 +1,50 @@
+{
+  "name": "Throbbing King",
+  "hydratedAt": "2026-04-26T00:00:00.000Z",
+  "model": "claude-opus-4-6",
+  "synthesizer": "agent",
+  "confidence": "low",
+  "signalNotes": "No wiki Strategies or Behavior section. Reddit threads are mostly lore and meme discussion with only scattered tactical bits from R6.",
+  "commonStrategies": [
+    {
+      "text": "The fight plays like Simon Says. Watch the boss's patterns and respond correctly. Misreading his signals is what gets you killed.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Throbbing_King"]
+    },
+    {
+      "text": "He has 150 HP and the fight can drag. Low-damage sustain comps will hit the exhaustion timer. Bring enough DPS, and use [[status:Stun]] in phase 1 to prevent him flooding the map with water tiles.",
+      "sources": ["https://www.reddit.com/r/mewgenics/comments/1sfqcus/is_the_throbbing_king_supposed_to_be_hard_just/"]
+    }
+  ],
+  "counters": [
+    {
+      "text": "Ranged or flying cats ignore the phase 2 water tiles that cripple ground melee. [[class:Hunter]] and [[class:Mage]] handle this fight cleanly.",
+      "sources": ["https://www.reddit.com/r/mewgenics/comments/1sfqcus/is_the_throbbing_king_supposed_to_be_hard_just/"]
+    }
+  ],
+  "keyStatuses": [
+    {
+      "text": "Champion elite buffs on his Stem Cat minions are the real threat. Elite Stem Cats are widely considered more dangerous than the king himself.",
+      "sources": [
+        "https://mewgenics.wiki.gg/wiki/Throbbing_King",
+        "https://www.reddit.com/r/mewgenics/comments/1sfqcus/is_the_throbbing_king_supposed_to_be_hard_just/"
+      ]
+    }
+  ],
+  "notableInteractions": [
+    {
+      "text": "\"Old\" cats hit exhaustion at round 5 instead of 10, but they also get their adrenaline boost sooner. Can be worth it if you time the burst right.",
+      "sources": ["https://www.reddit.com/r/mewgenics/comments/1sfqcus/is_the_throbbing_king_supposed_to_be_hard_just/"]
+    }
+  ],
+  "partyComps": [],
+  "communityTips": [
+    {
+      "text": "Most players find Throbbing King easier than Dybbuk or Spinnerette on Normal. On Hard mode with certain elite buffs, slow comps that can't keep up with his orders will struggle.",
+      "sources": ["https://www.reddit.com/r/mewgenics/comments/1sfqcus/is_the_throbbing_king_supposed_to_be_hard_just/"]
+    }
+  ],
+  "threadCount": {
+    "reddit": 6,
+    "steam": 0
+  }
+}

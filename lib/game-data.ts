@@ -182,6 +182,7 @@ export const classes = _classes;
 export const sets = _sets;
 export const abilities = _abilities;
 export const bosses = _bosses;
+export const bossHydrations = _bossHydrations;
 export const dataLoaded = _loaded;
 
 // ─── Lookup helpers ──────────────────────────────────────────────────────────

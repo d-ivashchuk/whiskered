@@ -19,29 +19,17 @@
         "sources": [
           "https://mewgenics.wiki.gg/wiki/Boris"
         ]
-      },
-      {
-        "text": "In late-game, you can just burst him down on turn 1. Crit-stacking [[class:Hunter]] builds with Heavy Shot or Scatter Shot delete him before he moves.",
-        "sources": [
-          "https://www.reddit.com/r/mewgenics/comments/1s57d8h/10_hours_playtime_boris_fight_rendition/"
-        ]
       }
     ],
     "counters": [
       {
-        "text": "[[class:Tank]] with [[status:Thorns]] is the classic counter. Boris walks into you every turn, so Thorns procs constantly.",
+        "text": "[[class:Tank]] with [[status:Thorns]] is the classic counter. Boris walks into you every turn, so Thorns procs constantly and does way more work than in any other fight.",
         "sources": [
           "https://mewgenics.wiki.gg/wiki/Boris"
         ]
       },
       {
         "text": "[[class:Butcher]] can attack diagonally and punish his 2x2 hitbox with [[item:Meat Hook]] from a safe angle.",
-        "sources": [
-          "https://mewgenics.wiki.gg/wiki/Boris"
-        ]
-      },
-      {
-        "text": "A [[status:Trample]]-immune cat with a familiar build (like [[ability:Nature's Guidance]]) makes Boris nearly harmless. He just pushes you around while your familiars do the work.",
         "sources": [
           "https://mewgenics.wiki.gg/wiki/Boris"
         ]
@@ -62,12 +50,6 @@
     "keyStatuses": [
       {
         "text": "[[status:Stun]], [[status:Sleep]], and [[status:Immobile]] all lock Boris in place. But watch out: his Trample Dash still fires through [[status:Immobile]] and [[status:Entangled]].",
-        "sources": [
-          "https://mewgenics.wiki.gg/wiki/Boris"
-        ]
-      },
-      {
-        "text": "[[status:Thorns]] is way stronger than usual here because Boris initiates contact on every single turn.",
         "sources": [
           "https://mewgenics.wiki.gg/wiki/Boris"
         ]
@@ -93,6 +75,26 @@
         ]
       }
     ],
+    "partyComps": [
+      {
+        "text": "[[class:Tank]] + [[class:Thief]] is the go-to. Tank soaks hits and applies knockback, [[class:Thief]] chips from range with their basic attack.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Boris"
+        ]
+      },
+      {
+        "text": "[[status:Trample]]-immune cat with a familiar build like [[ability:Nature's Guidance]]. Boris just pushes you around while your familiars do the work.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Boris"
+        ]
+      },
+      {
+        "text": "Late-game burst comp: crit [[class:Hunter]] with Heavy Shot or Scatter Shot deletes him before he moves.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1s57d8h/10_hours_playtime_boris_fight_rendition/"
+        ]
+      }
+    ],
     "communityTips": [
       {
         "text": "Boris is more of a DPS check than a mechanics puzzle. Melee-only teams have the hardest time.",
@@ -114,23 +116,173 @@
         ]
       }
     ],
-    "partyComps": [
+    "threadCount": {
+      "reddit": 6,
+      "steam": 0
+    }
+  },
+  {
+    "name": "Chubs & Nubs",
+    "hydratedAt": "2026-04-26T00:00:00.000Z",
+    "model": "claude-opus-4-6",
+    "synthesizer": "agent",
+    "confidence": "medium",
+    "signalNotes": "6 Reddit threads mostly focused on the ping-pong cheese, plus a solid wiki Strategies section. No detailed stat or attack data on the wiki.",
+    "commonStrategies": [
       {
-        "text": "[[class:Tank]] + [[class:Thief]] is the go-to. Tank soaks hits and applies knockback, [[class:Thief]] chips from range with their basic attack.",
+        "text": "Line them up facing each other with 2 tiles between them, then hit one. Chubs shoots a straight-line projectile and Nubs shoots 3 tiles ahead when damaged, so they ping-pong reaction shots until one dies. Use [[class:Tank]] knockback or Mage swap spells to set this up.",
         "sources": [
-          "https://mewgenics.wiki.gg/wiki/Boris"
+          "https://mewgenics.wiki.gg/wiki/Chubs_%26_Nubs",
+          "https://www.reddit.com/r/mewgenics/comments/1rf58q3/chubs_and_nubs_in_one_round/",
+          "https://www.reddit.com/r/mewgenics/comments/1r40ar3/chubs_nubs_fun_interaction/"
         ]
       },
       {
-        "text": "Familiar build with [[ability:Nature's Guidance]] and a [[status:Trample]]-immune cat is the safest option if you have the items for it.",
+        "text": "If you can't set up the ping-pong, damage both dogs evenly. Whichever one dies first enrages the survivor, so you want the remaining dog low enough to finish fast.",
         "sources": [
-          "https://mewgenics.wiki.gg/wiki/Boris"
+          "https://mewgenics.wiki.gg/wiki/Chubs_%26_Nubs"
         ]
       },
       {
-        "text": "Late-game burst comp: crit [[class:Hunter]] with Heavy Shot, Scatter Shot, or bonus-turn-start mutations.",
+        "text": "They're blind, so they don't always beeline for your cats. Use that breathing room to set up positioning before engaging.",
         "sources": [
-          "https://www.reddit.com/r/mewgenics/comments/1s57d8h/10_hours_playtime_boris_fight_rendition/"
+          "https://mewgenics.wiki.gg/wiki/Chubs_%26_Nubs"
+        ]
+      }
+    ],
+    "counters": [
+      {
+        "text": "High [[stat:SPD]] cats can target Chubs first and outrun Nubs's Nuke attack. Chubs hits harder and moves faster, so removing him first makes the cleanup safer.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Chubs_%26_Nubs"
+        ]
+      },
+      {
+        "text": "Avoid flooding the field with summons or familiars. The dogs' reaction attacks proc off every hit, so more targets means more chaos working against you.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1r4988m/never_underestimate_chubs_nubs/"
+        ]
+      }
+    ],
+    "keyStatuses": [
+      {
+        "text": "When the ping-pong triggers, the surviving dog racks up [[status:Poison]] stacks from the repeated hits. Even the \"winner\" often dies shortly after from the accumulated damage.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1rf58q3/chubs_and_nubs_in_one_round/"
+        ]
+      },
+      {
+        "text": "Nubs places Creep tiles that debilitate your cats. Watch where you step, especially after Nubs enrages.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Chubs_%26_Nubs"
+        ]
+      }
+    ],
+    "notableInteractions": [
+      {
+        "text": "They can't gain [[status:Elite Buff: Twin]], so you'll never face a third dog in Champion variants.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Chubs_%26_Nubs"
+        ]
+      }
+    ],
+    "partyComps": [],
+    "communityTips": [
+      {
+        "text": "If you kill Nubs first, Chubs enrages with higher damage and closes distance fast. If you kill Chubs first, Nubs enrages with Creep tiles everywhere. Pick based on your team's mobility.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Chubs_%26_Nubs"
+        ]
+      }
+    ],
+    "threadCount": {
+      "reddit": 6,
+      "steam": 0
+    }
+  },
+  {
+    "name": "Dybbuk",
+    "hydratedAt": "2026-04-26T00:00:00.000Z",
+    "model": "claude-opus-4-6",
+    "synthesizer": "agent",
+    "confidence": "high",
+    "signalNotes": "6 Reddit threads with extensive tactical discussion about possession manipulation, dodging, and boxing strategies. Detailed wiki Behavior section.",
+    "commonStrategies": [
+      {
+        "text": "Box him in. Dybbuk [[status:Backflip]] dodges any direct hit if there's an open tile next to him. Surround him with your cats and summons so he has nowhere to flip, then unload.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Dybbuk",
+          "https://www.reddit.com/r/mewgenics/comments/1r91hog/so_how_do_you_deal_with_dybbuk/"
+        ]
+      },
+      {
+        "text": "Use AoE, indirect damage, or non-targeted attacks to bypass his dodge. Brambles, [[status:Poison]], [[status:Burn]], traps, and abilities like Fist of Fate all hit him without triggering [[status:Backflip]].",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1s0hqpo/for_those_who_hate_dybbuk/",
+          "https://www.reddit.com/r/mewgenics/comments/1r91hog/so_how_do_you_deal_with_dybbuk/"
+        ]
+      },
+      {
+        "text": "Control which cat he possesses. He takes whoever dealt the killing blow, but prioritizes downed cats. Down a weak cat first (or use [[ability:Play Dead]]) to guarantee a safe possession target.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Dybbuk",
+          "https://www.reddit.com/r/mewgenics/comments/1r91hog/so_how_do_you_deal_with_dybbuk/",
+          "https://www.reddit.com/r/mewgenics/comments/1s4gsmi/dybbuk_possessed_my_butcher_and_gained_1b_health/"
+        ]
+      }
+    ],
+    "counters": [
+      {
+        "text": "Cleric is the safest killer. Low damage output means even when possessed, your Cleric won't one-shot your team.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1r91hog/so_how_do_you_deal_with_dybbuk/"
+        ]
+      },
+      {
+        "text": "[[class:Necromancer]] summons double-dip: extra bodies to box him in AND expendable possession targets. Soul Jar with a disposable cat inside is the ultimate cheese.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1s4gsmi/dybbuk_possessed_my_butcher_and_gained_1b_health/",
+          "https://www.reddit.com/r/mewgenics/comments/1s0hqpo/for_those_who_hate_dybbuk/"
+        ]
+      }
+    ],
+    "keyStatuses": [
+      {
+        "text": "[[status:Possessed by Dybbuk]] makes the possessed cat attack allies until it's downed. The possessed cat always takes a guaranteed injury, so factor that into which cat you sacrifice.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Dybbuk",
+          "https://www.reddit.com/r/mewgenics/comments/1s4gsmi/dybbuk_possessed_my_butcher_and_gained_1b_health/"
+        ]
+      }
+    ],
+    "notableInteractions": [
+      {
+        "text": "If only one cat is alive, Dybbuk still possesses it but can only attack familiars. He then uses Stop Hitting Yourself and exits. Solo runs with [[class:Tank]] [[status:Thorns]] or bubble builds abuse this.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Dybbuk",
+          "https://www.reddit.com/r/mewgenics/comments/1ry0moi/dybbuk_licks_a_spiky_bubble_and_fucking_dies/"
+        ]
+      },
+      {
+        "text": "Watch out for Soul Link or high-HP builds. If Dybbuk possesses a cat with huge stats, the possessed cat becomes nearly unkillable and will destroy your team.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1s4gsmi/dybbuk_possessed_my_butcher_and_gained_1b_health/"
+        ]
+      },
+      {
+        "text": "Cats with Severe Deja Vu can't use Stop Hitting Yourself to free themselves when possessed solo. Avoid soloing Dybbuk with a Deja Vu cat.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Dybbuk"
+        ]
+      }
+    ],
+    "partyComps": [],
+    "communityTips": [
+      {
+        "text": "Most players rank Dybbuk as the hardest Act 1 boss. The dodge + forced possession + guaranteed injury combo makes him uniquely punishing.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1r91hog/so_how_do_you_deal_with_dybbuk/",
+          "https://www.reddit.com/r/mewgenics/comments/1s4gsmi/dybbuk_possessed_my_butcher_and_gained_1b_health/"
         ]
       }
     ],
@@ -164,12 +316,6 @@
         "text": "Drop him to 150 HP and finish Champions in the same round so phase 2 starts with the field clear.",
         "sources": [
           "https://mewgenics.wiki.gg/wiki/Lord_Bunga"
-        ]
-      },
-      {
-        "text": "Treat as 'prepare or die' — bringing AI familiars or no CC is the main loss vector.",
-        "sources": [
-          "https://www.reddit.com/r/mewgenics/comments/1rlnqxi/worst_boss_in_the_game/"
         ]
       }
     ],
@@ -207,7 +353,7 @@
     ],
     "keyStatuses": [
       {
-        "text": "Concussion is the actual run-killer — undocumented in-game, stacks invisibly across hits.",
+        "text": "Concussion is the actual run-killer — invisible in-game, stacks across hits. Track stacks manually so you know when to pull a cat back.",
         "sources": [
           "https://mewgenics.wiki.gg/wiki/Lord_Bunga",
           "https://www.reddit.com/r/mewgenics/comments/1rlnqxi/worst_boss_in_the_game/"
@@ -246,20 +392,6 @@
         ]
       }
     ],
-    "communityTips": [
-      {
-        "text": "Concussion is invisible in-game — track stacks manually so you know when to retreat a cat.",
-        "sources": [
-          "https://www.reddit.com/r/mewgenics/comments/1rlnqxi/worst_boss_in_the_game/"
-        ]
-      },
-      {
-        "text": "Cited as an act-1 wall alongside Spewer — past him, Jurassic feels easy.",
-        "sources": [
-          "https://www.reddit.com/r/mewgenics/comments/1rlnqxi/worst_boss_in_the_game/"
-        ]
-      }
-    ],
     "partyComps": [
       {
         "text": "Ranged + movement-heavy comp — melee teams take phase-2 punishment hardest.",
@@ -272,12 +404,324 @@
         "sources": [
           "https://mewgenics.wiki.gg/wiki/Lord_Bunga"
         ]
+      }
+    ],
+    "communityTips": [
+      {
+        "text": "Cited as an act-1 wall alongside Spewer — past him, Jurassic feels easy.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1rlnqxi/worst_boss_in_the_game/"
+        ]
+      }
+    ],
+    "threadCount": {
+      "reddit": 6,
+      "steam": 0
+    }
+  },
+  {
+    "name": "Queen Hippo",
+    "hydratedAt": "2026-04-26T00:00:00.000Z",
+    "model": "claude-opus-4-6",
+    "synthesizer": "agent",
+    "confidence": "high",
+    "signalNotes": "6 Reddit threads with substantive tactical commentary plus a detailed wiki Strategies section.",
+    "commonStrategies": [
+      {
+        "text": "You don't actually have to kill her. Queen Hippo starts with [[status:Brace]] 4 and loses one stack per round, dying automatically after 4 rounds. Stall and survive for a safe win, or kill fast for better clover rewards.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Queen_Hippo",
+          "https://www.reddit.com/r/mewgenics/comments/1r7vb0q/you_may_not_like_it_but_this_is_the_ideal_queen/",
+          "https://www.reddit.com/r/mewgenics/comments/1r4aqr0/i_hate_queen_hippo/"
+        ]
       },
       {
-        "text": "Concussion-immune frontline (Helmet / Vest) + Soul-Link cat damaging the throne.",
+        "text": "Spread your cats to opposite sides of the arena. She can only chase one at a time, so the rest get free turns. Kiting with ranged classes like [[class:Hunter]] makes her barely a threat.",
         "sources": [
-          "https://mewgenics.wiki.gg/wiki/Lord_Bunga",
-          "https://www.reddit.com/r/mewgenics/comments/1sdwm36/lord_bungas_bone_throne/"
+          "https://mewgenics.wiki.gg/wiki/Queen_Hippo",
+          "https://www.reddit.com/r/mewgenics/comments/1r4aqr0/i_hate_queen_hippo/"
+        ]
+      }
+    ],
+    "counters": [
+      {
+        "text": "Strip all 4 [[status:Brace]] stacks with [[ability:Bloodletting]], [[ability:Reset]], or [[ability:Dealer]] + [[item:Enema]] for an instant turn-1 kill.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Queen_Hippo",
+          "https://www.reddit.com/r/mewgenics/comments/1r7vb0q/you_may_not_like_it_but_this_is_the_ideal_queen/"
+        ]
+      },
+      {
+        "text": "[[status:Slow]], [[status:Stun]], and [[status:Freeze]] stall her. She gains [[status:Movement Up]] each round, so locking her down early prevents her from ever reaching your cats.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Queen_Hippo",
+          "https://www.reddit.com/r/mewgenics/comments/1rs9x6d/queen_hippo_after_punching_john_cat_the_fighter/"
+        ]
+      },
+      {
+        "text": "Familiars, bear traps, and summons like leeches make great speed bumps. She wastes her limited turns punching things that aren't your cats.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1r4aqr0/i_hate_queen_hippo/"
+        ]
+      }
+    ],
+    "keyStatuses": [],
+    "notableInteractions": [
+      {
+        "text": "Her Jab has 10-tile chain knockback and applies [[status:Bruise]]. Her Uppercut launches cats into the air, knocking back anything they land on. Clumped positioning turns one hit into a team-wide pileup.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Queen_Hippo"
+        ]
+      },
+      {
+        "text": "Bringing [[item:Zaratana's Collar]] or [[item:Pyrophina's Collar]] to summon Kaiju familiars draws her aggro, but she can't actually attack them. Possibly a bug, but it trivializes the fight.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Queen_Hippo"
+        ]
+      },
+      {
+        "text": "She starts with 2 bonus turns on round 1, so she swings before you can react. Position defensively at the start.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Queen_Hippo"
+        ]
+      }
+    ],
+    "partyComps": [
+      {
+        "text": "[[class:Hunter]] at range plus a [[class:Tank]] to absorb hits. Tank face-tanks rounds 1-2, Hunter chips from safety.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Queen_Hippo",
+          "https://www.reddit.com/r/mewgenics/comments/1r4aqr0/i_hate_queen_hippo/"
+        ]
+      }
+    ],
+    "communityTips": [
+      {
+        "text": "Most players consider Queen Hippo harder than Radical Rat. She hits like a truck and you can't always choose which Alley boss you face.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1r4aqr0/i_hate_queen_hippo/",
+          "https://www.reddit.com/r/mewgenics/comments/1r7vb0q/you_may_not_like_it_but_this_is_the_ideal_queen/"
+        ]
+      }
+    ],
+    "threadCount": {
+      "reddit": 6,
+      "steam": 0
+    }
+  },
+  {
+    "name": "Radical Rat",
+    "hydratedAt": "2026-04-26T00:00:00.000Z",
+    "model": "claude-opus-4-6",
+    "synthesizer": "agent",
+    "confidence": "high",
+    "signalNotes": "6 Reddit threads with detailed bomb mechanic discussion plus a thorough wiki Strategies section.",
+    "commonStrategies": [
+      {
+        "text": "Defuse the bombs. Rat Bombs have 1 HP, so any attack destroys them. Prioritize bombs over hitting Radical Rat himself.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Radical_Rat",
+          "https://www.reddit.com/r/mewgenics/comments/1r1fmdr/who_else_is_in_the_lost_to_radical_rat_club/"
+        ]
+      },
+      {
+        "text": "Spread your cats across the arena. Radical Rat's AI targets spots where 2+ cats are in the blast radius. Spacing out limits his efficiency.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Radical_Rat",
+          "https://www.reddit.com/r/mewgenics/comments/1r4qpke/radical_rat_be_able_to_put_fire_on_the_whole/"
+        ]
+      },
+      {
+        "text": "Rush him down with melee. He has no close-range attack, so [[class:Fighter]] and [[class:Butcher]] can walk up and wail on him for free.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Radical_Rat"
+        ]
+      }
+    ],
+    "counters": [
+      {
+        "text": "[[ability:Tower Defense]] on a [[class:Hunter]] auto-defuses any bomb thrown within attack range. Set up in the center and bombs never go off.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Radical_Rat"
+        ]
+      },
+      {
+        "text": "[[status:Infested]] is a sleeper pick. The bugs kill bombs on their own and destroy the corpses so they can't chain-detonate.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Radical_Rat"
+        ]
+      },
+      {
+        "text": "Body-destroying abilities like [[ability:Desecrate]], [[ability:Dark Ritual]], and [[ability:Decompose]] clean up defused bombs before another explosion re-detonates them.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Radical_Rat"
+        ]
+      }
+    ],
+    "keyStatuses": [
+      {
+        "text": "Avoid anything that creates fire. [[status:Burn]] stacks, [[ability:Blessing of Holy Fire]], and fire-weather all instantly detonate bombs, causing chain reactions that can wipe your team.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Radical_Rat",
+          "https://www.reddit.com/r/mewgenics/comments/1r4qpke/radical_rat_be_able_to_put_fire_on_the_whole/",
+          "https://www.reddit.com/r/mewgenics/comments/1r1fmdr/who_else_is_in_the_lost_to_radical_rat_club/"
+        ]
+      },
+      {
+        "text": "Rain weather defuses all bombs on landing, making the fight trivial. Check the weather before picking your path.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Radical_Rat",
+          "https://www.reddit.com/r/mewgenics/comments/1r1fmdr/who_else_is_in_the_lost_to_radical_rat_club/"
+        ]
+      }
+    ],
+    "notableInteractions": [
+      {
+        "text": "Defused bombs stay on the ground and re-detonate if another bomb explodes near them. Always destroy defused bombs to prevent chain reactions.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Radical_Rat",
+          "https://www.reddit.com/r/mewgenics/comments/1r4qpke/radical_rat_be_able_to_put_fire_on_the_whole/"
+        ]
+      },
+      {
+        "text": "His Turtle move makes him invulnerable at the end of each round and knocks back adjacent units. Don't stand next to him when the round ends.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Radical_Rat"
+        ]
+      },
+      {
+        "text": "Charming or reanimating bombs with [[ability:Reanimate]] is a trap. They still damage your own cats, and Radical Rat hides in his Turtle while they explode.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Radical_Rat"
+        ]
+      }
+    ],
+    "partyComps": [
+      {
+        "text": "[[class:Fighter]] + [[class:Hunter]] with [[ability:Tower Defense]]. Fighter rushes him down, Hunter auto-defuses bombs from range.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Radical_Rat"
+        ]
+      }
+    ],
+    "communityTips": [
+      {
+        "text": "The fight spirals out of control fast if you let even one bomb go off. Fire spreads, more bombs land on fire, and suddenly the whole arena is exploding.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1r4qpke/radical_rat_be_able_to_put_fire_on_the_whole/",
+          "https://www.reddit.com/r/mewgenics/comments/1r1fmdr/who_else_is_in_the_lost_to_radical_rat_club/"
+        ]
+      }
+    ],
+    "threadCount": {
+      "reddit": 6,
+      "steam": 0
+    }
+  },
+  {
+    "name": "Spinnerette",
+    "hydratedAt": "2026-04-26T00:00:00.000Z",
+    "model": "claude-opus-4-6",
+    "synthesizer": "agent",
+    "confidence": "medium",
+    "signalNotes": "6 Reddit threads (mostly fan art/memes) with some tactical nuggets, plus a detailed wiki Strategies section.",
+    "commonStrategies": [
+      {
+        "text": "Don't kill the first Spider Kitten on turn 1. Spinnerette stays on the ceiling for the first round, giving you a free turn to buff up. She descends after round 1 regardless.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Spinnerette"
+        ]
+      },
+      {
+        "text": "Never attack Spinnerette from behind. Backstabs enrage her, boosting damage and speed. Hit her from the front or sides only.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Spinnerette",
+          "https://www.reddit.com/r/mewgenics/comments/1suyk6g/which_boss_is_harder_dybbuk_or_spinnerette/"
+        ]
+      },
+      {
+        "text": "AoE attacks are king here. Her 2x2 body takes multiple hits from area attacks, and you can clear Spider Kitten swarms at the same time.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1r3aska/let_me_tell_you_how_much_i_hate_you_spinnerette/",
+          "https://www.reddit.com/r/mewgenics/comments/1suyk6g/which_boss_is_harder_dybbuk_or_spinnerette/"
+        ]
+      }
+    ],
+    "counters": [
+      {
+        "text": "Fire effects counter her main mechanic. [[status:Burn]] stacks and [[ability:Fire Aspect]] make your cats immune to [[status:Webbed]] and instantly break free.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Spinnerette",
+          "https://www.reddit.com/r/mewgenics/comments/1suyk6g/which_boss_is_harder_dybbuk_or_spinnerette/"
+        ]
+      },
+      {
+        "text": "[[ability:Heretic Mark]] redirects her spider spawns back into her. [[ability:Butcher]] one-shots all 2 HP Spiderlings and converts them into meat pickups. Both turn her own mechanic against her.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Spinnerette"
+        ]
+      },
+      {
+        "text": "[[ability:Soul Reap]] with cost reduced by [[status:Insight]] lets you farm Spiderlings for mana, then spend it on damage spells that spawn more Spiderlings. Infinite combo.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Spinnerette"
+        ]
+      }
+    ],
+    "keyStatuses": [
+      {
+        "text": "[[status:Webbed]] replaces your basic attack with \"Break Free\" and prevents movement. Spider units prioritize webbed cats, so getting stuck snowballs fast. Knockback, mobility abilities, and fire all break webs.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Spinnerette",
+          "https://www.reddit.com/r/mewgenics/comments/1suyk6g/which_boss_is_harder_dybbuk_or_spinnerette/"
+        ]
+      }
+    ],
+    "notableInteractions": [
+      {
+        "text": "Her bite destroys a downed cat's body permanently. No revive, no corpse abilities. Keep fragile cats away from her front.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Spinnerette"
+        ]
+      },
+      {
+        "text": "Enraging her (hitting from behind) actually prevents her from going to the ceiling to spawn more spiders. Some players deliberately trigger it as a trade-off: harder hits but no more swarm.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Spinnerette"
+        ]
+      },
+      {
+        "text": "Pull moves like [[item:Meat Hook]], [[ability:Minihook]], and [[ability:Summon Toad]] familiars can accidentally enrage her even when hitting from the front.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Spinnerette"
+        ]
+      }
+    ],
+    "partyComps": [
+      {
+        "text": "[[class:Mage]] with AoE and [[status:Blood Frenzy]] can solo the fight. AoE hits her 2x2 body and clears spiders, Blood Frenzy chains off the kills.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1r3aska/let_me_tell_you_how_much_i_hate_you_spinnerette/"
+        ]
+      }
+    ],
+    "communityTips": [
+      {
+        "text": "On Normal, most players find Spinnerette easier than Dybbuk. On Hard mode it flips. Champion spider spawns with boosted HP and damage make her significantly harder.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1suyk6g/which_boss_is_harder_dybbuk_or_spinnerette/"
+        ]
+      },
+      {
+        "text": "She can die to [[status:Thorns]] or [[status:Burn]] stacks while descending from the ceiling. Stack enough damage beforehand and she face-plants on arrival.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1rg4lr7/spinnerette_falls_off_the_ceiling_and_dies/"
+        ]
+      },
+      {
+        "text": "If you get [[status:Elite Buff: Twin]] Spinnerette, the twin starts on the ground instead of the ceiling. No free buff turn in that scenario.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Spinnerette"
         ]
       }
     ],
@@ -307,7 +751,7 @@
         ]
       },
       {
-        "text": "Drag enemies from earlier fights into phase 1 via Friendship Bracelet, Eternal Servitude, or Chains of Guilt.",
+        "text": "Drag enemies from earlier fights into phase 1 via Friendship Bracelet, Eternal Servitude, or Chains of Guilt. Extra bodies the mirrors don't copy.",
         "sources": [
           "https://www.reddit.com/r/mewgenics/comments/1siarct/the_creator_yet_another_rant_spoilers/"
         ]
@@ -327,7 +771,7 @@
         ]
       },
       {
-        "text": "Party Detonator + Rune of Hagalaz multi-trigger removes bodies ignoring Holy Shield; fails only against Elite Buff: Depressing.",
+        "text": "Party Detonator + Rune of Hagalaz multi-trigger removes bodies ignoring Holy Shield. Fails only against Elite Buff: Depressing.",
         "sources": [
           "https://www.reddit.com/r/mewgenics/comments/1ssyfok/trivializing_the_creator_fight_with_one_item/"
         ]
@@ -373,6 +817,7 @@
         ]
       }
     ],
+    "partyComps": [],
     "communityTips": [
       {
         "text": "Polarizing fight — some players love the brain-on requirement, others skip Act 3 without a Survivalist Hat in hand.",
@@ -387,23 +832,63 @@
         ]
       }
     ],
-    "partyComps": [
+    "threadCount": {
+      "reddit": 6,
+      "steam": 0
+    }
+  },
+  {
+    "name": "Throbbing King",
+    "hydratedAt": "2026-04-26T00:00:00.000Z",
+    "model": "claude-opus-4-6",
+    "synthesizer": "agent",
+    "confidence": "low",
+    "signalNotes": "No wiki Strategies or Behavior section. Reddit threads are mostly lore and meme discussion with only scattered tactical bits from R6.",
+    "commonStrategies": [
       {
-        "text": "Initiative-control: Survivalist Hat + Super Luck on a high-LCK cat to force ambushes.",
+        "text": "The fight plays like Simon Says. Watch the boss's patterns and respond correctly. Misreading his signals is what gets you killed.",
         "sources": [
-          "https://www.reddit.com/r/mewgenics/comments/1siarct/the_creator_yet_another_rant_spoilers/"
+          "https://mewgenics.wiki.gg/wiki/Throbbing_King"
         ]
       },
       {
-        "text": "Charm/recruit: Friendship Bracelet, Eternal Servitude, or Chains of Guilt to bring outside allies.",
+        "text": "He has 150 HP and the fight can drag. Low-damage sustain comps will hit the exhaustion timer. Bring enough DPS, and use [[status:Stun]] in phase 1 to prevent him flooding the map with water tiles.",
         "sources": [
-          "https://www.reddit.com/r/mewgenics/comments/1siarct/the_creator_yet_another_rant_spoilers/"
+          "https://www.reddit.com/r/mewgenics/comments/1sfqcus/is_the_throbbing_king_supposed_to_be_hard_just/"
         ]
-      },
+      }
+    ],
+    "counters": [
       {
-        "text": "Item-burst: Party Detonator + Rune of Hagalaz multi-trigger pairing.",
+        "text": "Ranged or flying cats ignore the phase 2 water tiles that cripple ground melee. [[class:Hunter]] and [[class:Mage]] handle this fight cleanly.",
         "sources": [
-          "https://www.reddit.com/r/mewgenics/comments/1ssyfok/trivializing_the_creator_fight_with_one_item/"
+          "https://www.reddit.com/r/mewgenics/comments/1sfqcus/is_the_throbbing_king_supposed_to_be_hard_just/"
+        ]
+      }
+    ],
+    "keyStatuses": [
+      {
+        "text": "Champion elite buffs on his Stem Cat minions are the real threat. Elite Stem Cats are widely considered more dangerous than the king himself.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Throbbing_King",
+          "https://www.reddit.com/r/mewgenics/comments/1sfqcus/is_the_throbbing_king_supposed_to_be_hard_just/"
+        ]
+      }
+    ],
+    "notableInteractions": [
+      {
+        "text": "\"Old\" cats hit exhaustion at round 5 instead of 10, but they also get their adrenaline boost sooner. Can be worth it if you time the burst right.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1sfqcus/is_the_throbbing_king_supposed_to_be_hard_just/"
+        ]
+      }
+    ],
+    "partyComps": [],
+    "communityTips": [
+      {
+        "text": "Most players find Throbbing King easier than Dybbuk or Spinnerette on Normal. On Hard mode with certain elite buffs, slow comps that can't keep up with his orders will struggle.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1sfqcus/is_the_throbbing_king_supposed_to_be_hard_just/"
         ]
       }
     ],

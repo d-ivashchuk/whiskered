@@ -1,5 +1,5 @@
 import { CustomTabBar } from "@/components/custom-tab-bar";
-import { Home, Search, Settings as SettingsIcon } from "lucide-react-native";
+import { Home, Search, Settings as SettingsIcon, BookOpen } from "lucide-react-native";
 import { Tabs } from "expo-router";
 import { useColorScheme } from "nativewind";
 import {
@@ -23,6 +23,15 @@ export default function TabLayout() {
             title: "Home",
             tabBarIcon: ({ color, size }) => (
               <Home size={size} color={color} strokeWidth={1.8} />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="guides"
+          options={{
+            title: "Guides",
+            tabBarIcon: ({ color, size }) => (
+              <BookOpen size={size} color={color} strokeWidth={1.8} />
             ),
           }}
         />

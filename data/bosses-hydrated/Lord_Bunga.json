@@ -1,0 +1,98 @@
+{
+  "name": "Lord Bunga",
+  "hydratedAt": "2026-04-25T00:00:00.000Z",
+  "model": "claude-opus-4-7",
+  "synthesizer": "agent",
+  "confidence": "high",
+  "signalNotes": "Wiki has detailed phase mechanics; the 'Worst boss in the game' thread adds strong tactical synthesis (ice slides, AI-familiar warning) and the bone-throne thread surfaces the Soul Link interaction.",
+  "commonStrategies": [
+    {
+      "text": "Two-phase fight: Bunga is seated until both Champions die OR he hits 150 HP — pick which trigger you want.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Lord_Bunga"]
+    },
+    {
+      "text": "Chip him while seated — he doesn't counter or eat from the throne, so pre-stack damage before phase 2.",
+      "sources": [
+        "https://mewgenics.wiki.gg/wiki/Lord_Bunga",
+        "https://www.reddit.com/r/mewgenics/comments/1rlnqxi/worst_boss_in_the_game/"
+      ]
+    },
+    {
+      "text": "Drop him to 150 HP and finish Champions in the same round so phase 2 starts with the field clear.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Lord_Bunga"]
+    }
+  ],
+  "counters": [
+    {
+      "text": "Entangle locks him out indefinitely if a cat recasts it every round.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Lord_Bunga"]
+    },
+    {
+      "text": "Bulletproof Vest or Helmet negate the concussion-stacking BOOGA! attack.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Lord_Bunga"]
+    },
+    {
+      "text": "2+ Knockback avoids both his eat AND his retaliation in one shove.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Lord_Bunga"]
+    },
+    {
+      "text": "Bear Trap in front of the throne pre-phase-2 buys an escape turn if positioning slips.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Lord_Bunga"]
+    },
+    {
+      "text": "Don't bring Body Guard or AI-controlled familiars — both rotate him into your back line.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Lord_Bunga"]
+    }
+  ],
+  "keyStatuses": [
+    {
+      "text": "Concussion is the actual run-killer — invisible in-game, stacks across hits. Track stacks manually so you know when to pull a cat back.",
+      "sources": [
+        "https://mewgenics.wiki.gg/wiki/Lord_Bunga",
+        "https://www.reddit.com/r/mewgenics/comments/1rlnqxi/worst_boss_in_the_game/"
+      ]
+    },
+    {
+      "text": "Fear on Bunga backfires: forced movement resolves first, then he eats whatever's now adjacent.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Lord_Bunga"]
+    },
+    {
+      "text": "Stack Strength / Damage / Dexterity Up while he's seated to compress phase-2 exposure.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Lord_Bunga"]
+    }
+  ],
+  "notableInteractions": [
+    {
+      "text": "Behind him is safe, but any side-hit rotates his facing — plan damage angles deliberately.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Lord_Bunga"]
+    },
+    {
+      "text": "His eat is multi-tile AOE — summons or charmed allies walking adjacent get devoured too.",
+      "sources": ["https://www.reddit.com/r/mewgenics/comments/1s0rvxl/lord_bunga_eats_god/"]
+    },
+    {
+      "text": "Throne has 150 HP; Soul Link the throne to damage Bunga from outside eat range after he stands.",
+      "sources": ["https://www.reddit.com/r/mewgenics/comments/1sdwm36/lord_bungas_bone_throne/"]
+    }
+  ],
+  "partyComps": [
+    {
+      "text": "Ranged + movement-heavy comp — melee teams take phase-2 punishment hardest.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Lord_Bunga"]
+    },
+    {
+      "text": "CC anchor (Entangle / Knockback) plus burst damage to compress phase 2.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Lord_Bunga"]
+    }
+  ],
+  "communityTips": [
+    {
+      "text": "Cited as an act-1 wall alongside Spewer — past him, Jurassic feels easy.",
+      "sources": ["https://www.reddit.com/r/mewgenics/comments/1rlnqxi/worst_boss_in_the_game/"]
+    }
+  ],
+  "threadCount": {
+    "reddit": 6,
+    "steam": 0
+  }
+}

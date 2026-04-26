@@ -128,19 +128,11 @@ export default function HomeScreen() {
 
         <View className="gap-3">
           <NavCard
-            sprites={classSprites}
-            title="Classes"
-            count={classes.length}
-            subtitle="Stats, abilities, recommended sets"
-            onPress={() => router.push("/classes")}
-          />
-          <NavCard
-            sprites={abilitySprites}
-            title="Abilities"
-            count={abilities.length}
-            subtitle="All abilities by class"
-            onPress={() => router.push("/abilities")}
-            tierCounts={abilityTiers}
+            sprites={bossSprites}
+            title="Bosses"
+            count={bosses.length}
+            subtitle="Stats, attacks, drops"
+            onPress={() => router.push("/bosses")}
           />
           <NavCard
             sprites={itemSprites}
@@ -159,18 +151,26 @@ export default function HomeScreen() {
             tierCounts={setTiers}
           />
           <NavCard
+            sprites={classSprites}
+            title="Classes"
+            count={classes.length}
+            subtitle="Stats, abilities, recommended sets"
+            onPress={() => router.push("/classes")}
+          />
+          <NavCard
+            sprites={abilitySprites}
+            title="Abilities"
+            count={abilities.length}
+            subtitle="All abilities by class"
+            onPress={() => router.push("/abilities")}
+            tierCounts={abilityTiers}
+          />
+          <NavCard
             sprites={effectSprites}
             title="Effects"
             count={statusEffects.length}
             subtitle="Status effects and cross-references"
             onPress={() => router.push("/effects")}
-          />
-          <NavCard
-            sprites={bossSprites}
-            title="Bosses"
-            count={bosses.length}
-            subtitle="Boss guides, tactics, community tips"
-            onPress={() => router.push("/bosses")}
           />
         </View>
       </ScrollView>

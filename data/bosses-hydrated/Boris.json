@@ -1,0 +1,94 @@
+{
+  "name": "Boris",
+  "hydratedAt": "2026-04-26T00:00:00.000Z",
+  "model": "claude-opus-4-6",
+  "synthesizer": "agent",
+  "confidence": "high",
+  "signalNotes": "Rich wiki Strategies section plus 6 reddit threads with substantive tactical commentary.",
+  "commonStrategies": [
+    {
+      "text": "Keep your distance. Boris chases whoever hit him last, so ranged attackers can kite him all fight.",
+      "sources": [
+        "https://mewgenics.wiki.gg/wiki/Boris",
+        "https://www.reddit.com/r/mewgenics/comments/1s57d8h/10_hours_playtime_boris_fight_rendition/"
+      ]
+    },
+    {
+      "text": "DoT effects like [[status:Poison]] are great here. They tick damage without making your cat the \"last damager\" Boris chases.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Boris"]
+    }
+  ],
+  "counters": [
+    {
+      "text": "[[class:Tank]] with [[status:Thorns]] is the classic counter. Boris walks into you every turn, so Thorns procs constantly and does way more work than in any other fight.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Boris"]
+    },
+    {
+      "text": "[[class:Butcher]] can attack diagonally and punish his 2x2 hitbox with [[item:Meat Hook]] from a safe angle.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Boris"]
+    },
+    {
+      "text": "Anything with 1+ knockback keeps your cat from getting trampled on contact.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Boris"]
+    },
+    {
+      "text": "Avoid [[class:Fighter]] for this fight. Low [[stat:CON]] and short range is the worst possible matchup.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Boris"]
+    }
+  ],
+  "keyStatuses": [
+    {
+      "text": "[[status:Stun]], [[status:Sleep]], and [[status:Immobile]] all lock Boris in place. But watch out: his Trample Dash still fires through [[status:Immobile]] and [[status:Entangled]].",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Boris"]
+    }
+  ],
+  "notableInteractions": [
+    {
+      "text": "Reaction-attack chains can wipe your whole team in one turn if Boris triggers them. Risky pick for this fight.",
+      "sources": ["https://www.reddit.com/r/mewgenics/comments/1s59kx0/has_anyone_ever_actually_lost_to_boris/"]
+    },
+    {
+      "text": "The Spiky Rocks in the arena corners hurt Boris too. You can knock him into them or redirect his dash to deal free damage.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Boris"]
+    },
+    {
+      "text": "His 2x2 body can't fit into certain map spots. Scout the layout before committing your positioning.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Boris"]
+    }
+  ],
+  "partyComps": [
+    {
+      "text": "[[class:Tank]] + [[class:Thief]] is the go-to. Tank soaks hits and applies knockback, [[class:Thief]] chips from range with their basic attack.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Boris"]
+    },
+    {
+      "text": "[[status:Trample]]-immune cat with a familiar build like [[ability:Nature's Guidance]]. Boris just pushes you around while your familiars do the work.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Boris"]
+    },
+    {
+      "text": "Late-game burst comp: crit [[class:Hunter]] with Heavy Shot or Scatter Shot deletes him before he moves.",
+      "sources": ["https://www.reddit.com/r/mewgenics/comments/1s57d8h/10_hours_playtime_boris_fight_rendition/"]
+    }
+  ],
+  "communityTips": [
+    {
+      "text": "Boris is more of a DPS check than a mechanics puzzle. Melee-only teams have the hardest time.",
+      "sources": ["https://www.reddit.com/r/mewgenics/comments/1s59kx0/has_anyone_ever_actually_lost_to_boris/"]
+    },
+    {
+      "text": "On Hard and above he becomes a real threat, even with solid tactics and good comps.",
+      "sources": ["https://www.reddit.com/r/mewgenics/comments/1s59kx0/has_anyone_ever_actually_lost_to_boris/"]
+    },
+    {
+      "text": "Champion Boris rolls generic elite buffs (like on-move electric shock). Whether his Trample damage also scales is unconfirmed.",
+      "sources": [
+        "https://www.reddit.com/r/mewgenics/comments/1smlw0z/i_found_red_boris_when_doing_a_butcher_only_run_3/",
+        "https://www.reddit.com/r/mewgenics/comments/1s59kx0/has_anyone_ever_actually_lost_to_boris/"
+      ]
+    }
+  ],
+  "threadCount": {
+    "reddit": 6,
+    "steam": 0
+  }
+}

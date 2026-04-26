@@ -1,0 +1,85 @@
+{
+  "name": "Dybbuk",
+  "hydratedAt": "2026-04-26T00:00:00.000Z",
+  "model": "claude-opus-4-6",
+  "synthesizer": "agent",
+  "confidence": "high",
+  "signalNotes": "6 Reddit threads with extensive tactical discussion about possession manipulation, dodging, and boxing strategies. Detailed wiki Behavior section.",
+  "commonStrategies": [
+    {
+      "text": "Box him in. Dybbuk [[status:Backflip]] dodges any direct hit if there's an open tile next to him. Surround him with your cats and summons so he has nowhere to flip, then unload.",
+      "sources": [
+        "https://mewgenics.wiki.gg/wiki/Dybbuk",
+        "https://www.reddit.com/r/mewgenics/comments/1r91hog/so_how_do_you_deal_with_dybbuk/"
+      ]
+    },
+    {
+      "text": "Use AoE, indirect damage, or non-targeted attacks to bypass his dodge. Brambles, [[status:Poison]], [[status:Burn]], traps, and abilities like Fist of Fate all hit him without triggering [[status:Backflip]].",
+      "sources": [
+        "https://www.reddit.com/r/mewgenics/comments/1s0hqpo/for_those_who_hate_dybbuk/",
+        "https://www.reddit.com/r/mewgenics/comments/1r91hog/so_how_do_you_deal_with_dybbuk/"
+      ]
+    },
+    {
+      "text": "Control which cat he possesses. He takes whoever dealt the killing blow, but prioritizes downed cats. Down a weak cat first (or use [[ability:Play Dead]]) to guarantee a safe possession target.",
+      "sources": [
+        "https://mewgenics.wiki.gg/wiki/Dybbuk",
+        "https://www.reddit.com/r/mewgenics/comments/1r91hog/so_how_do_you_deal_with_dybbuk/",
+        "https://www.reddit.com/r/mewgenics/comments/1s4gsmi/dybbuk_possessed_my_butcher_and_gained_1b_health/"
+      ]
+    }
+  ],
+  "counters": [
+    {
+      "text": "Cleric is the safest killer. Low damage output means even when possessed, your Cleric won't one-shot your team.",
+      "sources": ["https://www.reddit.com/r/mewgenics/comments/1r91hog/so_how_do_you_deal_with_dybbuk/"]
+    },
+    {
+      "text": "[[class:Necromancer]] summons double-dip: extra bodies to box him in AND expendable possession targets. Soul Jar with a disposable cat inside is the ultimate cheese.",
+      "sources": [
+        "https://www.reddit.com/r/mewgenics/comments/1s4gsmi/dybbuk_possessed_my_butcher_and_gained_1b_health/",
+        "https://www.reddit.com/r/mewgenics/comments/1s0hqpo/for_those_who_hate_dybbuk/"
+      ]
+    }
+  ],
+  "keyStatuses": [
+    {
+      "text": "[[status:Possessed by Dybbuk]] makes the possessed cat attack allies until it's downed. The possessed cat always takes a guaranteed injury, so factor that into which cat you sacrifice.",
+      "sources": [
+        "https://mewgenics.wiki.gg/wiki/Dybbuk",
+        "https://www.reddit.com/r/mewgenics/comments/1s4gsmi/dybbuk_possessed_my_butcher_and_gained_1b_health/"
+      ]
+    }
+  ],
+  "notableInteractions": [
+    {
+      "text": "If only one cat is alive, Dybbuk still possesses it but can only attack familiars. He then uses Stop Hitting Yourself and exits. Solo runs with [[class:Tank]] [[status:Thorns]] or bubble builds abuse this.",
+      "sources": [
+        "https://mewgenics.wiki.gg/wiki/Dybbuk",
+        "https://www.reddit.com/r/mewgenics/comments/1ry0moi/dybbuk_licks_a_spiky_bubble_and_fucking_dies/"
+      ]
+    },
+    {
+      "text": "Watch out for Soul Link or high-HP builds. If Dybbuk possesses a cat with huge stats, the possessed cat becomes nearly unkillable and will destroy your team.",
+      "sources": ["https://www.reddit.com/r/mewgenics/comments/1s4gsmi/dybbuk_possessed_my_butcher_and_gained_1b_health/"]
+    },
+    {
+      "text": "Cats with Severe Deja Vu can't use Stop Hitting Yourself to free themselves when possessed solo. Avoid soloing Dybbuk with a Deja Vu cat.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Dybbuk"]
+    }
+  ],
+  "partyComps": [],
+  "communityTips": [
+    {
+      "text": "Most players rank Dybbuk as the hardest Act 1 boss. The dodge + forced possession + guaranteed injury combo makes him uniquely punishing.",
+      "sources": [
+        "https://www.reddit.com/r/mewgenics/comments/1r91hog/so_how_do_you_deal_with_dybbuk/",
+        "https://www.reddit.com/r/mewgenics/comments/1s4gsmi/dybbuk_possessed_my_butcher_and_gained_1b_health/"
+      ]
+    }
+  ],
+  "threadCount": {
+    "reddit": 6,
+    "steam": 0
+  }
+}

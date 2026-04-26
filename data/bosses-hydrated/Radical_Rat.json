@@ -1,0 +1,95 @@
+{
+  "name": "Radical Rat",
+  "hydratedAt": "2026-04-26T00:00:00.000Z",
+  "model": "claude-opus-4-6",
+  "synthesizer": "agent",
+  "confidence": "high",
+  "signalNotes": "6 Reddit threads with detailed bomb mechanic discussion plus a thorough wiki Strategies section.",
+  "commonStrategies": [
+    {
+      "text": "Defuse the bombs. Rat Bombs have 1 HP, so any attack destroys them. Prioritize bombs over hitting Radical Rat himself.",
+      "sources": [
+        "https://mewgenics.wiki.gg/wiki/Radical_Rat",
+        "https://www.reddit.com/r/mewgenics/comments/1r1fmdr/who_else_is_in_the_lost_to_radical_rat_club/"
+      ]
+    },
+    {
+      "text": "Spread your cats across the arena. Radical Rat's AI targets spots where 2+ cats are in the blast radius. Spacing out limits his efficiency.",
+      "sources": [
+        "https://mewgenics.wiki.gg/wiki/Radical_Rat",
+        "https://www.reddit.com/r/mewgenics/comments/1r4qpke/radical_rat_be_able_to_put_fire_on_the_whole/"
+      ]
+    },
+    {
+      "text": "Rush him down with melee. He has no close-range attack, so [[class:Fighter]] and [[class:Butcher]] can walk up and wail on him for free.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Radical_Rat"]
+    }
+  ],
+  "counters": [
+    {
+      "text": "[[ability:Tower Defense]] on a [[class:Hunter]] auto-defuses any bomb thrown within attack range. Set up in the center and bombs never go off.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Radical_Rat"]
+    },
+    {
+      "text": "[[status:Infested]] is a sleeper pick. The bugs kill bombs on their own and destroy the corpses so they can't chain-detonate.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Radical_Rat"]
+    },
+    {
+      "text": "Body-destroying abilities like [[ability:Desecrate]], [[ability:Dark Ritual]], and [[ability:Decompose]] clean up defused bombs before another explosion re-detonates them.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Radical_Rat"]
+    }
+  ],
+  "keyStatuses": [
+    {
+      "text": "Avoid anything that creates fire. [[status:Burn]] stacks, [[ability:Blessing of Holy Fire]], and fire-weather all instantly detonate bombs, causing chain reactions that can wipe your team.",
+      "sources": [
+        "https://mewgenics.wiki.gg/wiki/Radical_Rat",
+        "https://www.reddit.com/r/mewgenics/comments/1r4qpke/radical_rat_be_able_to_put_fire_on_the_whole/",
+        "https://www.reddit.com/r/mewgenics/comments/1r1fmdr/who_else_is_in_the_lost_to_radical_rat_club/"
+      ]
+    },
+    {
+      "text": "Rain weather defuses all bombs on landing, making the fight trivial. Check the weather before picking your path.",
+      "sources": [
+        "https://mewgenics.wiki.gg/wiki/Radical_Rat",
+        "https://www.reddit.com/r/mewgenics/comments/1r1fmdr/who_else_is_in_the_lost_to_radical_rat_club/"
+      ]
+    }
+  ],
+  "notableInteractions": [
+    {
+      "text": "Defused bombs stay on the ground and re-detonate if another bomb explodes near them. Always destroy defused bombs to prevent chain reactions.",
+      "sources": [
+        "https://mewgenics.wiki.gg/wiki/Radical_Rat",
+        "https://www.reddit.com/r/mewgenics/comments/1r4qpke/radical_rat_be_able_to_put_fire_on_the_whole/"
+      ]
+    },
+    {
+      "text": "His Turtle move makes him invulnerable at the end of each round and knocks back adjacent units. Don't stand next to him when the round ends.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Radical_Rat"]
+    },
+    {
+      "text": "Charming or reanimating bombs with [[ability:Reanimate]] is a trap. They still damage your own cats, and Radical Rat hides in his Turtle while they explode.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Radical_Rat"]
+    }
+  ],
+  "partyComps": [
+    {
+      "text": "[[class:Fighter]] + [[class:Hunter]] with [[ability:Tower Defense]]. Fighter rushes him down, Hunter auto-defuses bombs from range.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Radical_Rat"]
+    }
+  ],
+  "communityTips": [
+    {
+      "text": "The fight spirals out of control fast if you let even one bomb go off. Fire spreads, more bombs land on fire, and suddenly the whole arena is exploding.",
+      "sources": [
+        "https://www.reddit.com/r/mewgenics/comments/1r4qpke/radical_rat_be_able_to_put_fire_on_the_whole/",
+        "https://www.reddit.com/r/mewgenics/comments/1r1fmdr/who_else_is_in_the_lost_to_radical_rat_club/"
+      ]
+    }
+  ],
+  "threadCount": {
+    "reddit": 6,
+    "steam": 0
+  }
+}

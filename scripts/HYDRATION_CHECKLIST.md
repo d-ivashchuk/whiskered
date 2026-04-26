@@ -24,6 +24,12 @@ Every class, item, ability, status, and stat mention should be cross-referenced.
 - No hedging phrases like "it's worth noting", "consider", "it should be mentioned".
 - OK to be opinionated: "Avoid Fighters" not "Fighters may struggle".
 
+## Content rules
+
+- **No lore, trivia, or references.** Every bullet must be actionable gameplay advice. "He's a Mouser reference" or "they're decapitated dogs" is trivia, not a tip. If it doesn't help a player win the fight, cut it.
+- **No repetition across sections.** Each bullet must add NEW information. Before writing a bullet, check if the same advice already appears in another section. If commonStrategies says "rush with melee", counters should NOT repeat "melee classes are strong" — instead say something specific like "[[class:Fighter]] pairs well with high [[stat:SPD]] to reach bombs in one turn."
+- **Differentiate similar bullets.** If two sections must reference the same mechanic, each must give a distinct angle: one might explain the mechanic, the other a specific counter or timing window.
+
 ## Structure
 
 Each field is an array of `{ text, sources }`. Every claim needs at least one source URL.
@@ -42,5 +48,6 @@ Each field is an array of `{ text, sources }`. Every claim needs at least one so
 - [ ] Reads like a human wrote it, not an AI summary
 - [ ] Each bullet is self-contained (doesn't depend on reading the previous one)
 - [ ] Sources are real URLs from the bundle (wiki page or Reddit/Steam thread)
-- [ ] No duplicate information across sections
+- [ ] No duplicate information across sections — read all sections before writing each one
+- [ ] No lore, trivia, or pop culture references — every bullet is actionable gameplay advice
 - [ ] Validate with: `npx tsx scripts/validate-hydrated-bosses.ts`

@@ -1,0 +1,82 @@
+{
+  "name": "Queen Hippo",
+  "hydratedAt": "2026-04-26T00:00:00.000Z",
+  "model": "claude-opus-4-6",
+  "synthesizer": "agent",
+  "confidence": "high",
+  "signalNotes": "6 Reddit threads with substantive tactical commentary plus a detailed wiki Strategies section.",
+  "commonStrategies": [
+    {
+      "text": "You don't actually have to kill her. Queen Hippo starts with [[status:Brace]] 4 and loses one stack per round, dying automatically after 4 rounds. Stall and survive for a safe win, or kill fast for better clover rewards.",
+      "sources": [
+        "https://mewgenics.wiki.gg/wiki/Queen_Hippo",
+        "https://www.reddit.com/r/mewgenics/comments/1r7vb0q/you_may_not_like_it_but_this_is_the_ideal_queen/",
+        "https://www.reddit.com/r/mewgenics/comments/1r4aqr0/i_hate_queen_hippo/"
+      ]
+    },
+    {
+      "text": "Spread your cats to opposite sides of the arena. She can only chase one at a time, so the rest get free turns. Kiting with ranged classes like [[class:Hunter]] makes her barely a threat.",
+      "sources": [
+        "https://mewgenics.wiki.gg/wiki/Queen_Hippo",
+        "https://www.reddit.com/r/mewgenics/comments/1r4aqr0/i_hate_queen_hippo/"
+      ]
+    }
+  ],
+  "counters": [
+    {
+      "text": "Strip all 4 [[status:Brace]] stacks with [[ability:Bloodletting]], [[ability:Reset]], or [[ability:Dealer]] + [[item:Enema]] for an instant turn-1 kill.",
+      "sources": [
+        "https://mewgenics.wiki.gg/wiki/Queen_Hippo",
+        "https://www.reddit.com/r/mewgenics/comments/1r7vb0q/you_may_not_like_it_but_this_is_the_ideal_queen/"
+      ]
+    },
+    {
+      "text": "[[status:Slow]], [[status:Stun]], and [[status:Freeze]] stall her. She gains [[status:Movement Up]] each round, so locking her down early prevents her from ever reaching your cats.",
+      "sources": [
+        "https://mewgenics.wiki.gg/wiki/Queen_Hippo",
+        "https://www.reddit.com/r/mewgenics/comments/1rs9x6d/queen_hippo_after_punching_john_cat_the_fighter/"
+      ]
+    },
+    {
+      "text": "Familiars, bear traps, and summons like leeches make great speed bumps. She wastes her limited turns punching things that aren't your cats.",
+      "sources": ["https://www.reddit.com/r/mewgenics/comments/1r4aqr0/i_hate_queen_hippo/"]
+    }
+  ],
+  "keyStatuses": [],
+  "notableInteractions": [
+    {
+      "text": "Her Jab has 10-tile chain knockback and applies [[status:Bruise]]. Her Uppercut launches cats into the air, knocking back anything they land on. Clumped positioning turns one hit into a team-wide pileup.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Queen_Hippo"]
+    },
+    {
+      "text": "Bringing [[item:Zaratana's Collar]] or [[item:Pyrophina's Collar]] to summon Kaiju familiars draws her aggro, but she can't actually attack them. Possibly a bug, but it trivializes the fight.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Queen_Hippo"]
+    },
+    {
+      "text": "She starts with 2 bonus turns on round 1, so she swings before you can react. Position defensively at the start.",
+      "sources": ["https://mewgenics.wiki.gg/wiki/Queen_Hippo"]
+    }
+  ],
+  "partyComps": [
+    {
+      "text": "[[class:Hunter]] at range plus a [[class:Tank]] to absorb hits. Tank face-tanks rounds 1-2, Hunter chips from safety.",
+      "sources": [
+        "https://mewgenics.wiki.gg/wiki/Queen_Hippo",
+        "https://www.reddit.com/r/mewgenics/comments/1r4aqr0/i_hate_queen_hippo/"
+      ]
+    }
+  ],
+  "communityTips": [
+    {
+      "text": "Most players consider Queen Hippo harder than Radical Rat. She hits like a truck and you can't always choose which Alley boss you face.",
+      "sources": [
+        "https://www.reddit.com/r/mewgenics/comments/1r4aqr0/i_hate_queen_hippo/",
+        "https://www.reddit.com/r/mewgenics/comments/1r7vb0q/you_may_not_like_it_but_this_is_the_ideal_queen/"
+      ]
+    }
+  ],
+  "threadCount": {
+    "reddit": 6,
+    "steam": 0
+  }
+}

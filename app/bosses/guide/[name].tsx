@@ -3,8 +3,9 @@ import { RichText } from "@/components/rich-text";
 import { useThemeColors } from "@/lib/theme";
 import { getBossHydration } from "@/lib/game-data";
 import type { SourcedBullet } from "@/lib/game-data";
+import { getBossSprite } from "@/lib/sprites";
 import { useLocalSearchParams, Stack } from "expo-router";
-import { ScrollView, View } from "react-native";
+import { Image, ScrollView, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
@@ -45,6 +46,7 @@ export default function BossGuideScreen() {
 
   const decodedName = decodeURIComponent(name ?? "");
   const hydration = getBossHydration(decodedName);
+  const sprite = getBossSprite(decodedName);
 
   if (!hydration) {
     return (
@@ -65,6 +67,12 @@ export default function BossGuideScreen() {
         contentContainerStyle={{ paddingBottom: insets.bottom + 40 }}
       >
         <View className="px-5 pt-2">
+          {sprite && (
+            <View className="items-center pt-2 pb-1">
+              <Image source={sprite} style={{ width: 96, height: 96 }} resizeMode="contain" />
+            </View>
+          )}
+
           {hydration.commonStrategies.length > 0 && (
             <Section title="Common Strategies">
               <SourcedBulletList items={hydration.commonStrategies} theme={theme} />

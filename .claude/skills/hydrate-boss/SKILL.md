@@ -72,6 +72,8 @@ Write `data/bosses-hydrated/<BossName>.json` following the `HydratedBossSchema` 
 - Vary sentence structure
 - Each bullet is self-contained
 - Every claim must cite a source URL from the bundle
+- **NO lore, trivia, or pop culture references.** Every bullet must be actionable gameplay advice. "He's a Mouser reference" is trivia, not a tip.
+- **NO repetition across sections.** Before writing each section, re-read what you already wrote. If commonStrategies covers a mechanic, counters must add a NEW angle, not restate it. Each bullet must teach something the others don't.
 
 **Section guidelines:**
 - **commonStrategies** — General approaches. 2-4 bullets.
