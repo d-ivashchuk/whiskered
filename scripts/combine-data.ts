@@ -7,6 +7,8 @@ const DATA_DIR = path.resolve(__dirname, "../data");
 const ITEMS_DIR = path.join(DATA_DIR, "items");
 const CLASSES_DIR = path.join(DATA_DIR, "classes");
 const ABILITIES_DIR = path.join(DATA_DIR, "abilities");
+const BOSSES_DIR = path.join(DATA_DIR, "bosses");
+const BOSSES_HYDRATED_DIR = path.join(DATA_DIR, "bosses-hydrated");
 const SPRITES_DIR = path.join(DATA_DIR, "sprites");
 const TIERS_PATH = path.join(DATA_DIR, "tiers.json");
 const OUT_DIR = path.join(DATA_DIR, "combined");
@@ -683,6 +685,26 @@ function main(): void {
     cls.recommendedSets = recSets.sort();
   }
 
+  // ─── Step 4: Combine boss data ────────────────────────────────────────────
+
+  console.log("=== Step 4: Combining boss data ===\n");
+
+  const SKIP_BOSSES = ["Bosses.json"];
+  const rawBosses = loadJsonDir<Record<string, unknown>>(BOSSES_DIR, SKIP_BOSSES);
+  // Filter out entries without a real name (meta pages)
+  const combinedBosses = rawBosses
+    .filter((b) => b.name && b.name !== "Bosses")
+    .sort((a, b) => String(a.name).localeCompare(String(b.name)));
+  console.log(`  Bosses: ${combinedBosses.length}`);
+
+  // Combine hydrated boss data (if directory exists)
+  let combinedHydratedBosses: Record<string, unknown>[] = [];
+  if (fs.existsSync(BOSSES_HYDRATED_DIR)) {
+    combinedHydratedBosses = loadJsonDir<Record<string, unknown>>(BOSSES_HYDRATED_DIR, []);
+    combinedHydratedBosses.sort((a, b) => String(a.name).localeCompare(String(b.name)));
+    console.log(`  Hydrated bosses: ${combinedHydratedBosses.length}`);
+  }
+
   // ─── Step 5: Write output ────────────────────────────────────────────────
 
   console.log("=== Writing combined data ===\n");
@@ -698,6 +720,10 @@ function main(): void {
   fs.writeFileSync(path.join(OUT_DIR, "classes.json"), JSON.stringify(cleanedClasses, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, "abilities.json"), JSON.stringify(cleanedAbilities, null, 2));
   fs.writeFileSync(path.join(OUT_DIR, "sets.json"), JSON.stringify(combinedSets, null, 2));
+  fs.writeFileSync(path.join(OUT_DIR, "bosses.json"), JSON.stringify(combinedBosses, null, 2));
+  if (combinedHydratedBosses.length > 0) {
+    fs.writeFileSync(path.join(OUT_DIR, "bosses-hydrated.json"), JSON.stringify(combinedHydratedBosses, null, 2));
+  }
 
   // Copy status-effects.json to combined output if it exists
   const statusEffectsPath = path.join(DATA_DIR, "status-effects.json");

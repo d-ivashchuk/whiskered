@@ -1,0 +1,1104 @@
+[
+  {
+    "name": "Boris",
+    "kind": "boss",
+    "internalId": "Fatso",
+    "foundIn": "The Sewers",
+    "size": "2x2",
+    "attackStyle": "",
+    "stats": {
+      "health": "200",
+      "damage": "0",
+      "movement": "2",
+      "luck": "5"
+    },
+    "mainTheme": "Flush",
+    "attacks": [
+      {
+        "name": "Trample Dash",
+        "description": "Boris charges in a cardinal direction until it reaches a wall or static object, inflicting damage and knockback on any units in its path."
+      }
+    ],
+    "wikiBehavior": "Boris permanently has [[status:Trample]]. Boris automatically moves 1 tile towards whatever last damaged it. Boris takes four turns per round and will trample towards a target on each of them except the last.  On his last turn of the round, Boris will attempt to use Trample Dash before using his move, if no targets are in range he will use his move and end turn without dashing.",
+    "wikiStrategies": "* Because Boris moves to whoever damages it last, the player should keep their cats at a distance and attack from afar.\n* [[status:Immobile]], [[status:Stun]] and [[status:Sleep]] are extremely strong as they disable Boris' movement, which is his main form of damage.\n** His dash isn't disabled by [[status:Immobile]] and [[status:Entangled]].\n* [[class:Tank]] and [[class:Thief]] are especially good against Boris because of their high [[stat:CON]] and [[stat:SPD]] respectively. Thieves can keep out of Boris' range with their basic attack, and Tanks can shrug off the damage and keep Boris at bay with their knockback. Conversely, [[class:Fighter]] low [[stat:CON]] and low range gives them a very poor matchup against Boris.\n** [[class:Butcher]] can safely attack Boris diagonally, as whichever direction Boris moves cannot hit them unless they are directly adjacent to it. Its 2x2 hitbox also makes it an easy target for their [[item:Meat Hook]]. \n* Damage-over-time effects are especially good against Boris, as it can damage it without proccing its movement.\n* Anything with at least 1 knockback can keep your cat from being trampled.\n* [[status:Trample]] immunity can completely trivialize most of the fight as Boris will only be able to harmlessly push any immune units around. Familiar focused builds such as [[ability:Nature's Guidance]] can easily damage Boris while the cat itself stays out of harm's reach.\n* A [[class:Tank]] with high [[stat:CON]] and [[status:Thorns]] can help make Boris a quick fight.\n* Some level layouts have a safe spot where Boris can't reach your cats because he's a 2x2 enemy.\n* Boris can be manipulated into hitting the [[obj:Spiky Rock]] in each corner with his dash or with knockback attacks.",
+    "wikiNotes": "* Boris's rare, unique boss drops are [[item:Blubber]] & [[item:Boris' Brain]].\n* Boris is [[type:Cat]] and [[type:Blob]] enemy.",
+    "wikiQuotes": [
+      "Blub blub",
+      "Glub glub",
+      "Snort... fart",
+      ". . .",
+      "Grumble grumble"
+    ],
+    "wikiTrivia": "* Boris was the second boss ever implemented into the game. It lacked its reaction to damage mechanic and instead would dash away and fart when hit from behind. Due to this not being fun, Boris was redesigned when it was added to The Sewers.\n* Boris was present in the Team Meat prototype as one of the many opponents in Butch's Cat Fights, making him one of the oldest characters in the game.\n* His internal nickname within the games files is 'Fatso'.\n* His swollen lips and eyelids, bluish skin, and abdominal bloating are consistent with cyanosis, which can be caused by low oxygen from drowning. \n** His happy expression in his champion variant might be due to the holes on his back, which could've let the built-up gases inside him free and made his condition less painful.",
+    "spritePath": "data/sprites/bosses/Boris.png",
+    "categories": [
+      "Cats",
+      "Blobs",
+      "Brain PatternBrain",
+      "Decision weight default",
+      "Movement stay close"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Boris"
+  },
+  {
+    "name": "C-1000",
+    "kind": "boss",
+    "internalId": "Terminator2",
+    "foundIn": "House",
+    "size": "1x1",
+    "attackStyle": "",
+    "stats": {
+      "health": "",
+      "damage": "",
+      "movement": "",
+      "luck": "5"
+    },
+    "mainTheme": "Taser Paws",
+    "attacks": [],
+    "wikiBehavior": "* C-1000 starts the fight with [[status:Dodge Chance]]. \n** Any move that any unit takes will cause C-1000 to move towards it. \n** Each time C-1000 moves, it will lose 10% dodge chance and gain [[status:Speed Up]]. \n** If an attack on C-1000 misses, C-1000 will teleport to a random tile nearby and lose 10% dodge chance.\n* Once it is adjacent to your cat, on C-1000's turn, it will copy it, inheriting all of its stats (except constitution and stat ups), abilities and items, and clearing all debuffs and dodge chance. \n** After one turn as the copied cat, C-1000 will turn back to its original form and have 100% dodge chance again and no additional speed. The pattern then repeats.\n* Has a stabbing attack that ignores [[status:Shield]] and [[status:Holy Shield]].",
+    "wikiStrategies": "* C-1000 is a very challenging boss. Its ability to copy cats makes it extremely hard to win against it using \"conventional\" methods (i.e. sending fairly strong retired cats against it), since by using strong cats you're risking them being copied by C-1000, which can lead to a disaster very quickly. As such, using cheese strategies may be much less time-consuming and easier than trying to compile a perfect team against this boss.\n** One such strategy includes finding a [[item:DNA Multiplier]] item and a stray cat with [[ability:Invert]]. Using this combo your cat can easily one-shot the boss.\n**Self harming attacks such as [[ability:Body Slam]] (specifically when C-1000 copies a cat) and [[ability:Blood Geyser]], while dangerous, can end the fight quicker. \n* Abilities or items that inflict the [[status:Marked]] debuff are extremely valuable, since physical attacks are guaranteed to hit. Just be careful to not let C-1000 copy your marking cat, as it WILL use the debuff against your cats too, which can end in disaster.\n* General strategy revolves around forcing C-1000 to copy weak cats by sending them closer to it as bait.\n* If you have an extremely overpowered cat that could end the fight in 1-3 rounds, it may be beneficial to send it along 3 weak strays as bait instead of relying on strong teammates, to make sure C-1000 can't do any real harm to the OP cat.\n* Cats with low damage output and mobility but high constitution are a great candidate to send as bait for copying. High constitution will not be a disadvantage as C-1000's health functions separately.\n* C-1000 does not move when familiars move, so a team of multiple [[class:Druid]] can easily pen it in with familiars, forcing it to use only its weak basic attack until it can break free.\n* Cats with high mobility or teleport abilities can decrease the chances of more powerful cats being copied. But however, The increase in speed every turn makes this tactic more difficult.\n**Controllable familiars, such as squirrels, make for a great distraction.\n* Cats with the ability to \"block\" damage (such as via the Tank's [[ability:Hard Head]]) can trivialize the fight, as C-1000 will repeatedly attempt and fail to copy that cat once it is adjacent to it.\n** However, [[status:Holy Shield]]'s damage mitigation effect will not stop C-1000's copying ability.\n** [[item:Frying Pan]] blocks damage from behind and automatically counterattacks. If you're in a situation where C-1000 is adjacent to the cat wearing the Frying Pan, make sure to have it face away from the boss to avoid being copied and get a free hit. Be mindful that your cat will turn around once this happens, making them vulnerable to copying, so make sure you have the means to get C-1000 away.\n* [[status:Fear]] is an extraordinarily strong debuff to use against C-1000. Being able to apply it en-masse will render the scarier aspects of C-1000's abilities invalid, as being forced to waste its move action on running away means it cannot attack or transform.\n* One easy way to win this fight is to have a bait cat with the ability [[ability:Backflip]]. [[status:Backflip]] will automatically dodge C-1000's attempts to copy the cat. You can then send the cat with backflips to stand adjacent to the 2x2 lava pool, and C-1000 will continually meander through the lava, failing to stab and copy the backflip cat. Just make sure to cast backflip at least twice per turn on the bait cat, and just walk in circles around the lava pool. C-1000 will quickly accumulate burn stacks and never be able to copy your cat.\n* The [[item:Blackjack]] weapon can be invaluable as every time C-1000 targets the cat they will swipe at them causing them to teleport away functionally losing their turn.\n* C-1000 lacks attacks or spells capable of quickly clearing out low health enemies, dead bodies, or objects, in his standard form as such it is possible to prevent him from moving and copying your cats abilities by blocking him in with familiars\n** One reliable way of doing this is to equip the [[item:Crown of Pestilence]] on a cat with the [[ability:Leech Mother]] which will result in the entire board being filled with leaches whenever you attack\n* If the copied cat has [[item:Death's Scythe]], C-1000 will use it and then promptly die at the end of that turn, allowing the player to win without ever needing to attack.\n** If the copied cat has a item that makes it so physical attacks/abilities miss such as [[item:Mystical Blindfold]], C-1000 will not use [[item:Death's Scythe]]\n* If the copied cat has [[item:Self-Destruct Button]], C-1000 will foolishly blow itself up, immediately ending the fight.\n* If the copied cat has Singleton, C-1000 will copy the cats 1 single point of health, setting its health all the way down to 1 once it transforms back into its main form. This can be used to trivialize the fight.\n* If the copied cat has [[ability:Full Force]], C-1000 will keep using this ability and be stunned, letting themself be vulnerable to attacks. This is at a cost of one of your cats being stunned too.\n*A passive such as [[ability:Bullseye]] or items such as [[item:Third Eye]],[[item:Monocle]], and [[item:Man's Glasses]] can completely bypass the C-1000's Dodge status even at 100% as they make sure your attacks never miss no matter what, meaning heavy hitting moves like [[ability:Heavy Shot]] can decimate the C-1000 in just a few turns.\n* If any of your cats know [[ability:Toss]] or [[ability:Rough Toss]], you can throw C-1000 into the lava while it's transformed, allowing you to stack up burn damage and distance the boss from your cats.\n* Abilities like [[ability:Dump]], [[ability:Super Crate Box]], or any other ability or item that can create obstacles allows you to wall a [[class:Hunter]] in, giving your team some extra safety from C-1000, making it more difficult to copy them. Familiar spam and [[class:Tinkerer]] stationary turrets do the trick too.\n*C-1000 will not copy certain skills like [[ability:Russian Shorthair Roulette]] even if it's the only skill your bait cat has.\n*If the copied cat has [[ability:Rest]], C-1000 will use it at the end of its turn, preventing it from changing back from the bait cat.\n*[[ability:Reset]] does not seem to effect C-1000 while it's copying a cat, allowing the team to fully revive and heal without also healing the boss.",
+    "wikiNotes": "",
+    "wikiQuotes": [],
+    "wikiTrivia": "* Much like the C-800, the C-1000 is based on and named after the Terminator franchise, specifically the T-1000 model from Terminator 2: Judgement Day.\n** The pool of Lava during this battle also references the movie, where the T-1000 is eventually destroyed after being pushed into molten steel in a foundry.\n*As with the C-800, the \"C\" in the name C-1000 most likely stands for \"Cat\".",
+    "spritePath": "data/sprites/bosses/C-1000.png",
+    "categories": [
+      "Cats",
+      "Robots"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/C-1000"
+  },
+  {
+    "name": "C-800",
+    "kind": "boss",
+    "internalId": "Terminator1",
+    "foundIn": "House",
+    "size": "1x1",
+    "attackStyle": "",
+    "stats": {
+      "health": "",
+      "damage": "",
+      "movement": "",
+      "luck": "7"
+    },
+    "mainTheme": "Taser Paws",
+    "attacks": [],
+    "wikiBehavior": "C-800's primary method of attacking the player is through the use of explosive [[obj:Grenade]] and various firearms.  \nC-800 starts the fight with 50 stacks of [[status:Brace]]. These stacks will decrease by 1 for each tick of damage the boss takes, or whenever it is hit by an exploding grenade. The Boss' appearance becomes more visibly robotic as the stacks of brace are depleted.\n* At the start of Each Round, the C-800 will throw two [[obj:Grenade]] around the battlefield. These grenades will explode at the end of the round in a 2-tile radius, and remove stacks of buffs from whatever they hit.\n* Each Turn, C-800 will switch to a random firearm and then attack with it at the start of their next turn.   There are three firearms that the boss alternates between:\n** [[item:Shotgun]] - This fires in an expanding cone of up to three tiles in length, dealing more ticks of damage to targets closer to C-800.\n** [[item:Sniper Rifle]] - This is a high-damage single-target shot that can target anything within line-of-sight.\n** [[item:Submachine Gun]] - This fires multiple bullets consecutively at the targeted cat within range and line of sight.\n* Whenever a cat casts a spell, C-800 will walk towards them by one tile. If C-800 reaches the cat through this method or the player's cat end its turn in front of C-800, it will perform a melee attack that will stun the victim for one turn.\n*If C-800 starts its turn adjacent to any (player) allied unit, it will grab them and perform a multi-hit melee attack that does extreme damage.\n** This attack can also be used on downed cats - often killing them instantly due to its \"multi-hit\" nature.",
+    "wikiStrategies": "* C-800, like most of the house bosses, is an endurance test. The player will need to ensure that their cats are able to survive the barrage of firearm attacks long enough for C-800's brace stacks to get low enough so that real damage can start to be dealt.\n*[[ability:Bloodletting]]/[[ability:Reset]] can instantly remove all of C-800's brace in one turn.\n**The same effect can be achieved by a cat with the [[ability:Dealer]] passive and the [[item:Enema]] item.\n* [[status:Brace]] is a powerful way of mitigating the damage from the Shotgun and Machine Gun attacks, as each bullet/pellet will be summarily reduced in damage. While [[status:Holy Shield]] is helpful in dealing with the Sniper Rifle shots.\n* [[status:Reflect]] is extraordinarily powerful buff to have against C-800, allowing the players' cats to both prevent incoming damage and strip stacks of [[status:Brace]] faster.\n* [[status:Thorns]] can be used to great effect to help reduce the stacks of [[status:Brace]], as each hit in the melee combo will trigger the damage and strip another layer of the buff.\n* C-800's grenades can be used against it. Although the player will need access to some kind of knockback or other displacement, as the boss will seldom finish their turn in range of the explosion.\n* Do not carelessly use spells. Being caught by C-800's melee combo is a death sentence for all but the tankiest of cats.\n*Fighters can apply hit and run tactics using [[ability:Bull Rush]]. This consist of getting close to the boss by the side or rear, hitting him with a basic attack and then using Bull Rush to run away. Using this spell makes C-800 poorly try to follow the cat exposing his back.\n*Tanks also can use hit and run tactics with [[ability:Goad]]. Consists on using this skill, then punching him with its basic attack and retreat.\n*If C-800 is hit by a cat with the passive [[ability:Hack]], C-800 will instantly lose all its [[status:Brace]].\n* Stacking damaging status effects such as [[status:Poison]] and [[status:Bleed]] can help chip down C-800's [[status:Brace]] passively.\n* Every hit of the C-800's grapple response other than the first count as a backstab.  The humble [[item:Frying Pan]] can massively reduce damage, prevent the stun, and allow for counter attacks.\n*A [[class:Monk]] with [[ability:Running Jab]] and a movement spell such as [[ability:Sidestep]] or [[ability:Cartwheel]] can reliably whittle down the C-800's Brace from afar, provided it makes sure to keep its distance.",
+    "wikiNotes": "",
+    "wikiQuotes": [
+      "Meowsta la vista, baby.",
+      "Chill out, dickwad!",
+      "I need your Fur, your paws, and your motorcycle."
+    ],
+    "wikiTrivia": "* C-800 is an obvious reference to the T-800 model Terminator portrayed by Arnold Schwarzenegger in the [[url:https://en.wikipedia.org/wiki/Terminator_(franchise)|Terminator]] franchise.\n* The \"C\" in the name C-800 most likely stands for \"Cat\".\n* All three of C-800's boss quotes reference quotes from T-800 in Terminator 2 (1991).\n* C-800’s turn order icon resembles a Tom Tom, as well as his general appearance.",
+    "spritePath": "data/sprites/bosses/C-800.png",
+    "categories": [
+      "Cats",
+      "Robots"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/C-800"
+  },
+  {
+    "name": "Chaos!",
+    "kind": "boss",
+    "internalId": "Chaos",
+    "foundIn": "The Rift",
+    "size": "2x2",
+    "attackStyle": "",
+    "stats": {
+      "health": "400",
+      "damage": "8",
+      "movement": "0",
+      "luck": "5"
+    },
+    "mainTheme": "Bolt Of Lightning",
+    "attacks": [],
+    "wikiBehavior": "",
+    "wikiStrategies": "",
+    "wikiNotes": "",
+    "wikiQuotes": [],
+    "wikiTrivia": "* The champion version of the small Stevens resembles Ash from The End is Nigh.\n* All text surrounding Soahc is reversed. Including his description and abillity names.\n* Soahc's behavior is similar to Delirium from The Binding of Isaac, one of Edmund's previous games. Both entities represent a larger concept (\"the light at the end of the tunnel\" and chaos, respectively) and their fights both feature copying the attacks of other bosses. The Rift is also similar in concept to The Void, the Isaac stage where Delirium is fought.\n* Soahc's Intro Portrait goes unused in the game, due to the fact that it shows up immediately after the player defeats the Organ Grinder and Steven.\n* The voice for Soahc's in-game sounds and the secondary vocalist in his music theme Bolt Of Lightning are very similar. Other boss themes in the game, such as Guillotina, are sung by the boss in question, though it is unknown whether or not that is intended to be the case for Bolt Of Lightning.\n*Soahc’s Hsulf attack has the animation of Flushmaster’s Flush but played backwards.\n*During the transition between phases, a backwards voice (presumably Soahc itself) can be heard saying \"Chaos is coming.\" This makes Soahc one of the few characters in Mewgenics to have fully spoken voice lines, alongside mb, Cop Bot, Jack, Hitler II and Hitler III.\n* A cat which initially appears visually identical to Gun (besides various acquired mutations) is featured in all of the gameplay clips in the Mewgenics Release Date Trailer.\n*Gun's appearance and usage as a gun might be a reference to Garry's Mod addon [[url:https://steamcommunity.com/sharedfiles/filedetails/?id=827320827|M1A0 Cat Gun]]",
+    "spritePath": "data/sprites/bosses/Chaos_.png",
+    "categories": [
+      "Cats",
+      "Blobs",
+      "Humanoids",
+      "Brain PatternBrain",
+      "Decision weight default",
+      "Movement gunslinger reposition",
+      "Brain GenericBrain",
+      "Movement stay close always move",
+      "Movement chaos always move"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Chaos!"
+  },
+  {
+    "name": "Chubs & Nubs",
+    "kind": "boss",
+    "internalId": "Nubs",
+    "foundIn": "The Junkyard",
+    "size": "1x1",
+    "attackStyle": "",
+    "stats": {
+      "health": "",
+      "damage": "",
+      "movement": "",
+      "luck": "5"
+    },
+    "mainTheme": "Chumbucket Kitty",
+    "attacks": [],
+    "wikiBehavior": "",
+    "wikiStrategies": "* Because Chubs and Nubs are blind, they will not always prioritize moving towards the player's units.\n* Chubs and Nubs' attacks will gain new properties after one of them is killed. The player should keep this in mind as they choose which dog to pick off first.\n* Since Chubs shoots a projectile in a straight line & Nubs shoots a projectile 3 tiles in front of them when they're damaged, a potential strategy is to try to make them stand in front of each other and damage one of them. This makes them damage each other over and over again until one of them is dead. This strategy is best executed with some form of knockback, such as with a [[class:Tank]].\n** If the player can't pull off the above strategy, damaging both dogs at the same time is still the most ideal strategy for this fight, as they'll spend less turns with an enraged Chubs/Nubs once one of them dies.\n** Chubs has a higher Strength and Speed stat, while Nubs has lower HP, but places debilitating Creep tiles. While Nubs seems like an easier target, it may be useful to take out Chubs to keep him from approaching.\n*** A team with a higher overall [[stat:SPD]] can effectively target Chubs first, as its members will be able to more easily escape Nubs's Nuke.",
+    "wikiNotes": "* The rare, unique boss drops are split between the 2 bosses.\n** Chubs can rarely drop [[item:Chub's Collar]].\n** Nubs can rarely drop [[item:Nubs Collar]].\n* Cannot gain: [[status:Elite Buff: Twin]]",
+    "wikiQuotes": [
+      "Bork Bork   Ruff Roff",
+      "Arf Gorf!   Yiff yiff!",
+      "Cough sputter   Horf!",
+      "Gurgle gurgle   Wimper...",
+      "RoooF blurp!   Gurgle..."
+    ],
+    "wikiTrivia": "* Chubs 'n' Nubs are one of the only instances of dogs in the game, alongside Half-Dog, and Mb, and those that randomly appear in the intro cutscene.\n* The fact that Chubs 'n' Nubs are still alive despite being decapitated could be a reference to [[url:https://en.m.wikipedia.org/wiki/Mike_the_Headless_Chicken|Mike the Headless Chicken]], a Wyandotte Chicken who managed to survive for 18 months after having his head cut off.\n* Chubs 'n' Nubs' names are very similiar to the ones attributed to the bodies of the unused The Binding of Isaac Repentance boss Cadavra, known in the files as Chubs and Nibs.\n* Despite their blindness being a part of their enemy behavior, Chubs 'n' Nubs do not actually have the [[status:Blind]] status effect.",
+    "spritePath": "data/sprites/bosses/Chubs___Nubs.png",
+    "categories": [
+      "Dogs",
+      "Brain PatternBrain",
+      "Decision weight blind",
+      "Movement chubs_and_nubs_blind"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Chubs_%26_Nubs"
+  },
+  {
+    "name": "Crater Maker",
+    "kind": "boss",
+    "internalId": "AlienBeast",
+    "foundIn": "The Crater",
+    "size": "3x3",
+    "attackStyle": "",
+    "stats": {
+      "health": "",
+      "damage": "",
+      "movement": "",
+      "luck": "5"
+    },
+    "mainTheme": "Feline Invader",
+    "attacks": [
+      {
+        "name": "Crater Howl!",
+        "description": "Damages every other unit, with a chance to inflict either [[status:Stun]] or [[status:Immobile]]."
+      },
+      {
+        "name": "Consume!",
+        "description": "Targets one tile in front of her mouth, eating any units on it. Any unit will be killed and have their corpse destroyed if eaten. * This attack can destroy inanimate Objects."
+      },
+      {
+        "name": "Pukewave!",
+        "description": "Fires creep projectiles in a 2×2 diagonal pattern."
+      },
+      {
+        "name": "Rampage!",
+        "description": "Charges back and forth two times, trampling anything in the way. She will first charge forwards then backwards. She will stop at her original location but face the opposite direction she had before."
+      }
+    ],
+    "wikiBehavior": "Crater Maker takes up 3x3 tiles and has [[status:Trample]]. On her first turn, Crater Maker will try to move towards the player's cats and then will prime an attack she uses in her second turn. The player's attacks also change the pattern of the boss next attack, which always follows the same cycle. Either before she primes or after her primed attack, she moves in one direction and attacks the three tiles in front of her. She passively shoot six projectiles from her sides when damaged by most sources. These projectiles have infinite range.",
+    "wikiStrategies": "* Positioning is important: avoid facing either of her sides and reposition when the boss moves as to not kill your cats. \n** [[status:Fear]] will cause Crater Maker to move before activating her primed attack. Inflicting this effect can make the fight unpredictable (although it can be used to save a cat that would otherwise be consumed).\n* Damage-Over-Time effects such as [[status:Burn]] or [[status:Poison]] will not cycle her primed attack.\n** Nor will tile effects. This can be exploited should the player choose Weather earlier on, as cycling the Crater Maker's attack to Rampage! can cause them to take large amounts of damage from running over [[obj:Bramble]]\n* The boss attack will not cycle if it is stunned, nor will it counterattack on the sides.\n** If she is [[status:Stun]] on her second turn, she will not do her primed attack and the cycle will reset.\n* To manage her attack pattern to their advantage, the player has to be aware of the number of times they inflict damage to the boss each turn. They should especially pay attention to their uncontrollable familiars or cats (should they have an effect like [[status:Madness]]).\n** A good idea is to have melee attackers attack her from behind; they can rotate out her attacks, potentially making her use Consume! and do nothing.\n** If uncontrollable units pose too great of a risk, intentionally downing them could make the fight more predictable.",
+    "wikiNotes": "* Crater Maker's rare, unique boss drops are: [[item:Friendly Amoeba]] & [[item:Alien Stalk]].\n* Allied Carnibulbs deal 25 damage instead of killing her instantly.\n* Pet Rocks do not trigger the attack change on hit.",
+    "wikiQuotes": [
+      "OoOoOoOoOoOoOoOoOoOoOo!!!",
+      "*Meat clapping sounds*"
+    ],
+    "wikiTrivia": "* Her internal nicknames are 'Alien Beast' and 'Alien Queen'. In a screenshot in the game's [[url:https://store.steampowered.com/app/686060/Mewgenics/Steam|Steam]] page, she is referred to as the latter.\n* It's heavily implied through her theme, [[url:https://mewgenics.wiki.gg/wiki/Feline_Invader|Feline Invader]], that Crater Maker is an alien fungus, a viral and paranormal, sentient mold colony that came down with the meteorite that formed [[chapter:The Crater]].\n** Alternatively, she may be composed of a similar substance as the Amoebas as she possesses stalks similar to the stalks on their bodies. Additionally, both of her unique boss drops belong to the Amoeba set.",
+    "spritePath": "data/sprites/bosses/Crater_Maker.png",
+    "categories": [
+      "Aliens",
+      "Brain PatternBrain",
+      "Decision weight default",
+      "Movement stay close",
+      "insta-killers"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Crater_Maker"
+  },
+  {
+    "name": "Dreadnoughtus",
+    "kind": "boss",
+    "internalId": "MegaDinoHead",
+    "foundIn": "The Jurassic",
+    "size": "3x3",
+    "attackStyle": "",
+    "stats": {
+      "health": "550",
+      "damage": "0",
+      "movement": "0",
+      "luck": "5"
+    },
+    "mainTheme": "Tuff",
+    "attacks": [],
+    "wikiBehavior": "",
+    "wikiStrategies": "",
+    "wikiNotes": "* Dreadnoughtus's rare, unique boss drops are: [[item:Mega Poop]] & [[item:Green Whistle]].\n* Each segment of the boss will be its own elite type during Hard mode.\n* Cannot gain [[status:Elite Buff: Twin]].\n* Poop Cat will inherit the Head's Elite type, and as it is a non-boss elite, has double the health and an additional turn, making it considerably more dangerous.",
+    "wikiQuotes": [],
+    "wikiTrivia": "* [[url:https://en.wikipedia.org/wiki/Dreadnoughtus|Dreadnoughtus]] is based on a real species of titanosaurian sauropod dinosaur.\n** Fossil records indicate that the sauropod lived during the Late Cretaceous period (approximately 76-70 million years ago), but this particular Dreadnoughtus is present during the Jurassic period (201 - 405 million years ago).\n** The species name Dreadnoughtus, as coined by [[url:https://en.wikipedia.org/wiki/Kenneth_Lacovara|Kenneth Lacovara]], means \"fear nothing\". However, this Dreadnoughtus can be inflicted with the [[status:Fear]] status effect.\n** Dreadnoughtus fossils have been discovered in the southern Patagonia region of Argentina, implying that the [[chapter:Jurassic]] could potentially be within that geographic region.\n*** However, the presence of most of the other dinosaur enemies within the [[chapter:Jurassic]] contradicts this; fossils from species such as Stegosaurus have been found in the Western US and Portugal, while T-Rex fossils have only been found north of the Equator.\n*The fight, being a battle against gigantic legs with an unseen body, may be a reference to Mom's boss fight in The Binding of Isaac.\n*The tooltip for the head indicates that Dreadnoughtus is male.\n*Dreadnoughtus' corpse cannot be destroyed by attacking it.",
+    "spritePath": "data/sprites/bosses/Dreadnoughtus.png",
+    "categories": [
+      "Dinosaurs",
+      "Brain PatternBrain",
+      "Decision weight careless",
+      "Movement stay close",
+      "Brain NoBrain"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Dreadnoughtus"
+  },
+  {
+    "name": "Dybbuk",
+    "kind": "boss",
+    "internalId": "Dybbuk",
+    "foundIn": "The Boneyard",
+    "size": "1x1",
+    "attackStyle": "",
+    "stats": {
+      "health": "",
+      "damage": "",
+      "movement": "",
+      "luck": "5"
+    },
+    "mainTheme": "Them Kitty Bones",
+    "attacks": [],
+    "wikiBehavior": "Dybbuk will [[status:Backflip]] away from most sources of damage, moving one tile in any direction as long as there is an unoccupied tile adjacent to him.\n\nWhen he takes fatal damage, he will be left at 1 HP instead of dying. Dybbuk will then [[status:Possessed by Dybbuk]] the cat who dealt the fatal blow, unless there is an already downed cat, upon which he will possess that instead. The possessed cat will attack its allies until it is downed, at which point Dybbuk will exit the cat's body and can be killed normally. If there are no other cats, Dybbuk will exit the cat's body and deal damage equal to a third of the cat's maximum health, rounded down. \n\nIf there is only one cat present in the battle, Dybbuk will still possess it, but will only be able to attack any familiars that it can reach. However, if the solo cat owns any self damaging spells, Dybbuk will use them as much as possible during possession to cause more damage to the cat on its turn. At the end of its turn it performs a move called Stop Hitting Yourself, damaging the possessed cat in a way seemingly identical to [[status:Confusion]], before exiting the cat's body and becoming vulnerable to a killing blow as normal.",
+    "wikiStrategies": "",
+    "wikiNotes": "* Dybbuk's rare, unique boss drops are: [[item:Coffin Armor]] & [[item:Dybbuk's Rib]].\n* Dybbuk cannot gain [[status:Elite Buff: Twin]].\n* If a cat suffers of Severe Deja Vu, it won't be able to use Stop Hitting Yourself to free itself from [[status:Possessed by Dybbuk]] when left as the last cat standing or when playing a solo run.",
+    "wikiQuotes": [
+      "Time to spoil those good looks!",
+      "''I can't wait to see what you look like from the inside!''",
+      "''Tag! You're it!''",
+      "''Can't touch this!''",
+      "Not even Death can catch me!"
+    ],
+    "wikiTrivia": "* In Jewish mythology, a wikipedia (/ˈdɪbək/, ultimately from the Hebrew verb דָּבַק dāḇaq meaning adhere or cling) is a vengeful spirit that possesses a living person’s body in order to use it as a host.\n* Dybbuk appears in the cutscene which plays after unlocking the Boneyard. It serves to explain why the buried dead hate him enough to pull him into the earth (after his third phase).\n*According to Edmund, Dybbuk's design was partially inspired by the Pokémon Gengar. \n* The stitched section on Dybbuk's abdomen resembles a Y-incision, often done on bodies for autopsy.\n** This stitch is common in Edmund McMillen's art and is used as a shorthand to signify undead characters.\n* Dybbuk appears to have a wikipedia to some degree.",
+    "spritePath": "data/sprites/bosses/Dybbuk.png",
+    "categories": [
+      "Cats",
+      "Ghosts",
+      "Brain PatternBrain",
+      "Decision weight default",
+      "Movement keep distance"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Dybbuk"
+  },
+  {
+    "name": "Gambit",
+    "kind": "boss",
+    "internalId": "Gambit",
+    "foundIn": "The Desert",
+    "size": "1x1",
+    "attackStyle": "",
+    "stats": {
+      "health": "",
+      "damage": "",
+      "movement": "",
+      "luck": "10"
+    },
+    "mainTheme": "Lonesome Road",
+    "attacks": [
+      {
+        "name": "Melee Attack",
+        "description": "Hits an adjacent unit for 5 damage. Gambit will use this on its first turn, either on its D6 or another nearby unit."
+      },
+      {
+        "name": "0: Fizzle",
+        "description": "Gambit attacks itself in a manner identical to [[status:Confusion]]. Only occurs during Gambit's final turn in a round, if its die is not present."
+      },
+      {
+        "name": "1: Confusion",
+        "description": "Inflicts confusion on itself."
+      },
+      {
+        "name": "2: Poop",
+        "description": "Spawns a poop."
+      },
+      {
+        "name": "3: Lazer",
+        "description": "Jumps, then fires a Magic Damage laser beam in a straight line."
+      },
+      {
+        "name": "4: Quake",
+        "description": "Jumps, then fires an el in all diagonal directions, inflicting Magic Damage, knockback, and [[status:Bruise]] 1."
+      },
+      {
+        "name": "5: Storm",
+        "description": "Fires el in a 5×5 diamond, inflicting Magic Damage and [[status:Stun]]."
+      },
+      {
+        "name": "6: Wrath",
+        "description": "Summons many el over the entire board at random. Each explosion does 10 damage and applies 3 [[status:Burn]]."
+      }
+    ],
+    "wikiBehavior": "Gambit takes three turns per round. On its first and second turn if not already present, Gambit will throw a D6 onto the field. When it lands, the number facing up will indicate which attack Gambit will use at the end of the round, and its fur color and forehead symbol will also change to match. Damaging the D6 will send it flying and \"reroll\" the pending attack. \n\nIf the D6 is already on the field and it has a value of 3 or below, Gambit will try to move to it and punch it in an attempt to get a more favorable number. If possible, Gambit will launch it at one of your cats for knockback damage. If Gambit can't reach the D6 or it has a value of 4 or above, it will instead punch the nearest cat.\n\nOn the last turn of the round, Gambit will always jump to the D6, consume it, and perform an attack based on the number rolled. If the D6 is not present during Gambit's last turn, then the attack will fail and it will damage itself.",
+    "wikiStrategies": "* Attempt to hit the D6 when it's 4 or more. At that point, the probability of rolling a weaker attack is greater than rolling a stronger one. \n* Surrounding the D6 with allies, rocks, or other movement blockers can prevent Gambit from rerolling it in its second turn when it has a low value you want to keep.\n* Whether a cat moves before or after Gambit's second move can be really important, as Gambit will often reroll the D6 during its second move. So, it's often better to have the cats which move before Gambit attack the boss, and the cats which move after focus on re-rolling the D6.\n** Gambit is a very easy boss, as long as the player has the movement or range to chase the D6 and reroll it.\n* Summons which attack automatically can be detrimental in this fight, if they decide to attack Gambit's D6.\n* Effects that destroy inanimate objects can destroy the D6 to negate Gambit's final attack. For best results, use them after its second turn when it can't rethrow the die.\n* Inflicting [[status:Confusion]] on Gambit can cause it to never roll its D6 and damage itself.",
+    "wikiNotes": "* Gambit's rare, unique boss drops are: [[item:Snake Eyes]] & [[item:Gambit's Dice]].\n* Cannot gain: [[status:Elite Buff: Twin]]",
+    "wikiQuotes": [
+      "''You can prepare all you want, but if you never roll the dice, you'll never be a winner!''",
+      "Everybody knows the dice are loaded.",
+      "The die has been cast!",
+      "Things are about to get dicey!",
+      "''They see me rollin'...''"
+    ],
+    "wikiTrivia": "* The VS quote “They see me rollin’…” is a reference to the song [[url:https://www.youtube.com/watch?v=CtwJvgPJ9xw|\"Ridin'\"]] by Chamillionaire.\n* The VS quote \"The die has been cast\" may be alluding to the saying 'The die is cast', which is most famously associated with Julius Caesar's crossing of the rubicon in 49 BC.\n* Gambit’s D6 resembles the The D6 from The Binding of Isaac.\n* The pips on Gambit's D6 appear to be bulletholes, suggesting a connection with Zodiac.\n* Edmund has called Gambit's visual design \"the most phoned in\" on [[url:https://x.com/edmundmcmillen/status/2031613408056062066|Twitter]].\n* Gambit is one of the few alternate bosses that must be unlocked, along with Queen Hippo, mb, mb and mb, as each can only be fought after the player has completed their respective area at least once. There are commented out notes that imply this is intentional, only serving to ensure the player first fights the other mini-boss or boss first.",
+    "spritePath": "data/sprites/bosses/Gambit.png",
+    "categories": [
+      "Cats",
+      "Brain DicerBrain",
+      "Decision weight always cast",
+      "Movement keep distance always move"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Gambit"
+  },
+  {
+    "name": "Guillotina",
+    "kind": "boss",
+    "internalId": "Guillotina1",
+    "foundIn": "House",
+    "size": "2x2",
+    "attackStyle": "",
+    "stats": {
+      "health": "",
+      "damage": "",
+      "movement": "",
+      "luck": "5"
+    },
+    "mainTheme": "Guillotina (Song)",
+    "attacks": [],
+    "wikiBehavior": "Guillotina takes up 4 tiles in a 2x2 and starts with Trample. She has three actions per round. She will attempt to walk within melee range and use an attack at random, or Inhale faraway units. \n* Inhaled units have a chance to be instantly spat out 3 tiles away when she takes any damage\nWhen she reaches 200 HP or less, she becomes enraged, heals 50 HP, gains 100 max HP, cleanses all of her debuffs and enters her second phase.",
+    "wikiStrategies": "* If not ready for the fight, the player may opt to send 1-4 strays and intentionally lose for more time to prepare. After a few days, the week-long countdown will appear again, allowing the boss to be fought again.\n* Above all other considerations, mobility is most important to consider. Having a single mobility skill makes it easier to move to safety after attacking, and Guillotina's spit and knockback can throw cats to the opposite side of the arena, and without a way to return quickly (a Speed of at 10+ and/or a cheap movement skill) a defender can lose valuable turns returning to the fight.\n* The arena has a lot of short grass and a few spots of tall grass. Consider bringing el skills to provide extra dodge chance easily.\n* Beware bringing el skills as the [[status:Burn]] debuff and fire tiles will be far more of a threat to the team than to Guillotina.\n* el skills are similarly risky but more viable as slowing or freezing her solid are good CC strategies, and ice spikes won't spread like fire can. \n* No other enemies spawn alongside Guillotina, so avoid skills and strategies that rely on enemy minions or corpses (without a way to create them).\n* Avoid creating weak summons, especially during the second phase, as they are very prone to being eaten or knocked into defending cats. On other hand, having a lot of summons greatly lowers the chance that she will swallow an actual cat.\n* A source of [[status:Poison]] is recommended to halve the bonus HP she gains on her phase shift. Poison's 3 damage ticks per round is also preferable to [[status:Bleed]]'s 1 tick per round.\n* Any sources of [[status:Immobile]], or similar debuffs like [[status:Petrify]] are valuable for reducing her actions per round, but note that she will look for cats to inhale when immobilized.\n* A strong knockback skill (4+ tiles) can help kite her for the action immediately after, but weak knockback is of little use due to no arena obstacles to hit her into.",
+    "wikiNotes": "",
+    "wikiQuotes": [
+      "I WANT YOU INSIDE ME!",
+      "Mmmmm Pussy!",
+      "Looks like pussys on the menu tonight!",
+      "Come to Mama!"
+    ],
+    "wikiTrivia": "* Guillotina was the first House Boss teased.\n* A silhouette of her can occasionally be seen in the main menu.\n* Guillotina was inspired by the Danish folktale The Fat Cat, and by the Pokémon Snorlax.\n* She is referred to as \"that morbidly obese [cat] with the vore fetish\" by npc.\n* Guillotina's enrage animation might be a reference to [[url:https://bulbapedia.bulbagarden.net/wiki/Belly_Drum_(move)|Belly Drum]], an Attack-boosting Pokemon move introduced in [[url:https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Gold_and_Silver_Versions|Pokemon Gold and Silver]] that Snorlax can learn.\n** While Belly Drum normally wouldn't be usable at the point Guillotina uses it (since it sacrifices HP equal to half of the user's maximum in exchange for maximizing their Attack, and fails to function if the user lacks enough HP), a bug in its introductory games let it be used anyway, for a lesser effect than usual.\n* Guillotina's death animation shows her getting instantly decapitated, which may be a reference to how actual guillotines work, being a tool used to violently decapitate someone.\n** This death animation also foreshadows Guillotina II and III, since she splits into two units, her head and body.\n* npc, Guillotina and Zodiac were the second set of characters to recieve plushies as merchandise for the game, following Stacy and Radical Rat.\n** The Guillotina plush’s head is detachable from it’s body. This is a reference to Guillotina 2, although it lacks autopsy scars.",
+    "spritePath": "data/sprites/bosses/Guillotina.png",
+    "categories": [
+      "Cats",
+      "insta-killers"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Guillotina"
+  },
+  {
+    "name": "Guillotina 2",
+    "kind": "boss",
+    "internalId": "Guillotina2Body",
+    "foundIn": "House",
+    "size": "2x2",
+    "attackStyle": "",
+    "stats": {
+      "health": "250",
+      "damage": "8",
+      "movement": "1",
+      "luck": "5"
+    },
+    "mainTheme": "Guillotina (Song)",
+    "attacks": [],
+    "wikiBehavior": "Guillotina 2's head takes up 1 tile, while her body takes up 4 tiles, the head will attempt to perform either Gasp, pulling units inwards of a 3-tile wide line, or Toss any units that are adjacent to it towards the body, or perform a 4-tile long, piercing melee attack utilizing an unidentified internal organ, the body will attempt to trample nearby units before performing a body slam that has a high chance of inflicting stun. \n\nUpon the death of one of the parts, the other part will become enraged, healing 100 health, gaining an additional turn, and one new move.",
+    "wikiStrategies": "* Guillotina has lost her signature ability to swallow the player's cats, ironically due to no longer having a neck, allowing one to reliably reposition their cats without fear of needing to rescue them from her stomach.\n* The head is the more dangerous of the two parts and should often be focused first, the head has 3 turns while the body only has one, which is always the last turn of the round, and there is a high likelihood that the head will unintentionally kill the body by throwing units at it.",
+    "wikiNotes": "",
+    "wikiQuotes": [
+      "Prepare for trouble! And make it double!",
+      "Heads to tails!?",
+      "Time to tag-team these pussies!"
+    ],
+    "wikiTrivia": "* One of her quotes is a reference to Team Rocket's speech from the popular Pokémon anime.\n* An early version of the Guillotina 2 boss fight named Ornstein and Smough exists in the files, a reference to the Ornstein and Smough boss fight in Dark Souls. \n* The body bears a heavy resemblance to The Cage, a boss from The Binding of Isaac: Rebirth.",
+    "spritePath": "data/sprites/bosses/Guillotina_2.png",
+    "categories": [
+      "Cats"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Guillotina_2"
+  },
+  {
+    "name": "Guillotina 3",
+    "kind": "boss",
+    "internalId": "Guillotina3Body",
+    "foundIn": "House",
+    "size": "2x2",
+    "attackStyle": "",
+    "stats": {
+      "health": "400",
+      "damage": "0",
+      "movement": "2",
+      "luck": "5"
+    },
+    "mainTheme": "Guillotina (Song)",
+    "attacks": [],
+    "wikiBehavior": "Much like the Guillotina 2 fight, Guillotina 3 begins the encounter with her body and head as separate enemies. All attacks cause the head to be knocked away by one tile from the direction of damage (or more, depending on knockback modifiers), and it will briefly shriek, causing the body to step towards it, trampling any units in its path (conversely, damaging the body does not cause the head to move). When the body reaches the head, it will pick the head up, using a Shriek which inflicts one stack of [[status:Poison]] and one stack of [[status:Hex]] on the entire party before Tossing it at, and inflicting [[status:Bruise]] on one of your units at random. \n\nThe head will spend most turns doing nothing (Or change the direction it's facing), but will sometimes attempt to spit a tumor Prison around a nearby unit, much like a Burfer Maggot.\n\nThe body occasionally shakes, dispelling debuffs and spawning in a variety of maggot enemies. After falling below 250 HP, it will spawn a mb with 125 HP, dealing 130 damage to itself in the process (but immediately heal itself to 100 hp if it fell below that after spawning it), marking the transition to phase 2.\n\nWhile the body is holding the head, the two share a health pool.\n\nDuring the Second Phase, the body will no longer attempt to pick up the head, and will instead trample through your team and Shake, spawning maggots and intensifying the already dangerous, freshly spawned Mama Maggot (see that boss's page for tips and behavior, as it is identical in this fight).",
+    "wikiStrategies": "* The challenge of this fight comes from the introduction of a full-health Act I, Chapter 3 miniboss in the form of Mama Maggot halfway through the fight, likely after somewhat wearing down your party beforehand.\n** Bring at least one cat that is good at dealing with large amounts of enemies; otherwise you will likely be overwhelmed by the maggots spawned in Guillotina’s 2nd Phase.\n** A cat that can remove debuffs and/or heal will also help negate the penalties issued during the first phase.\n* Try to focus the head and Mama Maggot as they are the biggest threats. The body on its own is not much of a threat.\n* Abilities with knockback can help keep the body from reaching the head during the first phase.\n* Despite visually appearing to be an undead corpse, Guillotina is not considered Undead and does not interact with el element spells like undead enemies do.\n** Guillotina is instead considered a Maggot, and will get an extra turn from Mama Maggot's \"Rally, Maggots!\" ability.\n* Unusually, Guillotina can't transition to phase 2 while holding its head. If the player waits for Guillotina to pick up its head, then does enough damage to kill it, the body will simply die and drop the head back to the floor.",
+    "wikiNotes": "",
+    "wikiQuotes": [
+      "*flies buzzing*",
+      "*squeching and gurgling*",
+      "*stomach growling*"
+    ],
+    "wikiTrivia": "* The head's description is a reference to the NES game Monster Party.\n** Similar to the boss the quote comes from, Guillotina 3's head is actually dead and does not do anything or attack on its own (For the most part).\n* The cutscene depicts Guillotina 3 with both arms, but the intro art and in-game sprite have one arm missing.",
+    "spritePath": "data/sprites/bosses/Guillotina_3.png",
+    "categories": [
+      "Cats"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Guillotina_3"
+  },
+  {
+    "name": "Hitler II",
+    "kind": "boss",
+    "internalId": "Hitler",
+    "foundIn": "The Future",
+    "size": "2x2",
+    "attackStyle": "",
+    "stats": {
+      "health": "200",
+      "damage": "5",
+      "movement": "4",
+      "luck": "5"
+    },
+    "mainTheme": "HUMANICIDE",
+    "attacks": [],
+    "wikiBehavior": "",
+    "wikiStrategies": "* Target as many fetuses as possible in the first phase, reducing the amount of clones spawned will greatly lower the overall difficulty of the fight.\n* Spells such as [[ability:Rebuke]] are extremely valuable in this fight, as Hitler deals 999 damage when he shoots his own Führerclones. Using Rebuke on Hitler II after he shoots his clone will instantly kill him, exploding the corpse.\n* Abilities that ignore shield ([[ability:Slice]], [[ability:Weak Spot]], etc.) are also incredibly valuable, as Hitler II will still commit suicide at 50 [[stat:HEALTH]], regardless of how much shield he has. Due to this, [[class:Thief]] and [[class:Necromancer]] are an invaluable classes to bring to this fight, though their spells can be bred down to any class or obtained through items or passives that randomize level up choices such as [[item:Jester Cap]] or [[ability:Jester's Soul]].\n* The nuke at the end can be blocked by line of sight. Additionally, The nuke will give all cats an extra turn to avoid the blast.\n* Using something such as the Necromancers [[ability:Soul Link]] spell or another with the same effect can spread the damage of an offensive class across other Führerclones, effectively killing them off before they can get too many inspirations.\n* All three phases of Hitler II are considered robots, and thus are immune to electricity damage and receive [[status:Energized]] when hit by it.\n* Giving [[status:Energized]] to Hitler II's nuke phase will cause the Nuke to detonate early, killing any cats in sight who haven't had a chance to move\n* [[ability:Mass Hysteria]] can turn all the enemies against each other.\n* Using [[ability:Suggestion]] on Hitler II will force him to shoot a clone, instantly killing it.\n* It is possible to skip Phase 2 entirely by killing Hitler II before he is able to grow all the fetuses into Führerclones.",
+    "wikiNotes": "* Hitler II's rare, unique boss drops are: [[item:Hitler's Pistol]] & [[item:Hitler's Mustache]].\n* [[ability:Infected]] will revive Hitler II when a nuke is being prepped, restoring his health and leading to the nuke still being detonated.\n* If the player manages to deal enough damage in one hit during his second phase, Hitler will not have a chance to shoot himself and will instead play a unique death animation and won't explode.\n* If Hitler II's team is changed (with effects like [[status:Charmed]] and [[status:Madness]]) before he changes to mech form, he will transform on his turn.\n** When this happens, he will also convert all remaining fetuses to Führerclones on his next turn.\n* Hitler II's 2nd phase has the same property of a bomb unit. If it started with the Elite Buff: Flaming, it will automatically nuke immediately following its suicide action.",
+    "wikiQuotes": [],
+    "wikiTrivia": "* Hitler II is a reference to one of Edmund McMillen's canceled games, Hitlers Must Die!\n* Hitler II's mech suit may be a reference to the [[url:https://wolfenstein.fandom.com/wiki/Adolf_Hitler_(Wolf3D)|final boss]] of Wolfenstein 3D.\n**Him being a severed head preserved in a jar may be a reference to a [[url:https://futurama.fandom.com/wiki/Heads_in_Jars|recurring gag]] from Futurama.\n* Hitler II is a descendant of the infamous German dictator and real-world eugenicist Adolf Hitler.\n** Hitler II’s killing of his own allies when they reach low health is in reference to the real ideology of eugenics. Clones who have their health lowered are considered weak, and undesirable to continue on in the gene pool, which is why they are killed.\n**Additionally, his behavior of killing himself before the player’s party can is a reference to how the real Adolf Hitler died, as he famously committed suicide when it became clear Germany was losing the Battle of Berlin, which likely would've led to his capture.\n* Despite Hitler II's intro art showing him surrounded by Fötusjars, the Führerfötus are not found in jars at any point during the battle.",
+    "spritePath": "data/sprites/bosses/Hitler_II.png",
+    "categories": [
+      "Humanoids",
+      "Robots",
+      "Brain PatternBrain",
+      "Decision weight always cast",
+      "Movement keep distance",
+      "Decision weight default",
+      "Movement stay_close_move_far"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Hitler_II"
+  },
+  {
+    "name": "Hitler III",
+    "kind": "boss",
+    "internalId": "T3Hitler",
+    "foundIn": "House",
+    "size": "1x1",
+    "attackStyle": "",
+    "stats": {
+      "health": "100",
+      "damage": "",
+      "movement": "",
+      "luck": "5"
+    },
+    "mainTheme": "The Crack of Doom",
+    "attacks": [],
+    "wikiBehavior": "Hitler III has three distinct phases to the fight.",
+    "wikiStrategies": "* Each Robo-Miniboss and Hitler III have armor. This means spell interacting or bypassing armor, like [[ability:Crushinator]], could prove helpful.\n* Hitler III will only show up as the last robot cat is killed. This can be exploited to take turns setting up buffs and healing.\n* [[obj:Antidote]] dropped by Robo-Minibosses allow for the effective use of cat builds that incur debuffs, as it removes their inherent penalties.",
+    "wikiNotes": "* Hitler III is blacklisted from spawning with: [[status:Elite Buff: Twin]], [[status:Elite Buff: Mad]].",
+    "wikiQuotes": [
+      "Ich bin hier, um diese Katzen zu töten und die Kontrolle über diese wertlose Dimension zu übernehmen!",
+      "Unter Hitlers Herrschaft werden alle Katzen sterben!!"
+    ],
+    "wikiTrivia": "* When translating Hitler III's speech in his intro cutscene:\n** \"Hello, young man. Can you show me the way to the cats? Do you not speak German? Show me the way to the cats, you idiot! I expect an answer to my question. Under Hitler's reign, all cats will die! I will throw their organs out on the street! And if they evade me, I will get you! You! The person behind the computer screen! I'm coming to kill you!\"\n* When translating Hitler III's speech in his death cutscene:\n** \"Stupid cats. You thought you won? You haven't won at all. My dominion is inevitable! The future has already been decided. I will be the ruler of the world! What the hell? Are you pissing on me right now? One does not piss on Hitler! Stop it! No, stop pissing! Ewwww, it tastes so salty! Stop with it, you dirty cat! You think you will have the last laugh? I am the one who will laugh last!\"\n* It's strongly implied by a particular random event that many Hitler clones have tried and failed at what Hitler III attempts in-game, due to the presence of bloodstains very similar to Hitler III's that also contain moustache hair.\n** This may be an inversion of \"[[url:https://tvtropes.org/pmwiki/pmwiki.php/Main/HitlersTimeTravelExemptionAct|Hitler's Time Travel Exemption Act]]\", a trope that explains why no one manages to kill Hitler in a setting where time travel exists.\n*Hitler III’s description is in German no matter the language the player is playing in.\n* Hitler III is the only house boss to have a different theme to the others in his act.\n\n* mb's description misspells \"attackers\" as \"attackes\" with it being the only difference. \n** All Robo-Versions except mb use the original description, making this exceptionally strange.",
+    "spritePath": "data/sprites/bosses/Hitler_III.png",
+    "categories": [
+      "Humanoids",
+      "Robots",
+      "insta-killers"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Hitler_III"
+  },
+  {
+    "name": "Johnny",
+    "kind": "boss",
+    "internalId": "Johnny",
+    "foundIn": "The Bunker",
+    "size": "2x2",
+    "attackStyle": "",
+    "stats": {
+      "health": "",
+      "damage": "",
+      "movement": "",
+      "luck": "5"
+    },
+    "mainTheme": "Alone in the Dark",
+    "attacks": [],
+    "wikiBehavior": "Johnny takes up 4 tiles and always spawns in the center of the board with a Cultist Lackey nearby or adjacent. He is immobile and immune to knockback. Cultist Lackeys next to Johnny will start washing him, and will not attempt to move unless separated from him. If Johnny is not being washed, he cannot use any offensive abilities and can only summon Cultist Lackeys or give a Cultist lackey a turn directly after his.\nWhen Johnny dies, any Cultist Lackey still alive will automatically turn into a Cultist Zealot.",
+    "wikiStrategies": "* Summoned units can body block cultists, preventing them from washing Johnny. Summoning a large amount of units also decreases the likelihood [[status:Charmed]] will target a cat.\n** Alternatively, Mind Control can be cleared by debuff removers like [[item:The Bible]], [[ability:Cleanse]], or [[ability:Hose Off]], as long as the healing cat moves before the controlled cat.\n* Keep in mind that a cultist will turn into a Cultist Zealot if it kills something.\n** Cultist Zealots won't try washing Johnny and aren't considered for the cap of Lackeys still alive, allowing Johnny to summon another one.\n* As Johnny is immobile and never turns, it is very easy to backstab him, which is especially useful for abilities that benefit from backstabs.\n* Cultists who are washing Johnny will not attempt to move.\n* Johnny's Mind Blast and Super Mind Blast will also knock back any cultists washing him. Use this opportunity to damage him or prevent his cultists from reaching him.\n* Johnny can only summon a maximum of 3 Cultist Lackeys. As a result, blocking them from reaching him can be an effective strategy.\n* Reviving Johnny with [[ability:Reanimate]], [[ability:Infected]], or [[ability:Eternal Servitude]] will cause the cultists to stop washing him. However, he will continue to summon cultists that attack both him and your party.\n** If cultists are also revived onto your team with any of the 3 abilities, they are able to wash Johnny and allow him to cast his spells.",
+    "wikiNotes": "* Johnny's rare, unique boss drops are: [[item:Johnny's Stool]] & [[item:Johnny's Undies]].\n* Cannot gain: [[status:Elite Buff: Twin]]\n* Cultists with [[status:Entangled]] will not show the animation for washing Johnny, but Johnny will still use his psychic spells as if he were being washed.\n* While typically unable to be knocked back, Johnny can be displaced by poop-spawning actions, such as using [[item:Enema]].\n** Johnny can also be moved if he somehow obtains [[status:Backflip]].\n** Korbee too can move Johny.",
+    "wikiQuotes": [
+      "Ugh... my head is pounding.",
+      "Gah! Intruders! Help, help!",
+      "Someone bring me a damp rag!",
+      "Hey! Stop! Somebody is in here!"
+    ],
+    "wikiTrivia": "* Johnny's name and appearance are an homage to the short film/music video [[url:https://www.youtube.com/watch?v=eRvfxWRi6qQ|Rubber Johnny]] made by [[url:https://en.wikipedia.org/wiki/Chris_Cunningham|Chris Cunningham]] featuring music by [[url:https://en.wikipedia.org/wiki/Aphex_Twin|Aphex Twin]].\n*Johnny and his followers are heavily implied by npc to be npc' unsuccessful human experiments that he dumped into the [[chapter:The Bunker]].",
+    "spritePath": "data/sprites/bosses/Johnny.png",
+    "categories": [
+      "Humanoids",
+      "Brain PatternBrain",
+      "Decision weight always cast",
+      "Movement stay close"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Johnny"
+  },
+  {
+    "name": "Lord Bunga",
+    "kind": "boss",
+    "internalId": "LordBunga",
+    "foundIn": "Ice Age",
+    "size": "2x2",
+    "attackStyle": "",
+    "stats": {
+      "health": "300",
+      "damage": "6",
+      "movement": "2",
+      "luck": "5"
+    },
+    "mainTheme": "Mom I Really Hate You",
+    "attacks": [],
+    "wikiBehavior": "Lord Bunga will start the fight by sitting passively on his throne. Two of Bunga's Champions will be present to fight the player's cats.\n\nOnce either both champions go down or Bunga reaches 150 health, the second phase will begin.\n\nDuring this phase Bunga will instantly consume any units adjacent to him at the start of each turn, as well as retaliate with a counterattack every time he's hit. He is unable to devour anything behind him, nor retaliate when hit from behind.",
+    "wikiStrategies": "* During his second phase, the player should pay close attention to if any friendly units will end up standing adjacent to him. In addition, if units are placed behind him for safety, they should make sure sure he does not end up turning to face an unwanted direction.\n* Lord Bunga himself is a far bigger threat to the party than the Champions, and as such focusing him during the first phase may seem like the favorable option. However, Spear throws from the Champions can offset unit positions, and potentially push them into danger.\n* Inflicting [[status:Fear]] on Lord Bunga is ill-advised, as he will devour adjacent units AFTER the forced movement triggered by the status, possibly moving him next to an allied unit, or use BOOGA!, slowing down every cat in your party to a crawl.\n* Having lots of range and movement abilities available is crucial for the second phase, as teams made up out of a majority melee attackers will have a hard time.\n* Strong burst to quickly finish the fight is crucial to preserving the player's team as each hit adding concussion can really rack up, and cripple cats significantly heading into [[chapter:The Jurassic]]. Reducing Bunga's health down to 150 health and attacking the champions simultaneously can reduce damage done to units overall.\n** Deliberately stalling before his second phase to stack [[status:Strength Up]]/[[status:Dexterity Up]] or [[status:Damage Up]], can ensure the next phase is finished off quickly and minimize risk of instant kills and injuries.\n* Familiars can be used to bait out attacks, however AI controlled familiars may attack Lord Bunga from the sides, causing him to counter and rotate towards them, endangering units that were once behind him. A Zombie Kitten's poor speed means they take their turn last and have enough health to survive [[status:Trample]] makes them ideal for baiting out attacks.\n* If the player is planning on recruiting him via [[ability:Eternal Servitude]], they should be aware that he will start every fight doing the animation where he kills the baby and jumps from the throne, causing him to ground pound nearby cats every time due to spawning positions. He will not eat cats or other allies, however, just enemies.\n**However, if [[ability:Eternal Servitude]] is also used on either of his champions, he will start each battle sitting on his throne.\n*Cats with [[item:Bulletproof Vest]] or [[item:Helmet]] will not get concussions from the second phase's main attack.\n* [[ability:Entangle]] can permanently lock down Lord Bunga as long as a cat can cast it every round.\n* Lord Bunga is not immune to Knockback, so cats can drive lord Bunga off to avoid being eaten at the start of his next turn. It takes 2 or more Knockback to avoid being hit by his retaliation, however.\n**Arenas with [[obj:Ice]]'s however make this tactic even more effective.\n* Due to Lord Bunga reliance on melee attacks, [[obj:Bear]] are a possible means for keeping them back. Though one should take care of the jumps.\n**Placing a Bear Trap in front of Lord Bunga's throne before the second phase starts will give the team additional leeway to escape danger, Lest any units are positioned unfavourably.\n*[[ability:Body Guard]] is highly not recommended to bring into this fight.",
+    "wikiNotes": "* Lord Bunga's rare, unique boss drops are: [[item:Bunga's Bone]] & [[item:Bunga's Crown]].\n* Cannot gain: [[status:Elite Buff: Twin]]\n* Having a reanimated Bunga's Champion can prevent phase 2 from starting. The 150hp rule still applies. (This might a bug since tactical view still showed reanimated Bunga's Champion as an enemy)",
+    "wikiQuotes": [
+      "Eetoo thrag kats! Yum yom!",
+      "Grumble grumble..."
+    ],
+    "wikiTrivia": "* It is highly likely that the Champion and Regular variants of Lord Bunga were swapped at some point during development, notable evidence being the fact that the champion variant \"downgrades\" his skull crown to a normal skull, despite crowns being a common feature in champions. Evidence from the code and files also support thisvague. If this decision was intentional or simply a mistake is unknown, although the inclusion of the skull crown in the battle intro and map peekaboo art would suggest it was, in fact, an intentional change.\n* Lord Bunga’s Throne drops 4 pickups if destroyed.\n* Lord Bunga will turn back to be facing down-left when he eats the baby if he was facing a different direction before.\n* Unlike the other cavemen in the Ice Age, Lord Bunga does not wear a sabertooth pelt. Instead, his genitals are naturally obscured by his overgrown pubic hair.\n* The manner in which Lord Bunga eats the baby is likely a reference to the famous painting [[url:https://en.wikipedia.org/wiki/Saturn_Devouring_His_Son|Saturn Devouring His Son]] by Francisco Goya.\n* Lord Bunga, Guillotina and mb are currently the only bosses to show cannibalistic features towards their own species\n* Lord Bunga has a unique death animation if killed before leaving his throne.",
+    "spritePath": "data/sprites/bosses/Lord_Bunga.png",
+    "categories": [
+      "Humanoids",
+      "Brain PatternBrain",
+      "Decision weight default",
+      "Movement stay close",
+      "insta-killers"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Lord_Bunga"
+  },
+  {
+    "name": "Pebbles",
+    "kind": "boss",
+    "internalId": "ColorlessCat_Tutorial",
+    "foundIn": "The Path",
+    "size": "1x1",
+    "attackStyle": "",
+    "stats": {
+      "health": "",
+      "damage": "",
+      "movement": "",
+      "luck": "3"
+    },
+    "mainTheme": "Kat Fight",
+    "attacks": [
+      {
+        "name": "Push",
+        "description": "A two-tile melee attack that moves Pebbles forward one tile and applies knockback to whatever he hits. Same as the [[class:Tank]] default attack, though unlike the Tank, he can also attack diagonally. Pebbles will try to push rocks into the player's cats or push them into each other."
+      },
+      {
+        "name": "Rock Toss",
+        "description": "Pebbles throws a rock at a cat in range, at a distance of 3-5 tiles. This attack also leaves a rock on the battlefield."
+      },
+      {
+        "name": "Boulder Drop",
+        "description": "If Pebbles is at low HP and both of the player's cats are still alive, he will drop a boulder on the one with the lowest health, dealing 999 damage and instantly downing them, while also prompting Butch's tutorial on injuries. This leaves a boulder on the battlefield. *This attack targets a 3-tile radius with a 1-turn warning when used by the robotic variant of Pebbles."
+      }
+    ],
+    "wikiBehavior": "",
+    "wikiStrategies": "*This fight will always have the same outcome. One of the player's cats is downed, but they win the fight.\n*If the battle lasts for more than 9 rounds, Pebbles will run away.",
+    "wikiNotes": "",
+    "wikiQuotes": [],
+    "wikiTrivia": "* Internal nickname is 'Colorless Cat'\n** Due to this, it can be considered the collarless varient of the other class themed minibosses, like mb or mb.\n* Pebbles is a mechanical precursor to mb. Both share the stone-based archetype and rock throwing attacks, but Pebbles serves as an early-game introduction to the advanced projectile manipulation used by Rocky Bobo.\n*His German Intro Quote is \"SteinHart wie ein Rocker\", which is a reference to \"Beinhart\" by Torfrock.\n*Pebbles is the only enemy to not alter their appearance when they are a Champion or EliteCitation needed.",
+    "spritePath": "data/sprites/bosses/Pebbles.png",
+    "categories": [
+      "Class Bosses",
+      "Cats",
+      "Brain PatternBrain",
+      "Decision weight default",
+      "Movement keep distance always move"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Pebbles"
+  },
+  {
+    "name": "Pyrophina",
+    "kind": "boss",
+    "internalId": "Pyrophina",
+    "foundIn": "House",
+    "size": "2x2",
+    "attackStyle": "",
+    "stats": {
+      "health": "",
+      "damage": "",
+      "movement": "",
+      "luck": "5"
+    },
+    "mainTheme": "Brush Your Teeth",
+    "attacks": [],
+    "wikiBehavior": "* Despite her massive size, Pyrophina takes up only 4 tiles, often attempting to ram into the party with [[status:Trample]] before performing an attack. \n* Fire Breath: Pyrophina will breathe fire in a large cone in front of herself. Some of the tiles she targets have a chance to become a lava tile.\n* Volcano Stomp: Pyrophina will slam the ground, starting fires along the edges of the arena.\n* If a cat is adjacent to her, Pyrophina may pick them up and throw them on a lava tile.\n* After performing an attack, Pyrophina will likely run to one of the corners of the arena.\n* At the end of each round, Pyrophina will perform a massive roar, knock back any units to the edge of the map, and cleanse herself of all debuffs she has.\n* Pyrophina is immune to the el element, making her immune to her own fire tiles, as well as attacks from the player that would deal el damage or inflict [[status:Burn]].",
+    "wikiStrategies": "*Pyrophina does not rely on raw strength. Instead, The fight revolves around mass accumulations of [[status:Burn]] damage, Covering the Arena with Fire and Lava. If not properly managed, Will immolate all units. Keeping the fires under control through status effects such as [[status:Wet]] and spreading water is paramount for surviving this fight.\n*Make sure to bring el element items or abilities such as: \n** [[item:Old Hose]]: Use it every turn to create water tiles and extinguish your team. If you create water tiles all around the edges of the arena, it effectively makes her Volcano Stomp totally useless.\n** [[item:Water Feeder]]: Keeps cats consistently wet\n** [[item:Old Extinguisher]]: Extinguishes in a cone (can only be used once per battle)\n** [[item:Rain Staff]]: Creates large puddle of water. Can be used to flood whole arena and negate any burn and lava.\n** [[ability:Hose Off]]: Can be used in a pinch (again, can only be used once per battle, so use wisely)\n** [[ability:Number One]]: Reliably places down water tiles in a cross pattern\n** Incontinence: Instantly self-extinguishes cats that take damage\n** [[ability:Surf]]: Deals damage while extinguishing fire tiles in a large area\n** [[ability:Whirlpool]]: Has similar utility as Surf\n** [[ability:Forbidden Flood]]: Can flood the whole map with water tiles... but comes with a price\n** [[ability:Control Water]]: Places water tiles while healing units inside them\n** [[ability:Cleanse]]: Removes debuffs\n** [[ability:Spit]]: Deals 1 damage, but inflicts wet from infinite range\n** [[ability:Like a Fish]]: Synergizes very well with staying wet\n*el element spells can put out Pyrophina's fire by turning them into dirt tiles, creating a safe spot among the fires. This is especially useful against her attack that creates a ring of fire at the edges of the battle field.\n** [[ability:Earthquake]]: Creates a large cone of dirt tiles",
+    "wikiNotes": "",
+    "wikiQuotes": [
+      "RRRAAAAAHHHH!",
+      "GGGRRRRRAAAAAAAGGAAA!"
+    ],
+    "wikiTrivia": "* Pyrophina is confirmed to be female in the Pyrophina vs Zaratana tooltip.\n* Pyrophina's name is derived from \"pyr\" (Ancient Greek: pur πῦρ), meaning fire, and \"Seraphina\", a female name derived from the word seraph (Hebrew: śārāp̄ שרף) in the sense of a type of angel, but which can also mean \"fiery/burning [serpent]\" (referring to the burning effect of snake venom).\n* Pyrophina's design seems to be a pastiche of Godzilla, both creatures are bipedal reptiles that rise out of pools of liquid, the animation that Pyrophina does when beating Zaratana also appears similar to one performed by Godzilla.\n* Pyrophina's concept art bears a resemblance to the fire Pokémon Charmander. \n* While you have [[item:Pyrophina's Collar]], Pyrophina stays behind the House, amicably stomping around.",
+    "spritePath": "data/sprites/bosses/Pyrophina.png",
+    "categories": [
+      "Kaijus"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Pyrophina"
+  },
+  {
+    "name": "Pyrophina vs Zaratana",
+    "kind": "boss",
+    "internalId": "ZaratanaVS",
+    "foundIn": "House",
+    "size": "2x2",
+    "attackStyle": "",
+    "stats": {
+      "health": "",
+      "damage": "",
+      "movement": "",
+      "luck": "5"
+    },
+    "mainTheme": "Brush Your Teeth",
+    "attacks": [],
+    "wikiBehavior": "Both Kaiju will viciously attack each other, and for the most part ignore the party. The danger in this fight comes from being caught in the crossfire of the massive AOE attacks and terrain destruction. Whenever one of the Kaiju tramples the other one, they will headbutt them dealing massive damage. When one Kaiju dies the other will celebrate and the fight will end. \nAttempt to kill both bosses at the same time will result in Zaratana being alive with 1HP.",
+    "wikiStrategies": "* This fight can be extremely chaotic. The player should plan out every move and have failsafes ready in case something goes wrong. Bringing tanky cats (such as those with lots of [[status:Brace]]) and cats with the ability to heal and cleanse debuffs is essential.\n* A cat with an ability that generates el tiles (e.g. Incontinence, [[item:Old Hose]]) can help greatly with removing the Burning caused by Pyrophina's attacks.\n* A cat with an ability that damages units in a wide area (e.g. [[ability:Versatile Vocalist]], [[ability:Butcher]]) can destroy Zaratana's rocks before they become a problem.\n* Inflicting [[status:Soul Link]] on both Pyrophina and Zaratana can greatly shorten the fight.\n* Being thrown into the lava by Pyrophina's Toss attack is fairly common, find a way to get out as soon as possible!\n* The difficulty and chaos of this fight may be overwhelming, but remember that they never intentionally attack the party, outlive them as they fight each other and eventually one will fall.\n*Focus on only one of the kaijus to end the fight quicker, or to get a specific achievement.\n*Bringing a friendly Amoeba to the fight (such as with [[item:Conjoined Ameoba]]) can lead to it picking up Zaratana and instantly killing Pyrophina, trivialising the fight. \n*el immunity is very handy in this fight, since both kaiju deal collateral Fire damage.\n*Knockback Immunity (such as through [[ability:Mountain Form]]) is a mixed bag against Zaratana. While it provides immunity to Zaratana's Magnet Pull, it also prevents Zaratana's \"Spin Dash\" from knocking them out of the way. If Pyrophina and the Knockback-immune cat are close enough to Zaratana, one \"Spin Dash\" can bounce off the Knockback-immune cat multiple times.\n*Zaratana does her [[obj:Rock]]-firing counterattack far less often than in her previous fight.",
+    "wikiNotes": "* The Kaijus are blacklisted from spawning with: [[status:Elite Buff: Twin]].\n** They can appear with it in their individual fights.\n* If either Kaiju has [[status:Elite Buff: Reactive]], their sparkles will only target the other Kaiju, meaning it is safe to attack.",
+    "wikiQuotes": [
+      "*General giant screeching and roaring*"
+    ],
+    "wikiTrivia": "* Pyrophina's Spin Throw attack is likely a reference to the spin throw needed to defeat Bowser in Super Mario 64, given that Zaratana is a giant space turtle.\n** During the Spin Throw animation, if playing on Hard or above, Zaratana will briefly lose her champion appearance while being spun around by Pyrophina.\n* This boss fight is based on the concept of Kaiju battles, a staple of the Kaiju film genre, where giant monsters fight each other with little to no regard for the urban destruction caused as a result.\n** The name of this house boss fight, Pyrophina vs. Zaratana, draws inspiration from the titles of Kaiju battle-centric movies, such as [[url:https://en.wikipedia.org/wiki/King_Kong_vs._Godzilla|King Kong vs. Godzilla]].\n** If the player were to return to the main menu during the fight, the save file will say \"Watching some kaijus duke it out\", further cementing the connection to the film trope.\n* The intro cutscene is implied to be a flashback, taking place right after the player defeats the second Kaiju. The cutscene plays seven days after their defeat, and NPC remarks that their fighting has trapped her in P Mart for a week.",
+    "spritePath": "data/sprites/bosses/Pyrophina_vs_Zaratana.png",
+    "categories": [],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Pyrophina_vs_Zaratana"
+  },
+  {
+    "name": "Queen Hippo",
+    "kind": "boss",
+    "internalId": "QueenHippo",
+    "foundIn": "The Alley",
+    "size": "1x1",
+    "attackStyle": "",
+    "stats": {
+      "health": "",
+      "damage": "",
+      "movement": "",
+      "luck": "5"
+    },
+    "mainTheme": "Eatin' Rats",
+    "attacks": [
+      {
+        "name": "Jab",
+        "description": "Deals damage and inflicts chain knockback with a range of 10 tiles. Applies 1 [[status:Bruise]] to initial target."
+      },
+      {
+        "name": "Uppercut",
+        "description": "Deals damage and knocks a unit into the air, knocking back anything it lands on."
+      }
+    ],
+    "wikiBehavior": "Queen Hippo always starts with [[status:Brace]] 4 and 2 bonus turns. At the end of each round, Queen Hippo loses -1 [[status:Brace]] and gains +1 [[status:Movement Up]]. Upon losing all [[status:Brace]], it will die.",
+    "wikiStrategies": "* Queen Hippo's low speed, short range, and short lifespan means she is easily killed by ranged classes like the [[class:Hunter]].\n* Removing all 4 stacks of the Brace buff will defeat her in a single turn, this can be achieved using [[ability:Bloodletting]] or [[ability:Reset]].\n**The same effect can be achieved by a cat with the [[ability:Dealer]] passive and the [[item:Enema]] item.\n* Abilities that can [[status:Slow]], [[status:Stun]], [[status:Freeze]], or push Queen Hippo around can help greatly with stalling.",
+    "wikiNotes": "* Queen Hippo's rare, unique boss drops are: [[item:Missing Nipple]] & [[item:Queen's Crown]].\n* If [[item:Zaratana's Collar]] or [[item:Pyrophina's Collar]] is brought to the fight to summon the corresponding Kaiju familiars, Queen Hippo will be drawn aggro by them but is unable to perform its attack toward the Kaijus. It is currently unknown if this is a bug.",
+    "wikiQuotes": [
+      "I feel like eating. Time for lunch! Ha Ha Ha!",
+      "''I have my weaknesses. But you won't find them! Ha Ha Ha!''",
+      "''Ha Ha Ha! I'm the Queen! Ha Ha Ha!''",
+      "Hey! Get your paw outta my bellybutton!",
+      "My missing nipple? I guess I got hungry! Ha Ha Ha!"
+    ],
+    "wikiTrivia": "* Queen Hippo's design and name are a reference to [[url:https://punchout.fandom.com/wiki/King_Hippo|King Hippo]] from Nintendo's Punch-Out!! series.\n* If the player uses a move that removes Queen Hippo's brace, it will cause Queen Hippo to immediately experience a heart attack, thus ending the battle early.\n* Queen Hippo's quote \"Hey! Get your paw outta my bellybutton!\" is a reference to a similar quote from [[url:https://captainn.fandom.com/wiki/King_Hippo#cartoon|King Hippo]] in Captain N: The Game Master episode 12, \"Metroid Sweet Metroid\".\n* Queen Hippo is one of the few alternate bosses that must be unlocked, along with Queen Hippo, mb, mb and mb, as each can only be fought after the player has completed their respective area at least once. There are commented out notes that imply this is intentional, only serving to ensure the player first fights the other mini-boss or boss first.\n** Of these bosses, Queen Hippo is the only one that requires completing her chapter three times.",
+    "spritePath": "data/sprites/bosses/Queen_Hippo.png",
+    "categories": [
+      "Cats",
+      "Brain PatternBrain",
+      "Decision weight default",
+      "Movement stay close"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Queen_Hippo"
+  },
+  {
+    "name": "Radical Rat",
+    "kind": "boss",
+    "internalId": "BomberRat",
+    "foundIn": "The Alley",
+    "size": "1x1",
+    "attackStyle": "",
+    "stats": {
+      "health": "",
+      "damage": "",
+      "movement": "",
+      "luck": "5"
+    },
+    "mainTheme": "Eatin' Rats",
+    "attacks": [
+      {
+        "name": "Throw Bomb",
+        "description": "On each one of his bonus turns, Radical Rat will toss a [[obj:Rat Bomb]] next to the player's cats. At the end of the turn, bombs explode in a cross pattern with a range of 10 tiles. Rat Bombs have 1 HP and can be defused with damage. Defused bombs will not explode unless hit with fire or an explosion, in which case they'll explode instantly. *Under we and we weathers, Throw Bomb will instead directly target one of the player's cats, dealing 5 Physical Damage with a small chance to stun and spawning a defused bomb next to the target."
+      },
+      {
+        "name": "Turtle",
+        "description": "On his last turn of the round, Radical Rat will hide inside of a trash can, becoming invulnerable to all damage. At the end he will apply [[status:Knockback]] to adjacent units."
+      }
+    ],
+    "wikiBehavior": "Radical Rat will avoid the player's units and attack by throwing bombs from a distance. A maximum of two active bombs can be out at once.",
+    "wikiStrategies": "* Radical Rat's AI prioritizes tossing bombs to places that have at least 2 cats in the explosion. This can be abused by having cats move in pairs, one defusing the bomb and the other attacking.\n* Bombs that land in [[obj:Water]] will be immediately defused.\n* It is recommended to destroy the defused bombs to prevent them from being triggered by another bomb.\n** Using an ability which destroys bodies (ex. [[ability:Desecrate]], [[ability:Dark Ritual]], [[ability:Decompose]]) is a good way to achieve this.\n** [[status:Infested]] can greatly help with this, as the Spiderling will kill the bombs, and destroy them automatically.\n* Radical Rat has no melee attack, making him vulnerable to high-damage melee classes like the [[class:Fighter]] or [[class:Butcher]].\n* Any actions that can spawn or involve el should be avoided. As the Rat Bombs instantly detonate when hit by fire.\n** [[ability:Blessing of Holy Fire]] is especially terrible, as it will instantly detonate the bombs through any attack.\n* Charming or reanimating [[obj:Rat Bomb]], such as through [[ability:Reanimate]], is largely pointless as they still damage allies and Radical Rat typically uses the Turtle ability while the bombs explodes.\n* Abilities such as [[ability:Tower Defense]] or [[ability: Sentry Mode]] can come in handy, specially on long range classes as the [[class:Hunter]], since they will instantly defuse Rat Bombs thrown within the cat's attack range.",
+    "wikiNotes": "* Radical Rat's rare boss drops are: [[item:Rat Bomb]] & [[item:Rad Glasses]].\n** [[item:Rat Bomb]] is the only boss drop that is not unique to the boss, and can be obtained in events.",
+    "wikiQuotes": [
+      "Boom goes the dynamite!",
+      "Don't you dare defuse my bombs!",
+      "My bombs are undefeatable! Well, unless you attack them.",
+      "I love the smell of napalm in the morning!",
+      "Like my glasses? They are vintage."
+    ],
+    "wikiTrivia": "* Radical Rat is possibly based on the [[url:https://www.mariowiki.com/Mouser|Mouser]] boss from wikipedia, as both are grey rodents wearing shades fought as bosses that throw bombs.\n* Radical Rat's Rat Bombs exploding in a cross pattern is a possible reference to the Bomberman series, as that series' gameplay is centered around placing down bombs that explode in a cross pattern to eliminate rival players.\n** To reinforce this, his internal name is 'Bomber Rat'.\n* His max health jokingly references the popular 67 meme.\n** Pre-release footage shows his max health being 66, meaning it was changed for the official release, after the meme was popularized.\n* Stacy and Radical Rat were the first characters to receive plushies as merchandise for the game.\n* The quote \"I love the smell of napalm in the morning\" is taken directly from wikipedia.",
+    "spritePath": "data/sprites/bosses/Radical_Rat.png",
+    "categories": [
+      "Rats",
+      "Brain PatternBrain",
+      "Decision weight extra careless",
+      "Movement chaotic runaway"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Radical_Rat"
+  },
+  {
+    "name": "Spewer",
+    "kind": "boss",
+    "internalId": "Spewer",
+    "foundIn": "The Lab",
+    "size": "1x1",
+    "attackStyle": "",
+    "stats": {
+      "health": "",
+      "damage": "",
+      "movement": "",
+      "luck": "5"
+    },
+    "mainTheme": "Endless Misery",
+    "attacks": [],
+    "wikiBehavior": "Spewer will primarily attack the player's cats through the use of a lobbed projectile attack that strikes five random tiles in an area in front of it, aiming to hit as many cats as possible. These projectiles both deal damage and create tiles.\n\nThroughout the fight, pills intermittentlyvague spawn in random locations. Spewer will attempt to consume these, and will recieve various benefits if it is able to do so. \n\nAlongside a small amount of healing, each pill grants unique properties:\n* [[obj:Creep Pill]]: Grants Spewer +1 [[status:Damage Up]] and causes its projectiles to inflict 1 stack of [[status:Poison]] and create [[obj:Creep]].\n* [[obj:Tar Pill]]: Grants Spewer +1 [[status:Brace]] and causes its projectiles to inflict 2 stacks of [[status:Tarred]] and create [[obj:Tar]].\n*[[obj:Lava Pill]]: This pill grants Spewer +1 [[status:Speed Up]] and causes its projectiles to inflict 4 stacks of [[status:Burn]], and leave tiles of [[obj:Lava]].\n\nSpewer can inhale pills from up to 3 tiles away in a straight line.\n\nIf Spewer is damaged by a unit in-line with it, it will retaliate by inhaling the closest unit in the same direction.\n\nA unit that has been inhaled can use their basic attack to break free, but will also be freed the next time Spewer is attacked.\n\nIf not freed, they will be spit out at the start of Spewer's next turn. A spit out unit travels until it collides with something, inflicting damage to them and anything they collide with. The spit-out unit will also receive [[status:Poison]], [[status:Burn]] or [[status:Tarred]] depending on what the last pill Spewer inhaled was.\n\nWhile a unit is inhaled, Spewer gains [[status:Trample]]—displacing and dealing 1 contact damage to anything it walks into.\n\nIf Spewer takes knockback, it will attempt to inhale whatever it collides with, even if this is not possible (i.e., walls). It will, however, succesfully inhale objects like rocks and crates.",
+    "wikiStrategies": "* Being able to attack diagonally is a huge advantage in this fight, as it means Spewer will be unable to retaliate effectively. In general, Spewer is unable to target units within 2 tiles diagonally of it.\n* [[status:Kinetic Spikes]] is extremely dangerous to have in this fight, as if Spewer spits out a cat with Kinetic Spikes, the effect is likely to trigger its reactionary suck attack. This can lead to an endless loop where every time Spewer is made to spit out the cat, it sucks them back in immediately afterwards.\n** Any other counterattack has the risk of triggering this, but Kinetic Spikes is notable as it has infinite range and is not blocked by line of sight.\n* Try to focus on destroying the pills whenever possible. If Spewer is allowed to freely consume them, it will quickly heal and stack buffs that will make closing out the fight far more difficult. Prioritize [[obj:Tar Pill]] and [[obj:Lava Pill]] if you don't have a reliable way to purge their respective statuses, as they can stack rapidly.\n** Although [[obj:Spewer Pill Tube]] cannot be harmed by ordinary attacks, they can still be destroyed by abilities or items capable of destroying inanimate objects, such as [[ability:Become Entropy]], [[ability:Demolish]] or [[item:Pickaxe]].\n* Using a spell to attack Spewer first allows the use of the \"Thrash\" ability (which can only be used instead of a basic attack), which will immediately free the cat while dealing damage to Spewer. This is a relatively safe way to attack Spewer if no methods to deal damage diagonally are available.\n** Unlike similar \"Break Free\" style abilities, such as seen in the mb fight, Thrash will always let a cat escape.\n* Spewer is immune to [[obj:Creep]], [[obj:Lava]], and [[obj:Tar]]. This diminishes the usefulness of [[ability:Reflux]] and the [[item:Chum Bucket]] against it.\n** On a similtar note, if Spewer spits a cat onto one of the above tiles, the cat will not be affected by it; this \"immunity\" ends the once they move to another tile, however, or if they end their turn.",
+    "wikiNotes": "* Spewer's rare, unique boss drops are: [[item:Red Pill]] & [[item:Forbidden Pill]].\n* If you summon the Dreadnoughtus (Leg) as with the [[item:Green Whistle]] despite it taking up a 2x2 space Spewer can still suck it up and spit it out.",
+    "wikiQuotes": [
+      "''I've been trapped here for 17 years.''",
+      "I need to take my pills...",
+      "Pills pills pills!!!",
+      "''Uh oh, I think I'm gonna spew!''"
+    ],
+    "wikiTrivia": "* Spewer is the playable character in the game Spewer, made by Edmund McMillen and Eli Piilonen in 2009. His presence in [[chapter:The Lab]] is due to the Scientist in his home game being visually identical to npc.\n** Both his lava form and tar form are also taken from the original game albeit functioning differently.\n*** The way Spewer behaves in Mewgenics resembles his home game, with him vomiting projectiles and inhaling enemies (instead of inhaling his vomit), and swallowing pills to take on different forms.\n* His line, \"I've been trapped here for 17 years\", is a reference to how Mewgenics came out 17 years after Spewer did.\n*Spewer also made an appearance in [[url:https://bindingofisaacrebirth.fandom.com/wiki/The_Binding_of_Isaac:_Afterbirth_%E2%80%A0|The Binding of Isaac: Afterbirth †]] as a familiar under the name [[url:https://bindingofisaacrebirth.fandom.com/wiki/Lil_Spewer|Lil Spewer]], providing pills, firing damaging puddles of vomit, and changing forms when Isaac uses a pill.\n* His tar and lava forms may be referencing Gish and Super Meat Boy, both games also created by Edmund McMillen.",
+    "spritePath": "data/sprites/bosses/Spewer.png",
+    "categories": [
+      "Blobs",
+      "Brain PatternBrain",
+      "Decision weight default",
+      "Movement stay far move far"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Spewer"
+  },
+  {
+    "name": "Spinnerette",
+    "kind": "boss",
+    "internalId": "SpiderQueen",
+    "foundIn": "The Caves",
+    "size": "2x2",
+    "attackStyle": "",
+    "stats": {
+      "health": "250",
+      "damage": "10",
+      "movement": "3",
+      "luck": "5"
+    },
+    "mainTheme": "",
+    "attacks": [],
+    "wikiBehavior": "The battle initially begins as a fake-out fight against One Baby Spider, with a Spider Kitten in the center of the room. Either upon the Spider Kitten's death or after the first round passes, Spinnerette will descend from the ceiling and the real fight begins.\n\nSpinnerette has 3 attacks, using them to slow the player's cats and let them get swarmed by her children. When one of the player's cats kills a Spider Kitten, she descends from the ceiling.\n\nHer main attack is a large bite that affects a 2x1 radius in front of her, which will instantly destroy its target's body if it downs them. She can also lob webs or spiders in a cross pattern across the board. \n\nIf attacked from behind, Spinnerette becomes \"Enraged.\" This gives her a bonus to damage and speed, but prevents her from leaving the battlefield to spawn Spider Kittens. Spinnerette will also spawn webs on adjacent tiles behind when she is hit from behind.\n\nSpinnerette might go to the ceiling and spawn kittens no matter how she is removed from the board non-lethally. Things like Korbee swallow and fighter's uppercut should be checked, because it at least happened once with a Korbee swallow.",
+    "wikiStrategies": "* If Spinnerette is on the ceiling, the player can spend one turn buffing up for free without Spinnerette bothering their cats, as long as none of her Spider Kittens are killed. However, she will descend from the ceiling after 1 round regardless.\n* Spinnerette and her Spider Kitten spawns will attempt to inflict the [[status:Webbed]] status on units in range or create web tiles that halt units that cross them. Webs prevent a unit from moving until they break free, and replaces their basic attack with a \"Break Free\" action. Spider units prioritize attacking webbed units.\n** Fire attacks can light webs on fire, turning them into a fire tile. Units that have [[status:Burn]] stacks or the [[ability:Fire Aspect]] passive ability are immune to being webbed and will instantly break free.\n** Abilities with knockback will free units from webs. Druid's Crow is an great unit for negating webs in this manner as its [[ability:Aeroblast]] ability is relatively harmless to allied cats.\n* Spinnerette can spawn large amounts of Spiderling enemies, which can be surprisingly dangerous, as they often will be able to move before the player's cats can attack them, and inflict a status that permanently kills a downed cat.\n**The constant spawning of low health enemies can easily be taken advantage of by any cat with on-kill effects.\n**If [[ability:Soul Reap]] has its cost lowered by [[status:Insight]] or damage raised by [[status:Magic Damage Up]], it can be used to farm Spiderlings for mana, and in turn any damage spell can be used to farm Spinerette for Spiderlings, resulting in an infinite combo.\n**[[ability:Heretic Mark]] Can redirect the spawn back into Spinnerette. This is especially useful on the harder difficulties, When Champions are involved.\n**[[ability:Butcher]] can get kill of all the Spiderlings present instantly since Spiderlings only have 2 health and can create meat pickups to heal your team when killed by [[ability:Butcher]], making the ability very efficient for getting rid of abudant amounts of Spiderlings and converting them into meat for your team.",
+    "wikiNotes": "* Spinnerette's rare, unique boss drops are: [[item:Spinnerets]] & [[item:Spider Baby]].\n* Be careful when using any damaging pull moves like a sharpened [[item:Meat Hook]], [[ability:Minihook]], or the attack of a familiar toad summoned via [[ability:Summon Toad]]. As these seem to enrage Spinnerette when attacked from the front.\n* If she gets [[status:Elite Buff: Twin]], the twin will start on the ground rather than on the ceiling.",
+    "wikiQuotes": [
+      "''Pwease don't hurt me!''",
+      "''Please don't hurt me!''",
+      "You look delicious.",
+      "My children are... hungry!?",
+      "Mother is angry...",
+      "Your blood will nourish my brood!",
+      "''Don't you dare touch my babies!''",
+      "Mother is watching you..."
+    ],
+    "wikiTrivia": "* If Spinnerette dies while on the ceiling, she will fall to the ground on her back.\n* Spinnerette was the \"most complicated boss\" in the game at one point.\n* Because of Spinnerette's nature as a fake out boss, her actual Intro Art and Boss quotes go unused.\n* Spinnerette's internal nickname is 'Spider Queen'.\n* Spinnerette's unused quote \"Mother is watching you...\" might be a reference to The Binding of Isaac's The High Priestess tarot card flavor text, which says the same thing.\n* A spinneret is an organ used by spiders and caterpillars to make silk.\n* Despite being a giant spider, Spinnerette only has 6 legs, and two pairs of eyes.\n* If Spinnerette dies while enraged, her corpse will still show her head upside down.",
+    "spritePath": "data/sprites/bosses/Spinnerette.png",
+    "categories": [
+      "Bugs",
+      "Brain PatternBrain",
+      "Decision weight careless",
+      "Movement keep distance always move"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Spinnerette"
+  },
+  {
+    "name": "Stacy (Boss)",
+    "kind": "boss",
+    "internalId": "StacyMutant",
+    "foundIn": "The Lab",
+    "size": "1x1",
+    "attackStyle": "",
+    "stats": {
+      "health": "100",
+      "damage": "5",
+      "movement": "4",
+      "luck": "5"
+    },
+    "mainTheme": "Endless Misery",
+    "attacks": [],
+    "wikiBehavior": "Stacy will behave differently depending on which choices the player makes in the event leading up to the fight.\nThese choices will be presented in a series of four with three choices each, and a option to skip each section, modifying its stats, buffs and abilities.",
+    "wikiStrategies": "* Since the player can customize this boss, it's recommended to choose a strategy that their team is well-suited toward.\n* The el element stacy has the lowest damage output, and cannot stun you, but the lava she spawns can accumulate [[status:Burn]] damage over time.\n* When choosing an Element, it will also grant it immunity to that element, so the player should keep this in mind.\n* If the player chooses to pick the el element they should ensure that they have at least one ranged cat (such as the [[class:Hunter]]) on their team, as Stacy can stunlock units at melee range with their el magic which has a relatively high chance to [[status:Freeze]] cats in range.\n* If the player chooses to pick no element, Stacy will only have a basic melee attack and [[ability:Magic Missile]], making the fight more simple with the cost of a Disorder and a Parasite.\n* If a cat has two crippling Disorders, it may be beneficial to choose \"No Thanks\" in hopes of getting a less bad disorder.\n* \"Mirror Shine\" can be incredibly crippling, as it can completely shut down certain cats unless they want to take heaps of damage in return.",
+    "wikiNotes": "* Stacy's rare, unique boss drops are: [[item: Unstable DNA]] & [[item:Stacy 100]].",
+    "wikiQuotes": [
+      "Meow?",
+      "Mew mew!?",
+      "Meeeow!?"
+    ],
+    "wikiTrivia": "* The elemental choices for Stacy may be a reference to [[url:https://bulbapedia.bulbagarden.net/wiki/Eevee_(Pok%C3%A9mon)|Eevee]], a Pokemon who had three different \"evolved forms\" in its debut games. The choices were between [[url:https://bulbapedia.bulbagarden.net/wiki/Flareon_(Pok%C3%A9mon)|Flareon]] (a el-type), [[url:https://bulbapedia.bulbagarden.net/wiki/Jolteon_(Pok%C3%A9mon)|Jolteon]] (an el-type), and [[url:https://bulbapedia.bulbagarden.net/wiki/Vaporeon_(Pok%C3%A9mon)|Vaporeon]] (a Water-type who, like most other Water-type Pokemon, can learn several el-type abilities).\n* The elemental versions of Stacy will attack downed units, albeit at a lower priority than attacking the player's cats and familiars. Tellingly, they do not show up in [[chapter:The Infinite]].\n* Stacy [[url:https://foursouls.com/cards/soi-stacy/|appears]] in [[url:https://en.wikipedia.org/wiki/The_Binding_of_Isaac:_Four_Souls|The Binding of Isaac: Four Souls]], a card game made by Edmund McMillen, as a playable character. Her starting item is Unstable DNA.\n** Stacy was added in \"The Summer of Isaac\" expansion, which released in August of 2024; roughly a year and a half before Mewgenics released.\n* Stacy and Radical Rat were the first characters to receive plushies as merchandise for the game.\n* Counting the No thanks event option, there are 256 possible Stacy combinations based on the player's choices prior to entering the fight.",
+    "spritePath": "data/sprites/bosses/Stacy__Boss_.png",
+    "categories": [
+      "Cats"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Stacy_(Boss)"
+  },
+  {
+    "name": "The Coven",
+    "kind": "boss",
+    "internalId": "Tormentor",
+    "foundIn": "The Core",
+    "size": "3x3",
+    "attackStyle": "",
+    "stats": {
+      "health": "",
+      "damage": "",
+      "movement": "",
+      "luck": "8"
+    },
+    "mainTheme": "Down With The Devil",
+    "attacks": [],
+    "wikiBehavior": "",
+    "wikiStrategies": "",
+    "wikiNotes": "* The rare, unique boss drops are split between the 2 bosses.\n** The Coven can rarely drop [[item:Pentagram Sigil]].\n** The Tormentor can rarely drop [[item:Lucifer Sigil]].\n* Cannot gain: [[status:Elite Buff: Twin]]\n* During Hard mode, all enemies summoned by The Coven share its elite type.",
+    "wikiQuotes": [
+      "We shall bring forth the great end!",
+      "He will feast on your flesh and bathe in your blood!",
+      "Our Lord is coming!",
+      "Come! Spill your blood!"
+    ],
+    "wikiTrivia": "* A coven is a term describing a gathering of witches.\n* The Coven can be instantly killed with the [[item:Glowing Black Shard]].\n* In the [[url:https://store.steampowered.com/news/app/686060/view/529839807839340087|\"Who's The Boss?\"]] blog post, Tyler Glaiel mentioned a boss fight that playtesters \"reported it as a high point of the game when they first reached it\" due to its visuals although the fight itself was not fun, thus the boss was redesigned in the month prior to the blog post. In an interview with youtuber Sinvicta a month later, Edmund McMillen stated that the Tormentor fight, despite having no gameplay, was one of the most beloved bosses in the game. It is very likely that the boss Tyler Glaiel was referring to was Tormentor.\n* Tormentor bears some resemblance to The Mother.\n** They both also share visual similarities with The Beast, a final boss in The Binding of Isaac: Repentance DLC.\n* The names of The Coven's attacks are references to The Four Horsemen of the Apocalypse from The Bible.\n** However, Conquest is replaced with Pestilence, which is a common error in cultural depictions of the Four.\n* When the Tormentor is being summoned, the scene pans up above the combat map, showing what appear to be real-life pictures of eyes.",
+    "spritePath": "data/sprites/bosses/The_Coven.png",
+    "categories": [
+      "Humanoids",
+      "Tumors",
+      "Demons",
+      "Brain PatternBrain",
+      "Decision weight default",
+      "Movement stay close",
+      "insta-killers"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/The_Coven"
+  },
+  {
+    "name": "The Creator",
+    "kind": "boss",
+    "internalId": "TheChild",
+    "foundIn": "The Infinite",
+    "size": "2x2",
+    "attackStyle": "",
+    "stats": {
+      "health": "999",
+      "damage": "0",
+      "movement": "3",
+      "luck": "5"
+    },
+    "mainTheme": "Dig Your Own Grave",
+    "attacks": [],
+    "wikiBehavior": "",
+    "wikiStrategies": "",
+    "wikiNotes": "* All forms of The Creator are blacklisted from having [[status:Elite Buff: Twin]].",
+    "wikiQuotes": [
+      "Be strong, and let your heart take courage, all you who wait for the Lord!",
+      "Fear not, for I am your God; I will uphold you with my righteous right hand.",
+      "''Do not take revenge, my dear friends, but leave room for God's wrath.''"
+    ],
+    "wikiTrivia": "* The Creator seems to either be or is a stand-in for [[url:https://en.wikipedia.org/wiki/God_in_Abrahamic_religions|God]] of the abrahamic faiths, specifically as interpreted through Christianity.\n** Dr Beanies simply refers to him as God, The Creator himself and his boss theme also refer to him as God.\n* The different tooltips of each phase feature Latin phrases which have different meanings: \n** \"Nosce te Ipsum\" meaning \"Know Thyself\"\n** \"Memento Mori\" meaning \"Remember you must die\"\n** \"Tenebris Aeternae\" meaning \"Eternal Darkness\"\n** \"Respice Finem\" meaning \"Consider the end\"\n* The Creator is the boss with the most unique phases in the game, featuring 4 in total.\n* The Creator's first phase, along with the Seraphim enemy lack a face. This is a reference to Exodus 33:20 in the Bible, when God stated:\n** \"But,\" He said, \"you cannot see my face, for man shall not see me and live.\"\n* The Destroyer's head resembles Guppy, Edmund McMillen's dead cat who had also previously appeared in The Binding of Isaac.\n** The Father's internal nickname is MegaGuppy\n* The Child's glass jar resembles a [[url:https://en.wikipedia.org/wiki/Globus_cruciger|globus cruciger]], a symbol of Jesus Christ's dominion over the Earth, though with a crown on top (instead of a cross).\n* The background visuals during The Child may be a reference to [[url:https://earthbound.fandom.com/wiki/Giygas|Giygas]] from the EarthBound/Mother series.\n** Although not official, popular belief among fans is that fetus imagery is present during the Giygas battle.\n** The protagonists of EarthBound also use means of time travel to encounter Giygas.\n** The Child itself superficially resembles [[url:https://earthbound.fandom.com/wiki/Giegue|Giegue]] from EarthBound Beginnings (Mother), the prior form of Giygas before it is encountered in Earthbound.\n* The stole worn by The Creator in his map peekaboo artwork is miscolored, being blue, rather than red, as seen in the rest of his art.",
+    "spritePath": "data/sprites/bosses/The_Creator.png",
+    "categories": [
+      "Brain PatternBrain",
+      "Decision weight default",
+      "Movement keep_distance",
+      "Movement stay close"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/The_Creator"
+  },
+  {
+    "name": "The Man in the Moon",
+    "kind": "boss",
+    "internalId": "MoonHand",
+    "foundIn": "The Moon",
+    "size": "1x1",
+    "attackStyle": "",
+    "stats": {
+      "health": "",
+      "damage": "",
+      "movement": "",
+      "luck": "5"
+    },
+    "mainTheme": "So High",
+    "attacks": [
+      {
+        "name": ":O",
+        "description": "A breath attack that fans out in a wide radius from the head, dealing 10 knockback to units caught in the blast. This attack is prepared at the start of every round, and cast at the end of the round. * This attack does not deal knockback to the hands."
+      },
+      {
+        "name": "Call for Help",
+        "description": "Spawns 4 B-Probers on random tiles. This attack can only be used once per fight, and only after The Man in the Moon's health reaches below 25%."
+      }
+    ],
+    "wikiBehavior": "The Man in the Moon consists of three parts - a stationary head, and two hands that move and attack independently. The head starts with [[status:Brace]], and the hands will only take 1 damage per attack.\n\nThe Moon Hands move toward units and use a melee attack. If a unit ends its movement *in front of* the palm of the hand, it will grab the unit, disabling all actions and replacing their basic attack with Flail, which deals damage and has a 25% chance to release the unit. Attacking the hand from behind will force it to release the captive unit. The hand can be attacked from any direction to turn it away from the unit that attacked it. If attacked from behind while not holding a unit, it will charge forward, trampling anything in its path. If it collides with the head, it deals 20 damage and removes its Brace until its next turn. This can be repeated to deal further damage.\n\nThe head will immediately prepare a wide breath attack on its first turn. If a cat or other allied unit ends it movement in the tile directly in front of its mouth, the unit will be eaten, replacing their actions with two choices: Flail,  and Stop Hitting Yourself, a spell that commands the Moon Hands to charge toward the head. On the head's second turn, it will cast its breath attack - or, if it has eaten a cat, it will munch on it and deal damage. If the unit is a familiar, it will be swallowed.",
+    "wikiStrategies": "* The player should bait the hands towards the three center columns of the map, then turn the hands towards the face and make them dash as to break the [[status:Brace]]. Any further face dash on this turn will deal 20 damage to the boss. This makes having a higher quantity of attacks more important than those attacks dealing much damage, as the hands ram into the Man in the Moon multiple times per turn. \n** Note that multi-attacks, such as [[ability:Fury Swipes]], will only ram into the boss once.\n** Attacks that have no damage or knockback will still cause the hands to attack, for example, using [[ability:Lick]] on a hand will make it dash.\n** This means that the player needs to be mindful about accidentally inflicting status effects such as [[status:Stun]] on the hands as they will not be able to ram into the boss.\n* Ending movement in front of the Man in the Moon while his mouth is open will make him swallow the cat. On that cat's turn, it can flail to escape, but additionally can cast a 10 mana spell called \"Stop Hitting Yourself\", which will force the two hands to dash attack it. This is a guaranteed way to remove the brace buff.\n** This causes contact damage to the cat, as Man in the Moon will chew it. Letting him swallow a cat with high constitution and contact effects such as [[status:Thorns]] allows it to deal more damage as well as taking the hits. The [[class:Butcher]] and [[class:Necromancer]] classes can potentially have high-enough Mana and Health to consistently make it work, while the [[class:Tank]] class can manage the Thorns.\n** If a cat is downed while inside Man in the Moon, they will be instantly killed and swallowed by Man in the Moon.\n** A cat will only be initially swallowed if it ends its movement in the middle of the Man in the Moon's front 3 tiles.\n** If a cat is inside the Man in the Moon when the boss dies, it will survive.\n* The Hands die when the Man in the Moon dies.\n** The Hands are also immune to all status effects, meaning [[status:Thorns]] cannot be applied to increase their damage to the Man in the Moon.\n* The Man in the Moon will only charge his \":O\" attack when it's his first turn in the round. If his attack is interrupted, he won't attack and will only charge it next turn. The player can interrupt his attack by getting him to eat a unit.\n* If a cat has the [[item:Frying Pan]] equipped, it can ignore almost all damage and focus on the boss by having one side exposed.\n* If an Amoeba is brought to the fight and takes the Man in the Moon, destroying it with [[ability:Reap]] will instantly kill the boss.\n** Players should be careful when bringing Amoeba to the fight, as if they don't have [[ability:Reap]] or similar abilities, it can prolong the fight.\n*** An Amoeba that has taken the Man in the Moon as a shield can still be captured by the hands, which can make it even more difficult to end the fight if the player is not prepared.\n* Due to the nature of the fight, any AI controlled allied units like Mini-Me's can be extremely detrimental, as they mess up the hands and activate their counter attacks.\n** For this reason, the Severe Deja Vu punishment inflicted by NPC should be avoided at all costs, even if the player has strong cats.\n* Inflicting [[status:Stun]] on the Man in the Moon while its [[status:Brace]] is depleted will prevent it from regenerating the Brace on the next turn.\n*using [[item:Weird Egg]] to spawn a Brain Drain and having it use Counterspell will cancel Man in the Moon from regenerating his [[status:Brace]].\n*[[ability:Bloodletting]], [[ability:Reset]] and [[ability:Hack]] can remove Man in the Moon's [[status:Brace]] without cracking it so it won't regenerate the [[status:Brace]].\n*Inflicting [[status:Bruise]] will offset Man in the Moon's [[status:Brace]].",
+    "wikiNotes": "* The Man in the Moon's rare, unique boss drops are: [[item:Alien Tech]] & [[item:Asteroid]].\n* The head Cannot gain [[status:Elite Buff: Twin]], but its hands can.\n* Counts as a rock-type enemy and can be affected by abilities like Eat Rock and Amoeba's rock shield.\n* If the Hands are behind the head, they will ignore any obstacles when moving.\n* [[ability:Turnabout]] will cause the hands to dash when they're attacked on any sides\n* Using [[ability:Rally]] on allies will only make them target the head.\n* Hands take 25 damage from [[item:Revolver]] and [[item:Sniper Rifle]]",
+    "wikiQuotes": [
+      "They will crawl on their bellies and eat dust!",
+      "They will realize they are wretched, pitiful, poor, blind and naked!",
+      "They will be punished with everlasting destruction!",
+      "They will be put in chains of darkness to be held for judgment!"
+    ],
+    "wikiTrivia": "* The Man in the Moon and his hands are classified as Rocks, and are affected by abilities and enemies with special interaction with rocks.\n* Certain interactions such as with the Amoeba enemy reveal that when moved around, the boss indeed has sprites facing other directions.\n* The Man in the Moon's intro quotes are references to the biblical verses Revelation 3:17, Genesis 3:14, 2 Peter 2:4, and 2 Thessalonians 1:9.\n* The Man in the Moon references the pareidolic image of a man in the moon, represented by its craters. It is present in various mythologies, Dante's Divine Comedy, and the Hebrew Bible.\n* The map of The Moon shows a far-bigger face on it, suggesting that this might just be a part of a bigger entity (like how the Man himself has smaller faces on him).\n* Despite his death animation, killing this boss while a cat is inside him won't result in the loss of said cat.\n* NPC potentially refers to him, when accusing the player character of \"killing a Sumerian demi-god\". He may be conflating the Man in the Moon with  Sin (a.k.a. Nanna), the Moon god of Ur.\n**However, as the trigger for this dialogue is simply completing both Chapter 3 paths for Act 2, it is uncertain whether he is talking about Man in the Moon or Tormentor.",
+    "spritePath": "data/sprites/bosses/The_Man_in_the_Moon.png",
+    "categories": [
+      "Rocks",
+      "Aliens"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/The_Man_in_the_Moon"
+  },
+  {
+    "name": "The Mother",
+    "kind": "boss",
+    "internalId": "MotherSpike",
+    "foundIn": "The End",
+    "size": "1x1",
+    "attackStyle": "",
+    "stats": {
+      "health": "10",
+      "damage": "",
+      "movement": "",
+      "luck": "5"
+    },
+    "mainTheme": "We're Dead",
+    "attacks": [],
+    "wikiBehavior": "* Every turn, The Mother will  expand across the arena by spawning 5 HP tumor segments.\n* These segments propagate semi-randomly, one space at a time, to any adjacent space that is not already occupied by an existing segment. If left alive, they will grow, and heal to 9 [[stat:HEALTH]] at the end of the round.\n** If a segment is not attached to The Mother after its neighboring segment is destroyed, it will automatically get destroyed.\n* If a unit is on a tile that a segment appears on, that unit is captured, and their basic attack will be reduced with [[ability:Struggle]], disabling all their abilities until freed.\n** The segment can be destroyed to free them, unharmed.\n** If a big tumor is holding a unit, it will consume them at the end of the round.\n* The Mother's basic attack spawns a pillar underneath the farthest allied unit, dealing 3 damage and hurling them 2 tiles towards the main body. Each pillar has [[status:Thorns]].\n* At 25% health (122), The Mother will turn all pillars into Heralds.\n\n*The Mother takes 2 turns per round.\n\n*The Mother and all of her segments are knockback immune.\n** The segments are do not take extra damage from backstabs, cannot be stunned and won't leave a corpse.",
+    "wikiStrategies": "* Attacks that can hit multiple targets should be prioritized to destroy multiple sections and stop the tumors from growing and spreading.\n** [[ability:Scatter Shot]] being an especially potent example, able to hit each tile individually.\n* It is advised to keep a unit that can deal at least 5 ranged damage away from the main body to quickly free allies if they are caught, as well as deal with the spikes.\n** If the player lacks ranged units, multiple allied summons may accomplish the same goal.\n* Being a 3x3 sized unit, Mother is highly vulnerable to debuffs that automatically get applied to every tile at the start of battle Such as [[item:Leech Brood]], which will apply 9 stacks of [[status:Leeches]].\n* Ability and weapon focused builds are recommended, as [[ability:Struggle]] will replace captured units' basic.\n* Stacking [[status:Thorns]] and other on-contact damage effects can be useful tow instantly destroy the tumors when captured.\n** This only applies to units with at least 5 retaliatory damage.\n* Items and Abilities that trigger on kill (such as [[item:Red Cap]] and [[ability:Luck Drain]]) are very strong in this fight, since each segment of The Mother is a separate unit.\n** Additionally, a cat that can deal at least 9 damage and has Blood Frenzy can easily clear most of her segments.\n** [[ability:OVERPOWERED!!!]] can start a chain reaction of explosions with segments next to Mother, damaging her.\n* [[item:The Tick]] can aid greatly in this fight, as all segments Mother spawns will also have [[status:All Stats Down]], reducing their health.\n* A ranged attacker with [[ability:Sentry Mode]] or [[ability:Tower Defense]] can kill new segments as they spawn.\n* The [[item:Weird Egg]] can summon Brain Drain familiars which can be highly beneficial to this fight, as their [[ability:Counterspell]] will prevent The Mother from growing her tumors and prevent their instakill effect.\n* bug",
+    "wikiNotes": "* The Mother's rare, unique boss drops are: [[item:Mother's Teeth]] & [[item:Mother's Love]].\n* Cannot gain [[status:Elite Buff: Twin]].\n* The hole in the ground left after The Mother's death is not an object; it is her corpse, and as such, can be interacted with like with any other corpse.",
+    "wikiQuotes": [
+      "Return... to... me...",
+      "Look what has become of me...",
+      "My children have returned to me!"
+    ],
+    "wikiTrivia": "* The Mother is based on an enemy from [[url:https://theendisnigh.fandom.com/wiki/Mother|The End is Nigh]], who was described by Edmund Mcmillen as \"mother nature\" and \"the bringer and taker of life\".\n* The Mother bears some resemblance to The Beast, the final boss of The Binding of Isaac: Repentance, mainly in her intro card.\n** This is even more apparent with her Champion form, where she sports red eyes similar to The Beast.\n** Additionally, the [[item:Mother's Love]] item drop features the same polka-dot pattern present on the dress of both The Beast and Mom.\n** The Mother's unique boss drops both give three stat bonuses with values of six; the number 666 (three sixes) is described as \"the number of the Beast\" in the Bible.\n* The Mother also bears some resemblance to the Tormentor.\n** The Mother’s spawns closely resemble the tumor-themed enemies of [[chapter:The Core]].\n*** Other enemies in this chapter also resemble enemies from The Core, such as Slag resembling Mega Tumor, furthering the connection.",
+    "spritePath": "data/sprites/bosses/The_Mother.png",
+    "categories": [
+      "Tumors",
+      "Brain PatternBrain",
+      "Decision weight default",
+      "Movement stay close",
+      "Insta-killers"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/The_Mother"
+  },
+  {
+    "name": "Throbbing King",
+    "kind": "boss",
+    "internalId": "ThrobbingKing2",
+    "foundIn": "The Throbbing Domain",
+    "size": "1x1",
+    "attackStyle": "",
+    "stats": {
+      "health": "150",
+      "damage": "3",
+      "movement": "5",
+      "luck": "5"
+    },
+    "mainTheme": "Throbbing King (Song)",
+    "attacks": [],
+    "wikiBehavior": "",
+    "wikiStrategies": "",
+    "wikiNotes": "* Cannot gain [[status:Elite Buff: Twin]].",
+    "wikiQuotes": [
+      "KNEEL BEFORE ME!",
+      "OBEY YOUR KING!",
+      "HEAVY IS THE HEAD THAT WEARS THE CROWN!",
+      "HAIL TO THE KING!"
+    ],
+    "wikiTrivia": "* The NPC calls him \"the buried king\", having been responsible for sealing the entrance to the Throbbing Domain in the first place.\n**He also mentions that he used to live in the Throbbing Domain. More importantly, he mentions that the Throbbing King is a literal \"self-made man\".\n** One of the WMEW 99.9 radio songs, Break His Chains, also refers to a \"Buried King\", which most likely refers the Throbbing King.\n* The Throbbing King looks similar to the boss Mr. Fred from The Binding of Isaac: Rebirth, another game by Edmund McMillen. \n** With this in mind, the Throbbing King may also be based on a harlequin baby, much like Mr. Fred.\n* One of the Throbbing King's boss quotes is a popular misquote of William Shakespeare's Henry IV: Part II; it's normally not meant as a boast, but as a complaint.\n* The main fight mechanic plays out like a game of Simon Says.\n** The boss is known internally as \"Simon\", and his second stage as \"SimonFlopper\".\n* The Throbbing King is one of two bosses whose main theme shares the same name, the other being Guillotina.\n* Dr. Beanies sometimes refers to him as \"Super Meat Ball\", an obvious reference to [[url:https://en.wikipedia.org/wiki/Super_Meat_Boy|Super Meat Boy]]\n*If the Throbbing King's corpse is looted with 1 cat in the party then there will be a stem cat in the success cutscene where the rest of the party usually is.\n**This is unique to the Throbbing King as other Chapter 4 bosses have no other replacements for the missing cats when solo and their cutscenes will play with no differences.\n* The Throbbing King's song calls him a \"monarchy\", rather than a monarch, implying that the Throbbing Domain might be an extension of him.\n**The song also references his death in the quotes “Heart pumped backwards and that's no good,” where the king accidentally poops his own heart out.",
+    "spritePath": "data/sprites/bosses/Throbbing_King.png",
+    "categories": [
+      "Blobs"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Throbbing_King"
+  },
+  {
+    "name": "Zaratana",
+    "kind": "boss",
+    "internalId": "Zaratana",
+    "foundIn": "House",
+    "size": "2x2",
+    "attackStyle": "",
+    "stats": {
+      "health": "",
+      "damage": "",
+      "movement": "",
+      "luck": "5"
+    },
+    "mainTheme": "Brush Your Teeth",
+    "attacks": [],
+    "wikiBehavior": "Similarly to Pyrophina, despite her massive size, Zaratana takes up only 4 tiles, often attempting to walk all over the party with Trample before performing an attack. She is able to crowd the map quickly with rocks, grant them levitation effects, and summon a debilitating Meteornado at half health.",
+    "wikiStrategies": "* [[ability:Eat Rock]] can be used in combat to great effect. Zaratana herself is considered a rock by the ability and can be attacked by it for 5 damage alongside the auxiliary effects.\n* [[ability:Butcher]] will instantly destroy all of Zaratana’s rocks in a single turn.",
+    "wikiNotes": "",
+    "wikiQuotes": [
+      "GRUMBLE GRUMBLE!",
+      "GRUNT, SNORT"
+    ],
+    "wikiTrivia": "* Much like how Pyrophina is likely a pastiche of Godzilla, Zaratana is likely one of Gamera, a turtle-like Kaiju often considered one of the most influential Kaiju franchises in Japan alongside Godzilla.\n** Zaratana may also draw inspiration from legendary Pokémon, Pyrophina and Zaratana both represent opposite concepts (far below at the centre of the earth vs high above in space) and can passively generate weather conditions similar to legendary Pokémon such as Groudon and Kyogre. The player can additionally select one of the two to join them on their adventure.\n* Zaratana's Intro plays a rendition of Also Sprach Zarathustra's fanfare \"Sunrise\" well known for its use in 2001: A Space Odyssey.\n**Zaratana's name derives from the song's title \"Zara\" while retaining the naming convention of Act 1 and 2 House Bosses ending in \"na\"",
+    "spritePath": "data/sprites/bosses/Zaratana.png",
+    "categories": [
+      "Kaijus",
+      "Rocks"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Zaratana"
+  },
+  {
+    "name": "Zodiac",
+    "kind": "boss",
+    "internalId": "Zodiac",
+    "foundIn": "The Desert",
+    "size": "1x1",
+    "attackStyle": "",
+    "stats": {
+      "health": "75",
+      "damage": "7",
+      "movement": "6",
+      "luck": "5"
+    },
+    "mainTheme": "Lonesome Road",
+    "attacks": [],
+    "wikiBehavior": "Zodiac shoots in the direction of anything that moves to another tile, including objects that have been moved. He does not shoot cats that perform actions which do not move them to another tile. Zodiac has six shots in his revolver. Trying to fire a seventh shot will result in him attempting to shoot before getting confused and putting his gun away. During Zodiac's turn, he moves to a random tile, and may fire a shot if he has any bullets left. If he runs out of bullets before or during the turn, he will also reload his gun.",
+    "wikiStrategies": "* Hiding behind cover and moving the various objects around the map to bait out Zodiac's shots can provide a window of opportunity to attack.\n* Spawning familiars or using [[ability:Dump]] can be used as another method to bait out Zodiac's shots.\n* Classes with ranged basic attacks (e.g. [[class:Hunter]] & [[class:Mage]]) are great as they can attack from afar without having to move, often countering his main gimmick.\n* Classes with high constitution (e.g. [[class:Tank]] & [[class:Cleric]]) can absorb more shots from Zodiac, allowing them to approach and attack him without relying as much on cover.\n* Stacking armor effects can mitigate the damage from one or two shots, opening up opportunities to attack.\n* Zodiac only reloads if he is out of bullets during his turn. This can be taken advantage of by leaving Zodiac on low ammo so he doesn’t reload, allowing quick depletion of his remaining ammo during the round.",
+    "wikiNotes": "* Zodiac's rare, unique boss drops are: [[item:Zodiacs Poncho]] & [[item:Zodiac's Six Shooter]].\n\nclear",
+    "wikiQuotes": [
+      "''Don't move!''",
+      "Do you feel lucky?",
+      "I want you to print this cipher on your tombstone!",
+      "I want to report a murder... no, a double murder."
+    ],
+    "wikiTrivia": "* The insignia on Zodiac's cloak is the stamp used by the unidentified serial killer known as the \"[[url:https://en.wikipedia.org/wiki/Zodiac_Killer|Zodiac Killer]]\", who is also one of his inspirations and his namesake.\n** The quote \"I want to report a murder... no, a double murder.\" is likely inspired by a quote from the Zodiac Killer.\n* npc, Guillotina and Zodiac were of the second set of characters to recieve plushies as merchandise for the game, following Stacy and Radical Rat.\n\n* Zodiac used to be a mini-boss. Zodiac's conception and development was heavily documented in the [[url:https://store.steampowered.com/news/app/686060?emclan=103582791472650338&emgid=4213757668856197864|\"Zodiac!\"]] blog post.\n** Zodiac was conceived due to the developers wanting a cat mini-boss in the game who used a gun and from needing a mini-boss for The Desert. He was first prototyped as a enemy using the regular cat pieces who fired his revolver once any of his enemies ended their turns and during this time, he was known as simply \"Gunslinger\" by Tyler Glaiel. After deciding it wasn't fun, he experimented with instead having him fire the gun whenever he detected movement. There wouldn't be any more mechanical changes to Zodiac after this, as the change of having him react to movement was decided to be fun enough to not warrant another change. As for Zodiac's design, he was made bipedal due to Edmund McMillen wanting to make Zodiac stand out due to the fact he was going to be a mini-boss. Edmund McMillen cited him as a combination of \"[[url:https://en.wikipedia.org/wiki/Dirty_Harry_(character)|Dirty Harry]] and the Zodiac Killer\". When the developers began playtesting sessions with The Desert, it was noticed that Zodiac overshadowed the already existing boss of the chapter in terms of character and design. With this, it was decided to elevate Zodiac from a mini-boss to a full-fledged boss of the chapter.",
+    "spritePath": "data/sprites/bosses/Zodiac.png",
+    "categories": [
+      "Cats",
+      "Brain PatternBrain",
+      "Decision weight default",
+      "Movement gunslinger reposition"
+    ],
+    "wikiUrl": "https://mewgenics.wiki.gg/wiki/Zodiac"
+  }
+]

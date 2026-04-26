@@ -11,11 +11,12 @@ LogBox.ignoreLogs(["[RevenueCat]", "Open debugger"]);
 
 import { getOrCreateDeviceId } from "@/lib/services/device-id";
 import { getPostHogClient, capture } from "@/lib/services/posthog";
+import { useOnboardingStore } from "@/lib/stores/onboarding-store";
 import { useSettingsStore } from "@/lib/stores/settings-store";
 import { useIsDark } from "@/lib/theme";
 import { useColorScheme } from "nativewind";
 import Constants from "expo-constants";
-import { Stack, usePathname } from "expo-router";
+import { Stack, usePathname, useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import React, { Component, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Appearance, AppState, Text, View } from "react-native";
@@ -203,6 +204,26 @@ function ThemedStatusBar() {
   return <StatusBar style={isDark ? "light" : "dark"} />;
 }
 
+/**
+ * On first launch (or after a Settings reset), redirect into the onboarding
+ * stack once the splash has dismissed. We use replace() so the user can't
+ * "back" out of onboarding into a half-mounted tabs screen.
+ */
+function OnboardingGate({ splashDone }: { splashDone: boolean }) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const hasSeenIntro = useOnboardingStore((s) => s.hasSeenIntro);
+
+  useEffect(() => {
+    if (!splashDone) return;
+    if (hasSeenIntro) return;
+    if (pathname === "/onboarding") return;
+    router.replace("/onboarding");
+  }, [splashDone, hasSeenIntro, pathname, router]);
+
+  return null;
+}
+
 export default Sentry.wrap(function RootLayout() {
   const posthogClient = useMemo(() => getPostHogClient(), []);
   const [splashDone, setSplashDone] = useState(false);
@@ -221,8 +242,17 @@ export default Sentry.wrap(function RootLayout() {
           {posthogClient && <ScreenTracker />}
           {posthogClient && <DeviceIdentifier />}
           <AppearanceSync />
+          {/* <OnboardingGate splashDone={splashDone} /> */}
           <Stack screenOptions={{ headerShown: false }}>
             <Stack.Screen name="(tabs)" />
+            <Stack.Screen
+              name="onboarding"
+              options={{
+                headerShown: false,
+                gestureEnabled: false,
+                animation: "fade",
+              }}
+            />
             <Stack.Screen
               name="settings"
               options={{

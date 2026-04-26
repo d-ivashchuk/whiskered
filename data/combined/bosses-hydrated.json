@@ -1,0 +1,415 @@
+[
+  {
+    "name": "Boris",
+    "hydratedAt": "2026-04-26T00:00:00.000Z",
+    "model": "claude-opus-4-6",
+    "synthesizer": "agent",
+    "confidence": "high",
+    "signalNotes": "Rich wiki Strategies section plus 6 reddit threads with substantive tactical commentary.",
+    "commonStrategies": [
+      {
+        "text": "Keep your distance. Boris chases whoever hit him last, so ranged attackers can kite him all fight.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Boris",
+          "https://www.reddit.com/r/mewgenics/comments/1s57d8h/10_hours_playtime_boris_fight_rendition/"
+        ]
+      },
+      {
+        "text": "DoT effects like [[status:Poison]] are great here. They tick damage without making your cat the \"last damager\" Boris chases.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Boris"
+        ]
+      },
+      {
+        "text": "In late-game, you can just burst him down on turn 1. Crit-stacking [[class:Hunter]] builds with Heavy Shot or Scatter Shot delete him before he moves.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1s57d8h/10_hours_playtime_boris_fight_rendition/"
+        ]
+      }
+    ],
+    "counters": [
+      {
+        "text": "[[class:Tank]] with [[status:Thorns]] is the classic counter. Boris walks into you every turn, so Thorns procs constantly.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Boris"
+        ]
+      },
+      {
+        "text": "[[class:Butcher]] can attack diagonally and punish his 2x2 hitbox with [[item:Meat Hook]] from a safe angle.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Boris"
+        ]
+      },
+      {
+        "text": "A [[status:Trample]]-immune cat with a familiar build (like [[ability:Nature's Guidance]]) makes Boris nearly harmless. He just pushes you around while your familiars do the work.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Boris"
+        ]
+      },
+      {
+        "text": "Anything with 1+ knockback keeps your cat from getting trampled on contact.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Boris"
+        ]
+      },
+      {
+        "text": "Avoid [[class:Fighter]] for this fight. Low [[stat:CON]] and short range is the worst possible matchup.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Boris"
+        ]
+      }
+    ],
+    "keyStatuses": [
+      {
+        "text": "[[status:Stun]], [[status:Sleep]], and [[status:Immobile]] all lock Boris in place. But watch out: his Trample Dash still fires through [[status:Immobile]] and [[status:Entangled]].",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Boris"
+        ]
+      },
+      {
+        "text": "[[status:Thorns]] is way stronger than usual here because Boris initiates contact on every single turn.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Boris"
+        ]
+      }
+    ],
+    "notableInteractions": [
+      {
+        "text": "Reaction-attack chains can wipe your whole team in one turn if Boris triggers them. Risky pick for this fight.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1s59kx0/has_anyone_ever_actually_lost_to_boris/"
+        ]
+      },
+      {
+        "text": "The Spiky Rocks in the arena corners hurt Boris too. You can knock him into them or redirect his dash to deal free damage.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Boris"
+        ]
+      },
+      {
+        "text": "His 2x2 body can't fit into certain map spots. Scout the layout before committing your positioning.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Boris"
+        ]
+      }
+    ],
+    "communityTips": [
+      {
+        "text": "Boris is more of a DPS check than a mechanics puzzle. Melee-only teams have the hardest time.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1s59kx0/has_anyone_ever_actually_lost_to_boris/"
+        ]
+      },
+      {
+        "text": "On Hard and above he becomes a real threat, even with solid tactics and good comps.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1s59kx0/has_anyone_ever_actually_lost_to_boris/"
+        ]
+      },
+      {
+        "text": "Champion Boris rolls generic elite buffs (like on-move electric shock). Whether his Trample damage also scales is unconfirmed.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1smlw0z/i_found_red_boris_when_doing_a_butcher_only_run_3/",
+          "https://www.reddit.com/r/mewgenics/comments/1s59kx0/has_anyone_ever_actually_lost_to_boris/"
+        ]
+      }
+    ],
+    "partyComps": [
+      {
+        "text": "[[class:Tank]] + [[class:Thief]] is the go-to. Tank soaks hits and applies knockback, [[class:Thief]] chips from range with their basic attack.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Boris"
+        ]
+      },
+      {
+        "text": "Familiar build with [[ability:Nature's Guidance]] and a [[status:Trample]]-immune cat is the safest option if you have the items for it.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Boris"
+        ]
+      },
+      {
+        "text": "Late-game burst comp: crit [[class:Hunter]] with Heavy Shot, Scatter Shot, or bonus-turn-start mutations.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1s57d8h/10_hours_playtime_boris_fight_rendition/"
+        ]
+      }
+    ],
+    "threadCount": {
+      "reddit": 6,
+      "steam": 0
+    }
+  },
+  {
+    "name": "Lord Bunga",
+    "hydratedAt": "2026-04-25T00:00:00.000Z",
+    "model": "claude-opus-4-7",
+    "synthesizer": "agent",
+    "confidence": "high",
+    "signalNotes": "Wiki has detailed phase mechanics; the 'Worst boss in the game' thread adds strong tactical synthesis (ice slides, AI-familiar warning) and the bone-throne thread surfaces the Soul Link interaction.",
+    "commonStrategies": [
+      {
+        "text": "Two-phase fight: Bunga is seated until both Champions die OR he hits 150 HP — pick which trigger you want.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Lord_Bunga"
+        ]
+      },
+      {
+        "text": "Chip him while seated — he doesn't counter or eat from the throne, so pre-stack damage before phase 2.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Lord_Bunga",
+          "https://www.reddit.com/r/mewgenics/comments/1rlnqxi/worst_boss_in_the_game/"
+        ]
+      },
+      {
+        "text": "Drop him to 150 HP and finish Champions in the same round so phase 2 starts with the field clear.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Lord_Bunga"
+        ]
+      },
+      {
+        "text": "Treat as 'prepare or die' — bringing AI familiars or no CC is the main loss vector.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1rlnqxi/worst_boss_in_the_game/"
+        ]
+      }
+    ],
+    "counters": [
+      {
+        "text": "Entangle locks him out indefinitely if a cat recasts it every round.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Lord_Bunga"
+        ]
+      },
+      {
+        "text": "Bulletproof Vest or Helmet negate the concussion-stacking BOOGA! attack.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Lord_Bunga"
+        ]
+      },
+      {
+        "text": "2+ Knockback avoids both his eat AND his retaliation in one shove.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Lord_Bunga"
+        ]
+      },
+      {
+        "text": "Bear Trap in front of the throne pre-phase-2 buys an escape turn if positioning slips.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Lord_Bunga"
+        ]
+      },
+      {
+        "text": "Don't bring Body Guard or AI-controlled familiars — both rotate him into your back line.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Lord_Bunga"
+        ]
+      }
+    ],
+    "keyStatuses": [
+      {
+        "text": "Concussion is the actual run-killer — undocumented in-game, stacks invisibly across hits.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Lord_Bunga",
+          "https://www.reddit.com/r/mewgenics/comments/1rlnqxi/worst_boss_in_the_game/"
+        ]
+      },
+      {
+        "text": "Fear on Bunga backfires: forced movement resolves first, then he eats whatever's now adjacent.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Lord_Bunga"
+        ]
+      },
+      {
+        "text": "Stack Strength / Damage / Dexterity Up while he's seated to compress phase-2 exposure.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Lord_Bunga"
+        ]
+      }
+    ],
+    "notableInteractions": [
+      {
+        "text": "Behind him is safe, but any side-hit rotates his facing — plan damage angles deliberately.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Lord_Bunga"
+        ]
+      },
+      {
+        "text": "His eat is multi-tile AOE — summons or charmed allies walking adjacent get devoured too.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1s0rvxl/lord_bunga_eats_god/"
+        ]
+      },
+      {
+        "text": "Throne has 150 HP; Soul Link the throne to damage Bunga from outside eat range after he stands.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1sdwm36/lord_bungas_bone_throne/"
+        ]
+      }
+    ],
+    "communityTips": [
+      {
+        "text": "Concussion is invisible in-game — track stacks manually so you know when to retreat a cat.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1rlnqxi/worst_boss_in_the_game/"
+        ]
+      },
+      {
+        "text": "Cited as an act-1 wall alongside Spewer — past him, Jurassic feels easy.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1rlnqxi/worst_boss_in_the_game/"
+        ]
+      }
+    ],
+    "partyComps": [
+      {
+        "text": "Ranged + movement-heavy comp — melee teams take phase-2 punishment hardest.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Lord_Bunga"
+        ]
+      },
+      {
+        "text": "CC anchor (Entangle / Knockback) plus burst damage to compress phase 2.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Lord_Bunga"
+        ]
+      },
+      {
+        "text": "Concussion-immune frontline (Helmet / Vest) + Soul-Link cat damaging the throne.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/Lord_Bunga",
+          "https://www.reddit.com/r/mewgenics/comments/1sdwm36/lord_bungas_bone_throne/"
+        ]
+      }
+    ],
+    "threadCount": {
+      "reddit": 6,
+      "steam": 0
+    }
+  },
+  {
+    "name": "The Creator",
+    "hydratedAt": "2026-04-25T00:00:00.000Z",
+    "model": "claude-opus-4-7",
+    "synthesizer": "agent",
+    "confidence": "high",
+    "signalNotes": "Wiki is thin (no Behavior or Strategies section) but Reddit is dense — the 'Yet Another Rant' thread lays out phase-1 mirror mechanics in detail, the Party Detonator thread documents a documented item-skip strat, and the collarless thread confirms specific solo routes. Tactics here are almost entirely community-derived.",
+    "commonStrategies": [
+      {
+        "text": "Phase 1 is the wall — it's a mirror match against your own cats; phases 2–4 are noticeably easier.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1siarct/the_creator_yet_another_rant_spoilers/"
+        ]
+      },
+      {
+        "text": "On Hard+, mirror cats inherit your items AND Affixes; build every cat in your run with phase 1 in mind.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1siarct/the_creator_yet_another_rant_spoilers/"
+        ]
+      },
+      {
+        "text": "Drag enemies from earlier fights into phase 1 via Friendship Bracelet, Eternal Servitude, or Chains of Guilt.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1siarct/the_creator_yet_another_rant_spoilers/"
+        ]
+      }
+    ],
+    "counters": [
+      {
+        "text": "Survivalist Hat + Super Luck on a high-LCK cat almost guarantees an ambush start — you act before the mirrors.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1siarct/the_creator_yet_another_rant_spoilers/"
+        ]
+      },
+      {
+        "text": "Tame enemies with Depressing and bring them in — Depressing transfers to mirror cats and they lose initiative.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1siarct/the_creator_yet_another_rant_spoilers/"
+        ]
+      },
+      {
+        "text": "Party Detonator + Rune of Hagalaz multi-trigger removes bodies ignoring Holy Shield; fails only against Elite Buff: Depressing.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1ssyfok/trivializing_the_creator_fight_with_one_item/"
+        ]
+      },
+      {
+        "text": "Goofball stacked via cat-double accessory + Blood Frenzy + familiar spam can solo phase 1 by round 3.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1sc0jpw/defeated_the_creator_with_a_single_collarless_cat/"
+        ]
+      }
+    ],
+    "keyStatuses": [
+      {
+        "text": "Elite Buff: Depressing on the Creator hard-counters the Party Detonator strat — check the affix before committing.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1ssyfok/trivializing_the_creator_fight_with_one_item/"
+        ]
+      },
+      {
+        "text": "Mirror cats keep your Affixes on Hard+, so Affix-disruption items punch above their weight here.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1siarct/the_creator_yet_another_rant_spoilers/"
+        ]
+      }
+    ],
+    "notableInteractions": [
+      {
+        "text": "Cats killed in phase 1 are resurrected before phase 2/3 — P1 losses aren't run-ending if you survive the phase.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1siarct/the_creator_yet_another_rant_spoilers/"
+        ]
+      },
+      {
+        "text": "On Hard+ mirrors inherit your gear stash, so hoarded items can become the enemy's advantage.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1siarct/the_creator_yet_another_rant_spoilers/"
+        ]
+      },
+      {
+        "text": "Cannot roll Elite Buff: Twin — blacklisted on all forms.",
+        "sources": [
+          "https://mewgenics.wiki.gg/wiki/The_Creator"
+        ]
+      }
+    ],
+    "communityTips": [
+      {
+        "text": "Polarizing fight — some players love the brain-on requirement, others skip Act 3 without a Survivalist Hat in hand.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1siarct/the_creator_yet_another_rant_spoilers/"
+        ]
+      },
+      {
+        "text": "Collarless achievement is doable via Chaos Device 4-Jester runs or the Dr. Beanies all-class item.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1sj28qu/cant_wait_to_beat_the_creator_with_collarless_cats/"
+        ]
+      }
+    ],
+    "partyComps": [
+      {
+        "text": "Initiative-control: Survivalist Hat + Super Luck on a high-LCK cat to force ambushes.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1siarct/the_creator_yet_another_rant_spoilers/"
+        ]
+      },
+      {
+        "text": "Charm/recruit: Friendship Bracelet, Eternal Servitude, or Chains of Guilt to bring outside allies.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1siarct/the_creator_yet_another_rant_spoilers/"
+        ]
+      },
+      {
+        "text": "Item-burst: Party Detonator + Rune of Hagalaz multi-trigger pairing.",
+        "sources": [
+          "https://www.reddit.com/r/mewgenics/comments/1ssyfok/trivializing_the_creator_fight_with_one_item/"
+        ]
+      }
+    ],
+    "threadCount": {
+      "reddit": 6,
+      "steam": 0
+    }
+  }
+]

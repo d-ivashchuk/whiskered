@@ -20,6 +20,8 @@ const elementCtx = require.context("../data/sprites/elements", false, /\.png$/);
 const statusEffectCtx = require.context("../data/sprites/status-effects", false, /\.png$/);
 // @ts-expect-error
 const slotCtx = require.context("../data/sprites/slots", false, /\.png$/);
+// @ts-expect-error
+const bossCtx = require.context("../data/sprites/bosses", false, /\.png$/);
 
 type RequireContext = {
   keys(): string[];
@@ -45,6 +47,7 @@ const statSprites = buildMap(statCtx as RequireContext);
 const elementSprites = buildMap(elementCtx as RequireContext);
 const statusEffectSprites = buildMap(statusEffectCtx as RequireContext);
 const slotSprites = buildMap(slotCtx as RequireContext);
+const bossSprites = buildMap(bossCtx as RequireContext);
 
 // ─── Name → sprite key conversion ───────────────────────────────────────────
 
@@ -121,4 +124,13 @@ export function getStatusEffectSprite(name: string): ImageSourcePropType | null 
 
 export function getSlotSprite(slot: string): ImageSourcePropType | null {
   return slotSprites.get(slot) ?? null;
+}
+
+export function getBossSprite(name: string): ImageSourcePropType | null {
+  const underscored = name.replace(/\s+/g, "_");
+  if (bossSprites.has(underscored)) {
+    return bossSprites.get(underscored) ?? null;
+  }
+  const wikiKey = nameToSpriteKey(name);
+  return bossSprites.get(wikiKey) ?? null;
 }

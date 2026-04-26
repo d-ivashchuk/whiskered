@@ -1,8 +1,8 @@
 import { Text } from "@/components/ui/text";
 import { useThemeColors } from "@/lib/theme";
-import { items, classes, sets, abilities, statusEffects, dataLoaded } from "@/lib/game-data";
+import { items, classes, sets, abilities, statusEffects, bosses, dataLoaded } from "@/lib/game-data";
 import { getTierColor } from "@/lib/game-colors";
-import { getClassSprite, getAbilitySprite, getItemSprite, getStatusEffectSprite } from "@/lib/sprites";
+import { getClassSprite, getAbilitySprite, getItemSprite, getStatusEffectSprite, getBossSprite } from "@/lib/sprites";
 import { useRouter } from "expo-router";
 import { Image, Pressable, ScrollView, View, type ImageSourcePropType } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -111,6 +111,7 @@ export default function HomeScreen() {
     return [getItemSprite(first, item?.internalName)];
   });
   const effectSprites = statusEffects.slice(0, 4).map((e) => getStatusEffectSprite(e.name));
+  const bossSprites = bosses.slice(0, 4).map((b) => getBossSprite(b.name));
 
   return (
     <View style={{ flex: 1, paddingTop: insets.top }}>
@@ -163,6 +164,13 @@ export default function HomeScreen() {
             count={statusEffects.length}
             subtitle="Status effects and cross-references"
             onPress={() => router.push("/effects")}
+          />
+          <NavCard
+            sprites={bossSprites}
+            title="Bosses"
+            count={bosses.length}
+            subtitle="Boss guides, tactics, community tips"
+            onPress={() => router.push("/bosses")}
           />
         </View>
       </ScrollView>

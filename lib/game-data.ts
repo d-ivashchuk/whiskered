@@ -81,6 +81,58 @@ export interface GameAbility {
   hasSprite: boolean;
 }
 
+// ─── Boss types ─────────────────────────────────────────────────────────────
+
+export interface BossAttack {
+  name: string;
+  description: string;
+}
+
+export interface BossStats {
+  health: string;
+  damage: string;
+  movement: string;
+  luck: string;
+}
+
+export interface GameBoss {
+  name: string;
+  kind: "boss";
+  internalId: string;
+  foundIn: string;
+  size: string;
+  attackStyle: string;
+  stats: BossStats;
+  mainTheme: string;
+  attacks: BossAttack[];
+  wikiBehavior: string;
+  wikiStrategies: string;
+  wikiNotes: string;
+  wikiQuotes: string[];
+  wikiTrivia: string;
+  spritePath: string;
+  categories: string[];
+  wikiUrl: string;
+}
+
+export interface SourcedBullet {
+  text: string;
+  sources: string[];
+}
+
+export interface BossHydration {
+  name: string;
+  confidence: "high" | "medium" | "low";
+  signalNotes: string;
+  commonStrategies: SourcedBullet[];
+  counters: SourcedBullet[];
+  keyStatuses: SourcedBullet[];
+  notableInteractions: SourcedBullet[];
+  communityTips: SourcedBullet[];
+  partyComps: SourcedBullet[];
+  threadCount: { reddit: number; steam: number };
+}
+
 // ─── Stat descriptions ───────────────────────────────────────────────────────
 
 export const STAT_INFO: Record<string, { name: string; description: string }> = {
@@ -102,6 +154,8 @@ let _items: GameItem[] = [];
 let _classes: GameClass[] = [];
 let _sets: GameSet[] = [];
 let _abilities: GameAbility[] = [];
+let _bosses: GameBoss[] = [];
+let _bossHydrations: BossHydration[] = [];
 let _loaded = false;
 
 try {
@@ -113,12 +167,21 @@ try {
 } catch {
   console.warn("Game data not found. Run: npm run crawl && npm run combine");
 }
+
+try {
+  _bosses = require("../data/combined/bosses.json") as GameBoss[];
+} catch { /* bosses optional */ }
+
+try {
+  _bossHydrations = require("../data/combined/bosses-hydrated.json") as BossHydration[];
+} catch { /* hydrated bosses optional */ }
 /* eslint-enable @typescript-eslint/no-require-imports */
 
 export const items = _items;
 export const classes = _classes;
 export const sets = _sets;
 export const abilities = _abilities;
+export const bosses = _bosses;
 export const dataLoaded = _loaded;
 
 // ─── Lookup helpers ──────────────────────────────────────────────────────────
@@ -131,10 +194,24 @@ const itemMapNormalized = new Map(
 const classMap = new Map(_classes.map((c) => [c.name, c]));
 const setMap = new Map(_sets.map((s) => [s.name, s]));
 const abilityMap = new Map(_abilities.map((a) => [a.name, a]));
+const bossMap = new Map(_bosses.map((b) => [b.name, b]));
+const bossHydrationMap = new Map(_bossHydrations.map((h) => [h.name, h]));
+
+// Secondary lookup: strip wiki disambiguators like "(Item)" from item names
+const itemMapDisambiguated = new Map<string, GameItem>();
+for (const item of _items) {
+  const stripped = item.name.replace(/\s*\([^)]+\)\s*$/, "");
+  if (stripped !== item.name && !itemMap.has(stripped)) {
+    itemMapDisambiguated.set(stripped, item);
+  }
+}
 
 export function getItem(name: string): GameItem | undefined {
   const exact = itemMap.get(name);
   if (exact) return exact;
+  // Try without disambiguator: "Rat Bomb" → "Rat Bomb (Item)"
+  const disamb = itemMapDisambiguated.get(name);
+  if (disamb) return disamb;
   // Fuzzy fallback: strip special chars and compare
   const normalized = name.toLowerCase().replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
   return itemMapNormalized.get(normalized);
@@ -150,6 +227,45 @@ export function getSet(name: string): GameSet | undefined {
 
 export function getAbility(name: string): GameAbility | undefined {
   return abilityMap.get(name);
+}
+
+export function getBoss(name: string): GameBoss | undefined {
+  return bossMap.get(name);
+}
+
+export function getBossHydration(name: string): BossHydration | undefined {
+  return bossHydrationMap.get(name);
+}
+
+// ─── Boss drop reverse lookup ────────────────────────────────────────────────
+
+/** Map item name → boss names that drop it. Built once from wikiNotes. */
+const bossDropMap = new Map<string, string[]>();
+for (const boss of _bosses) {
+  const notes = boss.wikiNotes ?? "";
+  const itemRefs = [...notes.matchAll(/\[\[item:([^\]]+)\]\]/g)];
+  for (const m of itemRefs) {
+    const wikiName = m[1].trim();
+    if (!wikiName) continue;
+
+    // Index under both the wiki name and the resolved canonical name
+    const resolved = getItem(wikiName);
+    const names = new Set([wikiName]);
+    if (resolved) names.add(resolved.name);
+
+    for (const itemName of names) {
+      const existing = bossDropMap.get(itemName) ?? [];
+      if (!existing.includes(boss.name)) {
+        existing.push(boss.name);
+        bossDropMap.set(itemName, existing);
+      }
+    }
+  }
+}
+
+/** Get boss names that drop this item (empty array if none). */
+export function getBossesForItem(itemName: string): string[] {
+  return bossDropMap.get(itemName) ?? [];
 }
 
 // ─── Status effects ─────────────────────────────────────────────────────────

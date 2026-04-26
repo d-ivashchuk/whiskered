@@ -1,9 +1,9 @@
 import { Text } from "@/components/ui/text";
 import { ItemRow } from "@/components/item-row";
 import { useThemeColors } from "@/lib/theme";
-import { getItem, getSet } from "@/lib/game-data";
+import { getItem, getSet, getBossesForItem, getBoss } from "@/lib/game-data";
 import { getTierColor, getRarityTextColor } from "@/lib/game-colors";
-import { getItemSprite, getStatusEffectSprite, getSlotSprite } from "@/lib/sprites";
+import { getItemSprite, getStatusEffectSprite, getSlotSprite, getBossSprite } from "@/lib/sprites";
 import { useLocalSearchParams, useRouter, Stack } from "expo-router";
 import { Image, Pressable, ScrollView, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -98,6 +98,50 @@ export default function ItemDetailScreen() {
               <Text className="text-sm leading-5">{item.description}</Text>
             </View>
           ) : null}
+
+          {/* Drops from boss */}
+          {(() => {
+            const dropBosses = getBossesForItem(item.name);
+            if (dropBosses.length === 0) return null;
+            return (
+              <Section title="Drops From">
+                {dropBosses.map((bossName) => {
+                  const boss = getBoss(bossName);
+                  const bossSprite = getBossSprite(bossName);
+                  return (
+                    <Pressable
+                      key={bossName}
+                      onPress={() => router.push(`/bosses/${encodeURIComponent(bossName)}`)}
+                      style={({ pressed }) => ({
+                        backgroundColor: pressed ? theme.secondary : "transparent",
+                      })}
+                      className="flex-row items-center py-2.5 border-b border-border"
+                    >
+                      <View className="w-10 h-10 mr-3 items-center justify-center">
+                        {bossSprite ? (
+                          <Image source={bossSprite} style={{ width: 36, height: 36 }} resizeMode="contain" />
+                        ) : (
+                          <View
+                            style={{ backgroundColor: theme.secondary }}
+                            className="w-9 h-9 rounded-lg items-center justify-center"
+                          >
+                            <Text className="text-sm font-bold text-muted-foreground">{bossName[0]}</Text>
+                          </View>
+                        )}
+                      </View>
+                      <View className="flex-1">
+                        <Text className="text-sm font-medium">{bossName}</Text>
+                        {boss?.foundIn ? (
+                          <Text className="text-xs text-muted-foreground">{boss.foundIn}</Text>
+                        ) : null}
+                      </View>
+                      <ChevronRight size={16} color={theme.mutedForeground} />
+                    </Pressable>
+                  );
+                })}
+              </Section>
+            );
+          })()}
 
           {/* Found in (categories) */}
           {item.categories.length > 0 && (
