@@ -1,7 +1,7 @@
 {
   "name": "whiskered",
   "main": "expo-router/entry",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "private": true,
   "scripts": {
     "start": "expo start",
