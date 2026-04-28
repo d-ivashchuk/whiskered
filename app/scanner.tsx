@@ -73,6 +73,8 @@ export default function ScannerScreen() {
   const [isActive, setIsActive] = useState(true);
   const [cameraReady, setCameraReady] = useState(false);
   const [isFrozen, setIsFrozen] = useState(false);
+  const [autofocusMode, setAutofocusMode] = useState<"on" | "off">("on");
+  const refocusTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   // squareFrac: 0.0 = smallest, 1.0 = largest
   const [squareFrac, setSquareFrac] = useState(0.5);
   const [showDebug, setShowDebug] = useState(false);
@@ -140,6 +142,23 @@ export default function ScannerScreen() {
   const cameraHeight = screenHeight - resultsHeight - insets.bottom;
   const squareSize =
     screenWidth * (MIN_SQUARE_FRAC + squareFrac * (MAX_SQUARE_FRAC - MIN_SQUARE_FRAC));
+
+  // Tap-to-refocus: toggle autofocus prop to force a fresh AF pass.
+  // Continuous AF on Android (e.g. Steam Deck) doesn't always re-trigger
+  // when the subject distance changes, so this gives the user a manual nudge.
+  const handleTapToFocus = useCallback(() => {
+    triggerImpact();
+    if (refocusTimerRef.current) clearTimeout(refocusTimerRef.current);
+    setAutofocusMode("off");
+    refocusTimerRef.current = setTimeout(() => {
+      setAutofocusMode("on");
+      refocusTimerRef.current = null;
+    }, 50);
+  }, []);
+
+  useEffect(() => () => {
+    if (refocusTimerRef.current) clearTimeout(refocusTimerRef.current);
+  }, []);
 
   const STEP = 0.15;
   const handleZoomIn = useCallback(() => {
@@ -456,10 +475,18 @@ export default function ScannerScreen() {
             ref={cameraRef}
             style={StyleSheet.absoluteFill}
             facing="back"
-            autofocus="on"
+            autofocus={autofocusMode}
             onCameraReady={handleCameraReady}
           />
         )}
+
+        {/* Tap anywhere on the camera to force a refocus. Sits below the
+            top bar / stepper / resume overlay so their buttons still win. */}
+        <Pressable
+          style={StyleSheet.absoluteFill}
+          onPress={handleTapToFocus}
+          accessibilityLabel="Tap to refocus camera"
+        />
 
         <ScannerViewfinder squareSize={squareSize} />
 
