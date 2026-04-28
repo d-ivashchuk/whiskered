@@ -23,6 +23,7 @@ import Animated, {
 } from "react-native-reanimated";
 import { manipulateAsync, SaveFormat } from "expo-image-manipulator";
 import { X, Search } from "lucide-react-native";
+import { capture } from "@/lib/services/posthog";
 
 type CellResult = {
   row: number;
@@ -136,6 +137,7 @@ export default function GridScannerScreen() {
     setProgress({ current: 0, total: activeCells });
     setPhase("processing");
     setCellResults([]);
+    const startTime = performance.now();
 
     const { matchSprite } = await import("@/modules/item-classifier");
 
@@ -242,6 +244,13 @@ export default function GridScannerScreen() {
 
     setCellResults(results);
     setPhase("results");
+    const identified = results.filter((r) => r.topLabel && r.topLabel !== "unknown").length;
+    capture("grid_scan_completed", {
+      grid_size: gridSize,
+      cells_scanned: activeCells,
+      cells_identified: identified,
+      duration_ms: Math.round(performance.now() - startTime),
+    });
   }, [imageUri, gridSize, scale, translateX, translateY, imageAreaWidth, imageAreaHeight, cellSizePx, gridWidth, gridHeight, disabledCells]);
 
   const handleClose = useCallback(() => {

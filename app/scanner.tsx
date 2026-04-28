@@ -20,6 +20,7 @@ import { manipulateAsync, SaveFormat } from "expo-image-manipulator";
 import { X, ImageIcon, Scan, Bug, Grid3X3, Play, Plus, Minus } from "lucide-react-native";
 import * as ImagePicker from "expo-image-picker";
 import { triggerImpact } from "@/lib/haptics";
+import { capture } from "@/lib/services/posthog";
 
 type Prediction = {
   label: string;
@@ -89,6 +90,7 @@ export default function ScannerScreen() {
   const isBusyRef = useRef(false);
   const scanTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const labelHistoryRef = useRef<Map<string, number>>(new Map());
+  const lastIdentifiedLabelRef = useRef<string | null>(null);
   // Refs to avoid stale closures in the scan loop
   const isActiveRef = useRef(isActive);
   const cameraReadyRef = useRef(cameraReady);
@@ -103,6 +105,10 @@ export default function ScannerScreen() {
       requestPermission();
     }
   }, [hasPermission, requestPermission]);
+
+  useEffect(() => {
+    capture("scanner_opened");
+  }, []);
 
   // Pause scanning when navigating away, resume when returning.
   // Camera stays mounted to avoid flash on return.
@@ -277,12 +283,24 @@ export default function ScannerScreen() {
         .filter((p) => (history.get(p.label) ?? 0) >= STABILITY_THRESHOLD)
         .slice(0, 16);
 
-      setPredictions(
-        stablePredictions.map((p) => ({
-          label: p.label,
-          confidence: p.score,
-        }))
-      );
+      const nextPredictions = stablePredictions.map((p) => ({
+        label: p.label,
+        confidence: p.score,
+      }));
+      setPredictions(nextPredictions);
+
+      // Fire scan_identified only when the top stable label changes,
+      // to avoid spamming events every scan cycle.
+      const top = nextPredictions[0];
+      if (top && top.label !== lastIdentifiedLabelRef.current) {
+        lastIdentifiedLabelRef.current = top.label;
+        capture("scan_identified", {
+          source: "camera",
+          top_label: top.label,
+          top_confidence: Number(top.confidence.toFixed(3)),
+          predictions_count: nextPredictions.length,
+        });
+      }
     } catch (err) {
       const errMsg =
         err instanceof Error ? err.message : String(err);
@@ -339,12 +357,17 @@ export default function ScannerScreen() {
         const { matchSprite } = await import("@/modules/item-classifier");
         const matchResult = await matchSprite(result.assets[0].uri);
         labelHistoryRef.current.clear();
-        setPredictions(
-          matchResult.results.map((p) => ({
-            label: p.label,
-            confidence: p.score,
-          }))
-        );
+        const galleryPredictions = matchResult.results.map((p) => ({
+          label: p.label,
+          confidence: p.score,
+        }));
+        setPredictions(galleryPredictions);
+        const top = galleryPredictions[0];
+        capture("gallery_scan_used", {
+          predictions_count: galleryPredictions.length,
+          top_label: top?.label ?? null,
+          top_confidence: top ? Number(top.confidence.toFixed(3)) : null,
+        });
         // Freeze: keep camera off, results visible
         setIsFrozen(true);
       } else {
@@ -392,8 +415,16 @@ export default function ScannerScreen() {
   }, [router]);
 
   const handleItemPress = useCallback((displayName: string) => {
+    const idx = predictions.findIndex((p) => p.label === displayName);
+    const pred = idx >= 0 ? predictions[idx] : undefined;
+    capture("scan_result_tapped", {
+      label: displayName,
+      position: idx,
+      confidence: pred ? Number(pred.confidence.toFixed(3)) : null,
+      source: isFrozen ? "gallery" : "camera",
+    });
     router.push(`/items/${encodeURIComponent(displayName)}`);
-  }, [router]);
+  }, [router, predictions, isFrozen]);
 
   if (!hasPermission) {
     return (
