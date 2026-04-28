@@ -1,9 +1,10 @@
 import { Text } from "@/components/ui/text";
 import { Switch } from "@/components/ui/switch";
+import { useOnboardingStore } from "@/lib/stores/onboarding-store";
 import { useSettingsStore } from "@/lib/stores/settings-store";
 import { useThemeColors } from "@/lib/theme";
 
-import { ChevronRight, ExternalLink, FileText, Shield, Star, Wrench } from "lucide-react-native";
+import { ChevronRight, ExternalLink, FileText, PlayCircle, Shield, Star, Wrench } from "lucide-react-native";
 import SegmentedControl from "@react-native-segmented-control/segmented-control";
 import * as Application from "expo-application";
 import * as Updates from "expo-updates";
@@ -24,6 +25,13 @@ export default function SettingsScreen() {
 	const setSoundEnabled = useSettingsStore((s) => s.setSoundEnabled);
 	const analyticsEnabled = useSettingsStore((s) => s.analyticsEnabled);
 	const setAnalyticsEnabled = useSettingsStore((s) => s.setAnalyticsEnabled);
+	const resetIntro = useOnboardingStore((s) => s.resetIntro);
+
+	const handleShowIntroAgain = () => {
+		resetIntro();
+		capture("onboarding_replay_requested");
+		router.push("/onboarding");
+	};
 
 	const appVersion = Application.nativeApplicationVersion ?? "0.0.0";
 	const buildNumber = Application.nativeBuildVersion ?? "0";
@@ -194,6 +202,28 @@ export default function SettingsScreen() {
 								</Pressable>
 							</>
 						) : null}
+					</View>
+				</View>
+
+				{/* About section */}
+				<View className="px-6 mb-8">
+					<Text className="text-base font-semibold uppercase tracking-[0.08em] text-muted-foreground mb-2">
+						About
+					</Text>
+					<View className="bg-card rounded-2xl overflow-hidden">
+						<Pressable
+							onPress={handleShowIntroAgain}
+							className="px-4 py-4 flex-row items-center"
+						>
+							<PlayCircle size={18} color={colors.mutedForeground} strokeWidth={2} />
+							<View className="flex-1 ml-3">
+								<Text className="text-base font-medium text-foreground">Show intro again</Text>
+								<Text className="text-sm text-muted-foreground mt-0.5">
+									Replay the welcome tour
+								</Text>
+							</View>
+							<ChevronRight size={18} color={colors.mutedForeground} strokeWidth={2} />
+						</Pressable>
 					</View>
 				</View>
 

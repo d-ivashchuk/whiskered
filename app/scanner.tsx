@@ -17,7 +17,7 @@ import {
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { CameraView, useCameraPermissions } from "expo-camera";
 import { manipulateAsync, SaveFormat } from "expo-image-manipulator";
-import { X, ImageIcon, Scan, Bug, Grid3X3, Play, Plus, Minus } from "lucide-react-native";
+import { X, ImageIcon, Scan, Bug, Grid3X3, Play, Plus, Minus, Flower } from "lucide-react-native";
 import * as ImagePicker from "expo-image-picker";
 import { triggerImpact } from "@/lib/haptics";
 import { capture } from "@/lib/services/posthog";
@@ -73,6 +73,8 @@ export default function ScannerScreen() {
   const [isActive, setIsActive] = useState(true);
   const [cameraReady, setCameraReady] = useState(false);
   const [isFrozen, setIsFrozen] = useState(false);
+  const [macroLens, setMacroLens] = useState<string | null>(null);
+  const [isMacro, setIsMacro] = useState(true);
   // squareFrac: 0.0 = smallest, 1.0 = largest
   const [squareFrac, setSquareFrac] = useState(0.5);
   const [showDebug, setShowDebug] = useState(false);
@@ -337,10 +339,25 @@ export default function ScannerScreen() {
     };
   }, [isScanning, cameraReady, hasPermission, doScan]);
 
-  const handleCameraReady = useCallback(() => {
+  const handleCameraReady = useCallback(async () => {
     console.log("[Scanner] onCameraReady fired");
     setCameraReady(true);
     setIsScanning(true);
+    // Detect ultra-wide lens for macro mode
+    try {
+      const lenses = await cameraRef.current?.getAvailableLensesAsync();
+      const ultraWide = lenses?.find((l) => /ultra.*wide/i.test(l));
+      if (ultraWide) {
+        setMacroLens(ultraWide);
+      }
+    } catch {
+      // Not all devices support lens selection
+    }
+  }, []);
+
+  const handleToggleMacro = useCallback(() => {
+    triggerImpact();
+    setIsMacro((v) => !v);
   }, []);
 
   const handleGallery = useCallback(async () => {
@@ -457,6 +474,7 @@ export default function ScannerScreen() {
             style={StyleSheet.absoluteFill}
             facing="back"
             autofocus="on"
+            selectedLens={isMacro && macroLens ? macroLens : undefined}
             onCameraReady={handleCameraReady}
           />
         )}
@@ -482,6 +500,17 @@ export default function ScannerScreen() {
             <Pressable onPress={handleGridScanner} style={styles.topBarButton}>
               <Grid3X3 size={22} color="#fff" />
             </Pressable>
+            {macroLens && (
+              <Pressable
+                onPress={handleToggleMacro}
+                style={[
+                  styles.topBarButton,
+                  isMacro && { backgroundColor: "rgba(234,179,8,0.6)" },
+                ]}
+              >
+                <Flower size={20} color="#fff" />
+              </Pressable>
+            )}
             {__DEV__ && (
               <Pressable
                 onPress={() => setShowDebug((v) => !v)}
