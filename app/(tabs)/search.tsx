@@ -19,7 +19,8 @@ import {
 import { getTierColor } from "@/lib/game-colors";
 import { getItemSprite, getClassSprite, getAbilitySprite, getStatusEffectSprite } from "@/lib/sprites";
 import { useRouter } from "expo-router";
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { capture } from "@/lib/services/posthog";
 import {
   ActivityIndicator,
   Keyboard,
@@ -257,6 +258,20 @@ export default function SearchScreen() {
     [sections]
   );
 
+  // Debounce search analytics so we capture the settled query, not every keystroke.
+  useEffect(() => {
+    const trimmed = search.trim();
+    if (trimmed.length < 2) return;
+    const id = setTimeout(() => {
+      capture("search_performed", {
+        query_length: trimmed.length,
+        total_results: totalResults,
+        has_results: totalResults > 0,
+      });
+    }, 600);
+    return () => clearTimeout(id);
+  }, [search, totalResults]);
+
   const runClassification = useCallback(async (uri: string) => {
     setScanState({ status: "loading", imageUri: uri });
     try {
@@ -280,10 +295,16 @@ export default function SearchScreen() {
   }, []);
 
   const renderItem = useCallback(
-    ({ item }: { item: SearchResult }) => (
+    ({ item, index }: { item: SearchResult; index: number }) => (
       <ResultRow
         result={item}
-        onPress={() => router.push(item.route as never)}
+        onPress={() => {
+          capture("search_result_tapped", {
+            type: item.type,
+            position: index,
+          });
+          router.push(item.route as never);
+        }}
       />
     ),
     [router]

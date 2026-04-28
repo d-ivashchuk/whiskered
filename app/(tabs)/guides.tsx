@@ -8,6 +8,7 @@ import { useMemo } from "react";
 import { Image, Pressable, ScrollView, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ChevronRight } from "lucide-react-native";
+import { capture } from "@/lib/services/posthog";
 
 function GuideRow({ boss, onPress, isLast }: { boss: GameBoss; onPress: () => void; isLast: boolean }) {
   const theme = useThemeColors();
@@ -86,7 +87,10 @@ export default function GuidesTab() {
               key={boss.name}
               boss={boss}
               isLast={i === guideBosses.length - 1}
-              onPress={() => router.push(`/bosses/guide/${encodeURIComponent(boss.name)}`)}
+              onPress={() => {
+                capture("boss_guide_opened", { boss_name: boss.name });
+                router.push(`/bosses/guide/${encodeURIComponent(boss.name)}`);
+              }}
             />
           ))}
         </View>
