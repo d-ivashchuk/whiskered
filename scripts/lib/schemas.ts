@@ -68,7 +68,7 @@ export const BossSchema = z.object({
 });
 export type Boss = z.infer<typeof BossSchema>;
 
-// ── Boss (hydrated tactics writeup) ───────────────────────────────────────
+// ── Shared ────────────────────────────────────────────────────────────────
 
 /**
  * Every claim in the hydrated output must carry at least one source URL.
@@ -80,6 +80,82 @@ export const SourcedBulletSchema = z.object({
   sources: z.array(z.string().min(1)).min(1),
 });
 export type SourcedBullet = z.infer<typeof SourcedBulletSchema>;
+
+// ── Event (raw wiki output) ───────────────────────────────────────────────
+
+/**
+ * One outcome branch of a choice — what happens when the player picks an option,
+ * optionally gated behind a stat/skill check.
+ */
+export const EventOutcomeSchema = z.object({
+  /** Free-text label for the outcome, e.g. "Success", "Failure", "Cat dies". */
+  label: z.string().default(""),
+  /**
+   * The check that produces this outcome, if any. Both `stat` and `dc` come
+   * from the wiki when present (e.g. CON 14, DEX 10, "DC 12 INT"). Free-text
+   * because the wiki is inconsistent — some events list a stat, some a class,
+   * some a status, some "automatic".
+   */
+  check: z
+    .object({
+      stat: z.string().default(""),
+      dc: z.string().default(""),
+      kind: z.string().default(""),
+    })
+    .optional(),
+  /** What happens — text body, with `[[type:Name]]` link markers preserved. */
+  description: z.string().default(""),
+  /** Items/abilities/statuses this outcome grants or applies. Free-form. */
+  rewards: z.array(z.string()).default([]),
+  penalties: z.array(z.string()).default([]),
+});
+export type EventOutcome = z.infer<typeof EventOutcomeSchema>;
+
+export const EventChoiceSchema = z.object({
+  /** Choice text the player sees, e.g. "Approach the cauldron". */
+  text: z.string(),
+  /** Optional flavor / context from the wiki. */
+  description: z.string().default(""),
+  /** Possible outcomes — usually 1 (auto), 2 (success/failure), or N (random). */
+  outcomes: z.array(EventOutcomeSchema).default([]),
+});
+export type EventChoice = z.infer<typeof EventChoiceSchema>;
+
+export const EventSchema = z.object({
+  /** Always equal to the wiki page title. */
+  name: z.string(),
+  kind: z.literal("event"),
+  /**
+   * Where the event can appear. Free-form — the wiki uses chapter names
+   * ("The Sewers"), act labels ("Act I"), or both. We keep both.
+   */
+  chapter: z.string().default(""),
+  act: z.string().default(""),
+  /**
+   * One-line summary / flavor text. Pulled from the infobox if present,
+   * otherwise the first paragraph of the page body.
+   */
+  flavor: z.string().default(""),
+  /**
+   * Long-form description — the `==Description==` / `==Overview==` section
+   * body, with link markers preserved.
+   */
+  wikiDescription: z.string().default(""),
+  /** Player choices and their outcomes (the heart of an event). */
+  choices: z.array(EventChoiceSchema).default([]),
+  /** Items the event can possibly grant. Useful for the app's filter/search. */
+  possibleRewards: z.array(z.string()).default([]),
+  /** Notes, trivia, gotchas — anything else worth surfacing. */
+  wikiNotes: z.string().default(""),
+  wikiTrivia: z.string().default(""),
+  /** Sprite path on disk (relative to repo root), e.g. `data/sprites/events/Foo.png`. */
+  spritePath: z.string().default(""),
+  categories: z.array(z.string()).default([]),
+  wikiUrl: z.string(),
+});
+export type Event = z.infer<typeof EventSchema>;
+
+// ── Hydrated boss (tactics writeup) ───────────────────────────────────────
 
 export const HydratedBossSchema = z.object({
   name: z.string(),

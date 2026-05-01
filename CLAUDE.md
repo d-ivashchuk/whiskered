@@ -15,6 +15,9 @@ npm run web            # Web version
 npm test               # Vitest unit tests
 npm run test:e2e       # Maestro E2E tests
 npm run crawl          # Fetch items + sprites from mewgenics.wiki.gg
+npm run crawl:bosses   # Fetch bosses from mewgenics.wiki.gg
+npm run crawl:events   # Fetch events (choices/checks/outcomes) from mewgenics.wiki.gg
+npm run combine        # Merge raw crawl output into data/combined/*.json
 ```
 
 ## What's Included
@@ -83,13 +86,21 @@ lib/
   haptics.ts                 # Haptic feedback
 
 scripts/
-  crawl-wiki.ts        # Wiki crawler (items + sprites from mewgenics.wiki.gg)
+  crawl-wiki.ts        # Items + classes + abilities crawler
+  crawl-bosses.ts      # Bosses crawler (infobox + behavior + sprites)
+  crawl-events.ts      # Events crawler (choices, stat checks, outcomes)
+  combine-data.ts      # Merge raw crawls into data/combined/*.json
 
 data/                  # Crawled data (gitignored, regenerable)
   item-list.json       # All item names
   items/               # Individual item JSON files
+  bosses/              # Individual boss JSON files
+  events/              # Individual event JSON files (choices + outcomes)
+  combined/            # Merged data the app reads
   sprites/
     png/               # 224x224 PNGs for ML training
+    bosses/            # Boss sprites
+    events/            # Event sprites (when present on the wiki)
   missing-sprites.json # Items without sprites
 ```
 
