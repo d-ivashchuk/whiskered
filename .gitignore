@@ -81,3 +81,6 @@ ml/__pycache__/
 # Build artifacts and screenshots (not needed in EAS or repo)
 builds/
 screenshots/
+*.aab
+*.apk
+*.ipa
