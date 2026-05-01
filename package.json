@@ -19,6 +19,7 @@
     "lint": "expo lint",
     "crawl": "npx tsx scripts/crawl-wiki.ts",
     "crawl:bosses": "npx tsx scripts/crawl-bosses.ts",
+    "crawl:events": "npx tsx scripts/crawl-events.ts",
     "bundle:bosses": "npx tsx scripts/hydrate-bosses.ts",
     "validate:bosses": "npx tsx scripts/validate-hydrated-bosses.ts",
     "generate-tiers": "npx tsx scripts/generate-tiers.ts",
