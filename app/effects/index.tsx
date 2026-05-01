@@ -1,5 +1,6 @@
 import { Text } from "@/components/ui/text";
 import { Input } from "@/components/ui/input";
+import { SearchEmpty } from "@/components/search-empty";
 import { useThemeColors } from "@/lib/theme";
 import { statusEffects, type StatusEffect } from "@/lib/game-data";
 import { useRouter, Stack } from "expo-router";
@@ -108,6 +109,7 @@ export default function EffectsScreen() {
           keyExtractor={(item) => item.name}
           initialNumToRender={20}
           contentContainerStyle={{ paddingBottom: insets.bottom + 80 }}
+          ListEmptyComponent={search.trim() ? <SearchEmpty query={search.trim()} /> : null}
         />
       </View>
     </>

@@ -1,5 +1,6 @@
 import { Text } from "@/components/ui/text";
 import { Input } from "@/components/ui/input";
+import { SearchEmpty } from "@/components/search-empty";
 import { ItemRow } from "@/components/item-row";
 import { useThemeColors } from "@/lib/theme";
 import { items, getAllSlots } from "@/lib/game-data";
@@ -147,6 +148,7 @@ export default function ItemsScreen() {
           windowSize={10}
           getItemLayout={(_, index) => ({ length: 52, offset: 52 * index, index })}
           contentContainerStyle={{ paddingBottom: insets.bottom + 80 }}
+          ListEmptyComponent={search.trim() ? <SearchEmpty query={search.trim()} /> : null}
         />
       </View>
     </>

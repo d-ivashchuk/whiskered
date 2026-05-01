@@ -1,13 +1,15 @@
 import { Text } from "@/components/ui/text";
+import { Input } from "@/components/ui/input";
+import { SearchEmpty } from "@/components/search-empty";
 import { useThemeColors } from "@/lib/theme";
 import { bosses, getBossHydration } from "@/lib/game-data";
 import type { GameBoss } from "@/lib/game-data";
 import { getBossSprite } from "@/lib/sprites";
 import { useRouter, Stack } from "expo-router";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { Image, Pressable, ScrollView, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { ChevronRight } from "lucide-react-native";
+import { ChevronRight, Search, X } from "lucide-react-native";
 
 // ─── Act / Zone structure ────────────────────────────────────────────────────
 
@@ -113,10 +115,22 @@ export default function BossesScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
   const theme = useThemeColors();
+  const [search, setSearch] = useState("");
 
   const groups = useMemo(() => {
+    const q = search.toLowerCase().trim();
+
+    // Filter bosses first if there's a search query
+    const filteredBosses = q
+      ? bosses.filter(
+          (b) =>
+            b.name.toLowerCase().includes(q) ||
+            (b.foundIn ?? "").toLowerCase().includes(q)
+        )
+      : bosses;
+
     const bossMap = new Map<string, GameBoss[]>();
-    for (const boss of bosses) {
+    for (const boss of filteredBosses) {
       const loc = boss.foundIn || "";
       const existing = bossMap.get(loc) ?? [];
       existing.push(boss);
@@ -149,7 +163,9 @@ export default function BossesScreen() {
     }
 
     return result;
-  }, []);
+  }, [search]);
+
+  const totalFiltered = groups.reduce((sum, g) => sum + g.bosses.length, 0);
 
   // Track which act headers we've already shown
   const shownActs = new Set<string>();
@@ -160,12 +176,31 @@ export default function BossesScreen() {
       <ScrollView
         style={{ flex: 1 }}
         contentContainerStyle={{ paddingBottom: insets.bottom + 80 }}
+        keyboardShouldPersistTaps="handled"
       >
-        <View className="px-4 pt-2 pb-1">
+        <View className="px-4 pt-2 pb-2">
+          <View className="flex-row items-center">
+            <View className="flex-1 flex-row items-center">
+              <Search size={16} color={theme.mutedForeground} style={{ position: "absolute", left: 10, zIndex: 1 }} />
+              <Input value={search} onChangeText={setSearch} placeholder="Search bosses..." className="flex-1 pl-9" />
+              {search.length > 0 && (
+                <Pressable onPress={() => setSearch("")} style={{ position: "absolute", right: 10 }}>
+                  <X size={16} color={theme.mutedForeground} />
+                </Pressable>
+              )}
+            </View>
+          </View>
+        </View>
+
+        <View className="px-4 pb-1">
           <Text className="text-muted-foreground text-sm">
-            {bosses.length} bosses
+            {totalFiltered} bosses
           </Text>
         </View>
+
+        {totalFiltered === 0 && search.trim() ? (
+          <SearchEmpty query={search.trim()} />
+        ) : null}
 
         {groups.map((group) => {
           const showActHeader = !shownActs.has(group.act);

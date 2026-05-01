@@ -1,5 +1,6 @@
 import { Text } from "@/components/ui/text";
 import { Input } from "@/components/ui/input";
+import { SearchEmpty } from "@/components/search-empty";
 import { useThemeColors } from "@/lib/theme";
 import { abilities, classes } from "@/lib/game-data";
 import { getTierColor } from "@/lib/game-colors";
@@ -211,6 +212,7 @@ export default function AbilitiesScreen() {
           maxToRenderPerBatch={20}
           windowSize={10}
           contentContainerStyle={{ paddingBottom: insets.bottom + 80 }}
+          ListEmptyComponent={search.trim() ? <SearchEmpty query={search.trim()} /> : null}
         />
       </View>
     </>

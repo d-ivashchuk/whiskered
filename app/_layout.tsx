@@ -250,7 +250,7 @@ export default Sentry.wrap(function RootLayout() {
           {posthogClient && <ScreenTracker />}
           {posthogClient && <DeviceIdentifier />}
           <AppearanceSync />
-          {/* <OnboardingGate splashDone={splashDone} /> */}
+          <OnboardingGate splashDone={splashDone} />
           <Stack screenOptions={{ headerShown: false }}>
             <Stack.Screen name="(tabs)" />
             <Stack.Screen
