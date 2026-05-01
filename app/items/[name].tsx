@@ -8,6 +8,8 @@ import { useLocalSearchParams, useRouter, Stack } from "expo-router";
 import { Image, Pressable, ScrollView, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ChevronRight } from "lucide-react-native";
+import { useEffect } from "react";
+import { onEntryOpened } from "@/lib/services/rate-app";
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -27,6 +29,10 @@ export default function ItemDetailScreen() {
   const theme = useThemeColors();
 
   const item = getItem(decodeURIComponent(name ?? ""));
+
+  useEffect(() => {
+    if (item) void onEntryOpened(`item:${item.name}`);
+  }, [item]);
 
   if (!item) {
     return (

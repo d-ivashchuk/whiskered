@@ -21,6 +21,7 @@ import { X, ImageIcon, Scan, Bug, Grid3X3, Play, Plus, Minus, Flower } from "luc
 import * as ImagePicker from "expo-image-picker";
 import { triggerImpact } from "@/lib/haptics";
 import { capture } from "@/lib/services/posthog";
+import { onSuccessfulScan } from "@/lib/services/rate-app";
 
 type Prediction = {
   label: string;
@@ -440,6 +441,7 @@ export default function ScannerScreen() {
       confidence: pred ? Number(pred.confidence.toFixed(3)) : null,
       source: isFrozen ? "gallery" : "camera",
     });
+    void onSuccessfulScan();
     router.push(`/items/${encodeURIComponent(displayName)}`);
   }, [router, predictions, isFrozen]);
 
