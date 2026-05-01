@@ -7,6 +7,8 @@ import { getBossSprite } from "@/lib/sprites";
 import { useLocalSearchParams, Stack } from "expo-router";
 import { Image, ScrollView, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useEffect } from "react";
+import { onEntryOpened } from "@/lib/services/rate-app";
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -47,6 +49,10 @@ export default function BossGuideScreen() {
   const decodedName = decodeURIComponent(name ?? "");
   const hydration = getBossHydration(decodedName);
   const sprite = getBossSprite(decodedName);
+
+  useEffect(() => {
+    if (hydration && decodedName) void onEntryOpened(`guide:${decodedName}`);
+  }, [hydration, decodedName]);
 
   if (!hydration) {
     return (
