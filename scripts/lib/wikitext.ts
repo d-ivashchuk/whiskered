@@ -42,7 +42,12 @@ export function extractSection(wikitext: string, heading: string): string {
   const escaped = heading.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const re = new RegExp(`==\\s*${escaped}s?\\s*==\\s*\\n([\\s\\S]*?)(?=\\n==[^=]|$)`, "i");
   const m = wikitext.match(re);
-  return m ? m[1].trim() : "";
+  if (!m) return "";
+  let body = m[1];
+  // If a level-2 heading bled in (empty section followed by next section),
+  // drop everything from that heading onward — it belongs to another section.
+  body = body.replace(/^==[^=][\s\S]*$/m, "").trim();
+  return body;
 }
 
 /**
@@ -85,9 +90,11 @@ export function convertWikiTemplates(text: string, preserveLinks: boolean): stri
     HP: "HP", MANA: "Mana",
   };
 
-  text = text.replace(/\{\{[Ss]tat\|([^|}]+)(?:\|([^}]*))?\}\}/g, (_m, stat, val) => {
+  text = text.replace(/\{\{[Ss]tat\|([^|}]+)(?:\|([^}]*))?\}\}/g, (_m, stat, rawVal) => {
     const abbrev = STAT_ABBREV[stat.trim().toUpperCase()] ?? stat.trim().toUpperCase();
     const name = STAT_NAMES[abbrev] ?? stat.trim();
+    // Skip named parameters like nolabel=y, noicon=y — they're display hints, not values
+    const val = rawVal && !rawVal.includes("=") ? rawVal.trim() : undefined;
     if (preserveLinks) {
       return val ? `${val} [[stat:${abbrev}]]` : `[[stat:${abbrev}]]`;
     }
@@ -149,10 +156,28 @@ export function convertWikiTemplates(text: string, preserveLinks: boolean): stri
   // Tooltips: {{Tooltip/BossHP|122}} → "122"
   text = text.replace(/\{\{Tooltip\/[^|}]*\|([^}]+)\}\}/gi, "$1");
 
+  // HouseStat: {{HouseStat|nolabel=y|Comfort|+1}} or {{HouseStat|Health}}
+  // Extract the stat name (first non-named param) and optional value
+  text = text.replace(/\{\{HouseStat\|([^}]*)\}\}/gi, (_m, inner) => {
+    const parts = inner.split("|").map((p: string) => p.trim()).filter((p: string) => !p.includes("="));
+    const statName = parts[0] ?? "House Stat";
+    const value = parts[1];
+    return value ? `${value} ${statName}` : statName;
+  });
+
+  // Mutations: {{mut|Mouth.-2}} — internal IDs that can't be resolved to names
+  text = text.replace(/\{\{mut\|[^}]*\}\}/gi, "a mutation");
+
   text = text
-    .replace(/\{\{d\|([^}|]+?)(?:\|[^}]*)?\}\}/gi, "$1")
+    .replace(/\{\{d\|([^}|]+?)(?:\|([^}]+))?\}\}/gi, (_m, name, display) =>
+      linkOrDisplay("disorder", name, display),
+    )
     .replace(/\{\{b\|([^}|]+?)(?:\|([^}]+))?\}\}/gi, (_m, name, display) => display ?? name)
     .replace(/\{\{Icon\|([^}|]+?)(?:\|[^}]*)?\}\}/gi, "$1")
+    // Templates that should be stripped entirely (no output)
+    .replace(/\{\{Citation needed\}\}/gi, "")
+    .replace(/\{\{Navbox\/[^}]*\}\}/gi, "")
+    .replace(/\{\{Navbox[^}]*\}\}/gi, "")
     // <ref>URL</ref> and <ref name="...">…</ref> — drop entirely (citations are
     // noise once we've stripped the wiki's reference renderer).
     .replace(/<ref[^>]*\/>/gi, "")
@@ -162,7 +187,7 @@ export function convertWikiTemplates(text: string, preserveLinks: boolean): stri
 
   if (preserveLinks) {
     text = text.replace(
-      /\[\[(ability|item|class|status|stat|type|obj|chapter):([^\]]+)\]\]/g,
+      /\[\[(ability|item|class|status|stat|type|obj|chapter|disorder):([^\]]+)\]\]/g,
       (_m, type, name) => `%LINK%${type}:${name}%ENDLINK%`,
     );
   }
@@ -173,10 +198,13 @@ export function convertWikiTemplates(text: string, preserveLinks: boolean): stri
     .replace(/\[(https?:\/\/\S+)\s+([^\]]+)\]/g, "[[url:$1|$2]]")
     // Bare external links with no display text: [https://example.com] → drop
     .replace(/\[https?:\/\/[^\]]+\]/g, "")
-    .replace(/'''([^']+)'''/g, "$1")
-    .replace(/''([^']+)''/g, "$1")
+    .replace(/'''(.+?)'''/g, "$1")
+    .replace(/''(.+?)''/g, "$1")
     .replace(/<br\s*\/?>/gi, " ")
     .replace(/<[^>]+>/g, "")
+    // Strip wiki table markup and section headings that leaked into content
+    .replace(/\{\|[\s\S]*?\|\}/g, "")
+    .replace(/^={2,}\s*[^=\n]+\s*={2,}\s*$/gm, "")
     .trim();
 
   if (preserveLinks) {

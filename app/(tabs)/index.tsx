@@ -1,8 +1,8 @@
 import { Text } from "@/components/ui/text";
 import { useThemeColors } from "@/lib/theme";
-import { items, classes, sets, abilities, statusEffects, bosses, dataLoaded } from "@/lib/game-data";
+import { items, classes, sets, abilities, statusEffects, bosses, events, disorders, dataLoaded } from "@/lib/game-data";
 import { getTierColor } from "@/lib/game-colors";
-import { getClassSprite, getAbilitySprite, getItemSprite, getStatusEffectSprite, getBossSprite } from "@/lib/sprites";
+import { getClassSprite, getAbilitySprite, getItemSprite, getStatusEffectSprite, getBossSprite, getEventSprite, getDisorderSprite } from "@/lib/sprites";
 import { useRouter } from "expo-router";
 import { Image, Pressable, ScrollView, View, type ImageSourcePropType } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -111,6 +111,7 @@ export default function HomeScreen() {
     return [getItemSprite(first, item?.internalName)];
   });
   const effectSprites = statusEffects.slice(0, 4).map((e) => getStatusEffectSprite(e.name));
+  const eventSpriteList = events.filter((e) => e.spritePath).slice(0, 4).map((e) => getEventSprite(e.name));
   const bossSprites = bosses.slice(0, 4).map((b) => getBossSprite(b.name));
 
   return (
@@ -133,6 +134,13 @@ export default function HomeScreen() {
             count={bosses.length}
             subtitle="Stats, attacks, drops"
             onPress={() => router.push("/bosses")}
+          />
+          <NavCard
+            sprites={eventSpriteList}
+            title="Events"
+            count={events.length}
+            subtitle="Choices, outcomes, rewards"
+            onPress={() => router.push("/events")}
           />
           <NavCard
             sprites={itemSprites}
@@ -164,6 +172,13 @@ export default function HomeScreen() {
             subtitle="All abilities by class"
             onPress={() => router.push("/abilities")}
             tierCounts={abilityTiers}
+          />
+          <NavCard
+            sprites={disorders.slice(0, 4).map((d) => getDisorderSprite(d.name))}
+            title="Disorders"
+            count={disorders.length}
+            subtitle="Diseases, conditions, curses"
+            onPress={() => router.push("/disorders")}
           />
           <NavCard
             sprites={effectSprites}

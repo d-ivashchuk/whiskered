@@ -173,25 +173,25 @@ export default function BossesScreen() {
   return (
     <>
       <Stack.Screen options={{ title: "Bosses" }} />
+      <View className="px-4 pt-2 pb-2">
+        <View className="flex-row items-center">
+          <View className="flex-1 flex-row items-center">
+            <Search size={16} color={theme.mutedForeground} style={{ position: "absolute", left: 10, zIndex: 1 }} />
+            <Input value={search} onChangeText={setSearch} placeholder="Search bosses..." className="flex-1 pl-9" />
+            {search.length > 0 && (
+              <Pressable onPress={() => setSearch("")} style={{ position: "absolute", right: 10 }}>
+                <X size={16} color={theme.mutedForeground} />
+              </Pressable>
+            )}
+          </View>
+        </View>
+      </View>
+
       <ScrollView
         style={{ flex: 1 }}
         contentContainerStyle={{ paddingBottom: insets.bottom + 80 }}
         keyboardShouldPersistTaps="handled"
       >
-        <View className="px-4 pt-2 pb-2">
-          <View className="flex-row items-center">
-            <View className="flex-1 flex-row items-center">
-              <Search size={16} color={theme.mutedForeground} style={{ position: "absolute", left: 10, zIndex: 1 }} />
-              <Input value={search} onChangeText={setSearch} placeholder="Search bosses..." className="flex-1 pl-9" />
-              {search.length > 0 && (
-                <Pressable onPress={() => setSearch("")} style={{ position: "absolute", right: 10 }}>
-                  <X size={16} color={theme.mutedForeground} />
-                </Pressable>
-              )}
-            </View>
-          </View>
-        </View>
-
         <View className="px-4 pb-1">
           <Text className="text-muted-foreground text-sm">
             {totalFiltered} bosses

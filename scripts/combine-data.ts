@@ -10,6 +10,7 @@ const ABILITIES_DIR = path.join(DATA_DIR, "abilities");
 const BOSSES_DIR = path.join(DATA_DIR, "bosses");
 const BOSSES_HYDRATED_DIR = path.join(DATA_DIR, "bosses-hydrated");
 const EVENTS_DIR = path.join(DATA_DIR, "events");
+const DISORDERS_DIR = path.join(DATA_DIR, "disorders");
 const SPRITES_DIR = path.join(DATA_DIR, "sprites");
 const TIERS_PATH = path.join(DATA_DIR, "tiers.json");
 const OUT_DIR = path.join(DATA_DIR, "combined");
@@ -719,6 +720,19 @@ function main(): void {
     console.log(`  Events: ${combinedEvents.length}`);
   }
 
+  // ─── Step 4c: Combine disorder data ───────────────────────────────────────
+
+  let combinedDisorders: Record<string, unknown>[] = [];
+  if (fs.existsSync(DISORDERS_DIR)) {
+    console.log("=== Step 4c: Combining disorder data ===\n");
+    const SKIP_DISORDERS = ["Disorders.json"];
+    const rawDisorders = loadJsonDir<Record<string, unknown>>(DISORDERS_DIR, SKIP_DISORDERS);
+    combinedDisorders = rawDisorders
+      .filter((d) => d.name && d.name !== "Disorders")
+      .sort((a, b) => String(a.name).localeCompare(String(b.name)));
+    console.log(`  Disorders: ${combinedDisorders.length}`);
+  }
+
   // ─── Step 5: Write output ────────────────────────────────────────────────
 
   console.log("=== Writing combined data ===\n");
@@ -740,6 +754,9 @@ function main(): void {
   }
   if (combinedEvents.length > 0) {
     fs.writeFileSync(path.join(OUT_DIR, "events.json"), JSON.stringify(combinedEvents, null, 2));
+  }
+  if (combinedDisorders.length > 0) {
+    fs.writeFileSync(path.join(OUT_DIR, "disorders.json"), JSON.stringify(combinedDisorders, null, 2));
   }
 
   // Copy status-effects.json to combined output if it exists

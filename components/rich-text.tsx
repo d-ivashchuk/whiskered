@@ -6,8 +6,8 @@
  * proper inline flow (Pressable inside Text breaks layout in RN).
  */
 import { Text } from "@/components/ui/text";
-import { STAT_INFO, getAbility, getItem, getClass, getStatusEffect } from "@/lib/game-data";
-import { getAbilitySprite, getItemSprite, getClassSprite, getStatSprite, getStatusEffectSprite } from "@/lib/sprites";
+import { STAT_INFO, getAbility, getItem, getClass, getStatusEffect, getDisorder } from "@/lib/game-data";
+import { getAbilitySprite, getItemSprite, getClassSprite, getStatSprite, getStatusEffectSprite, getDisorderSprite } from "@/lib/sprites";
 import { useRouter } from "expo-router";
 import { Image, Linking } from "react-native";
 import type { ImageSourcePropType } from "react-native";
@@ -17,7 +17,7 @@ interface RichTextProps {
   className?: string;
 }
 
-type LinkType = "ability" | "item" | "class" | "stat" | "status" | "obj" | "type" | "chapter" | "url";
+type LinkType = "ability" | "item" | "class" | "stat" | "status" | "obj" | "type" | "chapter" | "disorder" | "url";
 
 interface TextSegment {
   type: "text" | LinkType;
@@ -26,7 +26,7 @@ interface TextSegment {
   display?: string;
 }
 
-const LINK_REGEX = /\[\[(ability|item|class|stat|status|obj|type|chapter):([^\]]+)\]\]/g;
+const LINK_REGEX = /\[\[(ability|item|class|stat|status|obj|type|chapter|disorder):([^\]]+)\]\]/g;
 const URL_REGEX = /\[\[url:([^|]+)\|([^\]]+)\]\]/g;
 
 function parseSegments(text: string): TextSegment[] {
@@ -81,6 +81,8 @@ function getSprite(type: string, name: string): ImageSourcePropType | null {
       return getStatSprite(name);
     case "status":
       return getStatusEffectSprite(name);
+    case "disorder":
+      return getDisorderSprite(name);
     default:
       return null;
   }
@@ -103,6 +105,8 @@ function getRoute(type: string, name: string): string | null {
       return getClass(name) ? `/classes/${encodeURIComponent(name)}` : null;
     case "status":
       return getStatusEffect(name) ? `/effects/${encodeURIComponent(name)}` : null;
+    case "disorder":
+      return getDisorder(name) ? `/disorders/${encodeURIComponent(name)}` : null;
     default:
       return null;
   }

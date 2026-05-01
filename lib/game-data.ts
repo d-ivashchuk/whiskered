@@ -133,6 +133,61 @@ export interface BossHydration {
   threadCount: { reddit: number; steam: number };
 }
 
+// ─── Event types ────────────────────────────────────────────────────────────
+
+export interface EventOutcome {
+  label: string;
+  description: string;
+  effect: string;
+  check?: { stat: string; dc: string; kind: string };
+  rewards: string[];
+  penalties: string[];
+}
+
+export interface EventChoice {
+  text: string;
+  description: string;
+  outcomes: EventOutcome[];
+}
+
+export interface GameEvent {
+  name: string;
+  kind: "event";
+  chapter: string;
+  act: string;
+  flavor: string;
+  wikiDescription: string;
+  choices: EventChoice[];
+  possibleRewards: string[];
+  wikiNotes: string;
+  wikiTrivia: string;
+  spritePath: string;
+  categories: string[];
+  wikiUrl: string;
+}
+
+// ─── Disorder types ─────────────────────────────────────────────────────────
+
+export interface GameDisorder {
+  name: string;
+  kind: "disorder";
+  id: string;
+  description: string;
+  pools: string[];
+  statusEffects: string[];
+  events: string[];
+  contagious: boolean;
+  wikiEffects: string;
+  wikiInteractions: string;
+  wikiObtaining: string;
+  wikiStrategy: string;
+  wikiTrivia: string;
+  wikiNotes: string;
+  spritePath: string;
+  categories: string[];
+  wikiUrl: string;
+}
+
 // ─── Stat descriptions ───────────────────────────────────────────────────────
 
 export const STAT_INFO: Record<string, { name: string; description: string }> = {
@@ -156,6 +211,8 @@ let _sets: GameSet[] = [];
 let _abilities: GameAbility[] = [];
 let _bosses: GameBoss[] = [];
 let _bossHydrations: BossHydration[] = [];
+let _events: GameEvent[] = [];
+let _disorders: GameDisorder[] = [];
 let _loaded = false;
 
 try {
@@ -175,6 +232,14 @@ try {
 try {
   _bossHydrations = require("../data/combined/bosses-hydrated.json") as BossHydration[];
 } catch { /* hydrated bosses optional */ }
+
+try {
+  _events = require("../data/combined/events.json") as GameEvent[];
+} catch { /* events optional */ }
+
+try {
+  _disorders = require("../data/combined/disorders.json") as GameDisorder[];
+} catch { /* disorders optional */ }
 /* eslint-enable @typescript-eslint/no-require-imports */
 
 export const items = _items;
@@ -183,6 +248,8 @@ export const sets = _sets;
 export const abilities = _abilities;
 export const bosses = _bosses;
 export const bossHydrations = _bossHydrations;
+export const events = _events;
+export const disorders = _disorders;
 export const dataLoaded = _loaded;
 
 // ─── Lookup helpers ──────────────────────────────────────────────────────────
@@ -197,6 +264,8 @@ const setMap = new Map(_sets.map((s) => [s.name, s]));
 const abilityMap = new Map(_abilities.map((a) => [a.name, a]));
 const bossMap = new Map(_bosses.map((b) => [b.name, b]));
 const bossHydrationMap = new Map(_bossHydrations.map((h) => [h.name, h]));
+const eventMap = new Map(_events.map((e) => [e.name, e]));
+const disorderMap = new Map(_disorders.map((d) => [d.name, d]));
 
 // Secondary lookup: strip wiki disambiguators like "(Item)" from item names
 const itemMapDisambiguated = new Map<string, GameItem>();
@@ -236,6 +305,14 @@ export function getBoss(name: string): GameBoss | undefined {
 
 export function getBossHydration(name: string): BossHydration | undefined {
   return bossHydrationMap.get(name);
+}
+
+export function getEvent(name: string): GameEvent | undefined {
+  return eventMap.get(name);
+}
+
+export function getDisorder(name: string): GameDisorder | undefined {
+  return disorderMap.get(name);
 }
 
 // ─── Boss drop reverse lookup ────────────────────────────────────────────────

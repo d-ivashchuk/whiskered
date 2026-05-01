@@ -105,6 +105,8 @@ export const EventOutcomeSchema = z.object({
     .optional(),
   /** What happens — text body, with `[[type:Name]]` link markers preserved. */
   description: z.string().default(""),
+  /** The game-mechanical effect, with `[[type:Name]]` link markers preserved. */
+  effect: z.string().default("Nothing happens."),
   /** Items/abilities/statuses this outcome grants or applies. Free-form. */
   rewards: z.array(z.string()).default([]),
   penalties: z.array(z.string()).default([]),
