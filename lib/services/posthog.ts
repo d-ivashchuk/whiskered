@@ -29,6 +29,17 @@ export function getPostHogClient(): PostHog | null {
 			// simulator reset / device-id rotation.
 			personProfiles: "identified_only",
 			enableSessionReplay: !__DEV__,
+			sessionReplayConfig: {
+				// Mask all text inputs and images by default to avoid leaking
+				// usernames, emails, photos picked from the library, etc.
+				maskAllTextInputs: true,
+				maskAllImages: true,
+				// iOS-only: mask system pickers (image picker, contact picker, etc.)
+				maskAllSandboxedViews: true,
+				// Capture network requests + console logs alongside replay
+				captureLog: true,
+				captureNetworkTelemetry: true,
+			},
 			// Flush quickly so events aren't lost when the app backgrounds
 			flushAt: 5,
 			flushInterval: 10_000, // 10 seconds
