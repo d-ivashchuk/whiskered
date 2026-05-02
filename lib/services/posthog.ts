@@ -20,8 +20,15 @@ export function getPostHogClient(): PostHog | null {
 	if (!_client) {
 		_client = new PostHog(POSTHOG_API_KEY, {
 			host: POSTHOG_HOST,
-			enableSessionReplay: true,
-			personProfiles: "always",
+			// No-op every call from dev/simulator builds so they don't pollute
+			// the production project with duplicate users.
+			disabled: __DEV__,
+			// Only create person profiles for identified users (post-identify).
+			// "always" creates a new person for every anonymous distinct_id,
+			// which inflates the unique-user count on every clean install /
+			// simulator reset / device-id rotation.
+			personProfiles: "identified_only",
+			enableSessionReplay: !__DEV__,
 			// Flush quickly so events aren't lost when the app backgrounds
 			flushAt: 5,
 			flushInterval: 10_000, // 10 seconds
