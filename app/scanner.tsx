@@ -8,6 +8,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import {
   ActivityIndicator,
   Image,
+  Platform,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -180,9 +181,12 @@ export default function ScannerScreen() {
       const captureStart = performance.now();
       const photo = await withTimeout(
         cameraRef.current.takePictureAsync({
-          quality: 0.9,
+          // Android: lower quality reduces capture latency and preview interruption
+          quality: Platform.OS === "android" ? 0.7 : 0.9,
           shutterSound: false,
-          skipProcessing: true,
+          // Android: skipProcessing causes incorrect width/height (EXIF rotation
+          // not applied) leading to skewed crops.
+          skipProcessing: Platform.OS === "ios",
         }) as Promise<{ uri: string; width: number; height: number }>,
         5000
       );
@@ -476,6 +480,7 @@ export default function ScannerScreen() {
             style={StyleSheet.absoluteFill}
             facing="back"
             autofocus="on"
+            animateShutter={Platform.OS !== "android"}
             selectedLens={isMacro && macroLens ? macroLens : undefined}
             onCameraReady={handleCameraReady}
           />

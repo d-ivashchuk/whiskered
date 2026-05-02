@@ -38,6 +38,10 @@
         "ascApiKeyPath": "./AuthKey_SL4827JXS2.p8",
         "ascApiKeyId": "SL4827JXS2",
         "ascApiKeyIssuerId": "f778d685-88d6-4e04-9995-da4cbcdc173c"
+      },
+      "android": {
+        "track": "internal",
+        "serviceAccountKeyPath": "./stack-on-fire-943533aea5b4.json"
       }
     }
   }

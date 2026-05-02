@@ -16,12 +16,13 @@
 #
 # Usage:
 #   ./scripts/ship-local.sh ios
+#   ./scripts/ship-local.sh android
 
 set -euo pipefail
 
-PLATFORM="${1:-ios}"
-if [[ "$PLATFORM" != "ios" ]]; then
-  echo "Usage: $0 [ios]" >&2
+PLATFORM="${1:-}"
+if [[ "$PLATFORM" != "ios" && "$PLATFORM" != "android" ]]; then
+  echo "Usage: $0 [ios|android]" >&2
   exit 1
 fi
 
@@ -63,7 +64,14 @@ BUILDS_DIR="$REPO_ROOT/builds"
 mkdir -p "$BUILDS_DIR"
 
 TIMESTAMP="$(date +%Y%m%d-%H%M%S)"
-OUTPUT="$BUILDS_DIR/build-${TIMESTAMP}.ipa"
+
+if [[ "$PLATFORM" == "ios" ]]; then
+  EXT="ipa"
+else
+  EXT="aab"
+fi
+
+OUTPUT="$BUILDS_DIR/build-${TIMESTAMP}.${EXT}"
 
 eas build \
   --platform "$PLATFORM" \
@@ -74,9 +82,9 @@ eas build \
 
 echo "→ Build saved to $OUTPUT"
 
-# Keep only the latest 3 builds, delete older ones.
+# Keep only the latest 3 builds per platform, delete older ones.
 cd "$BUILDS_DIR"
-ls -1t ./*.ipa 2>/dev/null | tail -n +4 | xargs -r rm -f
+ls -1t ./*.${EXT} 2>/dev/null | tail -n +4 | xargs -r rm -f
 cd "$REPO_ROOT"
 
 eas submit \

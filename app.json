@@ -59,6 +59,8 @@
       "@react-native-community/datetimepicker",
       "expo-localization",
       "./plugins/with-coreml-model",
+      "react-native-fast-tflite",
+      "./plugins/with-android-models",
       "expo-font",
       "expo-video"
     ],

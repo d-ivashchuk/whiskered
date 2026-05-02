@@ -57,6 +57,7 @@ data/*
 !data/combined
 !data/bosses-hydrated
 !data/sprite-fingerprints.bin
+!data/sprite-embeddings.bin
 !data/sprites
 data/sprites/*
 !data/sprites/png
@@ -72,10 +73,14 @@ data/sprites/*
 ml/dataset/
 ml/output/*
 !ml/output/mewgenics_items.mlmodelc
+!ml/output/mewgenics_items_classifier.tflite
+!ml/output/mewgenics_items_embeddings.tflite
 ml/.venv/
 
 .env.local
 AuthKey_*.p8
+google-play-service-account.json
+stack-on-fire-*.json
 ml/__pycache__/
 
 # Build artifacts and screenshots (not needed in EAS or repo)
