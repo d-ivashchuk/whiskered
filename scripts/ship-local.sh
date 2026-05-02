@@ -60,6 +60,26 @@ if (( ${#missing[@]} > 0 )); then
   exit 1
 fi
 
+# Auto-bump patch version in app.json before building.
+# Reads current version, increments patch, writes it back, and commits.
+CURRENT_VERSION=$(node -p "require('./app.json').expo.version")
+IFS='.' read -r MAJOR MINOR PATCH <<< "$CURRENT_VERSION"
+NEW_VERSION="${MAJOR}.${MINOR}.$((PATCH + 1))"
+
+# Use node to update app.json (preserves formatting)
+node -e "
+  const fs = require('fs');
+  const app = JSON.parse(fs.readFileSync('app.json', 'utf8'));
+  app.expo.version = '${NEW_VERSION}';
+  fs.writeFileSync('app.json', JSON.stringify(app, null, 2) + '\n');
+"
+
+echo "→ Version bumped: ${CURRENT_VERSION} → ${NEW_VERSION}"
+
+# Commit the version bump
+git add app.json
+git commit -m "Bump version to ${NEW_VERSION}" --no-verify
+
 BUILDS_DIR="$REPO_ROOT/builds"
 mkdir -p "$BUILDS_DIR"
 
