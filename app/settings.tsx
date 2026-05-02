@@ -8,11 +8,13 @@ import { ChevronLeft, ChevronRight, ExternalLink, FileText, Shield, Star, Wrench
 import SegmentedControl from "@react-native-segmented-control/segmented-control";
 import * as Application from "expo-application";
 import * as Updates from "expo-updates";
+import { useEffect, useState } from "react";
 import { Linking, Platform, Pressable, ScrollView, View } from "react-native";
 import { requestStoreReview } from "@/lib/services/rate-app";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { capture, getPostHogClient } from "@/lib/services/posthog";
+import { getOrCreateDeviceId } from "@/lib/services/device-id";
 
 export default function SettingsScreen() {
 	const insets = useSafeAreaInsets();
@@ -40,6 +42,11 @@ export default function SettingsScreen() {
 
 	const appearanceMode = useSettingsStore((s) => s.appearanceMode);
 	const setAppearanceMode = useSettingsStore((s) => s.setAppearanceMode);
+
+	const [deviceId, setDeviceId] = useState<string | null>(null);
+	useEffect(() => {
+		getOrCreateDeviceId().then(setDeviceId).catch(() => {});
+	}, []);
 
 	type AppearanceOption = "system" | "light" | "dark";
 
@@ -229,6 +236,19 @@ export default function SettingsScreen() {
 					<Text className="text-sm text-muted-foreground/50">
 						{versionLabel}
 					</Text>
+					{deviceId ? (
+						<>
+							<Text className="text-xs text-muted-foreground/40 mt-2">
+								User ID (long-press to copy)
+							</Text>
+							<Text
+								selectable
+								className="text-xs font-mono text-muted-foreground/60 mt-1 text-center"
+							>
+								{deviceId}
+							</Text>
+						</>
+					) : null}
 				</View>
 			</ScrollView>
 		</View>
