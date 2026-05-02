@@ -68,6 +68,8 @@ data/sprites/*
 !data/sprites/stats
 !data/sprites/status-effects
 !data/sprites/bosses
+!data/sprites/events
+!data/sprites/disorders
 
 # ML pipeline (generated) — except compiled model
 ml/dataset/
