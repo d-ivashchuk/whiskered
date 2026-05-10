@@ -6447,7 +6447,7 @@
     "wikiBehavior": "Spiderlings attack at melee range by burrowing into their targets, dealing 3 damage and inflicting [[status:Infested]]. This effectively \"kills\" them, as they disappear from the board after attacking.",
     "wikiTips": "",
     "wikiTrivia": "* Spiderlings are among a small subset of enemies that can be spawned as familiars directly from a spell or an item. Spiderlings summoned this way will be green.\n* The Spiderling is very similar to the Spider enemy from The Binding of Isaac.",
-    "dangerFlag": "Burrows into target on melee hit, inflicting Infested and removing itself from the board.",
+    "dangerFlag": "",
     "spritePath": "data/sprites/enemies/Spiderling.png",
     "categories": [
       "Bug type units",
