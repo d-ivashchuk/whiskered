@@ -5,6 +5,12 @@
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
+export interface SideQuestInfo {
+  rewardItem: string;
+  rewardEffect: string;
+  tip: string;
+}
+
 export interface GameItem {
   name: string;
   internalName: string;
@@ -19,6 +25,8 @@ export interface GameItem {
   tierReason: string;
   relatedItems: string[];
   hasSprite: boolean;
+  effects?: string;
+  sideQuest?: SideQuestInfo;
 }
 
 export interface ClassArchetype {
@@ -188,6 +196,34 @@ export interface GameDisorder {
   wikiUrl: string;
 }
 
+// ─── Enemy types ─────────────────────────────────────────────────────────────
+
+export interface EnemyStats {
+  health: string;
+  damage: string;
+  movement: string;
+  luck: string;
+}
+
+export interface GameEnemy {
+  name: string;
+  kind: "enemy";
+  internalId: string;
+  description: string;
+  locations: string[];
+  size: string;
+  attackStyle: string;
+  stats: EnemyStats;
+  championStats?: EnemyStats;
+  wikiBehavior: string;
+  wikiTips: string;
+  wikiTrivia: string;
+  dangerFlag: string;
+  spritePath: string;
+  categories: string[];
+  wikiUrl: string;
+}
+
 // ─── Stat descriptions ───────────────────────────────────────────────────────
 
 export const STAT_INFO: Record<string, { name: string; description: string }> = {
@@ -213,6 +249,7 @@ let _bosses: GameBoss[] = [];
 let _bossHydrations: BossHydration[] = [];
 let _events: GameEvent[] = [];
 let _disorders: GameDisorder[] = [];
+let _enemies: GameEnemy[] = [];
 let _loaded = false;
 
 try {
@@ -240,6 +277,10 @@ try {
 try {
   _disorders = require("../data/combined/disorders.json") as GameDisorder[];
 } catch { /* disorders optional */ }
+
+try {
+  _enemies = require("../data/combined/enemies.json") as GameEnemy[];
+} catch { /* enemies optional */ }
 /* eslint-enable @typescript-eslint/no-require-imports */
 
 export const items = _items;
@@ -250,6 +291,7 @@ export const bosses = _bosses;
 export const bossHydrations = _bossHydrations;
 export const events = _events;
 export const disorders = _disorders;
+export const enemies = _enemies;
 export const dataLoaded = _loaded;
 
 // ─── Lookup helpers ──────────────────────────────────────────────────────────
@@ -266,6 +308,7 @@ const bossMap = new Map(_bosses.map((b) => [b.name, b]));
 const bossHydrationMap = new Map(_bossHydrations.map((h) => [h.name, h]));
 const eventMap = new Map(_events.map((e) => [e.name, e]));
 const disorderMap = new Map(_disorders.map((d) => [d.name, d]));
+const enemyMap = new Map(_enemies.map((e) => [e.name, e]));
 
 // Secondary lookup: strip wiki disambiguators like "(Item)" from item names
 const itemMapDisambiguated = new Map<string, GameItem>();
@@ -313,6 +356,10 @@ export function getEvent(name: string): GameEvent | undefined {
 
 export function getDisorder(name: string): GameDisorder | undefined {
   return disorderMap.get(name);
+}
+
+export function getEnemy(name: string): GameEnemy | undefined {
+  return enemyMap.get(name);
 }
 
 // ─── Boss drop reverse lookup ────────────────────────────────────────────────

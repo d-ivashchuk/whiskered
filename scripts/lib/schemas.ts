@@ -157,6 +157,52 @@ export const EventSchema = z.object({
 });
 export type Event = z.infer<typeof EventSchema>;
 
+// ── Enemy (raw wiki output) ──────────────────────────────────────────────
+
+export const EnemyStatsSchema = z.object({
+  health: z.string().default(""),
+  damage: z.string().default(""),
+  movement: z.string().default(""),
+  luck: z.string().default(""),
+});
+export type EnemyStats = z.infer<typeof EnemyStatsSchema>;
+
+export const EnemySchema = z.object({
+  /** Always equal to the wiki title. */
+  name: z.string(),
+  kind: z.literal("enemy"),
+  /** From the infobox `Id`/`ID` field; internal game identifier. */
+  internalId: z.string().default(""),
+  /** Short description or flavor text from the infobox. */
+  description: z.string().default(""),
+  /** Where this enemy appears — chapters/zones. */
+  locations: z.array(z.string()).default([]),
+  /** Grid size, e.g. `"1x1"`. */
+  size: z.string().default(""),
+  /** Free-text attack style label. */
+  attackStyle: z.string().default(""),
+  /**
+   * Stats as strings — the wiki sometimes embeds difficulty scaling
+   * (e.g. `Normal/Hard/Crazy/Impossible: 10/15/20/30`).
+   */
+  stats: EnemyStatsSchema,
+  /** Champion variant stats — not all enemies have champion data. */
+  championStats: EnemyStatsSchema.optional(),
+  /** Raw `==Behavior==` body — preserves links via `[[type:Name]]` markers. */
+  wikiBehavior: z.string().default(""),
+  /** Raw `==Tips==` or `==Strategies==` body. */
+  wikiTips: z.string().default(""),
+  /** Raw `==Trivia==` body. */
+  wikiTrivia: z.string().default(""),
+  /** Curated warning text for tricky enemies (merged from enemy-dangers.json). */
+  dangerFlag: z.string().default(""),
+  /** Path on disk relative to repo root, e.g. `data/sprites/enemies/Bombfly.png`. */
+  spritePath: z.string().default(""),
+  categories: z.array(z.string()).default([]),
+  wikiUrl: z.string(),
+});
+export type Enemy = z.infer<typeof EnemySchema>;
+
 // ── Hydrated boss (tactics writeup) ───────────────────────────────────────
 
 export const HydratedBossSchema = z.object({

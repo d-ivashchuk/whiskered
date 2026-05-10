@@ -1,8 +1,8 @@
 import { Text } from "@/components/ui/text";
 import { useThemeColors } from "@/lib/theme";
-import { items, classes, sets, abilities, statusEffects, bosses, events, disorders, dataLoaded } from "@/lib/game-data";
+import { items, classes, sets, abilities, statusEffects, bosses, enemies, events, disorders, dataLoaded } from "@/lib/game-data";
 import { getTierColor } from "@/lib/game-colors";
-import { getClassSprite, getAbilitySprite, getItemSprite, getStatusEffectSprite, getBossSprite, getEventSprite, getDisorderSprite } from "@/lib/sprites";
+import { getClassSprite, getAbilitySprite, getItemSprite, getStatusEffectSprite, getBossSprite, getEnemySprite, getEventSprite, getDisorderSprite } from "@/lib/sprites";
 import { useRouter } from "expo-router";
 import { Image, Pressable, ScrollView, View, type ImageSourcePropType } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -113,6 +113,7 @@ export default function HomeScreen() {
   const effectSprites = statusEffects.slice(0, 4).map((e) => getStatusEffectSprite(e.name));
   const eventSpriteList = events.filter((e) => e.spritePath).slice(0, 4).map((e) => getEventSprite(e.name));
   const bossSprites = bosses.slice(0, 4).map((b) => getBossSprite(b.name));
+  const enemySpriteList = enemies.slice(0, 4).map((e) => getEnemySprite(e.name));
 
   return (
     <View style={{ flex: 1, paddingTop: insets.top }}>
@@ -134,6 +135,13 @@ export default function HomeScreen() {
             count={bosses.length}
             subtitle="Stats, attacks, drops"
             onPress={() => router.push("/bosses")}
+          />
+          <NavCard
+            sprites={enemySpriteList}
+            title="Enemies"
+            count={enemies.length}
+            subtitle="Stats, behavior, danger warnings"
+            onPress={() => router.push("/enemies")}
           />
           <NavCard
             sprites={eventSpriteList}

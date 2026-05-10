@@ -11,8 +11,11 @@ const BOSSES_DIR = path.join(DATA_DIR, "bosses");
 const BOSSES_HYDRATED_DIR = path.join(DATA_DIR, "bosses-hydrated");
 const EVENTS_DIR = path.join(DATA_DIR, "events");
 const DISORDERS_DIR = path.join(DATA_DIR, "disorders");
+const ENEMIES_DIR = path.join(DATA_DIR, "enemies");
 const SPRITES_DIR = path.join(DATA_DIR, "sprites");
 const TIERS_PATH = path.join(DATA_DIR, "tiers.json");
+const ENEMY_DANGERS_PATH = path.join(DATA_DIR, "enemy-dangers.json");
+const SIDE_QUEST_INFO_PATH = path.join(DATA_DIR, "side-quest-info.json");
 const OUT_DIR = path.join(DATA_DIR, "combined");
 
 // ─── Types ───────────────────────────────────────────────────────────────────
@@ -75,6 +78,12 @@ interface TiersFile {
   abilities: Record<string, { tier: string; reason: string }>;
 }
 
+interface SideQuestInfo {
+  rewardItem: string;
+  rewardEffect: string;
+  tip: string;
+}
+
 interface StatMap {
   [stat: string]: number;
 }
@@ -93,6 +102,8 @@ interface CombinedItem {
   tierReason: string;
   relatedItems: string[];
   hasSprite: boolean;
+  effects?: string;
+  sideQuest?: SideQuestInfo;
 }
 
 interface CombinedClassArchetype {
@@ -380,6 +391,11 @@ function main(): void {
   // Load tiers
   const tiers: TiersFile = JSON.parse(fs.readFileSync(TIERS_PATH, "utf-8"));
 
+  // Load side quest info
+  const sideQuestInfo: Record<string, SideQuestInfo> = fs.existsSync(SIDE_QUEST_INFO_PATH)
+    ? JSON.parse(fs.readFileSync(SIDE_QUEST_INFO_PATH, "utf-8"))
+    : {};
+
   // Load set descriptions (parsed from wiki Sets page)
   const SET_DESC_PATH = path.join(DATA_DIR, "set-descriptions.json");
   const setDescriptions: Record<string, string> = fs.existsSync(SET_DESC_PATH)
@@ -460,7 +476,10 @@ function main(): void {
     // Tier lookup
     const tierData = tiers.items[item.name];
 
-    cleanedItems.push({
+    // Side quest enrichment
+    const sqInfo = sideQuestInfo[item.name];
+
+    const combinedItem: CombinedItem = {
       name: item.name,
       internalName: item.internalName,
       description: cleanDesc,
@@ -474,7 +493,22 @@ function main(): void {
       tierReason: tierData?.reason ?? "",
       relatedItems: [], // filled after grouping by set
       hasSprite: hasSprite(item.name, item.internalName, itemSprites),
-    });
+    };
+
+    // Attach side quest data if present
+    if (sqInfo) {
+      combinedItem.sideQuest = sqInfo;
+    }
+
+    // Preserve raw effects for side quest items
+    if (rarity.includes("Side Quest") && item.effects) {
+      const cleanEffects = stripWikiMarkup(item.effects);
+      if (cleanEffects) {
+        combinedItem.effects = cleanEffects;
+      }
+    }
+
+    cleanedItems.push(combinedItem);
   }
 
   // ─── Step 1b: Load & clean classes ───────────────────────────────────────
@@ -733,6 +767,33 @@ function main(): void {
     console.log(`  Disorders: ${combinedDisorders.length}`);
   }
 
+  // ─── Step 4d: Combine enemy data ────────────────────────────────────────
+
+  let combinedEnemies: Record<string, unknown>[] = [];
+  if (fs.existsSync(ENEMIES_DIR)) {
+    console.log("=== Step 4d: Combining enemy data ===\n");
+    const SKIP_ENEMIES = ["Enemies.json"];
+    const rawEnemies = loadJsonDir<Record<string, unknown>>(ENEMIES_DIR, SKIP_ENEMIES);
+
+    // Load danger flags
+    const enemyDangers: Record<string, string> = fs.existsSync(ENEMY_DANGERS_PATH)
+      ? JSON.parse(fs.readFileSync(ENEMY_DANGERS_PATH, "utf-8"))
+      : {};
+
+    combinedEnemies = rawEnemies
+      .filter((e) => e.name && e.name !== "Enemies")
+      .map((e) => {
+        // Merge danger flag if present
+        const dangerFlag = enemyDangers[String(e.name)] ?? "";
+        if (dangerFlag) {
+          return { ...e, dangerFlag };
+        }
+        return e;
+      })
+      .sort((a, b) => String(a.name).localeCompare(String(b.name)));
+    console.log(`  Enemies: ${combinedEnemies.length} (${Object.keys(enemyDangers).length} danger flags)`);
+  }
+
   // ─── Step 5: Write output ────────────────────────────────────────────────
 
   console.log("=== Writing combined data ===\n");
@@ -758,6 +819,9 @@ function main(): void {
   if (combinedDisorders.length > 0) {
     fs.writeFileSync(path.join(OUT_DIR, "disorders.json"), JSON.stringify(combinedDisorders, null, 2));
   }
+  if (combinedEnemies.length > 0) {
+    fs.writeFileSync(path.join(OUT_DIR, "enemies.json"), JSON.stringify(combinedEnemies, null, 2));
+  }
 
   // Copy status-effects.json to combined output if it exists
   const statusEffectsPath = path.join(DATA_DIR, "status-effects.json");
@@ -775,6 +839,7 @@ function main(): void {
   console.log(`  Items:     ${cleanedItems.length}`);
   console.log(`  Classes:   ${cleanedClasses.length}`);
   console.log(`  Abilities: ${cleanedAbilities.length}`);
+  console.log(`  Enemies:   ${combinedEnemies.length}`);
 
   console.log(`\nParsing fixes applied:`);
   for (const [fixName, count] of Object.entries(fixes)) {

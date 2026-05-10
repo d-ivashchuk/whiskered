@@ -9,6 +9,8 @@ import {
   sets,
   abilities,
   statusEffects,
+  bosses,
+  enemies,
   getItem,
   type GameItem,
   type GameClass,
@@ -17,7 +19,7 @@ import {
   type StatusEffect,
 } from "@/lib/game-data";
 import { getTierColor } from "@/lib/game-colors";
-import { getItemSprite, getClassSprite, getAbilitySprite, getStatusEffectSprite } from "@/lib/sprites";
+import { getItemSprite, getClassSprite, getAbilitySprite, getStatusEffectSprite, getBossSprite, getEnemySprite } from "@/lib/sprites";
 import { useRouter } from "expo-router";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { capture } from "@/lib/services/posthog";
@@ -37,7 +39,7 @@ import type { ClassificationResult } from "@/modules/item-classifier";
 
 const MAX_PER_SECTION = 8;
 
-type EntityType = "item" | "class" | "ability" | "set" | "effect";
+type EntityType = "item" | "class" | "ability" | "set" | "effect" | "boss" | "enemy";
 
 interface SearchResult {
   type: EntityType;
@@ -156,6 +158,48 @@ function buildResults(query: string): SearchSection[] {
         tier: "",
         sprite: getStatusEffectSprite(e.name),
         route: `/effects/${encodeURIComponent(e.name)}`,
+      })),
+    });
+  }
+
+  const matchedBosses = bosses.filter(
+    (b) =>
+      b.name.toLowerCase().includes(q) ||
+      (b.foundIn && b.foundIn.toLowerCase().includes(q))
+  );
+
+  if (matchedBosses.length > 0) {
+    sections.push({
+      title: "Bosses",
+      total: matchedBosses.length,
+      data: matchedBosses.slice(0, MAX_PER_SECTION).map((b) => ({
+        type: "boss" as EntityType,
+        name: b.name,
+        subtitle: [b.foundIn, b.stats.health ? `HP ${b.stats.health}` : ""].filter(Boolean).join(" · "),
+        tier: "",
+        sprite: getBossSprite(b.name),
+        route: `/bosses/${encodeURIComponent(b.name)}`,
+      })),
+    });
+  }
+
+  const matchedEnemies = enemies.filter(
+    (e) =>
+      e.name.toLowerCase().includes(q) ||
+      e.locations.some((l) => l.toLowerCase().includes(q))
+  );
+
+  if (matchedEnemies.length > 0) {
+    sections.push({
+      title: "Enemies",
+      total: matchedEnemies.length,
+      data: matchedEnemies.slice(0, MAX_PER_SECTION).map((e) => ({
+        type: "enemy" as EntityType,
+        name: e.name,
+        subtitle: [e.locations.join(", "), e.stats.health ? `HP ${e.stats.health}` : ""].filter(Boolean).join(" · "),
+        tier: "",
+        sprite: getEnemySprite(e.name),
+        route: `/enemies/${encodeURIComponent(e.name)}`,
       })),
     });
   }
@@ -346,7 +390,7 @@ export default function SearchScreen() {
               ref={inputRef}
               value={search}
               onChangeText={setSearch}
-              placeholder="Search items, classes, abilities, sets, and effects..."
+              placeholder="Search items, classes, abilities, bosses, enemies, and more..."
               className="flex-1 pl-9"
               autoFocus
               autoCapitalize="none"
@@ -450,7 +494,7 @@ export default function SearchScreen() {
         >
           <Search size={48} color={theme.border} />
           <Text className="text-muted-foreground text-center mt-4 text-sm">
-            Search items, classes, abilities, sets, and effects
+            Search items, classes, abilities, bosses, enemies, and more
           </Text>
           <Button
             onPress={handleScanPress}
