@@ -3,8 +3,8 @@ import { Input } from "@/components/ui/input";
 import { SearchEmpty } from "@/components/search-empty";
 import { ItemRow } from "@/components/item-row";
 import { useThemeColors } from "@/lib/theme";
-import { items, getAllSlots } from "@/lib/game-data";
-import { getTierColor } from "@/lib/game-colors";
+import { items, getAllSlots, getAllRarities } from "@/lib/game-data";
+import { getTierColor, getRarityTextColor } from "@/lib/game-colors";
 import { useRouter, Stack } from "expo-router";
 import { useCallback, useMemo, useState } from "react";
 import { FlatList, Pressable, View } from "react-native";
@@ -22,13 +22,16 @@ export default function ItemsScreen() {
   const [search, setSearch] = useState("");
   const [tierFilter, setTierFilter] = useState("All");
   const [slotFilter, setSlotFilter] = useState("All");
+  const [rarityFilter, setRarityFilter] = useState("All");
 
   const slots = useMemo(() => ["All", ...getAllSlots()], []);
+  const rarities = useMemo(() => ["All", ...getAllRarities()], []);
 
   const filtered = useMemo(() => {
     let result = items;
     if (tierFilter !== "All") result = result.filter((i) => i.tier === tierFilter);
     if (slotFilter !== "All") result = result.filter((i) => i.slot === slotFilter);
+    if (rarityFilter !== "All") result = result.filter((i) => i.rarity === rarityFilter);
     if (search.trim()) {
       const q = search.toLowerCase().trim();
       result = result.filter(
@@ -42,7 +45,7 @@ export default function ItemsScreen() {
       const tb = TIER_ORDER[b.tier] ?? 5;
       return ta !== tb ? ta - tb : a.name.localeCompare(b.name);
     });
-  }, [search, tierFilter, slotFilter]);
+  }, [search, tierFilter, slotFilter, rarityFilter]);
 
   const renderItem = useCallback(
     ({ item }: { item: GameItem }) => (
@@ -112,6 +115,7 @@ export default function ItemsScreen() {
             horizontal
             showsHorizontalScrollIndicator={false}
             keyExtractor={(s) => s}
+            style={{ marginBottom: 6 }}
             renderItem={({ item: slot }) => {
               const active = slotFilter === slot;
               return (
@@ -129,6 +133,35 @@ export default function ItemsScreen() {
                     style={{ color: active ? theme.primaryForeground : theme.mutedForeground }}
                     className="text-xs font-medium"
                   >{slot}</Text>
+                </Pressable>
+              );
+            }}
+          />
+
+          {/* Rarity filter */}
+          <FlatList
+            data={rarities}
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            keyExtractor={(r) => r}
+            renderItem={({ item: rarity }) => {
+              const active = rarityFilter === rarity;
+              const rc = rarity !== "All" ? getRarityTextColor(rarity) : undefined;
+              return (
+                <Pressable
+                  onPress={() => setRarityFilter(rarity)}
+                  style={{
+                    backgroundColor: active ? (rc ? `${rc}25` : theme.primary) : "transparent",
+                    borderColor: active ? (rc ?? theme.primary) : theme.border,
+                    borderWidth: 1,
+                    marginRight: 6,
+                  }}
+                  className="rounded-lg px-2.5 py-1"
+                >
+                  <Text
+                    style={{ color: active ? (rc ?? theme.primaryForeground) : theme.mutedForeground }}
+                    className="text-xs font-medium"
+                  >{rarity}</Text>
                 </Pressable>
               );
             }}
