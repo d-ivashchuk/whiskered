@@ -283,10 +283,12 @@ try {
 } catch { /* enemies optional */ }
 /* eslint-enable @typescript-eslint/no-require-imports */
 
+const _disorderNames = new Set(_disorders.map((d) => d.name));
+
 export const items = _items;
 export const classes = _classes;
 export const sets = _sets;
-export const abilities = _abilities;
+export const abilities = _abilities.filter((a) => !_disorderNames.has(a.name));
 export const bosses = _bosses;
 export const bossHydrations = _bossHydrations;
 export const events = _events;
@@ -303,7 +305,7 @@ const itemMapNormalized = new Map(
 );
 const classMap = new Map(_classes.map((c) => [c.name, c]));
 const setMap = new Map(_sets.map((s) => [s.name, s]));
-const abilityMap = new Map(_abilities.map((a) => [a.name, a]));
+const abilityMap = new Map(abilities.map((a) => [a.name, a]));
 const bossMap = new Map(_bosses.map((b) => [b.name, b]));
 const bossHydrationMap = new Map(_bossHydrations.map((h) => [h.name, h]));
 const eventMap = new Map(_events.map((e) => [e.name, e]));
@@ -466,4 +468,14 @@ export function getAllSlots(): string[] {
     if (item.slot) slotSet.add(item.slot);
   }
   return [...slotSet].sort();
+}
+
+const RARITY_ORDER = ["Common", "Uncommon", "Rare", "Very Rare", "Legendary", "Innate", "Side Quest", "Quest"];
+
+export function getAllRarities(): string[] {
+  const raritySet = new Set<string>();
+  for (const item of _items) {
+    if (item.rarity) raritySet.add(item.rarity);
+  }
+  return RARITY_ORDER.filter((r) => raritySet.has(r));
 }
